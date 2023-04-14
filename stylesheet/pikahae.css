@@ -101,16 +101,13 @@ section nav{
     /*object-fit: fill;*/
 
     width: 100%;
-    height: 519px;
-    background: url("../images/menu/banner-image.png");
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-    opacity: 1;
-    position: absolute;
-    top: 217px;
-    border-radius: 50px;
+    height: 400px;
+    /*position: fixed;*/
+    object-position: center;
+    object-fit: cover;
     overflow: hidden;
+    border-radius: 50px;
+    display: block;
 }
 
 
