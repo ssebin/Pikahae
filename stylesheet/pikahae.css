@@ -13,10 +13,14 @@
     --text-color: #191D23;
     --secound-color: #75797F;
     --main-color: #FE6A86;
-    --header-color: rgba(254, 226, 85, 0.3);
+    --header-color: #FFF6CC;
     --big-font: 5rem;
     --h2-font: 3rem;
     --p-font: 1.1rem;
+}
+
+html{
+    scroll-behavior: smooth;
 }
 
 body{
@@ -24,62 +28,89 @@ body{
     color: var(--text-color);
 }
 
-header{
-    background-color: var(--header-color);
-    position: fixed;
+section{
     width: 100%;
-    top: 0;
-    right: 0;
+    height: 100vh;
+}
+
+section nav{
+    display: flex;
+    justify-content: space-around;
     align-items: center;
-    display: flex;
-    justify-content: space-between;
+    position: fixed;
+    right: 0;
+    left: 0;
+    background-color: var(--header-color);
     z-index: 1000;
-    padding: 30px 18%;
-    transition: .3s;
+
 }
-
-.navlist{
-    display: flex;
-}
-
-.navlist li{
-    position: relative;
-}
-
-.navlist a{
-    font-size: var(--p-font);
-    color: #9B693E;
-    font-weight: 500;
-    padding: 10px 27px;
-}
-
-/* make the underline when u hover to the nav */
-/*.navlist a::after{*/
-/*    content: '';*/
-/*    position: absolute;*/
-/*    width: 0;*/
-/*    height: 2px;*/
-/*    background: var(--main-color);*/
-/*    bottom: -3px;*/
-/*    Left: 0;*/
-/*    transition: ease .40s;*/
-/*}*/
-
-/*.navlist a:hover::after{*/
-/*    width: 100%;*/
-/*}*/
 
 .logo img{
     max-width: 50%;
     width: 130px;
+    cursor:pointer;
     height: auto;
+    margin: 7px 0;
 }
 
-.cafe-name{
+.navlist li{
+    display: inline-block;
+    margin: 0 15px;
+}
+
+.navlist li a{
     color: #9B693E;
-    margin: 0;
-    font-size: var(--p-font);
-    padding: 10px 27px;
+    font-weight: 500;
+    font-size: 17px;
+    transition: 0.1s;
+}
+
+.navlist li a::after{
+    content: '';
+    width: 0;
+    height: 2px;
+    background: var(--main-color);
+    display: block;
+    transition: 0.2s;
+}
+
+.navlist li a:hover::after{
+    width: 100%;
+}
+
+.icon i{
+    font-size: 20px;
+    color: var(--text-color);
+    /*background: var(--text-color);*/
+    /*border-radius: 50%;*/
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    transition: 0.3s;
+}
+
+.icon i:hover{
+    color: var(--main-color);
+}
+
+.banner img{
+    /*border-radius: 30px;*/
+    /*align-items: center;*/
+    /*width: 1920px;*/
+    /*height: auto;*/
+    /*object-fit: fill;*/
+
+    width: 100%;
+    height: 519px;
+    background: url("../images/menu/banner-image.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    opacity: 1;
+    position: absolute;
+    top: 217px;
+    border-radius: 50px;
+    overflow: hidden;
 }
 
 
