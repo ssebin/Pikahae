@@ -7,6 +7,7 @@
 
     <!-- For icons -->
     <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <!--  Google fonts Roboto -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -19,7 +20,7 @@
 <body>
     <!-- header -->
     <section>
-        <nav>
+        <nav class="header">
             <a href="#" class="logo"><img src="../images/logo_draft.png" alt="logo"></a>
             <!--        <p class="cafe-name">Pikahae</p>-->
 
@@ -40,5 +41,123 @@
             <img src="../images/menu/banner_2.png" alt="picture of pikachu with dessert">
         </div>
     </section>
+
+<!--    TODO: fix for mobile-->
+    <!-- sub header section -->
+    <div class="sub-header-wrapper">
+        <p>MENU</p>
+    <!--Search form -->
+        <form class="search-form">
+            <input type="text" placeholder="Search menu" class="search-box">
+<!--            <button type="submit">Search</button>-->
+        </form>
+    </div>
+
+    <hr>
+
+<!--    menu section -->
+
+    <!-- menu header -->
+    <section class="menu-header">
+        <nav class="menu-nav">
+            <ul class="menu-navlist">
+                <li><a href="#">All</a></li>
+                <li><a href="#">Food</a></li>
+                <li><a href="#">Drinks</a></li>
+                <li><a href="#">Dessert</a></li>
+            </ul>
+        </nav>
+    </section>
+
+    <section class="menu" id="menu">
+    <!--  TODO: add navigation here-->
+        <div class="box-container">
+            <div class="box">
+                <a href="#" class="category-btn">Food</a>
+                <img src="../images/menu/photo_food01_02.jpg">
+                <div class="item-text">
+                    <h3>Pikachu Burger</h3>
+                    <p class="item-desc">Lorem ipsum i love burger sometimes me think</p>
+                    <span class="price">RM25.00</span>
+                </div>
+                <div id="preorder-btn">
+                    <a href="#" class="btn">Pre-order</a>
+                </div>
+
+            </div>
+            <div class="box">
+                <a href="#" class="category-btn">Food</a>
+                <img src="../images/menu/photo_food02_02.jpg">
+                <div class="item-text">
+                    <h3>Pikachu Burger</h3>
+                    <p class="item-desc">Lorem ipsum i love burger sometimes me think</p>
+                    <span class="price">RM25.00</span>
+                </div>
+                <a href="#" class="btn">Pre-order</a>
+            </div>
+            <div class="box">
+                <a href="#" class="category-btn">Food</a>
+                <img src="../images/menu/photo_sweets02.jpg">
+                <div class="item-text">
+                    <h3>Pikachu Burger</h3>
+                    <p class="item-desc">Lorem ipsum i love burger sometimes me think</p>
+                    <span class="price">RM25.00</span>
+                </div>
+                <a href="#" class="btn">Pre-order</a>
+            </div>
+            <div class="box">
+                <a href="#" class="category-btn">Food</a>
+                <img src="../images/menu/photo_drink01.jpg">
+                <div class="item-text">
+                    <h3>Pikachu Burger</h3>
+                    <p class="item-desc">Lorem ipsum i love burger sometimes me think</p>
+                    <span class="price">RM25.00</span>
+                </div>
+                <a href="#" class="btn">Pre-order</a>
+            </div>
+            <div class="box">
+                <a href="#" class="category-btn">Food</a>
+                <img src="../images/menu/photo_drink04.jpg">
+                <div class="item-text">
+                    <h3>Pikachu Burger</h3>
+                    <p class="item-desc">Lorem ipsum i love burger sometimes me think</p>
+                    <span class="price">RM25.00</span>
+                </div>
+                <a href="#" class="btn">Pre-order</a>
+            </div>
+            <div class="box">
+                <a href="#" class="category-btn">Food</a>
+                <img src="../images/menu/pika4.jpeg">
+                <div class="item-text">
+                    <h3>Pikachu Burger</h3>
+                    <p class="item-desc">Lorem ipsum i love burger sometimes me think</p>
+                    <span class="price">RM25.00</span>
+                </div>
+                <a href="#" class="btn">Pre-order</a>
+            </div>
+            <div class="box">
+                <a href="#" class="category-btn">Food</a>
+                <img src="../images/menu/pika3.jpeg">
+                <div class="item-text">
+                    <h3>Pikachu Burger</h3>
+                    <p class="item-desc">Lorem ipsum i love burger sometimes me think</p>
+                    <span class="price">RM25.00</span>
+                </div>
+                <a href="#" class="btn">Pre-order</a>
+            </div>
+            <div class="box">
+                <a href="#" class="category-btn">Food</a>
+                <img src="../images/menu/pika2.jpeg">
+                <div class="item-text">
+                    <h3>Pikachu Burger</h3>
+                    <p class="item-desc">Lorem ipsum i love burger sometimes me think</p>
+                    <span class="price">RM25.00</span>
+                </div>
+                <a href="#" class="btn">Pre-order</a>
+            </div>
+        </div>
+    </section>
+
+
 </body>
 </html>
