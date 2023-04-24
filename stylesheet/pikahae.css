@@ -188,7 +188,7 @@ section .menu-nav{
 }
 
 .menu .box-container{
-    padding: 20px 80px 20px 80px;
+    padding: 20px 40px 20px 40px;
     width: 100%;
     height: auto;
     /*position: fixed;*/
@@ -196,19 +196,28 @@ section .menu-nav{
     object-fit: cover;
     overflow: hidden;
     display: grid;
-    /*grid-template-columns: repeat(auto-fit, minmax(28rem, 3fr));*/
-    grid-template-columns: 1fr 1fr 1fr 1fr;
 
+}
+
+/*TODO: resize menu image to be the same for everything*/
+@media (min-width: 40px){
+    .menu .box-container{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
 }
 
 .menu .box-container img{
-    width: 521px;
-    height: 347px;
+    width: 30vw;
+    height: 20vw;
+    max-width: 521px;
+    max-height: 347px;
 }
 
 .menu .box-container .box{
-    width: 500px;
-    height: 500px;
+    width: 30vw;
+    height: 20vw;
+    max-width: 500px;
+    max-height: 500px;
     margin: 10px;
     padding: 0 0 0 0;
     background: var(--bg-color);
@@ -217,7 +226,7 @@ section .menu-nav{
     overflow: hidden;
     justify-content: left;
     border: none;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .menu .box-container .box .item-text{
