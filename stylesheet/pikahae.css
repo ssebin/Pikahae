@@ -309,7 +309,7 @@ section .header{
 }
 
 .swiper .profile > span{
-    color: var(---main-color);
+    color: var(--main-color);
     font-size: .8em;
 }
 
@@ -530,7 +530,11 @@ section .menu-nav{
 }
 
 .menu .box-container .box .item-text{
-    padding: 10px 20px 10px 20px;
+    padding: 10px 20px 10px 0px;
+}
+
+.menu .box-container .box .item-text h3{
+    padding-left: 25px;
 }
 
 .menu .box-container .box .item-text .item-desc{
@@ -542,6 +546,7 @@ section .menu-nav{
 
 .menu .box-container .box .item-text .price{
     font-weight: bold;
+    padding-left: 25px;
     padding-bottom: 30px;
 }
 
