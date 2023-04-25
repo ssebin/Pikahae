@@ -121,6 +121,7 @@ section .header{
     display: block;
 }
 
+/** Homepage CSS*/
 .HP-about-us{
     justify-content: center;  
     align-items: center;  
@@ -402,7 +403,7 @@ footer {
 	}
 }
 
-
+/**Menu*/
 .sub-header-wrapper {
     display: flex;
     align-items: center;
