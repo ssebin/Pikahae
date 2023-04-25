@@ -574,3 +574,179 @@ section .menu-nav{
     border-radius: 30px;
     padding: 5px 10px 5px 10px;
 }
+
+/* login/registration */
+
+.form-body{
+    background: linear-gradient(rgba(255,255,255,.80), rgba(255,255,255,.90)),url("../images/pokecafe-bg.jpg");
+    background-size: contain;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;    
+    justify-content: center;
+}
+
+.form-container{
+    margin-top: 2rem;
+}
+
+.register-container{
+    margin-top: 4rem;
+}
+
+.form-card-logo img{
+    width: 150px;
+    height: 150px;
+}
+
+.form-container h1,
+.form-container h2{
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FE6A86;
+    font-size: 3.5rem;
+}
+
+.exclamation {
+    font-family: 'Aldrich';
+    font-style: normal;
+    font-weight: 400;
+    color: white;
+    text-shadow: -1px -1px 0 #FE6A86, 1px -1px 0 #FE6A86, -1px 1px 0 #FE6A86, 1px 1px 0 #FE6A86;
+    font-size: 120%;
+}
+
+.form-container h2{
+    font-size: 1.375rem;
+    margin-top: 20px;
+}
+
+.form-container p{
+    font-size: 1rem;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+.form-card{
+    text-align: center;
+    background-color: white;
+    width: 500px;
+    height: auto;
+    padding: 0.25rem 1.5rem 1.5rem;
+    border-radius: 35px;
+    margin: 10px auto 0;
+    position: relative;
+    filter: drop-shadow(0px 8px 4px rgba(0, 0, 0, 0.24));
+}
+
+.form-card-logo, .form-card-header, .form-card-input, .form-card-footer{
+    text-align: center;
+}
+
+.form-card-input input[type=text],
+.form-card-input input[type=tel],
+.form-card-input input[type=email],
+.form-card-input input[type=password]{
+    outline: none;
+    border: none;
+    border-bottom: 1.2px groove var(--secound-color);
+    width: 24rem;
+    height: auto;
+    margin: 14px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    text-indent: 2px;
+}
+
+.form-card-input input[type=text]::placeholder,
+.form-card-input input[type=tel]::placeholder,
+.form-card-input input[type=email]::placeholder,
+.form-card-input input[type=password]::placeholder{
+    color: rgba(0, 0, 0, 0.4);
+}
+
+.form-card-input input[type=text],
+.form-card-input input[type=tel],
+#password,
+#confirmPassword{
+    width: 11.1rem;
+}
+
+.register-input{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.form-item-other{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.875rem;
+    margin-bottom: 0.8rem;
+    font-weight: 500;
+}
+
+.form-item-other .checkbox{
+    display: flex;
+    align-items: center;
+    margin-right: 2.8rem;
+    color: rgba(0, 0, 0, 0.4);
+    border-color: #808080;  
+}
+
+.form-item-other .checkbox label{
+    margin-left: 5px;
+}
+
+
+.form-container a{
+    text-decoration: none;
+    color: #9B693E;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.form-card-input button{
+    margin: 0.5rem;
+    width: 24rem;
+    height: 2.2rem;
+    background: var(--main-color);
+    border-radius: 10px;
+    border: none;
+    color: white;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-size: 1.063rem;
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.084), 0px 4px 3px rgba(0, 0, 0, 0.168);
+}
+
+.login-btn-google button{
+    background: white;
+    color: rgba(0, 0, 0, 0.54);
+    letter-spacing: 0.2px;
+}
+
+.login-btn-google img{
+    width: 17px;
+    height: 17px;
+    margin-bottom: 3.5px;
+    margin-right: 7px;
+    vertical-align: middle;
+}
+
+.form-card-footer,
+.register-input p{
+    font-size: 0.78rem;
+    font-family: 'Open Sans', sans-serif;
+    margin-top: 0.5rem;
+}
+
+.register-input p{
+    font-size: 0.78rem;
+    margin-bottom: auto;
+}
+
+/* login/registration END */

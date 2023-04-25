@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pikahae Login</title>
+    <link rel="stylesheet" href="../stylesheet/pikahae.css">
+
+    <!-- For icons -->
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!--  Google fonts Roboto -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@100;200;400;500;600;700;800;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,700;1,300;1,400;1,500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Aldrich&family=Open+Sans:wght@600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <section>
+        <nav class="header">
+            <a href="#" class="logo"><img src="../images/logo_draft.png" alt="logo"></a>
+            <!--        <p class="cafe-name">Pikahae</p>-->
+    
+            <ul class="navlist">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Menu</a></li>
+                <li><a href="#">Reservations</a></li>
+            </ul>
+    
+            <div class="icon">
+                <a href="#"><i class='bx bxs-cart'></i></a>
+                <a href="#"><i class='bx bxs-user'></i></a>
+            </div>
+        </nav>
+    </section>
+    <div class="form-body">
+        <div class="form-container">
+            <div class="form-card-logo">
+                <img src="../images/logo_draft.png" alt="pikahae logo">
+            </div>
+            <h1>Welcome Back&nbsp<span class="exclamation">!</span></h1>
+            <div class="form-card login">
+                <div class="form-card-header login header">
+                    <h2>Login</h2>
+                    <p>Enter your details to sign in into your account.</p>
+                </div>
+                <form class="form-card-input login-input">
+                    <div class="form-item">
+                        <input type="email" placeholder="E-mail" required autofocus>
+                    </div>
+                    <div class="form-item">
+                        <input type="password" placeholder="Password" required autofocus>
+                    </div>
+                    <div class="form-item-other">
+                        <div class="checkbox">
+                            <input type="checkbox" id="rememberPassCheckbox">
+                            <label for="rememberPassCheckbox">Remember password</label>
+                        </div>
+                        <a href="./forgotpassword.html">Forgot password?</a>
+                    </div>
+                    <button type="submit">Log In</button><br>
+                    <div class="login-btn-google">
+                        <button type="button"><span><img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" alt="google logo"></span>Continue with Google</button>
+                    </div>
+                </form>
+                <div class="form-card-footer">
+                    New account? <a href="./register.html">Create account</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+</body>
+</html>
