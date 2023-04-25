@@ -500,7 +500,6 @@ section .menu-nav{
 
 }
 
-/*TODO: resize menu image to be the same for everything*/
 @media (min-width: 40px){
     .menu .box-container{
         grid-template-columns: 1fr 1fr 1fr;
@@ -518,7 +517,7 @@ section .menu-nav{
     width: 30vw;
     height: 20vw;
     max-width: 350px;
-    max-height: 500px;
+    max-height: 350px;
     margin: 10px;
     padding: 0 0 0 0;
     background: var(--bg-color);
@@ -545,10 +544,12 @@ section .menu-nav{
     color: #75797F;
 }
 
-.menu .box-container .box .item-text .price{
+.menu .box-container .box .price{
+    display: flex;
+    align-self: end;
     font-weight: bold;
     padding-left: 25px;
-    padding-bottom: 30px;
+    padding-bottom: 5px;
 }
 
 .menu .box-container .box .btn{
@@ -566,6 +567,7 @@ section .menu-nav{
 }
 
 .menu .box-container .category-btn{
+    font-size: small;
     position: absolute;
     top: 20px;
     left: 20px;
@@ -574,6 +576,25 @@ section .menu-nav{
     border-radius: 30px;
     padding: 5px 10px 5px 10px;
 }
+
+.menu .menu-bottom-img{
+    /*display: flex;
+    flex-wrap: wrap;
+    row-gap: 2em;*/
+    /*flex-direction: row;*/
+}
+
+.menu .menu-bottom-img > * {
+    flex: 1;
+}
+
+.menu .menu-bottom-img #pika-bottle-img{
+    width: 200px;
+    height: auto;
+    align-self: flex-end;
+}
+
+/* END FOR MENU PAGE */
 
 /* login/registration */
 
