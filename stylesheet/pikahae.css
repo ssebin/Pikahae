@@ -62,6 +62,7 @@ section .header{
 }
 
 .navlist li a{
+    text-decoration: none;
     color: #9B693E;
     font-weight: 500;
     font-size: 17px;
