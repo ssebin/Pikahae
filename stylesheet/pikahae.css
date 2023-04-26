@@ -900,6 +900,7 @@ section .menu-nav{
 /* END FOR MENU PAGE */
 
 /* login/registration */
+/* login/registration START */
 
 .form-body{
     background: linear-gradient(rgba(255,255,255,.80), rgba(255,255,255,.90)),url("../images/pokecafe-bg.jpg");
@@ -1008,7 +1009,7 @@ section .menu-nav{
     display: flex;
     align-items: center;
     justify-content: space-around;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-size: 0.875rem;
     margin-bottom: 0.8rem;
     font-weight: 500;
@@ -1030,7 +1031,7 @@ section .menu-nav{
 .form-container a{
     text-decoration: none;
     color: #9B693E;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 
 .form-card-input button{
@@ -1064,7 +1065,7 @@ section .menu-nav{
 .form-card-footer,
 .register-input p{
     font-size: 0.78rem;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
     margin-top: 0.5rem;
 }
 
@@ -1277,3 +1278,127 @@ select {
 }
 
 /* profile end */
+/* manage menu START  */
+
+.admin-view{
+    background-image: linear-gradient(rgba(255,255,255,.80), rgba(255,255,255,.90)),url("../images/pokecafe-bg.jpg");
+    background-size: cover;
+}
+
+.admin-view-body{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.admin-view-header{    
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+    align-items: center;
+    padding-top: 1.5rem;
+}
+
+.admin-view-header h1{
+    font-size: var(--h2-font);
+    color: var(--main-color);
+    margin: 0;
+    text-align: left;
+    margin-right: auto;
+}
+
+.admin-view-header a{
+    margin: 0.35rem;
+}
+
+.admin-view-header button,
+.admin-view-table button{
+    background-color: var(--main-color);
+    border-radius: 50%;
+    width: 1.875rem;
+    height: 1.875rem;
+    border: none;
+    text-align: center;
+}
+
+.admin-view-header img,
+.admin-view-table img{
+    width: auto;
+    height: 1.1rem;
+    display: block;
+    margin: 0 auto;
+}
+
+.admin-view-header input[type=text]{
+    width: 18rem;
+    height: 1.875rem;
+    margin-left: 0.625rem;
+    border-radius: 15px;
+    border: none;
+    font-size: 0.75rem;
+    text-indent: 15px;
+    background-image: url(../images/manage/search.png);
+    background-position: right 15px center;
+    background-size: 1rem;
+    background-repeat: no-repeat;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.admin-view-header input[type=text]::placeholder{
+    color: var(--main-color);
+    opacity: 0.5;
+}
+
+table{
+    width: 82vw;
+    height: 50vh;
+    /* border-radius: 15px; */
+    text-align: center;
+    border-collapse: separate;
+    border-spacing: 0 0.625rem;
+    overflow: hidden;
+    margin-top: 0rem;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+}
+
+tr{
+    border-radius: 50px;
+    overflow: hidden;
+}
+
+thead th{
+    background-color: white;
+    padding: 1rem 2rem;
+    letter-spacing: 0.07rem;
+    color: #274C5B;
+}
+
+td{
+    border: 0.25rem solid transparent;
+    padding: 0.625rem;
+    color: #274C5B;
+}
+
+th:first-child,
+td:first-child {
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+ }
+ 
+ th:last-child,
+ td:last-child {
+    border-bottom-right-radius: 15px;
+    border-top-right-radius: 15px;
+ }
+
+tr:nth-child(odd){
+    background-color: #EBDEDE;
+ }
+
+ tr:nth-child(even){
+    background-color: #FFEFEF;
+ }
+
+ /* manage menu END */
