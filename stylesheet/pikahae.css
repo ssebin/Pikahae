@@ -177,7 +177,7 @@ section .header{
     color: var(--main-color);  
     padding-top: 40px;  
     margin-top: 40px;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
 }
 
 .btn-pink{
@@ -213,7 +213,7 @@ section .header{
     height: auto;
     /*position: fixed;*/
     object-position: center;
-    object-fit: ;
+    object-fit: contain;
     overflow: hidden;
     display: flex;
     align-items: center;
