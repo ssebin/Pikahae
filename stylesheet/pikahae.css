@@ -248,7 +248,7 @@ section .header{
     width: 100%;
     text-align: center;
     border-radius: 8px;
-    padding: 4em 0;
+    padding: 3em 0;
 }
 
 .review-title{
@@ -382,6 +382,13 @@ footer{
     margin: 10px auto;
     line-height: 28px;
     font-size: 14px;
+}
+.footer-content img{
+    position: absolute;
+    right: 20px;
+    bottom: -200rem;
+    width: 170px;
+    height: auto;
 }
 .socials{
     list-style: none;
