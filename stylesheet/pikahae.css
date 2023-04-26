@@ -1285,17 +1285,7 @@ select {
 
 /* ITEM DETAIL PAGE START */
 
-.main-item-body #back-btn{
-    width: 100px;
-    color: var(--bg-color);
-    background: var(--main-color);
-    border: none;
-    border-radius: 40px;
-    padding: 10px 0px 10px 0px;
-    position: absolute;
-    left: 50px;
-    height: auto;
-}
+
 
 .main-item-body{
     background: linear-gradient(rgba(255,255,255,.80), rgba(255,255,255,.90)),url("../images/pokecafe-bg.jpg");
@@ -1304,6 +1294,16 @@ select {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.main-item-body #back-btn{
+    width: 100px;
+    color: var(--bg-color);
+    background: var(--main-color);
+    border: none;
+    border-radius: 40px;
+    padding: 10px 0px 10px 0px;
+    margin-bottom: 10px;
 }
 
 .main-container{
@@ -1683,6 +1683,10 @@ Product section styling
         display: none;
     }
 */
+
+    .main-item-body #back-btn{
+        position: absolute;
+    }
 
     .item-section{
         display: inline-block;
