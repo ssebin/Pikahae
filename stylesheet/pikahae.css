@@ -134,7 +134,7 @@ section .header{
 }
 
 .HP-heading{
-    font-size: 4rem;    
+    font-size: 3rem;    
     color: var(--main-color);    
     margin-top: 50px;
     margin-bottom: 40px;
@@ -154,7 +154,7 @@ section .header{
     font-size: 16px;
     font-weight: 500;
     border-radius: 0.375rem;
-    margin-bottom: 70px;
+    margin-bottom: 150px;
     line-height: 1.8;
 }
 
