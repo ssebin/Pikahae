@@ -175,9 +175,9 @@ section .header{
 .HP-menu-heading{
     font-size: 40px;
     color: var(--main-color);  
-    padding-top: 40px;  
-    margin-top: 40px;
-    margin-bottom: 20px;
+    padding-top: 10px;  
+    margin-top: 60px;
+    line-height: 3;
 }
 
 .btn-pink{
@@ -187,9 +187,9 @@ section .header{
     font-size: 16px;
     font-weight: 500;
     border-radius: 0.375rem;
-    margin-top: 50px;
-    margin-bottom: 50px;
-    line-height: 12;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    line-height: 10;
 }
 
 .btn-pink:hover{
@@ -204,7 +204,7 @@ section .header{
     object-fit: cover;
     overflow: hidden;
     display: block;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .HP-reservation{
@@ -246,7 +246,7 @@ section .header{
     width: 100%;
     text-align: center;
     border-radius: 8px;
-    padding: 3em 0;
+    padding: 2em 0;
 }
 
 .review-title{
@@ -430,6 +430,108 @@ footer{
 .footer-line{
     border: 0.5px solid #ddddddc1;
 }
+
+/** Admin Homepage */
+
+.admin-manage{
+    width: 100%;
+    height: auto;
+    background: linear-gradient(rgba(255,255,255,.80), rgba(255,255,255,.90));
+}
+
+.admin-manage .box-container{
+    padding-left: 2% ;
+    padding-right: 2%;
+    /*padding: 20px 40px 20px 40px;*/
+    width: 100%;
+    height: auto;
+    object-position: center;
+    object-fit: cover;
+    overflow: hidden;
+    display: grid;
+
+}
+
+@media (min-width: 40px){
+    .admin-manage .box-container{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+.admin-manage .box-container img{
+    width: 30vw;
+    height: 20vw;
+    max-width: 350px;
+    max-height: 200px;
+}
+
+.admin-manage .box-container .box{
+    width: 30vw;
+    height: 20vw;
+    max-width: 350px;
+    max-height: 350px;
+    margin: 10px;
+    padding: 0 0 0 0;
+    background: var(--bg-color);
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+    justify-content: left;
+    border: none;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.admin-manage .box-container .box .item-text{
+    padding: 10px 20px 10px 0px;
+}
+
+.admin-manage .box-container .box .item-text h3{
+    padding-left: 25px;
+}
+
+.admin-manage .box-container .box .item-text .item-desc{
+    font-size: small;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: #75797F;
+}
+
+.admin-manage .box-container .box .price{
+    display: flex;
+    align-self: end;
+    font-weight: bold;
+    padding-left: 25px;
+    padding-bottom: 5px;
+}
+
+.admin-manage .box-container .box .btn{
+    margin-bottom: 10px;
+    margin-right: 10px;
+    position: absolute;
+    font-size: small;
+    bottom: 5px;
+    right: 5px;
+    background: var(--main-color);
+    color: white;
+    border-radius: 30px;
+    padding: 5px 10px 5px 10px;
+    justify-content: flex-end;
+}
+
+.admin-manage .box-container .category-btn{
+    font-size: small;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: var(--main-color);
+    color: white;
+    border-radius: 30px;
+    padding: 5px 10px 5px 10px;
+}
+
+/** END of Admin HOMEPAGE */
+
+/** END of HOMEPAGE */
 
 /** MENU */
 .sub-header-wrapper {

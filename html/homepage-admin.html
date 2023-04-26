@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pikahae</title>
+    <link rel="stylesheet" href="../stylesheet/pikahae.css">
+
+    <!-- For icons -->
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!--  Google fonts Roboto -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Jost:wght@100;200;400;500;600;700;800;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,700;1,300;1,400;1,500&display=swap"
+        rel="stylesheet">
+
+    <!--Review swiper-->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+
+    <!--Footer Bootstrap-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+    <!-- header -->
+    <section>
+        <nav class="header">
+            <a href="#" class="logo"><img src="../images/logo_draft.png" alt="logo"></a>
+            <!--        <p class="cafe-name">Pikahae</p>-->
+
+            <ul class="navlist">
+                <li><a href="homepage-admin.html">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Reservations</a></li>
+                <li><a href="menu.html">Menu</a></li>
+            </ul>
+
+            <div class="icon">
+                <a href="#"><i class='bx bxs-cart'></i></a>
+                <a href="#"><i class='bx bxs-user'></i></a>
+            </div>
+        </nav>
+
+        <!--Different banner for homepage-->
+        <div class="homepage_banner">
+            <img src="../images/homepage/homepage_admin_main.jpg" alt="homepage customer main pic">
+        </div>
+    </section>
+
+    <!--Homepage Section-->
+    <section class="home">
+        <!--About Us-->
+        <div class="HP-about-us">
+            <h1 class="HP-heading">Welcome, PikaFam!</h1>
+            <p class="HP-desc">"Gotta serve 'em all"<br>
+                Manage consumer accounts, reservations, and menu items.<br>
+                All within your fingertips.<br></p>
+            <a href="#" class="btn-yellow">About Us</a>
+        </div>
+        <!--Menu-->
+        <div class="HP-menu">
+            <h2 class="HP-menu-heading">Manage</h2>
+
+            <!--Copied from homung's menu-->
+            <section class="admin-manage" id="admin-manage">
+                <!--  TODO: add navigation here-->
+                    <div class="box-container">
+                        <div class="box">
+                            <a href="#" class="category-btn">Food</a>
+                            <img src="../images/menu/photo_food01_02.jpg">
+                            <div class="item-text">
+                                <h3>Pikachu Burger</h3>
+                                <p class="item-desc">Lorem ipsum i love burger sometimes me think</p>
+                                <span class="price">RM25.00</span>
+                            </div>
+                            <div id="preorder-btn">
+                                <a href="#" class="btn">Pre-order</a>
+                            </div>
+            
+                        </div>
+                        <div class="box">
+                            <a href="#" class="category-btn">Food</a>
+                            <img src="../images/menu/photo_food02_02.jpg">
+                            <div class="item-text">
+                                <h3>Pikachu Burger</h3>
+                                <p class="item-desc">Lorem ipsum i love burger sometimes me think</p>
+                                <span class="price">RM25.00</span>
+                            </div>
+                            <a href="#" class="btn">Pre-order</a>
+                        </div>
+                        <div class="box">
+                            <a href="#" class="category-btn">Food</a>
+                            <img src="../images/menu/photo_sweets02.jpg">
+                            <div class="item-text">
+                                <h3>Pikachu Burger</h3>
+                                <p class="item-desc">Lorem ipsum i love burger sometimes me think</p>
+                                <span class="price">RM25.00</span>
+                            </div>
+                            <a href="#" class="btn">Pre-order</a>
+                        </div>
+                    </div>
+                </section>
+            <a href="#" class="btn-pink">Contact Manager</a>
+        </div>
+
+        <!--Mid pic-->
+        <div class="HP-mid">
+            <img src="../images/homepage/homepage_admin_mid.jpg" alt="homepage customer mid pic">
+        </div>
+
+        <!--Review-->
+        <div class="container">
+            <div class="board">
+                <h2 class="review-title">What our customers are saying</h2>
+
+                <!-- Slider main container -->
+                <div class="swiper">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide">
+                            <div class="flex">
+                                <div class="comments">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                    Non, placeat quisquam? Animi sunt, dignissimos est sit reiciendis iste ipsa error?
+                                </div>
+                                <div class="profile">
+                                    <img src="../images/review/review-brock.jpg" alt="">
+                                    <a href="#">Brock</a>
+                                    <span>Gym Leader</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="flex">
+                                <div class="comments">
+                                    Non, placeat quisquam? Animi sunt, dignissimos est sit reiciendis iste ipsa error?
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                </div>
+                                <div class="profile">
+                                    <img src="../images/review/review-jessie.jpeg" alt="">
+                                    <a href="#">Jessie</a>
+                                    <span>Team Rocket</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="flex">
+                                <div class="comments">
+                                    Animi sunt, ipsa error? Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                    Non, placeat quisquam? dignissimos est sit reiciendis iste
+                                </div>
+                                <div class="profile">
+                                    <img src="../images/review/review-oak.png" alt="">
+                                    <a href="#">Samuel Oak</a>
+                                    <span>Pokemon Researcher</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- If we need pagination -->
+                    <div class="swiper-pagination"></div>
+
+                    <!-- If we need navigation buttons -->
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+
+                </div>
+
+            </div>
+        </div>
+
+        <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+        <script src="../script/main.js"></script>
+
+        <!--Footer-->
+        <footer>
+            
+        <div class="footer-content">
+            <h3>Pikahae</h3>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.<br>Illo iste corrupti doloribus odio sed!</p>
+            <ul class="socials">
+                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+            </ul>
+            <img src=../images/babies_trans.png>
+        </div>
+        <hr class="footer-line">
+        <div class="footer-bottom">
+            <p>copyright &copy;2023 Pikahae. designed by <span>dino kuning</span></p>
+        </div>
+        </footer>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    </section>
+
+</body>
+
+</html>
