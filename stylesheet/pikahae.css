@@ -156,6 +156,7 @@ section .header{
     border-radius: 0.375rem;
     margin-bottom: 150px;
     line-height: 1.8;
+    text-decoration: none;
 }
 
 .btn-yellow:hover{
@@ -1979,3 +1980,80 @@ tr:nth-child(odd){
  }
 
  /* manage menu END */
+
+
+/* Annei reservation home*/
+
+.res-banner-text {
+    font-family: 'Aldrich', sans-serif;
+}
+
+.banner-text {
+    font-family: 'Aldrich', sans-serif;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.reservationDets {
+    justify-content: center;  
+    align-items: center;  
+    top: 50%;
+    left: 50%;  
+    width: 100%;
+    text-align: center;
+  }
+  
+  .reservationHead {
+    font-size: 3rem;    
+      color: var(--main-color);    
+      margin-top: 50px;
+      margin-bottom: 40px;
+      font-weight: bold;
+  }
+
+  .reservation-Button{
+    background-color: var(--btn-color);
+  }
+
+  .reservation-description{
+    justify-content: center;  
+      align-items: center;   
+      width: 100%;
+      text-align: center;
+      background-color: var(--bg-color);
+      padding-top: 50px;
+      padding-bottom: 50px;
+      padding-left: 50px;
+      padding-right: 50px;
+      margin-bottom: 50px;
+      margin-top: 50px;
+  }
+  
+  .res-dec{
+    font-size: 1.1rem;
+      color: var(--text-color);
+      line-height: 1.8;
+  }
+
+  /* Annei reservation home end */
+
+  /* Annei reserve from p1 */
+  .reservation-form-container{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: 70px;
+    margin-right: 70px;
+    padding:50px;
+    justify-content: center;  
+    align-items: center;   
+    text-align: center;
+    background-color: var(--header-color);
+  }
+  
+  .reservation-time-form {
+    margin-top: 10px;
+  }
+
+
