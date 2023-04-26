@@ -404,7 +404,7 @@ footer {
 	}
 }
 
-/**Menu*/
+/** MENU */
 .sub-header-wrapper {
     display: flex;
     align-items: center;
@@ -421,25 +421,106 @@ footer {
 
 }
 
-.search-form{
-    flex-grow: 1;
-    min-width: 30rem;
-    position: absolute;
-    margin-right: 30px;
+
+/* SEARCH BAR */
+.input-box {
     right: 20px;
-    display: flex;
-    align-items: center;
+    position: absolute;
+    height: 50px;
+    max-width: 400px;
+    width: 100%;
+    background: #fff;
+    margin: 0 20px;
+    border-radius: 30px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
 }
 
-.search-form .search-box{
+.input-box i,
+.input-box .button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.input-box i {
+    left: 20px;
+    font-size: 30px;
     color: var(--main-color);
-    padding-left: 20px;
+}
+.input-box input {
+    height: 100%;
     width: 100%;
-    /*min-width: 500px;*/
-    height: 40px;
-    border-radius: 30px;
+    outline: none;
+    font-size: 1.5vw;
+    font-weight: 400;
     border: none;
-    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    padding: 0 155px 0 30px;
+    color: var(--main-color);
+    background-color: transparent;
+}
+.input-box .button {
+    right: 0px;
+    font-size: 18px;
+    height: 50px;
+    font-weight: 400;
+    color: #ffffff;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.input-box .button:active {
+    transform: translateY(-50%) scale(0.98);
+}
+
+/* Responsive */
+@media screen and (min-width: 400px) {
+    .input-box {
+        width: 200px;
+        height: 20px;
+        margin: 0 8px;
+    }
+
+    .input-box i {
+        left: 12px;
+        font-size: 14px;
+    }
+
+    .input-box input {
+        font-size: 14px;
+        padding: 0 80px 0 20px;
+    }
+
+    .input-box .button {
+        height: 20px;
+        font-size: 12px;
+        padding: 8px 18px;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .input-box {
+        width: 400px;
+        height: 30px;
+        margin: 0 8px;
+    }
+
+    .input-box i {
+        left: 12px;
+        font-size: 14px;
+    }
+
+    .input-box input {
+        font-size: 14px;
+        padding: 0 80px 0 20px;
+    }
+
+    .input-box .button {
+        height: 30px;
+        font-size: 12px;
+        padding: 8px 18px;
+    }
 }
 
 hr{
@@ -575,13 +656,6 @@ section .menu-nav{
     color: white;
     border-radius: 30px;
     padding: 5px 10px 5px 10px;
-}
-
-.menu .menu-bottom-img{
-    /*display: flex;
-    flex-wrap: wrap;
-    row-gap: 2em;*/
-    /*flex-direction: row;*/
 }
 
 .menu .menu-bottom-img > * {
@@ -771,3 +845,4 @@ section .menu-nav{
 }
 
 /* login/registration END */
+
