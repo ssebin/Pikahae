@@ -134,7 +134,7 @@ section .header{
 }
 
 .HP-heading{
-    font-size: 5rem;    
+    font-size: 4rem;    
     color: var(--main-color);    
     margin-top: 50px;
     margin-bottom: 40px;
@@ -173,10 +173,10 @@ section .header{
 }
 
 .HP-menu-heading{
-    font-size: 3vw;    
+    font-size: 40px;
     color: var(--main-color);  
-    padding-top: 50px;  
-    margin-top: 50px;
+    padding-top: 40px;  
+    margin-top: 40px;
     margin-bottom: 40px;
 }
 
@@ -213,7 +213,7 @@ section .header{
     height: auto;
     /*position: fixed;*/
     object-position: center;
-    object-fit: cover;
+    object-fit: ;
     overflow: hidden;
     display: flex;
     align-items: center;
@@ -223,10 +223,8 @@ section .header{
 }
 
 .HP-res-1{
-    flex:1 1 40rem;
-    position: relative;
+    flex:1 1 20rem;
 }
-
 .HP-res-2{
     flex:1 1 40rem;
 }
@@ -384,11 +382,12 @@ footer{
     font-size: 14px;
 }
 .footer-content img{
-    position: absolute;
-    right: 20px;
-    bottom: -200rem;
+    position: sticky;
+    left: 200rem;
     width: 170px;
     height: auto;
+    margin-top: -180px;
+    opacity: 70%;
 }
 .socials{
     list-style: none;
@@ -399,6 +398,7 @@ footer{
 }
 .socials li{
     margin: 0 10px;
+    padding-bottom: 15px;
 }
 .socials a{
     text-decoration: none;
