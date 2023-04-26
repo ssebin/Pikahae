@@ -207,6 +207,7 @@ section .header{
     margin-bottom: 10px;
 }
 
+/** Homepage-Reservation */
 .HP-reservation{
     padding: 20px 40px 20px 40px;
     width: 100%;
@@ -228,11 +229,9 @@ section .header{
 .HP-res-2{
     flex:1 1 40rem;
 }
+/** End of homepage-reservation */
 
-.footer{
-    background-color: var(--header-color);
-}
-
+/** Review Swiper */
 .container{
     height: 98vh;
     display: flex;
@@ -346,7 +345,9 @@ section .header{
     }
 
 }
+/** End of review swiper */
 
+/** Footer */
 footer{
     bottom: 0;
     left: 0;
@@ -430,13 +431,112 @@ footer{
 .footer-line{
     border: 0.5px solid #ddddddc1;
 }
+/** End of footer */
+
+/** Customer-Menu */
+.homepage-menu{
+    width: 100%;
+    height: auto;
+}
+
+.homepage-menu .box-container{
+    padding-left: 2% ;
+    padding-right: 2%;
+    /*padding: 20px 40px 20px 40px;*/
+    width: 100%;
+    height: auto;
+    object-position: center;
+    object-fit: cover;
+    overflow: hidden;
+    display: grid;
+
+}
+
+@media (min-width: 40px){
+    .homepage-menu .box-container{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+.homepage-menu .box-container img{
+    width: 30vw;
+    height: 20vw;
+    max-width: 350px;
+    max-height: 200px;
+}
+
+.homepage-menu .box-container .box{
+    width: 30vw;
+    height: 20vw;
+    max-width: 350px;
+    max-height: 350px;
+    margin: 10px;
+    padding: 0 0 0 0;
+    background: var(--bg-color);
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+    justify-content: left;
+    border: none;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.homepage-menu .box-container .box .item-text{
+    padding: 10px 20px 10px 0px;
+}
+
+.homepage-menu .box-container .box .item-text h3{
+    padding-left: 25px;
+}
+
+.homepage-menu .box-container .box .item-text .item-desc{
+    font-size: small;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: #75797F;
+}
+
+.homepage-menu .box-container .box .price{
+    display: flex;
+    align-self: end;
+    font-weight: bold;
+    padding-left: 25px;
+    padding-bottom: 5px;
+}
+
+.homepage-menu .box-container .box .btn{
+    margin-bottom: 10px;
+    margin-right: 10px;
+    position: absolute;
+    font-size: small;
+    bottom: 5px;
+    right: 5px;
+    background: var(--main-color);
+    color: white;
+    border-radius: 30px;
+    padding: 5px 10px 5px 10px;
+    justify-content: flex-end;
+}
+
+.homepage-menu .box-container .category-btn{
+    font-size: small;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: var(--main-color);
+    color: white;
+    border-radius: 30px;
+    padding: 5px 10px 5px 10px;
+}
+/** End of Customer-Menu */
+
+/** End of Customer Homepage */
 
 /** Admin Homepage */
 
 .admin-manage{
     width: 100%;
     height: auto;
-    background: linear-gradient(rgba(255,255,255,.80), rgba(255,255,255,.90));
 }
 
 .admin-manage .box-container{
