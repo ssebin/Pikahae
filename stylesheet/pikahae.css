@@ -356,7 +356,6 @@ footer{
     background: var(--header-color);
     height: auto;
     width: 100vw;
-    padding-top: 40px;
     color: var(--secound-color);
     margin: 0;
     padding: 0;
@@ -483,7 +482,7 @@ footer{
 }
 
 .homepage-menu .box-container .box .item-text{
-    padding: 10px 20px 10px 0px;
+    padding: 10px 20px 10px 0;
 }
 
 .homepage-menu .box-container .box .item-text h3{
@@ -1050,7 +1049,7 @@ section .menu-navlist{
     font-family: 'Roboto';
     font-style: normal;
     font-size: 1.063rem;
-    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.084), 0px 4px 3px rgba(0, 0, 0, 0.168);
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.084), 0 4px 3px rgba(0, 0, 0, 0.168);
 }
 
 .login-btn-google button{
@@ -1460,61 +1459,6 @@ Product section styling
     margin-bottom: 3.5rem;
 }
 
-.img-main__btn {
-    display: none;
-}
-
-.img-btns {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 2rem;
-}
-
-.img-btn {
-    display: block;
-    cursor: pointer;
-    background: none;
-    border: none;
-    border-radius: 10%;
-    transition: all 0.3s;
-    position: relative;
-}
-
-.img-btn::after {
-    content: "";
-    max-width: 100%;
-    height: 100%;
-    background-color: var(--bg-color);
-    border-radius: 10%;
-    border: 3px solid transparent;
-    margin: auto;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    opacity: 0;
-}
-.img-btn:hover {
-    background-color: var(--main-color);
-}
-
-.img-btn:hover::after {
-    border: 3px solid var(--main-color);
-    opacity: 0.5;
-}
-
-.img-btn__img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 10%;
-    border: 3px solid transparent;
-    transition: all 0.3s;
-    transform-origin: bottom;
-}
-
 /*Right item details styling */
 
 .item-detail {
@@ -1542,8 +1486,6 @@ Product section styling
     font-size: 30px;
     font-weight: bold;
 }
-
-
 
 .quantity-btnbox {
     padding-top: 10px;
@@ -1685,9 +1627,29 @@ Product section styling
     }
 */
 
-    .main-item-body #back-btn{
-        position: absolute;
+
+    section .menu-nav{
+        width: 600px;
+        justify-content: space-between;
     }
+
+    section .menu-navlist{
+        width: 600px;
+    }
+
+    .menu-navlist li{
+        display: flex;
+        margin: 0;
+        padding-left: 10%;
+        padding-right: 10%;
+        justify-content: center;
+    }
+
+    .menu-navlist li a{
+        font-weight: 500;
+        font-size: 15px;
+    }
+
 
     .item-section{
         display: inline-block;
@@ -1696,6 +1658,7 @@ Product section styling
         padding: 50px 30px 30px 30px;
         position: relative;
         width: 450px;
+        margin-left: 20px;
 
     }
     .item {
@@ -1788,6 +1751,12 @@ Product section styling
         font-size: 20px;
     }
 
+    #back-btn{
+        position: absolute;
+        top: 510px;
+        /*bottom: 10px;*/
+        left: 100px;
+    }
 
     /* Cart */
     .head-cart {
@@ -1801,6 +1770,18 @@ Product section styling
         max-width: 100%;
         left: 50%;
         transform: translateX(-50%);
+    }
+
+    section .menu-nav{
+        width: 400px;
+    }
+
+    section .menu-navlist{
+        width: 400px;
+    }
+
+    .main-item-body #back-btn{
+        left: 40px;
     }
 }
 
@@ -1874,7 +1855,6 @@ JavaScript Triggered Classes
     align-items: center;
     justify-content: space-around;
     text-align: center;
-    align-items: center;
     padding-top: 1.5rem;
 }
 
@@ -1936,7 +1916,7 @@ table{
     border-collapse: separate;
     border-spacing: 0 0.625rem;
     overflow: hidden;
-    margin-top: 0rem;
+    margin-top: 0;
     font-family: 'Roboto', sans-serif;
     font-size: 1rem;
 }
