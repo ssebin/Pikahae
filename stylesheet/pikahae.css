@@ -2228,6 +2228,7 @@ tr:nth-child(odd){
     border-radius: 0.625rem;
     padding: 1rem;
     text-align: center;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
   }
 
   .img-container {
@@ -2237,6 +2238,7 @@ tr:nth-child(odd){
     position: relative;
   }
 
+  /* Anneis reservationSelectTable start */
   .img-container img {
     position: absolute;
     top: 0;
@@ -2245,6 +2247,26 @@ tr:nth-child(odd){
     height: 15.625rem;
     object-fit: cover;
   }
+
+  .available-table-header {
+    font-weight: bold;
+    color: var(--main-color);
+  }
+
+  .select-table-header {
+    color: var(--main-color);
+    margin-bottom: 30px;
+  }
+
+  .form-check-input:checked {
+    background-color: var(--main-color) !important;
+  }
+
+  .card.selected {
+    background-color: var(--main-color-light); 
+  }
+  
+  
 
 .member-container .item p {
     font-size: 1.125rem;
