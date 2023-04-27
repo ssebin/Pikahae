@@ -903,7 +903,6 @@ section .menu-navlist{
 
 /* END FOR MENU PAGE */
 
-/* login/registration */
 /* login/registration START */
 
 .form-body{
@@ -1049,13 +1048,20 @@ section .menu-navlist{
     font-family: 'Roboto';
     font-style: normal;
     font-size: 1.063rem;
-    box-shadow: 0 0 3px rgba(0, 0, 0, 0.084), 0 4px 3px rgba(0, 0, 0, 0.168);
+    box-shadow: 0 5px 0 #CC566B;
+    transition: transform 0.1s ease-out;
+}
+
+.form-card-input button:active{
+    box-shadow: none;
+    transform: translateY(5px);
 }
 
 .login-btn-google button{
     background: white;
     color: rgba(0, 0, 0, 0.54);
     letter-spacing: 0.2px;
+    box-shadow: 0 5px 0 #CCCCCC;
 }
 
 .login-btn-google img{
