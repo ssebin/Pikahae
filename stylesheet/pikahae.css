@@ -124,8 +124,8 @@ section .header{
 
 /** Homepage CSS*/
 .cool-fontz{
-    font-size: 3rem;
-    color: var(--main-color);
+    font-size: 3rem;    
+    color: var(--main-color);    
     margin-top: 50px;
     margin-bottom: 40px;
     color: white;
@@ -165,7 +165,6 @@ section .header{
     border-radius: 0.375rem;
     margin-bottom: 150px;
     line-height: 1.8;
-    text-decoration: none;
 }
 
 .btn-yellow:hover{
@@ -365,6 +364,7 @@ footer{
     background: var(--header-color);
     height: auto;
     width: 100vw;
+    padding-top: 40px;
     color: var(--secound-color);
     margin: 0;
     padding: 0;
@@ -491,7 +491,7 @@ footer{
 }
 
 .homepage-menu .box-container .box .item-text{
-    padding: 10px 20px 10px 0;
+    padding: 10px 20px 10px 0px;
 }
 
 .homepage-menu .box-container .box .item-text h3{
@@ -1032,7 +1032,6 @@ section .menu-navlist{
 
 /* END FOR MENU PAGE */
 
-/* login/registration */
 /* login/registration START */
 
 .form-body{
@@ -1178,13 +1177,21 @@ section .menu-navlist{
     font-family: 'Roboto';
     font-style: normal;
     font-size: 1.063rem;
-    box-shadow: 0 0 3px rgba(0, 0, 0, 0.084), 0 4px 3px rgba(0, 0, 0, 0.168);
+    box-shadow: 0 5px 0 #CC566B;
+    transition: transform 0.1s ease-out;
+}
+
+.form-card-input button:active{
+    box-shadow: none;
+    transform: translateY(5px);
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.084), 0px 4px 3px rgba(0, 0, 0, 0.168);
 }
 
 .login-btn-google button{
     background: white;
     color: rgba(0, 0, 0, 0.54);
     letter-spacing: 0.2px;
+    box-shadow: 0 5px 0 #CCCCCC;
 }
 
 .login-btn-google img{
@@ -1414,7 +1421,17 @@ select {
 
 /* ITEM DETAIL PAGE START */
 
-
+.main-item-body #back-btn{
+    width: 100px;
+    color: var(--bg-color);
+    background: var(--main-color);
+    border: none;
+    border-radius: 40px;
+    padding: 10px 0px 10px 0px;
+    position: absolute;
+    left: 50rem;
+    height: auto;
+}
 
 .main-item-body{
     background: linear-gradient(rgba(255,255,255,.80), rgba(255,255,255,.90)),url("../images/pokecafe-bg.jpg");
@@ -1423,16 +1440,6 @@ select {
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-.main-item-body #back-btn{
-    width: 100px;
-    color: var(--bg-color);
-    background: var(--main-color);
-    border: none;
-    border-radius: 40px;
-    padding: 10px 0px 10px 0px;
-    margin-bottom: 10px;
 }
 
 .main-container{
@@ -1588,6 +1595,61 @@ Product section styling
     margin-bottom: 3.5rem;
 }
 
+.img-main__btn {
+    display: none;
+}
+
+.img-btns {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+}
+
+.img-btn {
+    display: block;
+    cursor: pointer;
+    background: none;
+    border: none;
+    border-radius: 10%;
+    transition: all 0.3s;
+    position: relative;
+}
+
+.img-btn::after {
+    content: "";
+    max-width: 100%;
+    height: 100%;
+    background-color: var(--bg-color);
+    border-radius: 10%;
+    border: 3px solid transparent;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0;
+}
+.img-btn:hover {
+    background-color: var(--main-color);
+}
+
+.img-btn:hover::after {
+    border: 3px solid var(--main-color);
+    opacity: 0.5;
+}
+
+.img-btn__img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10%;
+    border: 3px solid transparent;
+    transition: all 0.3s;
+    transform-origin: bottom;
+}
+
 /*Right item details styling */
 
 .item-detail {
@@ -1615,6 +1677,8 @@ Product section styling
     font-size: 30px;
     font-weight: bold;
 }
+
+
 
 .quantity-btnbox {
     padding-top: 10px;
@@ -1756,30 +1820,6 @@ Product section styling
     }
 */
 
-
-    section .menu-nav{
-        width: 600px;
-        justify-content: space-between;
-    }
-
-    section .menu-navlist{
-        width: 600px;
-    }
-
-    .menu-navlist li{
-        display: flex;
-        margin: 0;
-        padding-left: 10%;
-        padding-right: 10%;
-        justify-content: center;
-    }
-
-    .menu-navlist li a{
-        font-weight: 500;
-        font-size: 15px;
-    }
-
-
     .item-section{
         display: inline-block;
         justify-items: center;
@@ -1787,7 +1827,6 @@ Product section styling
         padding: 50px 30px 30px 30px;
         position: relative;
         width: 450px;
-        margin-left: 20px;
 
     }
     .item {
@@ -1880,12 +1919,6 @@ Product section styling
         font-size: 20px;
     }
 
-    #back-btn{
-        position: absolute;
-        top: 510px;
-        /*bottom: 10px;*/
-        left: 100px;
-    }
 
     /* Cart */
     .head-cart {
@@ -1899,18 +1932,6 @@ Product section styling
         max-width: 100%;
         left: 50%;
         transform: translateX(-50%);
-    }
-
-    section .menu-nav{
-        width: 400px;
-    }
-
-    section .menu-navlist{
-        width: 400px;
-    }
-
-    .main-item-body #back-btn{
-        left: 40px;
     }
 }
 
@@ -1984,6 +2005,7 @@ JavaScript Triggered Classes
     align-items: center;
     justify-content: space-around;
     text-align: center;
+    align-items: center;
     padding-top: 1.5rem;
 }
 
@@ -2045,7 +2067,7 @@ table{
     border-collapse: separate;
     border-spacing: 0 0.625rem;
     overflow: hidden;
-    margin-top: 0;
+    margin-top: 0rem;
     font-family: 'Roboto', sans-serif;
     font-size: 1rem;
 }
@@ -2089,351 +2111,3 @@ tr:nth-child(odd){
  }
 
  /* manage menu END */
-
-
-/* Annei reservation home*/
-
-.res-banner-text {
-    font-family: 'Aldrich', sans-serif;
-}
-
-.banner-text {
-    font-family: 'Aldrich', sans-serif;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.reservationDets {
-    justify-content: center;
-    align-items: center;
-    top: 50%;
-    left: 50%;
-    width: 100%;
-    text-align: center;
-  }
-
-  .reservationHead {
-    font-size: 3rem;
-      color: var(--main-color);
-      margin-top: 50px;
-      margin-bottom: 40px;
-      font-weight: bold;
-  }
-
-  .reservation-Button{
-    background-color: var(--btn-color);
-  }
-
-  .reservation-description{
-    justify-content: center;
-      align-items: center;
-      width: 100%;
-      text-align: center;
-      background-color: var(--bg-color);
-      padding-top: 50px;
-      padding-bottom: 50px;
-      padding-left: 50px;
-      padding-right: 50px;
-      margin-bottom: 50px;
-      margin-top: 50px;
-  }
-
-  .res-dec{
-    font-size: 1.1rem;
-      color: var(--text-color);
-      line-height: 1.8;
-  }
-
-  /* Annei reservation home end */
-
-  /* Annei reserve from p1 */
-  .reservation-form-container{
-    margin-top: 50px;
-    margin-bottom: 50px;
-    margin-left: 70px;
-    margin-right: 70px;
-    padding:50px;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    background-color: var(--header-color);
-  }
-
-  .reservation-time-form {
-    margin-top: 10px;
-  }
-
-  /* About us & Contact us */
-
-  .search-container{
-    display: flex;
-    flex-direction: row;
-  }
-
-  .search-container input[type="text"] {
-    width: 18.75rem;
-    height: 1.875rem;
-    border-radius: 1.25rem;
-    color: rgba(254, 106, 134, 0.9);
-    margin: 1.5625rem;
-    margin-left: 37.5rem;
-    border: none;
-    padding-left: 1rem;
-    box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
-  }
-
-.about-us-background {
-    background-image: url("../images/other/about_us_bg.png");
-    background-size: cover;
-    background-position: center;
-    height: 270vh; /* hange this if the overall height of the page is changed*/
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.about-us-introduction h1{
-    color: #FE6A86;
-    font-size: 3.125rem;
-    padding-left: 5.75rem;
-    padding-top: 0rem;
-}
-
-.about-us-introduction p {
-    outline: 1px solid none;
-    padding-left: 6.25rem;
-    padding-right: 6.25rem;
-    color: #525C60;
-    line-height: 2;
-}
-
-.slogan-container{
-    margin: 1.25rem;
-    text-align: center;
-    background-color: #F1EDEA;
-    border-radius: 1.25rem;
-    align-items: center;
-    width: 37.5rem;
-    margin-top: 1rem;
-    padding: 2rem;
-    color: #FE6A86;
-    font-weight: bold;
-    line-height: 1.5;
-}
-
-.team-container h1{
-    color: #FE6A86;
-    text-align: center;
-    font-size: 2.1875rem;
-    padding-top: 1.25rem;
-}
-
-.team-container p{
-    font-size: 1rem;
-    width: 38.75rem;
-    text-align: center;
-}
-
-.member-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 0.625rem;
-    margin: 1.25rem;
-    align-items: center;
-    justify-items: center;
-  }
-
-.member-container .item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: #F1EDEA;
-    border-radius: 0.625rem;
-    padding: 1rem;
-    text-align: center;
-  }
-
-  .img-container {
-    width: 10.9375rem;
-    height: 0;
-    padding-bottom: 100%;
-    position: relative;
-  }
-
-  .img-container img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 10.625rem;
-    height: 15.625rem;
-    object-fit: cover;
-  }
-
-.member-container .item p {
-    font-size: 1.125rem;
-}
-
-
-@media screen and (max-width: 48rem) {
-    .member-container {
-      grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-  /* About us & Contact us END */
-
-/*  CART START */
-.cart-main-body{
-    background: linear-gradient(rgba(255,255,255,.80), rgba(255,255,255,.90)),url("../images/pokecafe-bg.jpg");
-    background-size: contain;
-    min-height: 20vh;
-    display: flex;
-    justify-content: center;
-}
-
-
-.cart-container .title{
-    padding-top: 30px;
-    font-size: large;
-    font-weight: bold;
-    color: var(--main-color);
-    align-self: center;
-}
-
-.cart-container {
-    width: 750px;
-    height: auto;
-    margin: 80px auto;
-    background: #FFFFFF;
-    box-shadow: 1px 2px 3px 0px rgba(0,0,0,0.10);
-    border-radius: 40px;
-    display: flex;
-    flex-direction: column;
-}
-
-.cart-container .cart-image img{
-    margin-top: 10px;
-    width: 150px;
-    border-radius: 10px;
-}
-
-.cart-item {
-    padding-left: 40px;
-    padding-right: 40px;
-    height: 120px;
-    display: flex;
-    margin-bottom: 20px;
-}
-
-.cart-item:nth-child(3) {
-    border-top:  1px solid #E1E8EE;
-    border-bottom:  1px solid #E1E8EE;
-}
-
-.delete-btn{
-    Cursor: pointer;
-    position: relative;
-    padding-top: 40px;
-    padding-right: 20px;
-}
-
-.is-active {
-    animation-name: animate;
-    animation-duration: .8s;
-    animation-iteration-count: 1;
-    animation-timing-function: steps(28);
-    animation-fill-mode: forwards;
-}
-
-@keyframes animate {
-    0%   { background-position: left;  }
-    50%  { background-position: right; }
-    100% { background-position: right; }
-}
-
-.description {
-    padding-left: 20px;
-    margin-right: 80px;
-    width: 115px;
-    position: relative;
-    padding-top: 40px;
-}
-
-.description span {
-    display: block;
-    font-size: 14px;
-    color: #43484D;
-    font-weight: 400;
-}
-
-.quantity {
-    padding-top: 20px;
-    margin-right: 60px;
-    position: relative;
-    padding-top: 40px;
-}
-.quantity input {
-    -webkit-appearance: none;
-    border: none;
-    text-align: center;
-    width: 32px;
-    font-size: 16px;
-    color: #43484D;
-    font-weight: 300;
-}
-
-button[class*=btn] {
-    width: 30px;
-    height: 30px;
-    background-color: #E1E8EE;
-    border-radius: 6px;
-    border: none;
-    cursor: pointer;
-}
-
-button:focus,
-input:focus {
-    outline:0;
-}
-
-.total-price {
-    width: 83px;
-    text-align: center;
-    font-size: 16px;
-    color: #43484D;
-    font-weight: 300;
-    position: relative;
-    padding-top: 40px;
-}
-
-@media (max-width: 800px) {
-    .shopping-cart {
-        width: 100%;
-        height: auto;
-        overflow: hidden;
-    }
-    .cart-item {
-        height: auto;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-    .cart-image img {
-        width: 50%;
-    }
-    .cart-image,
-    .quantity,
-    .description {
-        width: 100%;
-        text-align: center;
-        margin: 6px 0;
-    }
-    .buttons {
-        margin-right: 20px;
-    }
-}
-
-/*  CART END */
