@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Manage Menu</title>
+    <link rel="stylesheet" href="../stylesheet/pikahae.css">
+
+    <!-- For icons -->
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Googlefonts  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@100;200;400;500;600;700;800;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,700;1,300;1,400;1,500&display=swap" rel="stylesheet">
+    
+    <!-- Banner font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Aldrich&family=Roboto:wght@100&display=swap" rel="stylesheet">
+
+    <!-- Boostrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <!--Review swiper-->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+
+    <!--Footer Bootstrap-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body class="admin-view">
+    <!-- header -->
+    <section>
+        <nav class="header">
+            <a href="#" class="logo"><img src="../images/logo_draft.png" alt="logo"></a>
+            <!--        <p class="cafe-name">Pikahae</p>-->
+
+            <ul class="navlist">
+                <li><a href="homepage.html">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="#">Reservations</a></li>
+            </ul>
+
+            <div class="icon">
+                <!-- <a href="#"><i class='bx bxs-cart'></i></a>
+                <a href="#"><i class='bx bxs-user'></i></a> -->
+            </div>
+        </nav>
+        <div class="banner">
+            <img src="../images/homepage/homepage_admin_main.jpg" alt="picture of pikachu with dessert">
+        </div>
+
+        <div class="sub-header-wrapper">
+            <p>ADMIN DASHBOARD</p>
+            <div class="tab-switch-reservation">
+              <ul class="nav nav-pills justify-content-end">
+                <li class="nav-item">
+                  <a class="nav-link" aria-current="page" href="reservationDashboardAdmin.html">Reservation</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" href="reservationTableDashboardAdmin.html">Tables</a>
+                </li>
+              </ul>
+            </div>
+        </div>
+    
+        <hr>
+    </section>
+
+
+    <div class="reservation-admintable-container">
+      <!-- make this div respondsive container -->
+      <!-- <div class="table-selection-container"> -->
+        <h2 class="available-table-header">Available Tables</h2>
+        <h6 class="select-table-header">*Please select one</h6>
+
+        <div class="row">
+          <div class="col-md-9">
+            <div class="card">
+              <!-- CARD 1 FROM LEFT -->
+              <div class="container-fluid">
+                <div class="row">
+                  <!-- row 1 of table cards -->
+                  <div class="col-md-3 mb-4">
+                    <div class="card">
+                      <img src="/images/reservation/table6pax.png" class="card-img-top" alt="Table 1">
+                      <div class="card-body">
+                        <h5 class="card-title">Table 1</h5>
+                        <input type="checkbox" class="form-check-input" id="table1" name="table" onclick="uncheckOthers(this)" disabled>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-3 mb-4">
+                    <div class="card">
+                      <img src="/images/reservation/table6pax.png" class="card-img-top" alt="Table 2">
+                      <div class="card-body">
+                        <h5 class="card-title">Table 2</h5>
+                        <input type="checkbox" class="form-check-input" id="table2" name="table" onclick="uncheckOthers(this)">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-3 mb-4">
+                    <div class="card">
+                      <img src="/images/reservation/table6pax.png" class="card-img-top" alt="Table 3">
+                      <div class="card-body">
+                        <h5 class="card-title">Table 3</h5>
+                        <input type="checkbox" class="form-check-input" id="table3" name="table" onclick="uncheckOthers(this)">
+                      </div>
+                    </div>   
+                  </div>
+                  <div class="col-md-3 mb-4">
+                    <div class="card">
+                      <img src="/images/reservation/table6pax.png" class="card-img-top" alt="Table 4">
+                      <div class="card-body">
+                        <h5 class="card-title">Table 4</h5>
+                        <input type="checkbox" class="form-check-input" id="table4" name="table" onclick="uncheckOthers(this)">
+                      </div>
+                    </div>   
+                  </div>
+                </div>
+        
+                <div class="row">
+                  <!-- row 2 or table cards -->
+                  <div class="col-md-3 mb-4">
+                    <div class="card">
+                      <img src="/images/reservation/table6pax.png" class="card-img-top" alt="Table 5">
+                      <div class="card-body">
+                        <h5 class="card-title">Table 5</h5>
+                        <input type="checkbox" class="form-check-input" id="table5" name="table" onclick="uncheckOthers(this)">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-3 mb-4">
+                    <div class="card">
+                      <img src="/images/reservation/table6pax.png" class="card-img-top" alt="Table 6">
+                      <div class="card-body">
+                        <h5 class="card-title">Table 6</h5>
+                        <input type="checkbox" class="form-check-input" id="table6" name="table" onclick="uncheckOthers(this)">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-3 mb-4">
+                    <div class="card">
+                      <img src="/images/reservation/table6pax.png" class="card-img-top" alt="Table 7">
+                      <div class="card-body">
+                        <h5 class="card-title">Table 7</h5>
+                        <input type="checkbox" class="form-check-input" id="table7" name="table" onclick="uncheckOthers(this)">
+                      </div>
+                    </div>   
+                  </div>
+                  <div class="col-md-3 mb-4">
+                    <div class="card">
+                      <img src="/images/reservation/table6pax.png" class="card-img-top" alt="Table 8">
+                      <div class="card-body">
+                        <h5 class="card-title">Table 8</h5>
+                        <input type="checkbox" class="form-check-input" id="table8" name="table" onclick="uncheckOthers(this)">
+                      </div>
+                    </div>   
+                  </div>
+                </div>
+        
+                <div class="row">
+                  <!-- row 3 table cards -->
+                  <div class="col-md-3 mb-4">
+                    <div class="card">
+                      <img src="/images/reservation/table6pax.png" class="card-img-top" alt="Table 9">
+                      <div class="card-body">
+                        <h5 class="card-title">Table 9</h5>
+                        <input type="checkbox" class="form-check-input" id="table9" name="table" onclick="uncheckOthers(this)">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-3 mb-4">
+                    <div class="card">
+                      <img src="/images/reservation/table6pax.png" class="card-img-top" alt="Table 10">
+                      <div class="card-body">
+                        <h5 class="card-title">Table 10</h5>
+                        <input type="checkbox" class="form-check-input" id="table10" name="table" onclick="uncheckOthers(this)">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-3 mb-4">
+                    <div class="card">
+                      <img src="/images/reservation/table6pax.png" class="card-img-top" alt="Table 11">
+                      <div class="card-body">
+                        <h5 class="card-title">Table 11</h5>
+                        <input type="checkbox" class="form-check-input" id="table11" name="table" onclick="uncheckOthers(this)">
+                      </div>
+                    </div>   
+                  </div>
+                  <div class="col-md-3 mb-4">
+                    <div class="card">
+                      <img src="/images/reservation/table6pax.png" class="card-img-top" alt="Table 12">
+                      <div class="card-body">
+                        <h5 class="card-title">Table 12</h5>
+                        <input type="checkbox" class="form-check-input" id="table12" name="table" onclick="uncheckOthers(this)">
+                      </div>
+                    </div>   
+                  </div>
+                </div>
+        
+                <div class="row">
+                  <!-- row 4 table cards -->
+                  <div class="col-md-3 mb-4">
+                    <div class="card">
+                      <img src="/images/reservation/table6pax.png" class="card-img-top" alt="Table 13">
+                      <div class="card-body">
+                        <h5 class="card-title">Table 13</h5>
+                        <input type="checkbox" class="form-check-input" id="table13" name="table" onclick="uncheckOthers(this)">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-3 mb-4">
+                    <div class="card">
+                      <img src="/images/reservation/table6pax.png" class="card-img-top" alt="Table 14">
+                      <div class="card-body">
+                        <h5 class="card-title">Table 14</h5>
+                        <input type="checkbox" class="form-check-input" id="table14" name="table" onclick="uncheckOthers(this)">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-3 mb-4">
+                    <div class="card">
+                      <img src="/images/reservation/table6pax.png" class="card-img-top" alt="Table 15">
+                      <div class="card-body">
+                        <h5 class="card-title">Table 15</h5>
+                        <input type="checkbox" class="form-check-input" id="table15" name="table" onclick="uncheckOthers(this)">
+                      </div>
+                    </div>   
+                  </div>
+                  <div class="col-md-3 mb-4">
+                    <div class="card">
+                      <img src="/images/reservation/table6pax.png" class="card-img-top" alt="Table 16">
+                      <div class="card-body">
+                        <h5 class="card-title">Table 16</h5>
+                        <input type="checkbox" class="form-check-input" id="table16" name="table" onclick="uncheckOthers(this)">
+                      </div>
+                    </div>   
+                  </div>
+                </div>
+        
+                
+              </div>
+            </div>
+          </div>
+
+
+          <div class="col-md-3">
+            <div class="card">
+              <div class="table-details-side">
+                <h3 class="tabel-detials-header"> Tabel Details</h3>
+                <div class="table-selection-details">
+                  <p>Date: <span id="date"></span></p>
+                  <p>Time: <span id="time"></span></p>
+                  <p>Number of Guests: <span id="guests"></span></p>
+                  <p>Table Selection: <span id="table"></span></p>
+                </div>
+            
+                <div class="preordermenu-container">
+                  <section id="pre-order-items">
+                    <h4 class="tabel-detials-header">Pre-Order Items</h4>
+                    <ul>
+                      <li>Steak - Medium Rare</li>
+                      <li>Caesar Salad</li>
+                      <li>Cheesecake</li>
+                    </ul>
+                  </section>
+                </div> <br>
+                <div class="text-center">
+                  <a href="reservationConfirm.html" class="btn-yellow">Delete Reservation</a>
+                </div>
+
+              </div>
+            </div>
+            
+          </div>
+
+
+        </div>
+  
+      
+    </div>
+    
+
+    
+
+
+    <!--Footer-->
+    <footer>
+            
+      <div class="footer-content">
+          <h3>Pikahae</h3>
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.<br>Illo iste corrupti doloribus odio sed!</p>
+          <ul class="socials">
+              <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+              <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+              <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+              <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+              <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+          </ul>
+          <img src=../images/babies_trans.png>
+      </div>
+      <hr class="footer-line">
+      <div class="footer-bottom">
+          <p>copyright &copy;2023 Pikahae. designed by <span>dino kuning</span></p>
+      </div>
+      </footer>
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+   
+    
+</body>
+</html>
