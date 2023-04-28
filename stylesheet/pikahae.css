@@ -2315,24 +2315,52 @@ tr:nth-child(odd){
     background: linear-gradient(rgba(255,255,255,.80), rgba(255,255,255,.90)),url("../images/pokecafe-bg.jpg");
   }
 
+  .logo-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
   .reservation-form-container{
     max-width: 800px;
     margin: 0 auto;
     margin-top: 50px;
     margin-bottom: 50px;
     padding:50px;
-    background-color: var(--header-color);
+    background-color: var(--bg-color);
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
   }
 
   .form-alignment {
-    justify-content: center;  
+    justify-content:center;
     align-items: center;   
-    text-align: center;
+    /* text-align: center; */
   }
 
   .reservation-time-form {
     margin-top: 10px;
   }
+
+  /* Remove the default appearance of the date input box */
+input[type="date"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    border: 1px solid gray;
+  }
+  
+  /* Customize the appearance of the date input box */
+  .custom-date-input::-webkit-calendar-picker-indicator {
+    color: #fff;
+    background-color: var(--main-color);
+    border-radius: 50%;
+    border: none;
+    padding: 0.5rem;
+  }
+  
 
   /* Anneis reservationSelectTable start */
 
@@ -2341,12 +2369,14 @@ tr:nth-child(odd){
 }
 
 .reservation-table-container {
-     margin-top: 50px;
+    margin-top: 50px;
     margin-bottom: 50px;
     margin-left: 70px;
     margin-right: 70px;
     padding:50px;
-    background-color: var(--header-color);
+    background-color: var(--bg-color);
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
 }
 
 
