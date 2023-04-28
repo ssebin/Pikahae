@@ -134,17 +134,17 @@ section .header{
 }
 
 .HP-about-us{
-    justify-content: center;  
-    align-items: center;  
+    justify-content: center;
+    align-items: center;
     top: 50%;
-    left: 50%;  
+    left: 50%;
     width: 100%;
     text-align: center;
 }
 
 .HP-heading{
-    font-size: 3rem;    
-    color: var(--main-color);    
+    font-size: 3rem;
+    color: var(--main-color);
     margin-top: 50px;
     margin-bottom: 40px;
 }
@@ -173,10 +173,10 @@ section .header{
 }
 
 .HP-menu{
-    justify-content: center;  
-    align-items: center;  
+    justify-content: center;
+    align-items: center;
     top: 50%;
-    left: 50%;  
+    left: 50%;
     width: 100%;
     text-align: center;
     background-color: var(--header-color);
@@ -184,8 +184,8 @@ section .header{
 
 .HP-menu-heading{
     font-size: 40px;
-    color: var(--main-color);  
-    padding-top: 10px;  
+    color: var(--main-color);
+    padding-top: 10px;
     margin-top: 60px;
     line-height: 3;
 }
@@ -265,7 +265,7 @@ section .header{
 .swiper {
     width: 300px;
     height: auto;
-  }
+}
 
 .swiper .swiper-slide .flex{
     margin: 2em 0;
@@ -334,11 +334,11 @@ section .header{
 
     .swiper {
         width: 350px;
-      }
+    }
 
-      .board > h1, p{
-          padding: 0 1em;
-      }
+    .board > h1, p{
+        padding: 0 1em;
+    }
 }
 
 @media (min-width: 768px) {
@@ -348,7 +348,7 @@ section .header{
 
     .swiper {
         width: 600px;
-      }
+    }
 
     .swiper .swiper-button-prev, .swiper-button-next{
         display: initial;
@@ -920,7 +920,7 @@ section .menu-navlist{
     background-size: contain;
     min-height: 100vh;
     display: flex;
-    align-items: center;    
+    align-items: center;
     justify-content: center;
 }
 
@@ -1033,7 +1033,7 @@ section .menu-navlist{
     align-items: center;
     margin-right: 2.8rem;
     color: rgba(0, 0, 0, 0.4);
-    border-color: #808080;  
+    border-color: #808080;
 }
 
 .form-item-other .checkbox label{
@@ -1107,7 +1107,7 @@ hr {
     border-radius: 50%;
     width: 12.5rem;
 }
-  
+
 .edit-profile-figure {
     font-family: 'Roboto', sans-serif;
     display: flex;
@@ -1135,7 +1135,7 @@ hr {
     margin: 6.25rem;
     box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
 }
-  
+
 figcaption {
     font-family: 'Roboto', sans-serif;
     font-size: 1.125rem;
@@ -1178,7 +1178,7 @@ figcaption contenttext {
     align-items: center;
     margin-top: 2.8125rem;
 }
-  
+
 .profile-button {
     display: block;
     margin-top: 1.25rem;
@@ -1221,7 +1221,7 @@ figcaption contenttext {
     position: relative;
     margin: 1.875rem;
 }
-  
+
 .upload-wrapper label {
     background-color: #FE6A86;
     color: #ffffff;
@@ -1229,7 +1229,7 @@ figcaption contenttext {
     border-radius: 1.25rem;
     cursor: pointer;
 }
-  
+
 .upload-wrapper input[type="file"] {
     position: absolute;
     left: 0;
@@ -1859,7 +1859,7 @@ JavaScript Triggered Classes
     justify-content: center;
 }
 
-.admin-view-header{    
+.admin-view-header{
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -1952,23 +1952,23 @@ th:first-child,
 td:first-child {
     border-top-left-radius: 15px;
     border-bottom-left-radius: 15px;
- }
- 
- th:last-child,
- td:last-child {
+}
+
+th:last-child,
+td:last-child {
     border-bottom-right-radius: 15px;
     border-top-right-radius: 15px;
- }
+}
 
 tr:nth-child(odd){
     background-color: #EBDEDE;
- }
+}
 
- tr:nth-child(even){
+tr:nth-child(even){
     background-color: #FFEFEF;
- }
+}
 
- /* manage menu END */
+/* manage menu END */
 
 
 /* Annei reservation home*/
@@ -1979,10 +1979,10 @@ tr:nth-child(odd){
 
 .banner-text {
     font-family: 'Aldrich', sans-serif;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .reservationDets {
@@ -1992,44 +1992,44 @@ tr:nth-child(odd){
     left: 50%;
     width: 100%;
     text-align: center;
-  }
+}
 
-  .reservationHead {
+.reservationHead {
     font-size: 3rem;
-      color: var(--main-color);
-      margin-top: 50px;
-      margin-bottom: 40px;
-      font-weight: bold;
-  }
+    color: var(--main-color);
+    margin-top: 50px;
+    margin-bottom: 40px;
+    font-weight: bold;
+}
 
-  .reservation-Button{
+.reservation-Button{
     background-color: var(--btn-color);
-  }
+}
 
-  .reservation-description{
+.reservation-description{
     justify-content: center;
-      align-items: center;
-      width: 100%;
-      text-align: center;
-      background-color: var(--bg-color);
-      padding-top: 50px;
-      padding-bottom: 50px;
-      padding-left: 50px;
-      padding-right: 50px;
-      margin-bottom: 50px;
-      margin-top: 50px;
-  }
+    align-items: center;
+    width: 100%;
+    text-align: center;
+    background-color: var(--bg-color);
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-left: 50px;
+    padding-right: 50px;
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
 
-  .res-dec{
+.res-dec{
     font-size: 1.1rem;
-      color: var(--text-color);
-      line-height: 1.8;
-  }
+    color: var(--text-color);
+    line-height: 1.8;
+}
 
-  /* Annei reservation home end */
+/* Annei reservation home end */
 
-  /* Annei reserve from p1 */
-  .reservation-form-container{
+/* Annei reserve from p1 */
+.reservation-form-container{
     margin-top: 50px;
     margin-bottom: 50px;
     margin-left: 70px;
@@ -2039,20 +2039,20 @@ tr:nth-child(odd){
     align-items: center;
     text-align: center;
     background-color: var(--header-color);
-  }
+}
 
-  .reservation-time-form {
+.reservation-time-form {
     margin-top: 10px;
-  }
+}
 
-  /* About us & Contact us */
+/* About us & Contact us */
 
-  .search-container{
+.search-container{
     display: flex;
     flex-direction: row;
-  }
+}
 
-  .search-container input[type="text"] {
+.search-container input[type="text"] {
     width: 18.75rem;
     height: 1.875rem;
     border-radius: 1.25rem;
@@ -2062,7 +2062,7 @@ tr:nth-child(odd){
     border: none;
     padding-left: 1rem;
     box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
-  }
+}
 
 .about-us-background {
     background-image: url("../images/other/about_us_bg.png");
@@ -2124,7 +2124,7 @@ tr:nth-child(odd){
     margin: 1.25rem;
     align-items: center;
     justify-items: center;
-  }
+}
 
 .member-container .item {
     display: flex;
@@ -2135,23 +2135,23 @@ tr:nth-child(odd){
     border-radius: 0.625rem;
     padding: 1rem;
     text-align: center;
-  }
+}
 
-  .img-container {
+.img-container {
     width: 10.9375rem;
     height: 0;
     padding-bottom: 100%;
     position: relative;
-  }
+}
 
-  .img-container img {
+.img-container img {
     position: absolute;
     top: 0;
     left: 0;
     width: 10.625rem;
     height: 15.625rem;
     object-fit: cover;
-  }
+}
 
 .member-container .item p {
     font-size: 1.125rem;
@@ -2160,11 +2160,11 @@ tr:nth-child(odd){
 
 @media screen and (max-width: 48rem) {
     .member-container {
-      grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
-  /* About us & Contact us END */
+/* About us & Contact us END */
 
 /*  CART START */
 .cart-main-body{
@@ -2217,7 +2217,7 @@ tr:nth-child(odd){
 .delete-btn{
     Cursor: pointer;
     position: relative;
-    padding-top: 40px;
+    padding-top: 50px;
     padding-right: 20px;
 }
 
@@ -2240,7 +2240,7 @@ tr:nth-child(odd){
     margin-right: 80px;
     width: 115px;
     position: relative;
-    padding-top: 40px;
+    padding-top: 50px;
 }
 
 .description span {
@@ -2251,10 +2251,9 @@ tr:nth-child(odd){
 }
 
 .quantity {
-    padding-top: 20px;
     margin-right: 60px;
     position: relative;
-    padding-top: 40px;
+    padding-top: 50px;
 }
 .quantity input {
     -webkit-appearance: none;
@@ -2287,7 +2286,7 @@ input:focus {
     color: #43484D;
     font-weight: 300;
     position: relative;
-    padding-top: 40px;
+    padding-top: 50px;
 }
 
 @media (max-width: 800px) {
