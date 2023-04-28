@@ -2167,6 +2167,31 @@ tr:nth-child(odd){
   /* About us & Contact us END */
 
 /*  CART START */
+
+.cart-container .confirm-order-btn{
+    padding: 0 20px 20px 0;
+    align-self: end;
+}
+
+.cart-container #confirm-order-btn{
+    width: 100px;
+    border-radius: 40px;
+    border: none;
+    color: var(--bg-color);
+    background: var(--main-color);
+    padding: 5px;
+}
+
+.cart-container .total-price{
+    padding: 20px 20px 20px 0;
+    color: var(--main-color);
+    align-self: end;
+}
+
+.cart-container .total-price span{
+    color: var(--text-color);
+}
+
 .cart-main-body{
     background: linear-gradient(rgba(255,255,255,.80), rgba(255,255,255,.90)),url("../images/pokecafe-bg.jpg");
     background-size: contain;
@@ -2175,10 +2200,9 @@ tr:nth-child(odd){
     justify-content: center;
 }
 
-
 .cart-container .title{
     padding-top: 30px;
-    font-size: large;
+    font-size: 30px;
     font-weight: bold;
     color: var(--main-color);
     align-self: center;
@@ -2206,18 +2230,19 @@ tr:nth-child(odd){
     padding-right: 40px;
     height: 120px;
     display: flex;
-    margin-bottom: 20px;
-}
-
-.cart-item:nth-child(3) {
-    border-top:  1px solid #E1E8EE;
+    margin-bottom: 0;
     border-bottom:  1px solid #E1E8EE;
 }
+
+/*.cart-item:nth-child(3) {
+    border-top:  1px solid #E1E8EE;
+    border-bottom:  1px solid #E1E8EE;
+}*/
 
 .delete-btn{
     Cursor: pointer;
     position: relative;
-    padding-top: 40px;
+    padding-top: 50px;
     padding-right: 20px;
 }
 
@@ -2240,7 +2265,7 @@ tr:nth-child(odd){
     margin-right: 80px;
     width: 115px;
     position: relative;
-    padding-top: 40px;
+    padding-top: 50px;
 }
 
 .description span {
@@ -2251,10 +2276,9 @@ tr:nth-child(odd){
 }
 
 .quantity {
-    padding-top: 20px;
     margin-right: 60px;
     position: relative;
-    padding-top: 40px;
+    padding-top: 50px;
 }
 .quantity input {
     -webkit-appearance: none;
@@ -2280,15 +2304,16 @@ input:focus {
     outline:0;
 }
 
-.total-price {
+.cart-item-price {
     width: 83px;
     text-align: center;
     font-size: 16px;
     color: #43484D;
     font-weight: 300;
     position: relative;
-    padding-top: 40px;
+    padding-top: 50px;
 }
+
 
 @media (max-width: 800px) {
     .shopping-cart {
@@ -2317,3 +2342,4 @@ input:focus {
 }
 
 /*  CART END */
+
