@@ -2200,12 +2200,86 @@ tr:nth-child(odd){
     justify-content: center;
 }
 
-.cart-container .title{
-    padding-top: 30px;
-    font-size: 30px;
-    font-weight: bold;
-    color: var(--main-color);
-    align-self: center;
+
+
+    /* annei reservationConfirmation end */
+
+    /* annei reservationDashboardAdmin Start */
+
+    .reservation-admintable-container {
+        margin-top: 50px;
+        margin-bottom: 50px;
+        margin-left: 50px;
+        margin-right: 50px;
+        padding:50px;
+        background-color: var(--bg-color);
+        box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 20px;
+    }
+
+    .tab-switch-reservation {
+        right: 100px;
+        position: absolute;
+        background: #fff;
+        /* margin: 0 20px; */
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-link.active {
+        background-color: var(--main-color) !important;
+    }
+
+    /* .nav-link {
+        color: var(--bg-color) !important;
+    } */
+
+    .table-container{
+        max-width: 1600px;
+        margin: 0 auto;
+        margin-top: 50px;
+        margin-bottom: 50px;
+        padding:50px;
+        background-color: var(--bg-color);
+        box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 20px;
+    }
+
+    .reservation-admintable-container {
+        margin-top: 50px;
+        margin-bottom: 50px;
+        margin-left: 70px;
+        margin-right: 70px;
+        padding:50px;
+        background-color: var(--bg-color);
+        box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 20px;
+
+
+    }
+     /* annei reservationDashboardAdmin end */
+
+     /* annei reservationTableDashboardAdmn start */
+
+     .table-details-side {
+        max-width: 400px;
+        height: fit-content;
+        border-color: black;
+     }
+
+     .tabel-detials-header{
+        margin-top: 30px;
+        text-align: center;
+        font-weight: bold;
+        color: var(--main-color);
+     }
+     /* annei reservationTableDashboardAdmn start */
+    
+
+    
+
+
+.member-container .item p {
+    font-size: 1.125rem;
 }
 
 .cart-container {
