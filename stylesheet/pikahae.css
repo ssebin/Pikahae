@@ -1138,8 +1138,9 @@ section .menu-navlist{
     border-bottom: 1.2px groove var(--secound-color);
     width: 24rem;
     height: auto;
-    margin: 14px;
+    margin: 1.2rem;
     font-family: 'Roboto', sans-serif;
+    font-weight: 800;
     font-size: 16px;
     text-indent: 2px;
 }
@@ -1155,7 +1156,7 @@ section .menu-navlist{
 .form-card-input input[type=tel],
 #password,
 #confirmPassword{
-    width: 11.1rem;
+    width: 10.9rem;
 }
 
 .register-input{
@@ -1204,21 +1205,21 @@ section .menu-navlist{
     font-family: 'Roboto';
     font-style: normal;
     font-size: 1.063rem;
-    box-shadow: 0 5px 0 #CC566B;
+    box-shadow: 0 4px 0 #CC566B;
     transition: transform 0.1s ease-out;
 }
 
 .form-card-input button:active{
     box-shadow: none;
     transform: translateY(5px);
-    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.084), 0px 4px 3px rgba(0, 0, 0, 0.168);
 }
 
 .login-btn-google button{
     background: white;
     color: rgba(0, 0, 0, 0.54);
     letter-spacing: 0.2px;
-    box-shadow: 0 5px 0 #CCCCCC;
+    box-shadow: 0 4px 0 #CCCCCC;
+    margin-top: 1rem;
 }
 
 .login-btn-google img{
@@ -2086,9 +2087,9 @@ JavaScript Triggered Classes
     opacity: 0.5;
 }
 
-table{
+.admin-view-table table{
     width: 82vw;
-    height: 50vh;
+    height: 3;
     /* border-radius: 15px; */
     text-align: center;
     border-collapse: separate;
@@ -2099,41 +2100,41 @@ table{
     font-size: 1rem;
 }
 
-tr{
+.admin-view-table tr{
     border-radius: 50px;
     overflow: hidden;
 }
 
-thead th{
+.admin-view-table thead th{
     background-color: white;
     padding: 1rem 2rem;
     letter-spacing: 0.07rem;
     color: #274C5B;
 }
 
-td{
+.admin-view-table td{
     border: 0.25rem solid transparent;
     padding: 0.625rem;
     color: #274C5B;
 }
 
-th:first-child,
-td:first-child {
+.admin-view-table th:first-child,
+.admin-view-table td:first-child {
     border-top-left-radius: 15px;
     border-bottom-left-radius: 15px;
  }
  
- th:last-child,
- td:last-child {
+.admin-view-table th:last-child,
+.admin-view-table td:last-child {
     border-bottom-right-radius: 15px;
     border-top-right-radius: 15px;
  }
 
-tr:nth-child(odd){
+.admin-view-table tr:nth-child(odd){
     background-color: #EBDEDE;
  }
 
- tr:nth-child(even){
+.admin-view-table tr:nth-child(even){
     background-color: #FFEFEF;
  }
 
@@ -2697,3 +2698,124 @@ input[type="date"] {
   }
   
   /* About us & Contact us END */
+
+ /* edit menu START  */
+ .edit-item-container{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+ }
+
+ .edit-item-card{
+    background-color: white;
+    width: 70%;
+    height: auto;
+    padding: 2rem;
+    margin-top: 2rem;
+    border-radius: 15px;
+    filter: drop-shadow(0px 8px 4px rgba(0, 0, 0, 0.24));
+ }
+
+ .edit-item-card h1{
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 2rem;
+    color: var(--main-color);
+    margin-bottom: 2.5rem;
+ }
+
+ .edit-item-form-item{
+    margin: 3rem 1rem;
+ }
+
+ .edit-item-form-item label{
+    color: var(--main-color);
+    font-family: 'Roboto', sans-serif;
+ }
+
+#item-category,
+.edit-item-form-item input[type=text],
+.edit-item-form-item input::file-selector-button{
+    margin-top: 5px;
+}
+
+#item-category{
+    background-color: #FBFBFB;
+    color: #191D23;
+    width: 16rem;
+    height: auto;
+    border-radius: 30px;
+    border: none;
+    padding: 0.5rem 0;
+    color: black;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    text-indent: 12px;
+ }
+
+ .edit-item-form-item input[type=text]{
+    width: 16rem;
+    height: 2rem;
+    border-radius: 30px;
+    border: none;
+    background-color: #FBFBFB;
+    background: #FBFBFB;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    text-indent: 12px;
+ }
+
+ .edit-item-form-item input::file-selector-button{
+    background-color: var(--main-color);
+    border: none;
+    border-radius: 30px;
+    height: 1.5rem;
+    width: 5rem;
+    color: white;
+    font-weight: 600;
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.75rem;
+ }
+
+
+ #item-desc{
+    height: 8rem;
+    width: 30rem;
+ }
+
+ .edit-item-form-btn{
+    justify-content: right;
+    align-items: end;
+    display: flex;
+ }
+
+ .edit-item-form-btn button{
+    height: 2.4rem;
+    width: 6rem;
+    margin: 0 0.8rem;
+    border: none;
+    border-radius: 30px;
+    font-size: 1.1rem;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    color: white;
+ }
+
+ #cancel-edit-btn{
+    background-color: #EFD372;
+ }
+
+ #submit-edit-btn{
+    background-color: var(--main-color);
+ }
+
+ @media screen and (max-width: 768px) {
+    #item-desc {
+      width: 20rem;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    #item-desc {
+      width: 15rem;
+    }
+ }
+

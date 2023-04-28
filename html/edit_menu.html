@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Customer Accounts</title>
+    <link rel="stylesheet" href="../stylesheet/pikahae.css">
+
+    <!-- For icons -->
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!--  Google fonts Roboto -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@100;200;400;500;600;700;800;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,700;1,300;1,400;1,500&display=swap" rel="stylesheet">
+
+</head>
+
+<body class="admin-view">
+    <!-- header -->
+    <section>
+        <nav class="header">
+            <a href="#" class="logo"><img src="../images/logo_draft.png" alt="logo"></a>
+            <!--        <p class="cafe-name">Pikahae</p>-->
+
+            <ul class="navlist">
+                <li><a href="homepage.html">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="#">Reservations</a></li>
+            </ul>
+
+            <div class="icon">
+                <!-- <a href="#"><i class='bx bxs-cart'></i></a>
+                <a href="#"><i class='bx bxs-user'></i></a> -->
+            </div>
+        </nav>
+        <div class="banner">
+            <img src="../images/homepage/homepage_admin_main.jpg" alt="picture of pikachu with dessert">
+        </div>
+
+        <div class="sub-header-wrapper">
+            <p>EDIT MENU</p>
+            <!-- <div class="input-box">
+                <i class="uil uil-search"></i>
+                <input type="text" placeholder="Search customer" />
+                <button class="button"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div> -->
+        </div>
+        <hr>
+        <div class="edit-item-container">
+            <div class="edit-item-card">
+                <h1 class="edit-item-header">Edit Item Details</h1>
+
+                <form class="edit-item-form">
+
+                    <div class="edit-item-form-item">
+                        <label for="item-category">Category:</label><br>
+                        <select id="item-category" name="item-category">
+                            <option value="food">Food</option>
+                            <option value="drink">Drink</option>
+                        </select><br>
+                    </div>
+
+                    <div class="edit-item-form-item">
+                        <label for="item-name">Item name:</label><br>
+                        <input id="item-name" type="text" placeholder="Enter item name"><br>
+                    </div>
+
+                    <div class="edit-item-form-item">
+                        <label for="item-price">Item price:</label><br>
+                        <input type="text" id="item-price" name="item-price" pattern="[0-9]+(\.[0-9]{2})?" placeholder="RM 0.00" required oninput="formatCurrency(this)"><br> <!-- handled by JS -->
+                    </div>
+
+                    <div class="edit-item-form-item">
+                        <label for="item-desc">Item description:</label><br>
+                        <input id="item-desc" type="text" placeholder="Enter item description"><br>
+                    </div>
+
+                    <div class="edit-item-form-item">
+                        <label for="item-photo">Item photo:</label><br>
+                        <img id="preview" alt="Image Preview"><br> <!-- handled by JS -->
+                        <input type="file" id="item-photo" name="item-photo" accept="image/*"><br>
+                    </div>
+
+                    <div class="edit-item-form-btn">
+                        <button id="cancel-edit-btn" type="button">Cancel</button>
+                        <span><button id="submit-edit-btn" type="submit">Save</button></span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
