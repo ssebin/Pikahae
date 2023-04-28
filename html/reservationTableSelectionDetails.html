@@ -34,7 +34,7 @@
       <ul class="navlist">
           <li><a href="homepage-customer.html">Home</a></li>
           <li><a href="#">About</a></li>
-          <li><a href="register.html">Reservations</a></li>
+          <li><a href="reservation.html">Reservations</a></li>
           <li><a href="menu.html">Menu</a></li>
       </ul>
 
@@ -57,38 +57,21 @@
 
 
   <div class="reservation-form-container">
-    <div class="form-alignment">
-      <img src="/images/logo_draft.png"> <br><br><br>
-    <form action="" method="POST">
-      <div class="container-fluid reservation-date-form">
-        <label for="date">Select Date:</label>
-        <input type="date" id="date" name="date" required>
-      </div>
-    
-      <div class="container-fluid reservation-time-form">
-        <label for="time">Select Time:</label>
-        <select id="time" name="time" required>
-          <option value="">--Please choose an option--</option>
-          <option value="5:00 PM">5:00 PM</option>
-          <option value="6:00 PM">6:00 PM</option>
-          <option value="7:00 PM">7:00 PM</option>
-          <option value="8:00 PM">8:00 PM</option>
-        </select><br><br>
-      </div>
-    
-      <div class="container-fluid reservation-pax-form">
-        <label for="pax">Number of guests:</label>
-        <input type="number" id="pax" name="pax" min="1" max="10" required><br><br>
-      </div>
-    
-      <!-- <input type="submit" value="Search for available tables"> -->
-      <div class="text-center">
-        <a href="reservationSelectTable.html" class="btn-yellow">Search for available tables</a>
-      </div>
-
-    </form>
+    <h1 class="reservationHead">Reservation Confirmation</h1>
+		<p class="select-table-header">You have selected the following reservation details:</p>
+		<div class="table-selection-details">
+			<p>Date: <span id="date"></span></p>
+			<p>Time: <span id="time"></span></p>
+			<p>Number of Guests: <span id="guests"></span></p>
+			<p>Table Selection: <span id="table"></span></p>
+		</div>
+    <div class="text-center">
+      <a href="menu.html" class="btn-yellow">Pre order menu</a>
     </div>
   </div>
+		
+
+
 </body>
 
 
