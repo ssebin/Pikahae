@@ -2549,5 +2549,121 @@ tr:nth-child(odd){
     background-position: center;
     margin: 10px;
 }
+  
+.locate-us {
+    background-color: #FFFFFF;
+    width: 300px;
+    height: 300px;
+    align-items: center;
+    margin-left: 600px;
+    border-radius: 20px;
+}
 
+.locate-us h4{
+    color: #FE6A86;
+    font-size: 40px;
+    text-align: left;
+    margin-left: 12px;
+    margin-top: 20px;
+}
+
+.cafe-location-information {
+    background-image: url("../images/other/cafe_photo.jpg");
+    width: 1000px;
+    height: 550px;
+    margin-top: 100px;
+    margin-left: 100px;
+    margin-bottom: 100px;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    align-items: center;
+}
+
+  .cafe-location-information p {
+    text-align: left;
+    color: #525C60;
+  }
+
+  .cafe-location-address {
+    display: flex;
+    flex-direction: row;
+    margin-top: 50px;
+    color: #525C60;
+  }
+
+  .cafe-location-address img {
+    width: 40px;
+    height: 40px;
+    margin-left: 20px;
+  }
+
+  .contact-us-form-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .contact-us-form-container form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+  }
+  
+  .form-row {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-row label {
+    font-weight: bold;
+    color: #FE6A86;
+    margin-bottom: 10px;
+  }
+ 
+  .form-row input[type="text"],
+  input[type="email"]{
+    padding: 10px;
+    border-radius: 16px;
+    width: 300px;
+    height: 50px;
+    border: 1px solid #FE6A86;
+  }
+
+  .form-row textarea{
+    resize: none;
+    height: 100px;
+    width: 207%;
+    border-radius: 16px;
+    border: 1px solid #FE6A86;
+    padding: 10px;
+  }
+
+  .form-row input[type="text"]::placeholder {
+    color: #999;
+    font-style: italic;
+  }
+
+  .form-row input[type="email"]::placeholder {
+    color: #999;
+    font-style: italic;
+  }
+
+  .form-row input[type="message"]::placeholder {
+    color: #999;
+    font-style: italic;
+  }
+  
+  .contact-us-form-container button[type="submit"] {
+    padding: 20px;
+    margin-top:30px;
+    margin-right: 490px;
+    border-radius: 20px;
+    border: none;
+    background-color: #FE6A86;
+    color: #fff;
+    cursor: pointer;
+  }
+  
   /* About us & Contact us END */
