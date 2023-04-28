@@ -2249,6 +2249,10 @@ tr:nth-child(odd){
 
   /* Annei reservation home*/
 
+  .reservation-body {
+    background: linear-gradient(rgba(255,255,255,.80), rgba(255,255,255,.90)),url("../images/pokecafe-bg.jpg");
+  }
+
 .res-banner-text {
     font-family: 'Aldrich', sans-serif;
 }
@@ -2305,12 +2309,17 @@ tr:nth-child(odd){
 
   /* Annei reservation home end */
 
-  /* Annei reserve from p1 */
+  /* Annei reserve form p1 */
+
+  .reservationForm1-body {
+    background: linear-gradient(rgba(255,255,255,.80), rgba(255,255,255,.90)),url("../images/pokecafe-bg.jpg");
+  }
+
   .reservation-form-container{
+    max-width: 800px;
+    margin: 0 auto;
     margin-top: 50px;
     margin-bottom: 50px;
-    margin-left: 70px;
-    margin-right: 70px;
     padding:50px;
     background-color: var(--header-color);
   }
@@ -2326,6 +2335,21 @@ tr:nth-child(odd){
   }
 
   /* Anneis reservationSelectTable start */
+
+  .reservationTableSelectionDetails-body{
+    background: linear-gradient(rgba(255,255,255,.80), rgba(255,255,255,.90)),url("../images/pokecafe-bg.jpg");
+}
+
+.reservation-table-container {
+     margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: 70px;
+    margin-right: 70px;
+    padding:50px;
+    background-color: var(--header-color);
+}
+
+
   .img-container img {
     position: absolute;
     top: 0;
@@ -2336,6 +2360,7 @@ tr:nth-child(odd){
   }
 
   .available-table-header {
+    text-align: center;
     font-weight: bold;
     color: var(--main-color);
   }
@@ -2362,20 +2387,49 @@ tr:nth-child(odd){
     margin-bottom: 20px;
   }
 
-  .btn {
-    display: flex;
-    justify-content: center;
+  .reservation-confirmation-container{
+    max-width: 800px;
     margin: 0 auto;
-    width: 200px;
-    font-size: 1.2rem;
-    text-align: center;
-    padding: 10px;
-    border-radius: 5px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    cursor: pointer;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding:50px;
+    background-color: var(--bg-color);
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+
   }
+
+  /* annei table selection details end  */
+
+  /* annei reservationConfirmationDetals start */
+
+  .reservationConfirmationDetails-body {
+    background: linear-gradient(rgba(255,255,255,.80), rgba(255,255,255,.90)),url("../images/pokecafe-bg.jpg");
+  }
+
+  .preordermenu-container{
+
+  }
+
+  .preorderitem-header {
+    color: var(--main-color);
+  }
+
+    /* annei reservationConfirmationDetals end */
+
+    /* annei reservationConfirmation start */
+
+    .reservationConfirmation-body {
+        background: linear-gradient(rgba(255,255,255,.80), rgba(255,255,255,.90)),url("../images/pokecafe-bg.jpg");
+    }
+
+
+
+    /* annei reservationConfirmation end */
+    
+
+    
+
 
 .member-container .item p {
     font-size: 1.125rem;
