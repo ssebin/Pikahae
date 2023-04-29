@@ -649,7 +649,6 @@ footer{
     align-items: center;
     justify-content: flex-start;
     margin: 5px 0 5px 0;
-
 }
 
 .sub-header-wrapper p{
@@ -657,9 +656,51 @@ footer{
     font-size: 3vw;
     width: fit-content;
     padding: 0 0 0 100px;
-
 }
 
+.menu-price{
+    padding-top: 10px;
+}
+
+
+@media (max-width: 800px) {
+    .shopping-cart {
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+    }
+    .cart-item {
+        height: auto;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .cart-image img {
+        width: 50%;
+    }
+    .cart-image,
+    .quantity,
+    .description {
+        padding: 10px 0 0;
+        width: 100%;
+        text-align: center;
+        align-self: center;
+        margin: 6px 0;
+    }
+
+    .delete-btn{
+        padding: 20px 0 0;
+        display: flex;
+        align-self: center;
+    }
+
+    .menu-price{
+        padding-top: 10px;
+    }
+
+    .cart-main-body .cart-container{
+        width: 300px;
+    }
+}
 
 /* SEARCH BAR */
 .input-box {
@@ -804,45 +845,33 @@ section .menu-navlist{
     width: 100%;
 }
 
+/*  MENU CONTAINER */
+
 .menu{
+    padding: 40px 0 0 40px;
     width: 100%;
     height: auto;
     background: linear-gradient(rgba(255,255,255,.80), rgba(255,255,255,.90)),url("../images/pokecafe-bg.jpg");
 }
 
 .menu .box-container{
-    padding-left: 2% ;
-    padding-right: 2%;
-    /*padding: 20px 40px 20px 40px;*/
     width: 100%;
     height: auto;
-    object-position: center;
-    object-fit: cover;
-    overflow: hidden;
     display: grid;
-
-}
-
-@media (min-width: 40px){
-    .menu .box-container{
-        grid-template-columns: 1fr 1fr 1fr;
-    }
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    grid-gap: 20px;
 }
 
 .menu .box-container img{
-    width: 30vw;
-    height: 20vw;
-    max-width: 350px;
-    max-height: 200px;
+    width: 400px;
+    height: 250px;
 }
 
 .menu .box-container .box{
-    width: 30vw;
-    height: 20vw;
-    max-width: 350px;
-    max-height: 350px;
-    margin: 10px;
-    padding: 0 0 0 0;
+    width: 400px;
+    height: 380px;
+    margin: 15px 15px 0;
     background: var(--bg-color);
     border-radius: 20px;
     position: relative;
@@ -853,35 +882,30 @@ section .menu-navlist{
 }
 
 .menu .box-container .box .item-text{
-    padding: 10px 20px 10px 0px;
+    padding: 10px 20px 10px 20px;
 }
 
 .menu .box-container .box .item-text h3{
-    padding-left: 25px;
-}
-
-.menu .box-container .box .item-text .item-desc{
-    font-size: small;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    color: #75797F;
-}
-
-.menu .box-container .box .price{
-    display: flex;
-    align-self: end;
-    font-weight: bold;
-    padding-left: 25px;
     padding-bottom: 5px;
 }
 
-.menu .box-container .box .btn{
-    margin-bottom: 10px;
-    margin-right: 10px;
-    position: absolute;
+.menu .box-container .box .item-text .item-desc{
+    font-size: 13px;
+    color: var(--secound-color);
+    padding-bottom: 10px;
+}
+
+.menu .box-container .box .menu-price{
+    font-weight: bold;
+    font-size: 15px;
+    align-self: center;
+}
+
+.menu .box-container .category-btn{
     font-size: small;
-    bottom: 5px;
-    right: 5px;
+    position: absolute;
+    top: 15px;
+    left: 15px;
     background: var(--main-color);
     color: white;
     border-radius: 30px;
@@ -889,10 +913,23 @@ section .menu-navlist{
 }
 
 .menu .box-container .category-btn{
-    font-size: small;
+    font-size: 15px;
     position: absolute;
-    top: 20px;
-    left: 20px;
+    top: 15px;
+    left: 15px;
+    background: var(--main-color);
+    color: white;
+    border-radius: 30px;
+    padding: 5px 10px 5px 10px;
+}
+
+.menu .box .po-btn-container{
+    display: flex;
+    justify-content: center;
+}
+
+.menu .box .po-btn{
+    font-size: 15px;
     background: var(--main-color);
     color: white;
     border-radius: 30px;
@@ -910,6 +947,28 @@ section .menu-navlist{
     height: auto;
 }
 
+/* MENU RESPONSIVE */
+@media (max-width: 600px) {
+    .menu .box .price{
+        padding: 0;
+        margin: 0;
+    }
+
+    .menu .box-container{
+        width: 100%;
+        grid-template-columns: 1fr;
+    }
+
+    .menu-bottom-img #pika-bottle-img{
+        width: 100px;
+        height: 100px;
+    }
+
+    .menu-bottom-img #menu-img{
+        width: 90px;
+        height: 100px;
+    }
+}
 /* END FOR MENU PAGE */
 
 /* login/registration */
