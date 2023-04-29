@@ -2225,41 +2225,6 @@ tr:nth-child(odd){
 
   /* About us & Contact us END */
 
-/*  CART START */
-
-.cart-container .confirm-order-btn{
-    padding: 0 20px 20px 0;
-    align-self: end;
-}
-
-.cart-container #confirm-order-btn{
-    width: 100px;
-    border-radius: 40px;
-    border: none;
-    color: var(--bg-color);
-    background: var(--main-color);
-    padding: 5px;
-}
-
-.cart-container .total-price{
-    padding: 20px 20px 20px 0;
-    color: var(--main-color);
-    align-self: end;
-}
-
-.cart-container .total-price span{
-    color: var(--text-color);
-}
-
-.cart-main-body{
-    background: linear-gradient(rgba(255,255,255,.80), rgba(255,255,255,.90)),url("../images/pokecafe-bg.jpg");
-    background-size: contain;
-    min-height: 20vh;
-    display: flex;
-    justify-content: center;
-}
-
-
 
     /* annei reservationConfirmation end */
 
@@ -2340,141 +2305,6 @@ tr:nth-child(odd){
 .member-container .item p {
     font-size: 1.125rem;
 }
-
-.cart-container {
-    width: 750px;
-    height: auto;
-    margin: 80px auto;
-    background: #FFFFFF;
-    box-shadow: 1px 2px 3px 0px rgba(0,0,0,0.10);
-    border-radius: 40px;
-    display: flex;
-    flex-direction: column;
-}
-
-.cart-container .cart-image img{
-    margin-top: 10px;
-    width: 150px;
-    border-radius: 10px;
-}
-
-.cart-item {
-    padding-left: 40px;
-    padding-right: 40px;
-    height: 120px;
-    display: flex;
-    margin-bottom: 0;
-    border-bottom:  1px solid #E1E8EE;
-}
-
-/*.cart-item:nth-child(3) {
-    border-top:  1px solid #E1E8EE;
-    border-bottom:  1px solid #E1E8EE;
-}*/
-
-.delete-btn{
-    Cursor: pointer;
-    position: relative;
-    padding-top: 50px;
-    padding-right: 20px;
-}
-
-.is-active {
-    animation-name: animate;
-    animation-duration: .8s;
-    animation-iteration-count: 1;
-    animation-timing-function: steps(28);
-    animation-fill-mode: forwards;
-}
-
-@keyframes animate {
-    0%   { background-position: left;  }
-    50%  { background-position: right; }
-    100% { background-position: right; }
-}
-
-.description {
-    padding-left: 20px;
-    margin-right: 80px;
-    width: 115px;
-    position: relative;
-    padding-top: 50px;
-}
-
-.description span {
-    display: block;
-    font-size: 14px;
-    color: #43484D;
-    font-weight: 400;
-}
-
-.quantity {
-    margin-right: 60px;
-    position: relative;
-    padding-top: 50px;
-}
-.quantity input {
-    -webkit-appearance: none;
-    border: none;
-    text-align: center;
-    width: 32px;
-    font-size: 16px;
-    color: #43484D;
-    font-weight: 300;
-}
-
-button[class*=btn] {
-    width: 30px;
-    height: 30px;
-    background-color: #E1E8EE;
-    border-radius: 6px;
-    border: none;
-    cursor: pointer;
-}
-
-button:focus,
-input:focus {
-    outline:0;
-}
-
-.cart-item-price {
-    width: 83px;
-    text-align: center;
-    font-size: 16px;
-    color: #43484D;
-    font-weight: 300;
-    position: relative;
-    padding-top: 50px;
-}
-
-
-@media (max-width: 800px) {
-    .shopping-cart {
-        width: 100%;
-        height: auto;
-        overflow: hidden;
-    }
-    .cart-item {
-        height: auto;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-    .cart-image img {
-        width: 50%;
-    }
-    .cart-image,
-    .quantity,
-    .description {
-        width: 100%;
-        text-align: center;
-        margin: 6px 0;
-    }
-    .buttons {
-        margin-right: 20px;
-    }
-}
-
-/*  CART END */
 
 /* edit menu START  */
 .edit-item-container{
@@ -2743,3 +2573,205 @@ hr {
 }
 
 /* End of Reservation-Selection */
+
+/*  CART START */
+
+.cart-container .confirm-order-btn{
+    padding: 0 20px 20px 0;
+    align-self: end;
+}
+
+.cart-container #confirm-order-btn{
+    width: 100px;
+    border-radius: 40px;
+    border: none;
+    color: var(--bg-color);
+    background: var(--main-color);
+    padding: 5px;
+}
+
+
+.cart-container .total-price{
+    padding: 20px 20px 20px 0;
+    color: var(--main-color);
+    align-self: end;
+}
+
+.cart-container .total-price span{
+    color: var(--text-color);
+}
+
+.cart-main-body{
+    background: linear-gradient(rgba(255,255,255,.80), rgba(255,255,255,.90)),url("../images/pokecafe-bg.jpg");
+    background-size: contain;
+    min-height: 20vh;
+    display: flex;
+    justify-content: center;
+}
+
+.cart-container .title{
+    padding-top: 0;
+    font-size: 30px;
+    font-weight: bold;
+    color: var(--main-color);
+    align-self: center;
+}
+
+.cart-container {
+    width: 750px;
+    height: auto;
+    margin: 80px auto;
+    background: #FFFFFF;
+    box-shadow: 1px 2px 3px 0px rgba(0,0,0,0.10);
+    border-radius: 40px;
+    display: flex;
+    flex-direction: column;
+}
+
+.cart-container .cart-image img{
+    margin-top: 10px;
+    width: 150px;
+    border-radius: 10px;
+}
+
+
+/* back button*/
+.cart-main-body .back-btn{
+    padding: 20px 10px 10px 20px;
+}
+
+.cart-main-body #back-btn{
+    width: 80px;
+    border-radius: 40px;
+    border: none;
+    color: var(--bg-color);
+    background: var(--main-color);
+    padding: 5px;
+}
+
+.cart-item {
+    padding-left: 40px;
+    padding-right: 40px;
+    height: 120px;
+    display: flex;
+    margin-bottom: 0;
+    border-bottom:  1px solid #E1E8EE;
+}
+
+.delete-btn{
+    Cursor: pointer;
+    position: relative;
+    padding-top: 50px;
+    padding-right: 20px;
+}
+
+.is-active {
+    animation-name: animate;
+    animation-duration: .8s;
+    animation-iteration-count: 1;
+    animation-timing-function: steps(28);
+    animation-fill-mode: forwards;
+}
+
+@keyframes animate {
+    0%   { background-position: left;  }
+    50%  { background-position: right; }
+    100% { background-position: right; }
+}
+
+.description {
+    padding-left: 20px;
+    margin-right: 80px;
+    width: 115px;
+    position: relative;
+    padding-top: 50px;
+}
+
+.description span {
+    display: block;
+    font-size: 14px;
+    color: #43484D;
+    font-weight: 400;
+}
+
+.quantity {
+    margin-right: 60px;
+    position: relative;
+    padding-top: 50px;
+}
+.quantity input {
+    -webkit-appearance: none;
+    border: none;
+    text-align: center;
+    width: 32px;
+    font-size: 16px;
+    color: #43484D;
+    font-weight: 300;
+}
+
+button[class*=btn] {
+    width: 30px;
+    height: 30px;
+    background-color: #E1E8EE;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+}
+
+button:focus,
+input:focus {
+    outline:0;
+}
+
+.cart-item-price {
+    width: 83px;
+    text-align: center;
+    font-size: 16px;
+    color: #43484D;
+    font-weight: 300;
+    position: relative;
+    padding-top: 50px;
+}
+
+
+@media (max-width: 800px) {
+    .shopping-cart {
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+    }
+    .cart-item {
+        height: auto;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .cart-image img {
+        width: 50%;
+    }
+    .cart-image,
+    .quantity,
+    .description {
+        padding: 10px 0 0;
+        width: 100%;
+        text-align: center;
+        align-self: center;
+        margin: 6px 0;
+    }
+
+    .delete-btn{
+        padding: 20px 0 0;
+        display: flex;
+        align-self: center;
+    }
+
+    .cart-item-price{
+        padding: 10px 0 20px;
+    }
+
+    .cart-main-body .cart-container{
+        width: 300px;
+    }
+}
+
+/*  CART END */
+
