@@ -2537,7 +2537,9 @@ input:focus {
     }
  }
 
- /* Reservation-Selection */
+/** END of edit menu */
+
+/* Reservation-Selection */
 .reservation_banner img{
     width: 100%;
     height: 300px;
@@ -2549,6 +2551,7 @@ input:focus {
     border-bottom-left-radius: 50px;
     display: block;
 }
+
 hr {
     margin: 0;
     padding: 0;
@@ -2563,15 +2566,16 @@ hr {
     justify-content: center;
     align-items: center;
 }
+
 .selection-details {
     font-family: 'Roboto', sans-serif;
     display: flex;
     align-items: center;
     justify-content: center;
     border: 1px solid #ffffff;
-    border-radius: 1.25rem;
+    border-radius: 40px;
     background-color: white;
-    width: 50rem;
+    width: 40rem;
     height: 50rem;
     margin-top: 15rem;
     margin-bottom: 15rem;
@@ -2595,9 +2599,9 @@ hr {
     align-items: center;
     justify-content: center;
     border: 1px solid #ffffff;
-    border-radius: 1.25rem;
+    border-radius: 40px;
     background-color: white;
-    width: 50rem;
+    width: 40rem;
     height: 70rem;
     margin-top: 15rem;
     margin-bottom: 15rem;
@@ -2618,7 +2622,7 @@ hr {
 .confirmation-details .edit-wrapper h3 {
     align-items: center;
 }
-
+  
 .res-sel-fig {
     font-family: 'Roboto', sans-serif;
     font-size: 1.125rem;
@@ -2626,43 +2630,47 @@ hr {
     color: #FE6A86;
     margin: 3.125rem;
 }
+
 .res-sel-fig h3 {
     color: var(--text-color);
     line-height: 1.5;
 }
+
 .res-sel-fig titletext {
     color: var(--text-color);
     line-height: 1.5;
     font-weight: bold;
 }
+
 .res-title {
     border: 1px solid var(--main-color);
-    border-radius: 1rem;
+    border-radius: 40px;
     padding: 0.625rem 3rem;
     font-size: 1rem;
     color: black;
     margin-right: 1rem;
     margin-top: 1rem;
 }
+
 .res-button-wrapper {
     display: flex;
     flex-direction: row;
 }
-.proceed-btn {
-    display: flex;
-    flex-direction: row;
-    border-radius: 1rem;
+
+.res-button-wrapper .proceed-btn {
+    border-radius: 40px;
     background-color: var(--main-color);
     color: white;
     font-size: 1rem;
     border: none;
     padding: 1rem 1.5rem;    
     position: relative;   
+    width: auto;
+    height: auto;
 }
-.res-back-btn {
-    display: flex;
-    flex-direction: row;
-    border-radius: 1rem;
+
+.res-button-wrapper .res-back-btn {
+    border-radius: 40px;
     background-color: var(--brown-text);
     color: white;
     font-size: 1rem;
@@ -2671,5 +2679,8 @@ hr {
     position: relative;
     margin-left: 1.25rem;
     margin-right: 1.25rem;
+    width: auto;
+    height: auto;
 }
+
 /* End of Reservation-Selection */
