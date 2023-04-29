@@ -2417,3 +2417,122 @@ input:focus {
 
 /*  CART END */
 
+/* edit menu START  */
+.edit-item-container{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+ }
+
+ .edit-item-card{
+    background-color: white;
+    width: 70%;
+    height: auto;
+    padding: 2rem;
+    margin-top: 2rem;
+    border-radius: 15px;
+    filter: drop-shadow(0px 8px 4px rgba(0, 0, 0, 0.24));
+ }
+
+ .edit-item-card h1{
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 2rem;
+    color: var(--main-color);
+    margin-bottom: 2.5rem;
+ }
+
+ .edit-item-form-item{
+    margin: 3rem 1rem;
+ }
+
+ .edit-item-form-item label{
+    color: var(--main-color);
+    font-family: 'Roboto', sans-serif;
+ }
+
+#item-category,
+.edit-item-form-item input[type=text],
+.edit-item-form-item input::file-selector-button{
+    margin-top: 5px;
+}
+
+#item-category{
+    background-color: #FBFBFB;
+    color: #191D23;
+    width: 16rem;
+    height: auto;
+    border-radius: 30px;
+    border: none;
+    padding: 0.5rem 0;
+    color: black;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    text-indent: 12px;
+ }
+
+ .edit-item-form-item input[type=text]{
+    width: 16rem;
+    height: 2rem;
+    border-radius: 30px;
+    border: none;
+    background-color: #FBFBFB;
+    background: #FBFBFB;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    text-indent: 12px;
+ }
+
+ .edit-item-form-item input::file-selector-button{
+    background-color: var(--main-color);
+    border: none;
+    border-radius: 30px;
+    height: 1.5rem;
+    width: 5rem;
+    color: white;
+    font-weight: 600;
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.75rem;
+ }
+
+
+ #item-desc{
+    height: 8rem;
+    width: 30rem;
+ }
+
+ .edit-item-form-btn{
+    justify-content: right;
+    align-items: end;
+    display: flex;
+ }
+
+ .edit-item-form-btn button{
+    height: 2.4rem;
+    width: 6rem;
+    margin: 0 0.8rem;
+    border: none;
+    border-radius: 30px;
+    font-size: 1.1rem;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    color: white;
+ }
+
+ #cancel-edit-btn{
+    background-color: #EFD372;
+ }
+
+ #submit-edit-btn{
+    background-color: var(--main-color);
+ }
+
+ @media screen and (max-width: 768px) {
+    #item-desc {
+      width: 20rem;
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    #item-desc {
+      width: 15rem;
+    }
+ }
