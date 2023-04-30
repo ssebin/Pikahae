@@ -2037,6 +2037,10 @@ tr:nth-child(odd){
 
 /* Annei reservation home*/
 
+.reservation-body {
+    background: linear-gradient(rgba(255,255,255,.80), rgba(255,255,255,.90)),url("../images/pokecafe-bg.jpg");
+  }
+
 .res-banner-text {
     font-family: 'Aldrich', sans-serif;
 }
@@ -2064,6 +2068,7 @@ tr:nth-child(odd){
       margin-top: 50px;
       margin-bottom: 40px;
       font-weight: bold;
+      text-align: center;
   }
 
   .reservation-Button{
@@ -2072,16 +2077,16 @@ tr:nth-child(odd){
 
   .reservation-description{
     justify-content: center;
-      align-items: center;
-      width: 100%;
-      text-align: center;
-      background-color: var(--bg-color);
-      padding-top: 50px;
-      padding-bottom: 50px;
-      padding-left: 50px;
-      padding-right: 50px;
-      margin-bottom: 50px;
-      margin-top: 50px;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+    background-color: var(--header-color);
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-left: 50px;
+    padding-right: 50px;
+    margin-bottom: 50px;
+    margin-top: 50px;
   }
 
   .res-dec{
@@ -2093,21 +2098,196 @@ tr:nth-child(odd){
   /* Annei reservation home end */
 
   /* Annei reserve from p1 */
-  .reservation-form-container{
-    margin-top: 50px;
-    margin-bottom: 50px;
-    margin-left: 70px;
-    margin-right: 70px;
-    padding:50px;
+
+  .reservationForm1-body {
+    background: linear-gradient(rgba(255,255,255,.80), rgba(255,255,255,.90)),url("../images/pokecafe-bg.jpg");
+  }
+
+  .logo-container{
+    display: flex;
     justify-content: center;
     align-items: center;
-    text-align: center;
-    background-color: var(--header-color);
+  }
+
+  .reservation-form-container{
+    max-width: 800px;
+    margin: 0 auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding:50px;
+    background-color: var(--bg-color);
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+  }
+
+  .form-alignment {
+    justify-content:center;
+    align-items: center;   
+    /* text-align: center; */
   }
 
   .reservation-time-form {
     margin-top: 10px;
   }
+
+   /* Remove the default appearance of the date input box */
+input[type="date"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    padding: 0.5rem;
+    border-radius: 4px;
+    border: 2px solid #ccc;
+    width: 100%;
+  }
+
+  /* Change the appearance of the date input box when it's being hovered over */
+  input[type=date]:hover {
+    border: 2px solid #555;
+  }
+  
+  /* Customize the appearance of the date input box */
+  .custom-date-input::-webkit-calendar-picker-indicator {
+    color: #fff;
+    background-color: var(--main-color);
+    border-radius: 50%;
+    border: none;
+    padding: 0.5rem;
+  }
+
+
+  /* Change the appearance of the drop down box */
+#time {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: white;
+    font-size: 16px;
+  }
+  
+  /* Change the appearance of the drop down box when it's being hovered over */
+  #time:hover {
+    border: 2px solid #555;
+  }
+  
+  /* Change the appearance of the drop down box when it has focus */
+  #time:focus {
+    border: 2px solid #555;
+    outline: none;
+  }
+
+  
+
+
+  /* Change the appearance of the number input box */
+input[type=number] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  /* Change the appearance of the number input box when it's being hovered over */
+  input[type=number]:hover {
+    border: 2px solid #555;
+  }
+  
+  /* Change the appearance of the number input box when it has focus */
+  input[type=number]:focus {
+    border: 2px solid #555;
+    outline: none;
+  }
+  
+
+   /* Anneis reservationSelectTable start */
+
+   .reservationTableSelectionDetails-body{
+    background: linear-gradient(rgba(255,255,255,.80), rgba(255,255,255,.90)),url("../images/pokecafe-bg.jpg");
+}
+
+.reservation-table-container {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: 70px;
+    margin-right: 70px;
+    padding:50px;
+    background-color: var(--bg-color);
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+}
+
+
+  .img-container img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 10.625rem;
+    height: 15.625rem;
+    object-fit: cover;
+  }
+
+  .available-table-header {
+    text-align: center;
+    font-weight: bold;
+    color: var(--main-color);
+  }
+
+  .select-table-header {
+    color: var(--main-color);
+    margin-bottom: 30px;
+    text-align: center;
+  }
+
+  .form-check-input:checked {
+    background-color: var(--main-color) !important;
+  }
+
+  .card.selected {
+    background-color: var(--main-color-light); 
+  }
+
+  /* Anneis reservationSelectTable end */
+
+    /* annei table selection details start */
+    .table-selection-details {
+        padding: 10px;
+        margin-bottom: 20px;
+      }
+    
+      .reservation-confirmation-container{
+        max-width: 800px;
+        margin: 0 auto;
+        margin-top: 50px;
+        margin-bottom: 50px;
+        padding:50px;
+        background-color: var(--bg-color);
+        box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 20px;
+      }
+      /* annei table selection details end  */
+
+/* annei reservationConfirmationDetals start */
+
+  .reservationConfirmationDetails-body {
+    background: linear-gradient(rgba(255,255,255,.80), rgba(255,255,255,.90)),url("../images/pokecafe-bg.jpg");
+  }
+
+  .preordermenu-container{
+
+  }
+
+  .preorderitem-header {
+    color: var(--main-color);
+    font-weight: bold;
+  }
+
+/* annei reservationConfirmationDetals end */
+
 
   /* About us & Contact us */
 
