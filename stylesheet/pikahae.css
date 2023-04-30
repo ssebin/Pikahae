@@ -1173,7 +1173,7 @@ hr {
     align-items: center;
     justify-content: center;
     border: 1px solid #ffffff;
-    border-radius: 1.25rem;
+    border-radius: 40px;
     background-color: white;
     width: 50rem;
     height: 37.5rem;
@@ -1187,14 +1187,18 @@ hr {
     align-items: center;
     justify-content: center;
     border: 1px solid #ffffff;
-    border-radius: 1.2rem;
+    border-radius: 40px;
     background-color: white;
-    width: 50rem;
+    width: 55rem;
     height: 25rem;
     margin: 6.25rem;
     box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
 }
-  
+
+.qr-code {
+    margin-right: 1px; /*adjust when the qr-code picture is different size!*/
+}
+
 figcaption {
     font-family: 'Roboto', sans-serif;
     font-size: 1.125rem;
@@ -1235,6 +1239,7 @@ figcaption contenttext {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-left: 20px;
     margin-top: 2.8125rem;
 }
   
@@ -1245,7 +1250,7 @@ figcaption contenttext {
     background-color: #FE6A86;
     color: white;
     border: none;
-    border-radius: 0.625rem;
+    border-radius: 40px;
     font-family: 'Roboto', sans-serif;
     font-size: 1rem;
     cursor: pointer;
@@ -1285,7 +1290,7 @@ figcaption contenttext {
     background-color: #FE6A86;
     color: #ffffff;
     padding: 0.625rem 0.9375rem;
-    border-radius: 1.25rem;
+    border-radius: 40px;
     cursor: pointer;
 }
   
@@ -1299,7 +1304,7 @@ figcaption contenttext {
 
 div[contenteditable="true"] {
     border: 1px solid black;
-    border-radius: 1.875rem;
+    border-radius: 40px;
     padding: 0.625rem;
     font-size: 1rem;
     color: black;
@@ -1308,7 +1313,7 @@ div[contenteditable="true"] {
 select {
     border: 1px solid black;
     width: 16rem;
-    border-radius: 2rem;
+    border-radius: 40px;
     padding: 1rem;
     font-size: 1rem;
     color: black;
@@ -1321,7 +1326,7 @@ select {
 }
 
 .delete-account {
-    border-radius: 1.25rem;
+    border-radius: 40px;
     background-color: #9B693E;
     color: white;
     font-size: 1.25rem;
@@ -1331,7 +1336,7 @@ select {
 }
 
 .cancel-edit {
-    border-radius: 1.25rem;
+    border-radius: 40px;
     background-color: #FFDD13;
     color: white;
     font-size: 1.25rem;
@@ -1341,7 +1346,7 @@ select {
 }
 
 .save-edit {
-    border-radius: 1.25rem;
+    border-radius: 40px;
     background-color: #FE6A86;
     color: white;
     font-size: 1.25rem;
@@ -2114,7 +2119,7 @@ tr:nth-child(odd){
   .search-container input[type="text"] {
     width: 18.75rem;
     height: 1.875rem;
-    border-radius: 1.25rem;
+    border-radius: 40px;
     color: rgba(254, 106, 134, 0.9);
     margin: 1.5625rem;
     margin-left: 37.5rem;
@@ -2153,7 +2158,7 @@ tr:nth-child(odd){
     margin: 1.25rem;
     text-align: center;
     background-color: #F1EDEA;
-    border-radius: 1.25rem;
+    border-radius: 40px;
     align-items: center;
     width: 37.5rem;
     margin-top: 1rem;
@@ -2290,7 +2295,7 @@ tr:nth-child(odd){
     margin: 25px;
     background-size: 30px 30px;
     background-position: center;
-    border-radius: 20px;
+    border-radius: 40px;
 }
 
 .contact-icon-wrapper {
@@ -2302,7 +2307,7 @@ tr:nth-child(odd){
     margin: 25px;
     background-size: 30px 30px;
     background-position: center;
-    border-radius: 20px;
+    border-radius: 40px;
 }
 
 .small-button-container {
@@ -2337,7 +2342,7 @@ tr:nth-child(odd){
     height: 300px;
     align-items: center;
     margin-left: 600px;
-    border-radius: 20px;
+    border-radius: 40px;
 }
 
 .locate-us h4{
@@ -2406,7 +2411,7 @@ tr:nth-child(odd){
   .form-row input[type="text"],
   input[type="email"]{
     padding: 10px;
-    border-radius: 16px;
+    border-radius: 40px;
     width: 300px;
     height: 50px;
     border: 1px solid #FE6A86;
@@ -2416,7 +2421,7 @@ tr:nth-child(odd){
     resize: none;
     height: 100px;
     width: 207%;
-    border-radius: 16px;
+    border-radius: 40px;
     border: 1px solid #FE6A86;
     padding: 10px;
   }
@@ -2440,7 +2445,7 @@ tr:nth-child(odd){
     padding: 20px;
     margin-top:30px;
     margin-right: 490px;
-    border-radius: 20px;
+    border-radius: 40px;
     border: none;
     background-color: #FE6A86;
     color: #fff;
