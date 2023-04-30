@@ -2223,6 +2223,229 @@ tr:nth-child(odd){
     }
 }
 
+.contact-us-background {
+    background-image: url("../images/other/about_us_bg.png");
+    background-size: cover;
+    background-position: center;
+    height: 270vh; /* hange this if the overall height of the page is changed*/
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-us-icon-container {
+    display: flex;
+    flex-direction: row;
+    background-color: #FFFFFF;
+    border-radius: 20px;
+    width: 400px;
+    height: 100px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: 20px;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+}
+
+.contact-us-icon-container p {
+    margin-left: 60px;
+    white-space: nowrap;
+    color:#FE6A86;
+}
+
+.image-description-wrapper {
+    display: flex;
+    flex-direction: row;
+}
+
+.image-description-wrapper img {
+    width: 450px;
+    height: 500px;
+    margin-top: 40px;
+    margin-left: 100px;
+}
+
+.description-wrapper {
+    margin-left: 20px;
+    margin-top: 40px;
+    width: 500px;
+}
+
+.social-media-button {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: #F1EDEA;
+    width: 30px;
+    height: 30px;
+    border: none;
+    border-radius: 50%;
+}
+
+.email-icon-wrapper {
+    background-image: url("../images/other/mail.png");
+    background-repeat: no-repeat;
+    background-color: #F4F4F4;
+    width: 50px;
+    height: 50px;
+    margin: 25px;
+    background-size: 30px 30px;
+    background-position: center;
+    border-radius: 20px;
+}
+
+.contact-icon-wrapper {
+    background-image: url("../images/other/phone.png");
+    background-repeat: no-repeat;
+    background-color: #F4F4F4;
+    width: 50px;
+    height: 50px;
+    margin: 25px;
+    background-size: 30px 30px;
+    background-position: center;
+    border-radius: 20px;
+}
+
+.small-button-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 400px;
+    margin-left: 16px;
+  }
+
+  .social-media-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    padding: 10px;
+    border-radius: 50%;
+    background-color: #f4f4f4;
+  }
+
+.social-media-button img {
+    width: 24px;
+    height: 24px;
+    background-position: center;
+    margin: 10px;
+}
+  
+.locate-us {
+    background-color: #FFFFFF;
+    width: 300px;
+    height: 300px;
+    align-items: center;
+    margin-left: 600px;
+    border-radius: 20px;
+}
+
+.locate-us h4{
+    color: #FE6A86;
+    font-size: 40px;
+    text-align: left;
+    margin-left: 12px;
+    margin-top: 20px;
+}
+
+.cafe-location-information {
+    background-image: url("../images/other/cafe_photo.jpg");
+    width: 1000px;
+    height: 550px;
+    margin-top: 100px;
+    margin-left: 100px;
+    margin-bottom: 100px;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    align-items: center;
+}
+
+  .cafe-location-information p {
+    text-align: left;
+    color: #525C60;
+  }
+
+  .cafe-location-address {
+    display: flex;
+    flex-direction: row;
+    margin-top: 50px;
+    color: #525C60;
+  }
+
+  .cafe-location-address img {
+    width: 40px;
+    height: 40px;
+    margin-left: 20px;
+  }
+
+  .contact-us-form-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .contact-us-form-container form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+  }
+  
+  .form-row {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-row label {
+    font-weight: bold;
+    color: #FE6A86;
+    margin-bottom: 10px;
+  }
+ 
+  .form-row input[type="text"],
+  input[type="email"]{
+    padding: 10px;
+    border-radius: 16px;
+    width: 300px;
+    height: 50px;
+    border: 1px solid #FE6A86;
+  }
+
+  .form-row textarea{
+    resize: none;
+    height: 100px;
+    width: 207%;
+    border-radius: 16px;
+    border: 1px solid #FE6A86;
+    padding: 10px;
+  }
+
+  .form-row input[type="text"]::placeholder {
+    color: #999;
+    font-style: italic;
+  }
+
+  .form-row input[type="email"]::placeholder {
+    color: #999;
+    font-style: italic;
+  }
+
+  .form-row input[type="message"]::placeholder {
+    color: #999;
+    font-style: italic;
+  }
+  
+  .contact-us-form-container button[type="submit"] {
+    padding: 20px;
+    margin-top:30px;
+    margin-right: 490px;
+    border-radius: 20px;
+    border: none;
+    background-color: #FE6A86;
+    color: #fff;
+    cursor: pointer;
+  }
   /* About us & Contact us END */
 
 
