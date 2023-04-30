@@ -2446,6 +2446,13 @@ tr:nth-child(odd){
     color: #fff;
     cursor: pointer;
   }
+
+  .search-container h2{
+    color:#FE6A86 ;
+    font-size: 40px;
+    margin: 16px;
+    font-weight: normal;
+  }
   /* About us & Contact us END */
 
 
