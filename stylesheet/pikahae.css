@@ -1209,7 +1209,7 @@ section .menu-navlist{
     margin-bottom: 15px;
 }
 
-.form-card{
+.form-card {
     text-align: center;
     background-color: white;
     width: 500px;
@@ -1219,6 +1219,12 @@ section .menu-navlist{
     margin: 10px auto 0;
     position: relative;
     filter: drop-shadow(0px 8px 4px rgba(0, 0, 0, 0.24));
+}
+
+#success-msg{
+    margin-top: 1.8rem;
+    font-family: 'Roboto', sans-serif;
+    font-size: var(--p-font);
 }
 
 .form-card-logo, .form-card-header, .form-card-input, .form-card-footer{
@@ -1234,7 +1240,7 @@ section .menu-navlist{
     border-bottom: 1.2px groove var(--secound-color);
     width: 24rem;
     height: auto;
-    margin: 14px;
+    margin: 1rem;
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
     text-indent: 2px;
@@ -1266,7 +1272,7 @@ section .menu-navlist{
     justify-content: space-around;
     font-family: 'Roboto', sans-serif;
     font-size: 0.875rem;
-    margin-bottom: 0.8rem;
+    margin-bottom: 1rem;
     font-weight: 500;
 }
 
@@ -1290,7 +1296,7 @@ section .menu-navlist{
 }
 
 .form-card-input button{
-    margin: 0.5rem;
+    margin: 0.6rem;
     width: 24rem;
     height: 2.2rem;
     background: var(--main-color);
@@ -2795,7 +2801,7 @@ input[type=number] {
   }
  
   .form-row input[type="text"],
-  input[type="email"]{
+  .form-row input[type="email"]{
     padding: 10px;
     border-radius: 40px;
     width: 300px;
