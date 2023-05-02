@@ -2224,6 +2224,30 @@ tr:nth-child(odd){
     background: linear-gradient(rgba(255,255,255,.80), rgba(255,255,255,.90)),url("../images/pokecafe-bg.jpg");
   }
 
+.btn-yellow-reservation {
+    padding: 15px 25px;
+    background: var(--btn-color);
+    color: var(--text-color);
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 40px;
+    margin-bottom: 150px;
+    line-height: 1.8;
+    text-decoration: none;
+}
+
+.btn-yellow-reservation-delete {
+    padding: 15px 25px;
+    background: red;
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 40px;
+    margin-bottom: 150px;
+    line-height: 1.8;
+    text-decoration: none;
+}
+
 .res-banner-text {
     font-family: 'Aldrich', sans-serif;
 }
@@ -2300,7 +2324,7 @@ tr:nth-child(odd){
     padding:50px;
     background-color: var(--bg-color);
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 20px;
+    border-radius: 40px;
   }
 
   .form-alignment {
@@ -2345,16 +2369,15 @@ input[type="date"] {
     padding: 12px 20px;
     margin: 8px 0;
     box-sizing: border-box;
-    border: 2px solid #ccc;
     border-radius: 4px;
     background-color: white;
     font-size: 16px;
   }
   
   /* Change the appearance of the drop down box when it's being hovered over */
-  #time:hover {
+  /* #time:hover {
     border: 2px solid #555;
-  }
+  } */
   
   /* Change the appearance of the drop down box when it has focus */
   #time:focus {
@@ -2401,7 +2424,7 @@ input[type=number] {
     padding:50px;
     background-color: var(--bg-color);
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 20px;
+    border-radius: 40px;
 }
 
 
@@ -2450,7 +2473,7 @@ input[type=number] {
         padding:50px;
         background-color: var(--bg-color);
         box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
-        border-radius: 20px;
+        border-radius: 40px;
       }
       /* annei table selection details end  */
 
@@ -2836,7 +2859,7 @@ input[type=number] {
         padding:50px;
         background-color: var(--bg-color);
         box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
-        border-radius: 20px;
+        border-radius: 40px;
     }
 
     .tab-switch-reservation {
@@ -2874,7 +2897,7 @@ input[type=number] {
         padding:50px;
         background-color: var(--bg-color);
         box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
-        border-radius: 20px;
+        border-radius: 40px;
 
 
     }
