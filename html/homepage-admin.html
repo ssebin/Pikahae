@@ -31,13 +31,13 @@
     <!-- header -->
     <section>
         <nav class="header">
-            <a href="#" class="logo"><img src="../images/logo_draft.png" alt="logo"></a>
+            <a href="homepage-admin.html" class="logo"><img src="../images/logo_draft.png" alt="logo"></a>
             <!--        <p class="cafe-name">Pikahae</p>-->
 
             <ul class="navlist">
                 <li><a href="homepage-admin.html">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Reservations</a></li>
+                <li><a href="about_us.html">About</a></li>
+                <li><a href="reservationDashboardAdmin.html">Reservations</a></li>
                 <li><a href="menu.html">Menu</a></li>
             </ul>
 
@@ -57,62 +57,58 @@
     <section class="home">
         <!--About Us-->
         <div class="HP-about-us">
-            <h1 class="HP-heading"><span class="cool-fontz">Welcome, </span>PikaFam <span class="cool-fontz">!</span></h1>
+            <h1 class="HP-heading"><span class="cool-fontz">Welcome back, </span>PikaFam<span class="cool-fontz"> !</span>
+            </h1>
             <p class="HP-desc">"Gotta serve 'em all"<br>
                 Manage consumer accounts, reservations, and menu items.<br>
                 All within your fingertips.<br></p>
-            <a href="#" class="btn-yellow">About Us</a>
+            <a href="about_us.html" class="btn-yellow">About Us</a>
         </div>
         <!--Menu-->
         <div class="HP-menu">
             <h2 class="HP-menu-heading">Manage</h2>
 
             <!--Copied from homung's menu-->
-            <section class="admin-manage" id="admin-manage">
-                <!--  TODO: add navigation here-->
-                    <div class="box-container">
-                        <div class="box">
-                            <img src="../images/homepage/manage-pic-1.png">
-                            <div class="item-text">
-                                <h3>Consumer Accounts</h3>
-                                <ul class="desc">
-                                    <li>View list of users</li>
-                                    <li>Update user information</li>
-                                    <li>Delete an account</li>
-                                </ul>
-                            </div>
-                            <div id="preorder-btn">
-                                <a href="#" class="btn">Manage</a>
-                            </div>            
-                        </div>
+            <section class="homepage-admin-menu" id="homepage-admin-menu">
+                <div class="box-container">
 
-                        <div class="box">
-                            <img src="../images/homepage/manage-pic-2.png">
-                            <div class="item-text">
-                                <h3>Reservations</h3>
-                                <ul class="desc">
-                                    <li>View reserved tables</li>
-                                    <li>Edit availability options</li>
-                                    <li>View pre-ordered menu items</li>
-                                </ul>
-                            </div>
-                            <a href="#" class="btn">Manage</a>
+                    <!-- CARD 1 -->
+                    <div class="box">
+                        <a href="#" class="category-btn">Food</a>
+                        <img src="../images/homepage/manage-pic-1.png">
+                        <div class="item-text">
+                            <h3 class="item-name">Consumer Accounts</h3>
+                            <i class="item-desc">View list of users<br>Update user information<br>Delete an account</i>
+                            <br>
                         </div>
-
-                        <div class="box">
-                            <img src="../images/homepage/manage-pic-3.png">
-                            <div class="item-text">
-                                <h3>Menu Items</h3>
-                                <ul class="desc">
-                                    <li>View an item</li>
-                                    <li>Add or delete an item</li>
-                                    <li>Edit an item</li>
-                                </ul>
-                            </div>
-                            <a href="#" class="btn">Manage</a>
-                        </div>
+                        <div class="po-btn-container"><a href="#" class="po-btn">Manage</a></div>
                     </div>
-                </section>
+
+                    <!-- CARD 2 -->
+                    <div class="box">
+                        <a href="#" class="category-btn">Food</a>
+                        <img src="../images/homepage/manage-pic-2.png">
+                        <div class="item-text">
+                            <h3 class="item-name">Reservations</h3>
+                            <i class="item-desc">View reserved tables<br>Edit availability options<br>View pre-ordered menu items</i>
+                            <br>
+                        </div>
+                        <div class="po-btn-container"><a href="#" class="po-btn">Manage</a></div>
+                    </div>
+
+                    <!-- CARD 3 -->
+                    <div class="box">
+                        <a href="#" class="category-btn">Food</a>
+                        <img src="../images/homepage/manage-pic-3.png">
+                        <div class="item-text">
+                            <h3 class="item-name">Menu Items</h3>
+                            <i class="item-desc">View an item<br>Add or delete an item<br>Edit an item</i>
+                            <br>
+                        </div>
+                        <div class="po-btn-container"><a href="#" class="po-btn">Manage</a></div>
+                    </div>
+                </div>
+            </section>
             <a href="#" class="btn-pink">Contact Manager</a>
         </div>
 
@@ -122,9 +118,9 @@
         </div>
 
         <!--Review-->
-        <div class="container">
-            <div class="board">
-                <h2 class="review-title">What our customers are saying</h2>
+        <div class="review-container">
+            <div class="review-board">
+                <h2 class="review-title">What Our Customers are Saying</h2>
 
                 <!-- Slider main container -->
                 <div class="swiper">
@@ -135,7 +131,8 @@
                             <div class="flex">
                                 <div class="comments">
                                     Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                    Non, placeat quisquam? Animi sunt, dignissimos est sit reiciendis iste ipsa error?
+                                    Non, placeat quisquam? Animi sunt, dignissimos est sit reiciendis iste ipsa
+                                    error?
                                 </div>
                                 <div class="profile">
                                     <img src="../images/review/review-brock.jpg" alt="">
@@ -147,7 +144,8 @@
                         <div class="swiper-slide">
                             <div class="flex">
                                 <div class="comments">
-                                    Non, placeat quisquam? Animi sunt, dignissimos est sit reiciendis iste ipsa error?
+                                    Non, placeat quisquam? Animi sunt, dignissimos est sit reiciendis iste ipsa
+                                    error?
                                     Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                                 </div>
                                 <div class="profile">
@@ -160,7 +158,8 @@
                         <div class="swiper-slide">
                             <div class="flex">
                                 <div class="comments">
-                                    Animi sunt, ipsa error? Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                    Animi sunt, ipsa error? Lorem ipsum dolor sit amet, consectetur adipisicing
+                                    elit.
                                     Non, placeat quisquam? dignissimos est sit reiciendis iste
                                 </div>
                                 <div class="profile">
@@ -177,7 +176,7 @@
                     <!-- If we need navigation buttons -->
                     <div class="swiper-button-prev"></div>
                     <div class="swiper-button-next"></div>
-
+                    <br>
                 </div>
 
             </div>
@@ -188,23 +187,24 @@
 
         <!--Footer-->
         <footer>
-            
-        <div class="footer-content">
-            <h3>Pikahae</h3>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.<br>Illo iste corrupti doloribus odio sed!</p>
-            <ul class="socials">
-                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                <li><a href="#"><i class="fa fa-youtube"></i></a></li>
-                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-            </ul>
-            <img src=../images/babies_trans.png>
-        </div>
-        <hr class="footer-line">
-        <div class="footer-bottom">
-            <p>copyright &copy;2023 Pikahae. designed by <span>dino kuning</span></p>
-        </div>
+
+            <div class="footer-content">
+                <h3>Pikahae</h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.<br>Illo iste corrupti doloribus
+                    odio sed!</p>
+                <ul class="socials">
+                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                    <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                    <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+                    <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                </ul>
+                <img src=../images/babies_trans.png>
+            </div>
+            <hr class="footer-line">
+            <div class="footer-bottom">
+                <p>copyright &copy;2023 Pikahae. designed by <span>dino kuning</span></p>
+            </div>
         </footer>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     </section>
