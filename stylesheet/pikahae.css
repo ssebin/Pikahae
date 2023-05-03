@@ -1215,7 +1215,7 @@ section .menu-navlist{
     width: 500px;
     height: auto;
     padding: 0.25rem 1.5rem 1.5rem;
-    border-radius: 35px;
+    border-radius: 40px;
     margin: 10px auto 0;
     position: relative;
     filter: drop-shadow(0px 8px 4px rgba(0, 0, 0, 0.24));
@@ -1243,6 +1243,7 @@ section .menu-navlist{
     margin: 1rem;
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
+    font-weight: 600;
     text-indent: 2px;
 }
 
@@ -1306,13 +1307,14 @@ section .menu-navlist{
     font-family: 'Roboto';
     font-style: normal;
     font-size: 1.063rem;
-    box-shadow: 0 0 3px rgba(0, 0, 0, 0.084), 0 4px 3px rgba(0, 0, 0, 0.168);
+    box-shadow: 0 4px 0 #CC566B;
 }
 
 .login-btn-google button{
-    background: white;
+    background: #FAFAFA;
     color: rgba(0, 0, 0, 0.54);
     letter-spacing: 0.2px;
+    box-shadow: 0 4px 0 #CCCCCC;
 }
 
 .login-btn-google img{
@@ -1333,6 +1335,49 @@ section .menu-navlist{
 .register-input p{
     font-size: 0.78rem;
     margin-bottom: auto;
+}
+
+#admin-login-button{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+}
+
+#admin-login-button button{
+    background-color: var(--main-color);
+    border: none;
+    border-radius: 50px;
+    width: 3rem;
+    height: 3rem;
+    text-align: center;
+}
+
+#admin-login-button img{
+    width: auto;
+    height: 1.5rem;
+    display: block;
+    margin: 0 auto;
+}
+
+.form-body button:hover,
+#admin-login-button button:hover{
+    background-color: #E66079;
+    transition: 0.5s;
+}
+
+.form-body button:active{
+    box-shadow: none;
+    transform: translateY(4px);
+}
+
+.login-btn-google button:hover{
+    background-color: #E6E6E6;
+}
+
+.reset-pass-input{
+    margin-top: 1.5rem;
 }
 
 /* login/registration END */
@@ -2101,15 +2146,12 @@ JavaScript Triggered Classes
 /* ITEM DETAIL PAGE END */
 /* manage menu START  */
 
-.admin-view{
-    background-image: linear-gradient(rgba(255,255,255,.80), rgba(255,255,255,.90)),url("../images/pokecafe-bg.jpg");
-    background-size: cover;
-}
-
 .admin-view-body{
     align-items: center;
     display: flex;
     justify-content: center;
+    background-image: linear-gradient(rgba(255,255,255,.80), rgba(255,255,255,.90)),url("../images/pokecafe-bg.jpg");
+    background-size: cover;
 }
 
 .admin-view-header{    
@@ -2178,7 +2220,7 @@ table{
     border-collapse: separate;
     border-spacing: 0 0.625rem;
     overflow: hidden;
-    margin-top: 0;
+    margin-top: 1rem;
     font-family: 'Roboto', sans-serif;
     font-size: 1rem;
 }
