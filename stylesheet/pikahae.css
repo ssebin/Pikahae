@@ -1400,6 +1400,8 @@ hr {
     border-radius: 50%;
     width: 12.5rem;
 }
+
+
   
 .edit-profile-figure {
     font-family: 'Roboto', sans-serif;
@@ -1440,6 +1442,16 @@ figcaption {
     color: #FE6A86;
     margin: 3.125rem;
 }
+
+.upload-wrapper .file-name {
+    font-size: 16px;
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 150px;
+}
+  
 
 figcaption h2 {
     color: black;
