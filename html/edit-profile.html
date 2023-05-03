@@ -49,11 +49,12 @@
                         <h3>Edit Profile</h3>
                         <div class="profile-description-wrapper">
                             <div class="profile-wrapper">
-                                <img src="../images/profile/profile_pic.png" alt="Profile Picture" class="profile-picture">
+                                <img src="../images/profile/profile_pic.png" id="ProfilePicture" alt="Profile Picture" class="profile-picture">
                                 <div class="upload-wrapper">
-                                    <label for="file-upload">Upload</label>
+                                    <label for="file-upload" id="upload-btn">Upload</label>
                                     <input type="file" id="file-upload" name="file-upload" accept=".jpg, .jpeg, .png">
                                     <span class="file-name"></span>
+                                    <script src="../script/editProfile.js"></script>
                                 </div>
                             </div>
                             <figcaption>
