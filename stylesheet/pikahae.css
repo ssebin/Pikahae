@@ -956,6 +956,7 @@ footer{
     align-items: center;
     justify-content: flex-start;
     margin: 5px 0 5px 0;
+    /* background-color: var(--bg-color); */
 }
 
 .sub-header-wrapper p{
@@ -1111,8 +1112,16 @@ footer{
 }
 
 hr{
-    border: 1px solid var(--main-color);
+    border: 1px solid var(--main-color); 
 }
+
+.pinkLine hr {
+    border: 1px solid var(--main-color); 
+    margin: 0 ;
+    padding: 0 ;
+
+}
+
 
 section .menu-nav{
     padding: 20px;
@@ -2055,6 +2064,7 @@ Product section styling
     justify-content: center;
     background-image: linear-gradient(rgba(255,255,255,.80), rgba(255,255,255,.90)),url("../images/pokecafe-bg.jpg");
     background-size: cover;
+    margin-bottom: 50px;
 }
 
 .admin-view-header{    
@@ -2192,7 +2202,7 @@ tr:nth-child(odd){
     text-decoration: none;
 }
 
-.btn-yellow-reservation-delete {
+.btn-red-reservation-delete {
     padding: 15px 25px;
     background: red;
     color: white;
@@ -2243,19 +2253,19 @@ tr:nth-child(odd){
     align-items: center;
     width: 100%;
     text-align: center;
-    background-color: var(--header-color);
+    background-color: rgb(255, 246, 204, 0.55);
     padding-top: 50px;
     padding-bottom: 50px;
-    padding-left: 50px;
-    padding-right: 50px;
+    padding-left: 90px;
+    padding-right: 90px;
     margin-bottom: 50px;
     margin-top: 50px;
   }
 
   .res-dec{
     font-size: 1.1rem;
-      color: var(--text-color);
-      line-height: 1.8;
+    color: var(--text-color);
+    line-height: 1.8;
   }
 
   /* Annei reservation home end */
@@ -2293,13 +2303,20 @@ tr:nth-child(odd){
     margin-top: 10px;
   }
 
+  .reservation-pax-form {
+    margin-top: 10px;
+  }
+
    /* Remove the default appearance of the date input box */
 input[type="date"] {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-    padding: 0.5rem;
-    border-radius: 4px;
+    padding-left: 1.5rem;
+    padding-right: 1.0rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    border-radius: 40px;
     border: 2px solid #ccc;
     width: 100%;
   }
@@ -2321,19 +2338,28 @@ input[type="date"] {
 
   /* Change the appearance of the drop down box */
 #time {
+    /* -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 6'%3E%3Cpath d='M6 6L0 0h12z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: 12px 6px;
+    padding-right: 20px;  */
+
     width: 100%;
     padding: 12px 20px;
-    margin: 8px 0;
     box-sizing: border-box;
-    border-radius: 4px;
-    background-color: white;
+    border-radius: 40px;
+    border: 2px solid #ccc;
     font-size: 16px;
+    
   }
   
   /* Change the appearance of the drop down box when it's being hovered over */
-  /* #time:hover {
+  #time:hover {
     border: 2px solid #555;
-  } */
+  }
   
   /* Change the appearance of the drop down box when it has focus */
   #time:focus {
@@ -2341,17 +2367,13 @@ input[type="date"] {
     outline: none;
   }
 
-  
-
-
   /* Change the appearance of the number input box */
 input[type=number] {
     width: 100%;
     padding: 12px 20px;
-    margin: 8px 0;
     box-sizing: border-box;
     border: 2px solid #ccc;
-    border-radius: 4px;
+    border-radius: 40px;
   }
   
   /* Change the appearance of the number input box when it's being hovered over */
@@ -2430,6 +2452,18 @@ input[type=number] {
         background-color: var(--bg-color);
         box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
         border-radius: 40px;
+      }
+
+      .reservation-confirmation-container2{
+        max-width: 800px;
+        margin: 0 auto;
+        margin-top: 50px;
+        margin-bottom: 50px;
+        padding:50px;
+        background-color: var(--bg-color);
+        box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 40px;
+        text-align: center;
       }
       /* annei table selection details end  */
 
@@ -2863,8 +2897,30 @@ input[type=number] {
         box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
     }
 
+    .nav-pills {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #f2f2f2;
+        border-radius: 25px;
+        padding: 10px;
+    }
+
+    .nav-link {
+        text-decoration: none;
+        color: var(--text-color);
+        padding: 10px;
+        border-radius: 5px;
+      }
+
     .nav-link.active {
         background-color: var(--main-color) !important;
+        color: var(--bg-color);
+    }
+
+    .nav-link:hover {
+        background-color: var(--main-color-light);
+        transition: background-color 0.5s ease;
     }
 
     /* .nav-link {

@@ -49,6 +49,11 @@ checkboxes.forEach((checkbox) => {
     } else {
       card.classList.remove('selected');
     }
+
+    // add the highlighting to this card
+    if (this.checked) {
+      card.classList.add('selected');
+    } 
   });
 }); //end
 
