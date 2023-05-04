@@ -1513,6 +1513,12 @@ figcaption contenttext {
     font-family: 'Roboto', sans-serif;
     font-size: 1rem;
     cursor: pointer;
+    box-shadow: 0 4px 0 #b20046;
+}
+
+.profile-button:active{
+    box-shadow: none;
+    transform: translateY(4px);
 }
 
 #birthday{
@@ -1589,6 +1595,10 @@ select {
     box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
 }
 
+#upload-btn{
+    box-shadow: 0 4px 0 #CC566B;
+}
+
 .button-wrapper {
     display: flex;
     flex-direction: row;
@@ -1598,29 +1608,40 @@ select {
     border-radius: 40px;
     background-color: #9B693E;
     color: white;
-    font-size: 1.25rem;
+    font-size: 1rem;
     border: none;
     margin-right: 17rem;
     padding: 0.8rem 1.4rem;
+    box-shadow: 0 4px 0 #7b4719;
 }
 
 .cancel-edit {
     border-radius: 40px;
     background-color: #FFDD13;
     color: white;
-    font-size: 1.25rem;
+    font-size: 1rem;
     border: none;
     padding: 0.625rem 1.25rem;
     margin-right: 1.25rem;
+    box-shadow: 0 4px 0 #ecd134;
+}
+
+#upload-btn:active,
+.cancel-edit:active,
+.save-edit:active,
+.delete-account:active{
+    box-shadow: none;
+    transform: translateY(4px);
 }
 
 .save-edit {
     border-radius: 40px;
     background-color: #FE6A86;
     color: white;
-    font-size: 1.25rem;
+    font-size: 1rem;
     border: none;
     padding: 0.625rem 1.25rem;
+    box-shadow: 0 4px 0 #CC566B;
 }
 
 /* profile end */
@@ -2752,7 +2773,7 @@ input[type=number] {
     font-style: italic;
   }
 
-  .form-row input[type="message"]::placeholder {
+  #message{
     color: #999;
     font-style: italic;
   }
@@ -2766,7 +2787,55 @@ input[type=number] {
     background-color: #FE6A86;
     color: #fff;
     cursor: pointer;
+    box-shadow: 0 4px 0 #b20046;
   }
+
+  .contact-us-form-container button[type="submit"]:active,
+  .close-button:active{
+    box-shadow: none;
+    transform: translateY(4px);
+  }
+
+  /* Style for the overlay */
+.submit-btn-overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+    z-index: 999; /* Make sure it appears above everything else */
+    display: none; /* Hide it by default */
+  }
+  
+  /* Style for the message box */
+  .message-box {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 40px;
+  }
+  
+  /* Style for the close button */
+  .close-button {
+    background-color: #FE6A86;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 40px;
+    cursor: pointer;
+    bottom: -30px;
+    left: 50%;
+    box-shadow: 0 4px 0 #b20046;
+  }
+  
 
   /* About us & Contact us END */
 
