@@ -14,6 +14,7 @@
     --secound-color: #75797F;
     --main-color: #FE6A86;
     --main-color-light: #faacba;
+    --main-color-very-light: #ffd1d8;
     --header-color: #FFF6CC;
     --btn-color: #FFDD13;
     --btn-hover-color: #ecd134;
@@ -83,7 +84,7 @@ section .header{
     width: 100%;
 }
 
-.icon i{
+.header .icon i{
     font-size: 20px;
     color: var(--text-color);
     /*background: var(--text-color);*/
@@ -94,7 +95,7 @@ section .header{
     transition: 0.3s;
 }
 
-.icon i:hover{
+.header .icon i:hover{
     color: var(--main-color);
 }
 
@@ -292,10 +293,12 @@ section .header{
     margin-bottom: 150px;
     line-height: 1.8;
     text-decoration: none;
+    box-shadow: 0 4px 0 #ecd134;
 }
 
-.btn-yellow:hover{
-    background: var(--btn-hover-color);
+.btn-yellow:active{
+    box-shadow: none;
+    transform: translateY(4px);
 }
 
 .HP-menu{
@@ -333,10 +336,12 @@ section .header{
     margin-top: 30px;
     margin-bottom: 30px;
     line-height: 10;
+    box-shadow: 0 4px 0 #CC566B;
 }
 
-.btn-pink:hover{
-    background: var(--btn-pink-hover-color);
+.btn-pink:active{
+    box-shadow: none;
+    transform: translateY(4px);
 }
 
 .HP-mid img{
@@ -425,7 +430,209 @@ section .header{
 
 /** End of homepage-reservation */
 
-/** Review Swiper */
+/** Homepage-Review */
+.HP-review-section {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 40px;;
+    background: linear-gradient(rgba(255,255,255,.85), rgba(255,255,255,.95)),url("../images/pokecafe-bg.jpg");
+}
+
+.HP-rev-heading {
+    font-size: 2.8rem;
+    color: var(--main-color);  
+    padding-top: 60px;
+    padding-bottom: 50px;  
+    line-height: 1.5;
+    justify-content: center;  
+    align-items: center;  
+    top: 50%;
+    left: 50%;  
+    width: 100%;
+    text-align: center;
+}
+
+@media only screen and (max-width: 900px) {
+    .HP-rev-heading {
+      font-size: 2rem;
+      padding-top: 30px;
+      padding-bottom: 30px;
+    }
+}
+  
+
+.HP-review {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 2rem;
+}
+  
+.HP-rev-1 {
+    flex: 3;
+    text-align: center;
+}
+  
+@media only screen and (max-width: 900px) {
+    .HP-review {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    .HP-rev-1 {
+      margin-bottom: 1rem;
+    }
+}
+
+.HP-rev-1 img {
+    margin-left: 30px;
+    margin-top: -50px;
+    width: 80%;
+    height: auto;
+ }
+
+@media only screen and (max-width: 900px) {
+    .HP-rev-1 img {
+      margin-top: -10px;
+      width: 50%;
+      margin-bottom: 60px;
+    }
+}
+  
+  
+.HP-rev-2,
+  .HP-rev-3 {
+    flex: 2;
+}
+  
+.testimonials-box {
+    position: relative;
+    margin-bottom: 70px;
+    width: 85%;
+    height: 200px;
+}
+  
+@media only screen and (max-width: 900px) {
+    .testimonials-box {
+      width: 90%;
+      margin-bottom: 1.5rem;
+      margin-left: 1.5rem;
+      margin-right: 1.5rem;
+    }
+}
+  
+
+.testimonials-box:hover .testimonials-box-text, .testimonials-box-img {
+    transform: scale(1.05);
+    z-index: 2;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+}
+  
+.testimonial-box-top {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+  
+.testimonials-box-img {
+    width: 100px;
+    height: 100px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 50%;
+    position: absolute;
+    top: -15px;
+    left: 25%;
+    transform: translateX(-50%);
+    border: 5px solid var(--main-color);
+}
+
+@media only screen and (max-width: 900px) {
+    .testimonials-box-img {
+      width: 90px;
+      height: 90px;
+      top: -20px;
+      left: 50%;
+      transform: translateX(-50%);
+      border-width: 3px;
+    }
+}  
+  
+/* .HP-review .star-rating-wp {
+    display: block;
+}
+
+.HP-review .star-rating {
+    font-size: 22px;
+    position: relative;
+    margin-top: 20px;
+    display: inline-block;
+}
+
+.HP-review .star-rating::before {
+    content: "\f005\f005\f005\f005\f005";
+    font-family: "Font Awesome 5 Pro";
+    font-weight: 900;
+    color: #c8c8c8;
+    filter: drop-shadow(0 0.6rem 0.3rem rgba(0, 0, 0, 0.05));
+    letter-spacing: 4px;
+}
+
+.HP-review .star-rating__fill {
+    position: absolute;
+    display: inline-block;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    animation: fill-star 2s ease-in-out;
+}
+
+.HP-review .star-rating__fill::after {
+    content: "\f005\f005\f005\f005\f005";
+    font-family: "Font Awesome 5 Pro";
+    font-weight: 900;
+    color: #ff8243;
+    letter-spacing: 4px;
+}
+
+@keyframes fill-star {
+    0% {
+        width: 0;
+    }
+} */
+  
+.h3-title {
+    margin-top: -0.1rem;
+    margin-bottom: 1.5rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-left: 8rem;
+}
+  
+.testimonials-box-text {
+    padding: 2rem;
+    /* background-color: var(--main-color-very-light);
+    background: linear-gradient(145deg, var(--main-color-very-light), var(--main-color-light)); 
+    border-radius: 40px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+    box-shadow: 28px 28px 45px #e6e6e6, -28px -28px 45px #ffffff;*/
+
+    background: var(--main-color-very-light);
+    border-radius: 40px;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    transition: all 0.3s ease-in-out;
+}
+  
+/** End of homepage-review */
+
+/** Review Swiper
 .review-container{
     height: auto;
     display: flex;
@@ -542,7 +749,7 @@ section .header{
     }
 
 }
-/** End of review swiper */
+ End of review swiper */
 
 /** Footer */
 footer{
@@ -775,6 +982,12 @@ footer{
     border-radius: 30px;
     padding: 5px 10px 5px 10px;
     margin-top: 5px;
+    box-shadow: 0 3px 0 #CC566B;
+}
+
+.homepage-menu .box .po-btn:active{
+    box-shadow: none;
+    transform: translateY(4px);
 }
 
 /* MENU RESPONSIVE */
@@ -945,6 +1158,12 @@ footer{
     border-radius: 30px;
     padding: 5px 12px 5px 12px;
     margin-top: 5px;
+    box-shadow: 0 3px 0 #CC566B;
+}
+
+.homepage-admin-menu .box .po-btn:active{
+    box-shadow: none;
+    transform: translateY(4px);
 }
 
 /** END of Admin HOMEPAGE */
@@ -3113,7 +3332,7 @@ input[type=number] {
 /* Reservation-Selection */
 .reservation_banner img{
     width: 100%;
-    height: 300px;
+    height: 400px;
     /*position: fixed;*/
     object-position: center;
     object-fit: cover;
@@ -3159,7 +3378,7 @@ hr {
     background-image: url("../images/profile/background_pic2.png");
     background-size: cover;
     background-position: center;
-    height: 80rem;
+    height: 70rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -3174,7 +3393,7 @@ hr {
     border-radius: 40px;
     background-color: white;
     width: 40rem;
-    height: 70rem;
+    height: 60rem;
     margin-top: 15rem;
     margin-bottom: 15rem;
     position: absolute;
@@ -3239,6 +3458,12 @@ hr {
     position: relative;   
     width: auto;
     height: auto;
+    box-shadow: 0 4px 0 #CC566B;
+}
+
+.res-button-wrapper .proceed-btn:active{
+    box-shadow: none;
+    transform: translateY(4px);
 }
 
 .res-button-wrapper .res-back-btn {
@@ -3253,6 +3478,12 @@ hr {
     margin-right: 1.25rem;
     width: auto;
     height: auto;
+    box-shadow: 0 4px 0 #7b4719;
+}
+
+.res-button-wrapper .res-back-btn:active{
+    box-shadow: none;
+    transform: translateY(4px);
 }
 
 /* End of Reservation-Selection */
