@@ -25,15 +25,15 @@
             <!--        <p class="cafe-name">Pikahae</p>-->
     
             <ul class="navlist">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Menu</a></li>
-                <li><a href="#">Reservations</a></li>
+                <li><a href="homepage-customer.html">Home</a></li>
+                <li><a href="about_us.html">About</a></li>
+                <li><a href="reservation.html">Reservations</a></li>
+                <li><a href="menu.html">Menu</a></li>
             </ul>
     
             <div class="icon">
-                <a href="#"><i class='bx bxs-cart'></i></a>
-                <a href="#"><i class='bx bxs-user'></i></a>
+                <a href="cart.html"><i class='bx bxs-cart'></i></a>
+                <a href="view-profile.html"><i class='bx bxs-user'></i></a>
             </div>
         </nav>
         <div class="banner">
@@ -42,50 +42,72 @@
         </div>
         <hr>
     </section>
-    <div class="background-image">
-            <figure class="edit-profile-figure">
-                <div>
-                    <div class="edit-wrapper">
-                        <h3>Edit Profile</h3>
-                        <div class="profile-description-wrapper">
-                            <div class="profile-wrapper">
-                                <img src="../images/profile/profile_pic.png" id="ProfilePicture" alt="Profile Picture" class="profile-picture">
-                                <div class="upload-wrapper">
-                                    <label for="file-upload" id="upload-btn">Upload</label>
-                                    <input type="file" id="file-upload" name="file-upload" accept=".jpg, .jpeg, .png">
-                                    <span class="file-name"></span>
-                                    <script src="../script/editProfile.js"></script>
+    <div class="edit-profile-page">
+        <div class="background-image">
+                <figure class="edit-profile-figure">
+                    <div>
+                        <div class="edit-wrapper">
+                            <h3>Edit Profile</h3>
+                            <div class="profile-description-wrapper">
+                                <div class="profile-wrapper">
+                                    <img src="../images/profile/profile_pic.png" id="ProfilePicture" alt="Profile Picture" class="profile-picture">
+                                    <div class="upload-wrapper">
+                                        <label for="file-upload" id="upload-btn">Upload</label>
+                                        <input type="file" id="file-upload" name="file-upload" accept=".jpg, .jpeg, .png">
+                                        <span class="file-name"></span>
+                                        <script src="../script/editProfile.js"></script>
+                                    </div>
                                 </div>
+                                <figcaption>
+                                    Username1<br>
+                                    <h2>current points: 80pts<br></h2>
+                                    <br>
+                                    <titletext>E-mail:<br></titletext>
+                                    <div contenteditable="true" id="email">Pikachuz@gmail.com</div>
+                                    <br>
+                                    <titletext>Birthday:<br></titletext>
+                                    <div contenteditable="true" id="birthday">30/03/2005</div>
+                                    <br>
+                                    <titletext>Favourite pokemon:<br></titletext>
+                                        <select id="favorite-pokemon">
+                                            <option value="bulbasaur">Bulbasaur</option>
+                                            <option value="charmander">Charmander</option>
+                                            <option value="squirtle">Squirtle</option>
+                                            <option value="pikachu">Pikachu</option>
+                                            <option value="rowlet" selected>Rowlet</option>
+                                        </select>
+                                </figcaption>
                             </div>
-                            <figcaption>
-                                Username1<br>
-                                <h2>current points: 80pts<br></h2>
-                                <br>
-                                <titletext>E-mail:<br></titletext>
-                                <div contenteditable="true" id="email">Pikachuz@gmail.com</div>
-                                <br>
-                                <titletext>Birthday:<br></titletext>
-                                <div contenteditable="true" id="birthday">30/03/2005</div>
-                                <br>
-                                <titletext>Favourite pokemon:<br></titletext>
-                                    <select id="favorite-pokemon">
-                                        <option value="bulbasaur">Bulbasaur</option>
-                                        <option value="charmander">Charmander</option>
-                                        <option value="squirtle">Squirtle</option>
-                                        <option value="pikachu">Pikachu</option>
-                                        <option value="rowlet" selected>Rowlet</option>
-                                    </select>
-                            </figcaption>
+                        </div>
+                        <div class="button-wrapper">
+                            <button class="delete-account">Delete Account</button>
+                            <button class="cancel-edit">Cancel</button>
+                            <button class="save-edit">Save</button>
+                            <script src="../script/editProfile.js"></script>
                         </div>
                     </div>
-                    <div class="button-wrapper">
-                        <button class="delete-account">Delete Account</button>
-                        <button class="cancel-edit">Cancel</button>
-                        <button class="save-edit">Save</button>
-                    </div>
-                </div>
-            </figure>
+                </figure>
         </div>
+        <footer>
+            <div class="footer-content">
+                <h3>Pikahae</h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.<br>Illo iste corrupti doloribus odio sed!
+                </p>
+                <ul class="socials">
+                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                    <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                    <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+                    <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                </ul>
+                <img src=../images/babies_trans.png>
+            </div>
+            <hr class="footer-line">
+            <div class="footer-bottom">
+                <p>copyright &copy;2023 Pikahae. designed by <span>dino kuning</span></p>
+            </div>
+        </footer>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     </div>
 </body>
 </html>
