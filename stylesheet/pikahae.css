@@ -1167,11 +1167,11 @@ section .menu-navlist{
 }
 
 .form-container{
-    margin-top: 2rem;
+    margin-top: 4rem;
 }
 
 .register-container{
-    margin-top: 4rem;
+    margin-top: 6rem;
 }
 
 .form-card-logo img{
@@ -1216,7 +1216,7 @@ section .menu-navlist{
     height: auto;
     padding: 0.25rem 1.5rem 1.5rem;
     border-radius: 40px;
-    margin: 10px auto 0;
+    margin: 1rem auto 3rem;
     position: relative;
     filter: drop-shadow(0px 8px 4px rgba(0, 0, 0, 0.24));
 }
@@ -1378,6 +1378,11 @@ section .menu-navlist{
 
 .reset-pass-input{
     margin-top: 1.5rem;
+}
+
+.register-input-alert p{
+    display: none;
+    color: red;
 }
 
 /* login/registration END */
