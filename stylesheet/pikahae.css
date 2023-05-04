@@ -2436,11 +2436,12 @@ input[type=number] {
     background-image: url("../images/other/about_us_bg.png");
     background-size: cover;
     background-position: center;
-    height: 270vh; /* hange this if the overall height of the page is changed*/
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding-top: 70px;
+    padding-bottom: 70px;
 }
 
 .about-us-introduction h1{
@@ -2537,9 +2538,9 @@ input[type=number] {
     background-image: url("../images/other/about_us_bg.png");
     background-size: cover;
     background-position: center;
-    height: 270vh; /* hange this if the overall height of the page is changed*/
     display: flex;
     flex-direction: column;
+    padding-top: 70px;
 }
 
 .contact-us-icon-container {
