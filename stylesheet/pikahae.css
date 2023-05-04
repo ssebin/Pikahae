@@ -1420,7 +1420,8 @@ hr {
     background-color: white;
     width: 50rem;
     height: 37.5rem;
-    margin-top: 6.25rem;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
     box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
 }
 
@@ -1434,7 +1435,7 @@ hr {
     background-color: white;
     width: 55rem;
     height: 25rem;
-    margin: 6.25rem;
+    margin: 3.5rem;
     box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
 }
 
@@ -1487,8 +1488,7 @@ figcaption contenttext {
     background-image: url("../images/profile/background_pic2.png");
     background-size: cover;
     background-position: center;
-    height: 100vh;
-    margin-bottom: 100px;
+    /*height: 100vh;*/
     display: flex;
     justify-content: center;
     align-items: center;
@@ -2565,13 +2565,13 @@ input[type=number] {
 .image-description-wrapper {
     display: flex;
     flex-direction: row;
+    align-items: center;
+    justify-content: center;
 }
 
 .image-description-wrapper img {
     width: 450px;
     height: 500px;
-    margin-top: 40px;
-    margin-left: 100px;
 }
 
 .description-wrapper {
@@ -2661,18 +2661,24 @@ input[type=number] {
     margin-top: 20px;
 }
 
+.cafe-location-wrapper{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
 .cafe-location-information {
     background-image: url("../images/other/cafe_photo.jpg");
     background-size: contain;
-    width: 1000px;
+    width: 1050px;
     height: 550px;
     margin-top: 100px;
-    margin-left: 100px;
     margin-bottom: 100px;
     display: flex;
     flex-direction: row;
-    text-align: center;
     align-items: center;
+    justify-content: center;
 }
 
   .cafe-location-information p {
