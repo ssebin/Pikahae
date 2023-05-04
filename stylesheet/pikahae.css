@@ -2195,7 +2195,11 @@ JavaScript Triggered Classes
     margin: 0.35rem;
 }
 
-.admin-view-header button,
+.add-menu-button button{
+    margin-left: 50px;
+}
+
+.add-menu-button button,
 .admin-view-table button{
     background-color: var(--main-color);
     border-radius: 50%;
@@ -2205,7 +2209,7 @@ JavaScript Triggered Classes
     text-align: center;
 }
 
-.admin-view-header img,
+.add-menu-button img,
 .admin-view-table img{
     width: auto;
     height: 1.1rem;
@@ -3074,6 +3078,11 @@ input[type=number] {
     font-weight: 600;
     font-family: 'Roboto', sans-serif;
     font-size: 0.75rem;
+ }
+
+ #preview{
+    width: 25rem;
+    height: 15.625rem;
  }
 
 
