@@ -14,6 +14,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Jost:wght@100;200;400;500;600;700;800;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,700;1,300;1,400;1,500&display=swap" rel="stylesheet">
 
+    <!--Footer Bootstrap-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body class="admin-view">
@@ -50,8 +52,8 @@
             </div>
             <div class="input-box">
                 <i class="uil uil-search"></i>
-                <input type="text" placeholder="Search menu" />
-                <button class="button"><i class="fa-solid fa-magnifying-glass"></i></button>
+                <input type="text" id="menu-search-input" placeholder="Search menu" />
+                <button class="button" id="menu-search-button"><i class="fa-solid fa-magnifying-glass"></i></button>
             </div>
         </div>
     
@@ -67,25 +69,23 @@
                     <div class="table-header">
                         <thead>
                             <tr>
-                                <th>ID</th>
-                                <th>Name</th>
-                                <th>Category</th>
-                                <th>Price</th>
+                                <th id="menu-table-id">ID</th>
+                                <th id="menu-table-name">Name</th>
+                                <th id="menu-table-cat">Category</th>
+                                <th id="menu-table-price">Price</th>
                                 <th>Description</th>
                                 <th>Action</th>
                             </tr>
                         </thead>
                     </div>
                     <div class="table-body">
-                        <tbody>
+                        <tbody id="menu-table-body">
                             <tr>
                                 <td>F01</td>
                                 <td>Pikachu Burger</td>
                                 <td>Food</td>
                                 <td>25.00</td>
-                                <td>ENADCFKNSDKCLSDVC
-                                    FUCJDKSV THSI CFDFVNK
-                                    aAAAAAAAAAAAAAAAA AAAAAAAAAAA
+                                <td>Lorem ipsum i love burger sometimes me think 
                                 </td>
                                 <td>
                                     <a href="#">
@@ -104,9 +104,7 @@
                                 <td>Eevee Chocolate Drink</td>
                                 <td>Drink</td>
                                 <td>15.00</td>
-                                <td>ENADCFKNSDKCLSDVC
-                                    FUCJDKSV THSI CFDFVNK
-                                    aAAAAAAAAAAAAAAAA AAAAAAAAAAA
+                                <td>Lorem ipsum i love chocolate drink sometimes me think 
                                 </td>
                                 <td>
                                     <a href="#">
@@ -125,9 +123,7 @@
                                 <td>Eevee Fry</td>
                                 <td>Food</td>
                                 <td>25.00</td>
-                                <td>ENADCFKNSDKCLSDVC
-                                    FUCJDKSV THSI CFDFVNK
-                                    aAAAAAAAAAAAAAAAA AAAAAAAAAAA
+                                <td>A fun and flavorful twist on your traditional french fries!
                                 </td>
                                 <td>
                                     <a href="#">
@@ -167,5 +163,6 @@
             <p>copyright &copy;2023 Pikahae. designed by <span>dino kuning</span></p>
         </div>
     </footer>
+    <script src="../script/manageMenu.js"></script>
 </body>
 </html>

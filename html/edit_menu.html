@@ -14,6 +14,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Jost:wght@100;200;400;500;600;700;800;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,700;1,300;1,400;1,500&display=swap" rel="stylesheet">
 
+    <!--Footer Bootstrap-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body class="admin-view">
@@ -70,17 +72,17 @@
 
                     <div class="edit-item-form-item">
                         <label for="item-desc">Item description:</label><br>
-                        <input id="item-desc" type="text" placeholder="Enter item description"><br>
+                        <textarea id="item-desc" rows="4" cols="100" placeholder="Enter item description"></textarea>
                     </div>
 
                     <div class="edit-item-form-item">
                         <label for="item-photo">Item photo:</label><br>
-                        <img id="preview" alt="Image Preview"><br> <!-- handled by JS -->
+                        <img id="preview" src="../images/edit_menu/image-preview.png" alt="Image Preview"><br> <!-- handled by JS -->
                         <input type="file" id="item-photo" name="item-photo" accept="image/*"><br>
                     </div>
 
                     <div class="edit-item-form-btn">
-                        <button id="cancel-edit-btn" type="button">Cancel</button>
+                        <a href="./manage_menu.html"><button id="cancel-edit-btn" type="button">Cancel</button></a>
                         <span><button id="submit-edit-btn" type="submit">Save</button></span>
                     </div>
                 </form>

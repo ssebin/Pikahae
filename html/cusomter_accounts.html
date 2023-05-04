@@ -14,6 +14,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Jost:wght@100;200;400;500;600;700;800;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,700;1,300;1,400;1,500&display=swap" rel="stylesheet">
 
+    <!--Footer Bootstrap-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body class="admin-view">
@@ -43,14 +45,13 @@
             <p>CUSTOMER ACCOUNTS</p>
             <div class="input-box">
                 <i class="uil uil-search"></i>
-                <input type="text" placeholder="Search customer" />
-                <button class="button"><i class="fa-solid fa-magnifying-glass"></i></button>
+                <input type="text" id="customer-search-input" placeholder="Search customer" />
+                <button class="button" id="customer-search-button"><i class="fa-solid fa-magnifying-glass"></i></button>
             </div>
         </div>
     
         <hr>
     </section>
-
     <div class="admin-view-body">
         <div class="admin-view-container">
             <!-- <div class="admin-view-header">
@@ -70,64 +71,131 @@
                     <div class="table-header">
                         <thead>
                             <tr>
-                                <th>Account<br>Number</th>
-                                <th>Name</th>
-                                <th>Phone Number</th>
-                                <th>Email</th>
-                                <th>Birthday</th>
-                                <th>Favourite<br>Pokemon</th>
+                                <th id="customer-acc-num">Account<br>Number</th>
+                                <th id="customer-acc-name">Name</th>
+                                <th id="customer-acc-phone">Phone Number</th>
+                                <th id="customer-acc-email">Email</th>
+                                <th id="customer-acc-birthday">Birthday</th>
+                                <th id="customer-acc-favpoke">Favourite<br>Pokemon</th>
+                                <th>Action</th>
                             </tr>
                         </thead>
                     </div>
                     <div class="table-body">
-                        <tbody>
+                        <tbody id="customer-table-body">
                             <tr>
                                 <td>10001</td>
                                 <td>Syamira Rahman</td>
                                 <td>0102030192</td>
                                 <td>pikachuz@gmail.com</td>
                                 <td>13/03/2002</td>
-                                <td>Rowlet</td>
+                                <td>Pikachu</td>
+                                <td>
+                                    <a href="./edit-profile.html">
+                                        <button type="button">
+                                            <img src="../images/manage/edit.png" alt="Edit">
+                                        </button></a>
+                                    <a href="#">
+                                        <button type="button">
+                                            <img src="../images/manage/delete.png" alt="Delete">
+                                        </button>
+                                    </a>
+                                </td>
                             </tr>
                             <tr>
                                 <td>10002</td>
-                                <td>Syamira Rahman</td>
-                                <td>0102030192</td>
-                                <td>pikachuz@gmail.com</td>
-                                <td>13/03/2002</td>
+                                <td>Aisyah Yussof</td>
+                                <td>0169102121</td>
+                                <td>pikapika@gmail.com</td>
+                                <td>03/01/1999</td>
                                 <td>Rowlet</td>
+                                <td>
+                                    <a href="./edit-profile.html">
+                                        <button type="button">
+                                            <img src="../images/manage/edit.png" alt="Edit">
+                                        </button></a>
+                                    <a href="#">
+                                        <button type="button">
+                                            <img src="../images/manage/delete.png" alt="Delete">
+                                        </button>
+                                    </a>
+                                </td>
                             </tr>
                             <tr>
                                 <td>10003</td>
-                                <td>Syamira Rahman</td>
-                                <td>0102030192</td>
-                                <td>pikachuz@gmail.com</td>
-                                <td>13/03/2002</td>
-                                <td>Rowlet</td>
+                                <td>Amirul Syafiq</td>
+                                <td>01111519204</td>
+                                <td>bulbasaurfan@yahoo.com</td>
+                                <td>11/01/2002</td>
+                                <td>Bulbasaur</td>
+                                <td>
+                                    <a href="./edit-profile.html">
+                                        <button type="button">
+                                            <img src="../images/manage/edit.png" alt="Edit">
+                                        </button></a>
+                                    <a href="#">
+                                        <button type="button">
+                                            <img src="../images/manage/delete.png" alt="Delete">
+                                        </button>
+                                    </a>
+                                </td>
                             </tr>
                             <tr>
                                 <td>10004</td>
-                                <td>Syamira Rahman</td>
-                                <td>0102030192</td>
-                                <td>pikachuz@gmail.com</td>
-                                <td>13/03/2002</td>
-                                <td>Rowlet</td>
+                                <td>Khairul Anwar</td>
+                                <td>0113107469</td>
+                                <td>charizardzz@gmail.com</td>
+                                <td>29/11/2000</td>
+                                <td>Charmander</td>
+                                <td>
+                                    <a href="./edit-profile.html">
+                                        <button type="button">
+                                            <img src="../images/manage/edit.png" alt="Edit">
+                                        </button></a>
+                                    <a href="#">
+                                        <button type="button">
+                                            <img src="../images/manage/delete.png" alt="Delete">
+                                        </button>
+                                    </a>
+                                </td>
                             </tr>
                             <tr>
                                 <td>10005</td>
-                                <td>Syamira Rahman</td>
-                                <td>0102030192</td>
-                                <td>pikachuz@gmail.com</td>
-                                <td>13/03/2002</td>
-                                <td>Rowlet</td>
+                                <td>Muhammad Nabil</td>
+                                <td>0184014121</td>
+                                <td>pikapower@hotmail.com</td>
+                                <td>21/05/2003</td>
+                                <td>Pikachu</td>
+                                <td>
+                                    <a href="./edit-profile.html">
+                                        <button type="button">
+                                            <img src="../images/manage/edit.png" alt="Edit">
+                                        </button></a>
+                                    <a href="#">
+                                        <button type="button">
+                                            <img src="../images/manage/delete.png" alt="Delete">
+                                        </button>
+                                    </a>
+                                </td>
                             </tr>
                             <tr>
-                                <td>10005</td>
-                                <td>Syamira Rahman</td>
-                                <td>0102030192</td>
-                                <td>pikachuz@gmail.com</td>
-                                <td>13/03/2002</td>
-                                <td>Rowlet</td>
+                                <td>10006</td>
+                                <td>Nadia Azman</td>
+                                <td>0197370509</td>
+                                <td>mew2@gmail.com</td>
+                                <td>27/08/2001</td>
+                                <td>Charmander</td>
+                                <td>
+                                    <a href="./edit-profile.html">
+                                        <button type="button">
+                                            <img src="../images/manage/edit.png" alt="Edit">
+                                        </button></a>
+                                    <a href="#">
+                                        <button type="button">
+                                            <img src="../images/manage/delete.png" alt="Delete">
+                                        </button>
+                                    </a>
+                                </td>
                             </tr>
                         </tbody>
                     </div>
@@ -136,7 +204,6 @@
         </div>
     </div>
     <footer>
-
         <div class="footer-content">
             <h3>Pikahae</h3>
             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.<br>Illo iste corrupti doloribus odio sed!
@@ -155,5 +222,6 @@
             <p>copyright &copy;2023 Pikahae. designed by <span>dino kuning</span></p>
         </div>
     </footer>
+    <script src="../script/customerAccounts.js"></script>
 </body>
 </html>
