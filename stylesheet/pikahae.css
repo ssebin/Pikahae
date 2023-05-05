@@ -2400,7 +2400,6 @@ Product section styling
     justify-content: center;
     background-image: linear-gradient(rgba(255,255,255,.80), rgba(255,255,255,.90)),url("../images/pokecafe-bg.jpg");
     background-size: cover;
-    margin-bottom: 50px;
     position: relative;
 }
 
@@ -3217,7 +3216,7 @@ input[type=number] {
  
   .form-row input[type="text"],
   .form-row input[type="email"]{
-    padding: 10px;
+    padding: 20px;
     border-radius: 40px;
     width: 300px;
     height: 50px;
@@ -3230,7 +3229,7 @@ input[type=number] {
     width: 207%;
     border-radius: 40px;
     border: 1.5px solid #FE6A86;
-    padding: 30px;
+    padding: 20px;
   }
 
   .form-row input[type="text"]::placeholder {
