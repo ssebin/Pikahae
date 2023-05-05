@@ -2263,6 +2263,11 @@ Product section styling
 .modal-content .allergen img{
     width: 40px;
     height: auto;
+    transition: 0.5s all ease-in-out;
+}
+
+.modal-content .allergen img:hover{
+    transform: scale(1.3);
 }
 
 .item-section{
@@ -2337,17 +2342,19 @@ Product section styling
         font-size: 15px;
     }
 
-
     .item-section{
         display: inline-block;
         justify-items: center;
         height: auto;
-        padding: 50px 30px 30px 30px;
+        padding: 20px 30px 30px 30px;
         position: relative;
         width: 450px;
-        margin-left: 20px;
-
     }
+
+    .item-section .img img{
+        margin-bottom: 20px;
+    }
+
     .item {
         padding: 0;
         grid-template-columns: 1fr;
@@ -4155,7 +4162,11 @@ input:focus {
 }
 
 .category-name{
-    margin-top: 50px;
+    margin-top: 20px;
+}
+
+.category-name #food{
+    margin-top: 0px;
 }
 
 .menu .box img{
@@ -4678,7 +4689,7 @@ button:active{
 
 
 
-/*!* TODO: MEDIA QUERIES*!
+/* TODO: MEDIA QUERIES*/
 @media only screen and (max-width: 1600px) {
     .head {
         max-width: 100%;
@@ -4704,6 +4715,7 @@ button:active{
 }
 
 @media only screen and (max-width: 850px) {
+
     section .menu-nav{
         width: 600px;
         justify-content: space-between;
@@ -4731,11 +4743,11 @@ button:active{
         display: inline-block;
         justify-items: center;
         height: auto;
-        padding: 50px 30px 30px 30px;
         position: relative;
+        width: 400px;
+    }
+    .modal-content{
         width: 450px;
-        margin-left: 20px;
-
     }
     .item {
         padding: 0;
@@ -4826,7 +4838,7 @@ button:active{
     #back-btn{
         position: absolute;
         top: 510px;
-        !*bottom: 10px;*!
+        /*bottom: 10px;*/
         left: 100px;
     }
 
@@ -4875,8 +4887,28 @@ button:active{
         gap: 1.5rem;
     }
 
-}*/
+}
 
 /* ITEM DETAIL PAGE END */
 
+/* SCROLL TO TOP */
 
+#topBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99; /* Make sure it does not overlap */
+    border: none;
+    outline: none;
+    background-color: var(--btn-pink-hover-color);
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 30px;
+    font-size: 18px;
+}
+
+#topBtn:hover {
+    background-color: #555; /* Add a dark-grey background on hover */
+}
