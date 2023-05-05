@@ -1445,7 +1445,7 @@ section .menu-navlist{
 .form-card {
     text-align: center;
     background-color: white;
-    width: 500px;
+    width: 31.25rem;
     height: auto;
     padding: 0.25rem 1.5rem 1.5rem;
     border-radius: 40px;
@@ -1620,7 +1620,7 @@ section .menu-navlist{
 }
 
 .login-popup-card{
-    padding: 1.8rem;
+    padding: 2rem;
     background-color: white;
     align-items: center;
     text-align: center;
@@ -1631,9 +1631,9 @@ section .menu-navlist{
     top: 20%;
     left: 50%;
     transform: translate(-50%, -50%) translateY(-100%);
+    transition: transform 0.5s ease-out, opacity 0.5s ease-out;
     z-index: 9999;
     display: none;
-    transition: transform 0.5s ease-out, opacity 0.5s ease-out;
 }
 
 .login-popup-card img{
@@ -1649,11 +1649,10 @@ section .menu-navlist{
 }
 
 .login-popup-card p{
-    margin-top: 1.5rem;
-}
+    margin-top: 1.5rem;}
 
-.login-success-msg{
-    margin-left: 1rem;
+.login-popup-header h1{
+    font-size: 2.5rem;
 }
 
 .overlay {
@@ -1663,7 +1662,7 @@ section .menu-navlist{
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5); /* semi-transparent black */
-    z-index: 1000; /* make sure it's above other elements */
+    z-index: 1000; 
     display: none; /* hide by default */
 }
 
