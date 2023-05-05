@@ -23,37 +23,85 @@ file.addEventListener('change', function(){
     }
 });
 
+/* save edit and its pop-up message display*/
+const overlay = document.createElement('div');
+overlay.classList.add('submit-btn-overlay');
+
+const messageBox = document.createElement('div');
+messageBox.classList.add('message-box');
+
+const image = document.createElement('img');
+image.src = '../images/other/pop-up-pic.jpg';
+image.style.width = '200px';
+image.style.height = '155px';
+
+const messageText = document.createElement('p');
+messageText.textContent = 'Profile saved!';
+messageText.style.marginTop = '30px'; 
+
+const closeButton = document.createElement('span');
+closeButton.classList.add('close-button');
+closeButton.textContent = 'Close';
+closeButton.style.marginTop = '16px'; 
+
+messageBox.appendChild(image);
+messageBox.appendChild(messageText);
+messageBox.appendChild(closeButton);
+overlay.appendChild(messageBox);
+
 /* save edit*/
 document.addEventListener('DOMContentLoaded', function() {
     const saveButton = document.querySelector('.save-edit');
     saveButton.addEventListener('click', function() {
-      // Save changes to user profile
-      // Redirect to "view profile" page
-      alert('Profile saved successfully!');
-      window.location.href = 'view-profile.html'; 
+        document.body.appendChild(overlay); // Add the overlay to the page
+        overlay.style.display = 'block'; // Show the overlay
     });
+});
+
+closeButton.addEventListener('click', function() {
+    overlay.style.display = 'none'; // Hide the overlay
+    window.location.href = 'view-profile.html'; 
 });
 
 /* cancel edit*/
 document.addEventListener('DOMContentLoaded', function() {
-    const saveButton = document.querySelector('.cancel-edit');
-    saveButton.addEventListener('click', function() {
+    const cancelButton = document.querySelector('.cancel-edit');
+    cancelButton.addEventListener('click', function() {
       // Redirect to "view profile" page
       window.location.href = 'view-profile.html'; 
     });
 });
 
-/* delete account*/
+/*delete acc*/
 document.addEventListener('DOMContentLoaded', function() {
-    const saveButton = document.querySelector('.delete-account');
-    saveButton.addEventListener('click', function() {
-        const confirmed = confirm('Are you sure you want to delete your account?');
-        if (confirmed) {
-            // Delete user account
-            // Redirect to login page
-            alert('Your account is successfully deleted.');
+    const deleteButton = document.querySelector('.delete-account');
+    const confirmationBox = document.querySelector('#confirmationBox');
+    const confirmYesButton = document.querySelector('#confirmYes');
+    const confirmNoButton = document.querySelector('#confirmNo');
+
+    deleteButton.addEventListener('click', function() {
+        confirmationBox.style.display = 'block';
+    });
+
+    confirmYesButton.addEventListener('click', function() {
+        image.src = '../images/other/pokemon-bye-bye.jpg';
+        image.style.width = '200px';
+        image.style.height = '155px';   
+        messageText.textContent = 'Account is successfully deleted.';
+        messageBox.appendChild(image);
+        messageBox.appendChild(messageText);
+        messageBox.appendChild(closeButton);
+        overlay.appendChild(messageBox);
+        document.body.appendChild(overlay); // Add the overlay to the page
+        overlay.style.display = 'block'; // Show the overlay
+        closeButton.addEventListener('click', function() {
+            overlay.style.display = 'none'; // Hide the overlay
             window.location.href = 'login.html'; 
-        }
+        });
+    });
+
+    confirmNoButton.addEventListener('click', function() {
+        confirmationBox.style.display = 'none';
     });
 });
 
