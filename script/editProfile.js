@@ -84,6 +84,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     confirmYesButton.addEventListener('click', function() {
+        confirmationBox.style.display = 'none';
         image.src = '../images/other/pokemon-bye-bye.jpg';
         image.style.width = '200px';
         image.style.height = '155px';   
