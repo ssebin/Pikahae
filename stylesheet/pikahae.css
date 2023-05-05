@@ -2438,6 +2438,12 @@ Product section styling
     text-align: center;
 }
 
+.add-menu-button button:hover,
+.admin-view-table button:hover{
+    background-color: #E66079;
+    transition: 0.5s;
+}
+
 .add-menu-button img,
 .admin-view-table img{
     width: auto;
@@ -3476,7 +3482,7 @@ input[type=number] {
  .edit-item-form-item textarea{
     width: 16rem;
     height: 2rem;
-    border-radius: 30px;
+    border-radius: 40px;
     border: none;
     background-color: #FBFBFB;
     background: #FBFBFB;
@@ -3492,9 +3498,9 @@ input[type=number] {
  .edit-item-form-item input::file-selector-button{
     background-color: var(--main-color);
     border: none;
-    border-radius: 30px;
-    height: 1.5rem;
-    width: 5rem;
+    border-radius: 40px;
+    height: 2rem;
+    width: 5.5rem;
     color: white;
     font-weight: 600;
     font-family: 'Roboto', sans-serif;
@@ -3505,7 +3511,6 @@ input[type=number] {
     width: 25rem;
     height: 15.625rem;
  }
-
 
  #item-desc{
     height: 8rem;
@@ -3518,37 +3523,132 @@ input[type=number] {
     display: flex;
  }
 
- .edit-item-form-btn button{
+ .edit-item-form-btn button
+ {
     height: 2.4rem;
     width: 6rem;
     margin: 0 0.8rem;
     border: none;
-    border-radius: 30px;
+    border-radius: 40px;
     font-size: 1.1rem;
     font-family: 'Roboto', sans-serif;
     font-weight: 600;
     color: white;
  }
 
- #cancel-edit-btn{
+ #cancel-edit-btn,
+ #cancel-back-button,
+ #save-back-button{
     background-color: #EFD372;
  }
 
- #submit-edit-btn{
+ #cancel-edit-btn:hover,
+ #cancel-back-button:hover,
+ #save-back-button:hover{
+    background-color: #D8BF68;
+    transition: 0.5s;
+ }
+
+ #submit-edit-btn,
+ #cancel-confirm-button,
+ #save-confirm-button{
     background-color: var(--main-color);
+ }
+
+ #submit-edit-btn:hover,
+ .edit-item-form-item input::file-selector-button:hover,
+ #cancel-confirm-button:hover,
+ #save-confirm-button:hover{
+    background-color: #E66079;
+    transition: 0.5s;
  }
 
  @media screen and (max-width: 768px) {
     #item-desc {
       width: 20rem;
     }
+
+    #preview{
+        width: 20rem;
+        height: 15.625rem;
+     }
+
+     .edit-item-form-btn{
+        justify-content: center;
+        align-items: center;
+        display: flex;
+     }
   }
 
   @media screen and (max-width: 480px) {
     #item-desc {
       width: 15rem;
     }
+
+    #preview{
+        width: 16rem;
+        height: 15.625rem;
+     }
+
+     .edit-item-form-btn{
+        justify-content: center;
+        align-items: center;
+        display: flex;
+     }
  }
+
+ .cancel-popup-card,
+ .save-popup-card{
+    padding: 2rem;
+    background-color: white;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 40px;
+    font-family: 'Roboto', sans-serif;
+    filter: drop-shadow(0px 8px 4px rgba(0, 0, 0, 0.24));
+    position: fixed;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%) translateY(-100%);
+    transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+    z-index: 9999;
+    display: none;
+    width: 22rem;
+}
+
+.cancel-popup-card img,
+.save-popup-card img{
+    width: 12rem;
+    height: 12rem;
+    margin-left: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.cancel-popup-card button,
+.save-popup-card button{
+    width: 4rem;
+    margin: 2.5rem 1rem 1rem;
+    background-color: var(--main-color);
+    border: none;
+    border-radius: 30px;
+    height: 2.4rem;
+    width: 6rem;
+    font-size: 1.063rem;
+    color: white;
+    font-weight: 600;
+}
+
+.cancel-popup-card p,
+.save-popup-card p{
+    margin-top: 2rem;
+}
+
+.cancel-popup-header h1,
+.save-popup-header h1{
+    font-size: 2rem;
+    color: var(--main-color);
+}
 
 /** END of edit menu */
 
