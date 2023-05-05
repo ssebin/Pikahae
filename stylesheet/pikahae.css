@@ -269,6 +269,18 @@ section .header{
     padding: 20px 40px 20px 40px;
 }
 
+.HP-admin-about-us{
+    justify-content: center;  
+    align-items: center;  
+    top: 50%;
+    left: 50%;  
+    width: 100%;
+    height: auto;
+    text-align: center;
+    padding: 20px 40px 20px 40px;
+    margin-bottom: -70px;
+}
+
 .HP-heading{
     font-size: 3rem;    
     color: var(--main-color);    
