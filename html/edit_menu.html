@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Customer Accounts</title>
+    <title>Edit Menu</title>
     <link rel="stylesheet" href="../stylesheet/pikahae.css">
 
     <!-- For icons -->
@@ -64,24 +64,22 @@
 
                     <div class="edit-item-form-item">
                         <label for="item-name">Item name:</label><br>
-                        <input id="item-name" type="text" placeholder="Enter item name"><br>
+                        <input id="item-name" type="text" placeholder="Enter item name" value="Pikachu Burger"><br>
                     </div>
 
                     <div class="edit-item-form-item">
                         <label for="item-price">Item price:</label><br>
-                        <input type="text" id="item-price" name="item-price" pattern="[0-9]+(\.[0-9]{2})?"
-                            placeholder="RM 0.00" required oninput="formatCurrency(this)"><br> <!-- handled by JS -->
+                        <input type="text" id="item-price" name="item-price" pattern="[0-9]+(\.[0-9]{2})?" placeholder="RM 0.00" required oninput="formatCurrency(this)" value="25.00"><br> <!-- handled by JS -->
                     </div>
 
                     <div class="edit-item-form-item">
                         <label for="item-desc">Item description:</label><br>
-                        <textarea id="item-desc" rows="4" cols="100" placeholder="Enter item description"></textarea>
+                        <textarea id="item-desc" rows="4" cols="100" placeholder="Enter item description" >Lorem ipsum i love burger sometimes me think </textarea>
                     </div>
 
                     <div class="edit-item-form-item">
                         <label for="item-photo">Item photo:</label><br>
-                        <img id="preview" src="../images/edit_menu/image-preview.png" alt="Image Preview"><br>
-                        <!-- handled by JS -->
+                        <img id="preview" src="../images/menu/photo_food02_03.jpg" alt="Image Preview"><br> <!-- handled by JS -->
                         <input type="file" id="item-photo" name="item-photo" accept="image/*"><br>
                     </div>
 

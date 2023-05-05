@@ -1623,6 +1623,7 @@ section .menu-navlist{
     padding: 2rem;
     background-color: white;
     align-items: center;
+    justify-content: center;
     text-align: center;
     border-radius: 40px;
     font-family: 'Roboto', sans-serif;
@@ -1634,6 +1635,7 @@ section .menu-navlist{
     transition: transform 0.5s ease-out, opacity 0.5s ease-out;
     z-index: 9999;
     display: none;
+    width: 25rem;
 }
 
 .login-popup-card img{
@@ -1644,7 +1646,7 @@ section .menu-navlist{
 }
 
 .login-popup-card button{
-    width: 20rem;
+    width: 15rem;
     margin: 2rem;
 }
 
@@ -2338,6 +2340,8 @@ Product section styling
     justify-content: center;
     background-image: linear-gradient(rgba(255,255,255,.80), rgba(255,255,255,.90)),url("../images/pokecafe-bg.jpg");
     background-size: cover;
+    margin-bottom: 50px;
+    position: relative;
 }
 
 .admin-view-header{    
@@ -2382,6 +2386,22 @@ Product section styling
     margin: 0 auto;
 }
 
+.add-menu-button {
+    position: absolute;
+    top: 2%;
+    right: 2%;
+    margin-bottom: 2rem;
+}
+
+.add-menu-button button{
+    width: 2.8rem;
+    height: 4em;
+}
+
+.add-menu-button img{
+    height: 2rem;
+}
+
 .admin-view-header input[type=text]{
     width: 18rem;
     height: 1.875rem;
@@ -2413,7 +2433,7 @@ table{
     /* border-radius: 15px; */
     text-align: center;
     border-collapse: separate;
-    border-spacing: 0 0.625rem;
+    border-spacing: 0;
     overflow: hidden;
     margin-top: 1rem;
     font-family: 'Roboto', sans-serif;
@@ -3357,6 +3377,7 @@ input[type=number] {
     background: #FBFBFB;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     text-indent: 12px;
+    font-size: 0.9rem;
  }
 
  #item-desc{
