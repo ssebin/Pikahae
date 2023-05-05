@@ -3809,7 +3809,6 @@ hr {
 }
 
 /* End of Reservation-Selection */
-
 /*  CART START */
 
 .cart-container .confirm-order-btn{
@@ -4034,6 +4033,10 @@ input:focus {
     margin-bottom: 50px;
 }
 
+.category-name{
+    margin-top: 50px;
+}
+
 .menu .box img{
     width: 400px;
     height: 250px;
@@ -4130,10 +4133,6 @@ input:focus {
     margin: 0;
 }
 
-.view-details{
-    line-height: 30px;
-    font-size: small;
-}
 
 /* MENU RESPONSIVE */
 
@@ -4199,9 +4198,22 @@ input:focus {
 
 .head-cart__heading {
     position: relative;
-    padding-bottom: 5px;
     font-size: 18px;
     border-bottom:  1px solid #E1E8EE;
+}
+
+.menu-head-cart .cart-close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.menu-head-cart .cart-close:hover,
+.menu-head-cart .cart-close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
 }
 
 .head-cart__heading::before {
@@ -4365,11 +4377,57 @@ input:focus {
     border-radius: 10px;
 }
 
+/* HEAD CART END */
 
+/* MENU MODAL */
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    filter: drop-shadow(0px 8px 4px rgba(0, 0, 0, 0.24));
+}
 
+/* Modal Content/Box */
+.modal-content {
+    background-color: var(--bg-color);
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border-radius: 40px;
+    width: 800px /* Could be more or less, depending on screen size */
+}
 
+/* The Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
 
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
 
+.po-btn, .head-cart-checkout{
+    box-shadow: 0 4px 0 #CC566B;
+}
 
+.plus-btn, .minus-btn{
+    box-shadow: 0 4px 0 #b9a2a2;
+}
 
-
+button:active{
+    box-shadow: none;
+    transform: translateY(4px);
+}

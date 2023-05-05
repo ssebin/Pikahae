@@ -15,6 +15,7 @@ const priceBtns = Array.from(document.querySelectorAll(".price-btn__img"));
 const totalItems = document.querySelector(".price-btn__txt");
 const body = document.querySelector("body");
 const headerCart = document.querySelector(".head-rgt");
+const closeCartBtn = document.querySelector(".cart-close");
 
 let noOfItems = 0;
 let cartItems = {};
@@ -54,10 +55,8 @@ function renderCart() {
     for (const itemId in cartItems) {
         let itemImgSrc = getItemImageSrc(itemId);
 
-        //const itemImgSrc = document.querySelector(`.box .item-name:contains('${itemId}')`).closest('.box').querySelector('img').dataset.imgSrc;
-
         cartItemsHTML += `
-      <div class="head-cart__item open-cart">
+      <div class="head-cart__item${cart.classList.contains("open-cart") ? " open-cart" : ""}">
         <div class="head-cart__item-wrapper">
           <span class="delete-btn"><i class="fa-solid fa-xmark"></i></span>
           <img src="${itemImgSrc}" class="head-cart__item-img" alt="" />
@@ -78,12 +77,13 @@ function renderCart() {
     updateDeleteBtnListeners();
 }
 
+
 function cartIt() {
     cartItem.classList.add("open-cart");
-    renderCart();
     cartTotal.classList.add("open-cart");
     cartCheckoutBtn.classList.add("open-cart");
     emptyCartTxt.classList.remove("open-cart");
+    renderCart();
 }
 
 function cartTx() {
@@ -93,8 +93,10 @@ function cartTx() {
     emptyCartTxt.classList.add("open-cart");
 }
 
+
 cartBtn.addEventListener("click", function () {
     cart.classList.toggle("open-cart");
+    const cartItemsList = document.querySelectorAll('.head-cart__item'); // Add this line
 
     if (cart.classList.contains("open-cart")) {
         if (noOfItems >= 1) {
@@ -107,7 +109,11 @@ cartBtn.addEventListener("click", function () {
         if (noOfItems > 0) {
             cartTotal.classList.add("open-cart");
             cartCheckoutBtn.classList.add("open-cart");
-            cartItems.classList.add("open-cart");
+
+            // Add this loop to toggle the open-cart class for each cart item
+            cartItemsList.forEach(function (cartItem) {
+                cartItem.classList.add("open-cart");
+            });
         } else {
             cartTotal.classList.remove("open-cart");
             cartCheckoutBtn.classList.remove("open-cart");
@@ -119,7 +125,49 @@ cartBtn.addEventListener("click", function () {
         // Hide the total, checkout button, and items when closing the cart
         cartTotal.classList.remove("open-cart");
         cartCheckoutBtn.classList.remove("open-cart");
-        cartItems.classList.remove("open-cart");
+
+        // Add this loop to toggle the open-cart class for each cart item
+        cartItemsList.forEach(function (cartItem) {
+            cartItem.classList.remove("open-cart");
+        });
+    }
+});
+closeCartBtn.addEventListener("click", function () {
+    cart.classList.toggle("open-cart");
+    const cartItemsList = document.querySelectorAll('.head-cart__item'); // Add this line
+
+    if (cart.classList.contains("open-cart")) {
+        if (noOfItems >= 1) {
+            cartIt();
+        } else {
+            cartTx();
+        }
+
+        // Show the total and checkout button if there are items in the cart
+        if (noOfItems > 0) {
+            cartTotal.classList.add("open-cart");
+            cartCheckoutBtn.classList.add("open-cart");
+
+            // Add this loop to toggle the open-cart class for each cart item
+            cartItemsList.forEach(function (cartItem) {
+                cartItem.classList.add("open-cart");
+            });
+        } else {
+            cartTotal.classList.remove("open-cart");
+            cartCheckoutBtn.classList.remove("open-cart");
+            emptyCartTxt.classList.add("open-cart");
+        }
+    } else {
+        emptyCartTxt.classList.remove("open-cart");
+
+        // Hide the total, checkout button, and items when closing the cart
+        cartTotal.classList.remove("open-cart");
+        cartCheckoutBtn.classList.remove("open-cart");
+
+        // Add this loop to toggle the open-cart class for each cart item
+        cartItemsList.forEach(function (cartItem) {
+            cartItem.classList.remove("open-cart");
+        });
     }
 });
 
@@ -150,9 +198,18 @@ priceBtns.forEach((btn) => {
             noOfItems += currentQty - previousQty;
             renderCart();
             productPrice();
+
+            if (!cart.classList.contains("open-cart")) {
+                let cartItemsList;
+                cartItemsList = document.querySelectorAll(".head-cart__item");
+                cartItemsList.forEach(function (cartItem) {
+                    cartItem.classList.remove("open-cart");
+                });
+            }
         }
     });
 });
+
 
 
 addToCartBtns.forEach((btn) => {
@@ -220,5 +277,41 @@ function updateDeleteBtnListeners() {
         });
     });
 }
+
+//checkout button redirect
+cartCheckoutBtn.addEventListener("click", function () {
+    window.location.href = "../html/reservation-confirmation.html";
+});
+
+//for the modal thingy
+// Get all the buttons that open the modals
+var modalBtns = document.querySelectorAll(".menu-details-btn");
+
+// Add an event listener to each button
+modalBtns.forEach((modalBtn) => {
+    modalBtn.addEventListener("click", function () {
+        // Find the corresponding modal for the clicked button
+        const modal = modalBtn.nextElementSibling;
+
+        // Show the modal
+        modal.style.display = "block";
+
+        // Get the <span> element that closes the modal
+        const span = modal.querySelector(".close");
+
+        // Add event listeners for closing the modal
+        span.addEventListener("click", function () {
+            modal.style.display = "none";
+        });
+
+        window.addEventListener("click", function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        });
+    });
+});
+
+
 
 
