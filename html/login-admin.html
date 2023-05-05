@@ -37,6 +37,7 @@
         </nav>
     </section>
     <div class="form-body">
+        <div class="overlay"></div>
         <div class="form-container">
             <div class="form-card-logo">
                 <img src="../images/logo_draft.png" alt="pikahae logo">
@@ -61,7 +62,7 @@
                         </div>
                         <a href="./forgotpassword.html">Forgot password?</a>
                     </div>
-                    <a href="./homepage-admin.html"><button type="button">Log In</button></a><br>
+                    <button type="button" id="login-button">Log In</button><br>
                     <!-- <div class="login-btn-google">
                         <button type="button"><span><img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" alt="google logo"></span>Continue with Google</button>
                     </div> -->
@@ -72,6 +73,16 @@
             </div>
         </div>
         <a href="./login.html" id="admin-login-button"><button type="button"><img src="../images/login/user-logo.png" alt="Admin"></button></a>
+        <div class="login-popup-card">
+            <div class="login-popup-img">
+                <img src="../images/login/pikachu-celebrate.jpg" alt="Pikachu Celebrating">
+            </div>
+            <div class="login-popup-text">
+                <h1 class="login-success-msg">Login Success&nbsp<span class="exclamation">!</span></h1>
+                <p>You have successfully logged in</p>
+            </div>
+            <a href="./homepage-admin.html"><button id="login-continue-button" type="button">Continue</button></a>
+        </div>
     </div>
     <footer>
 
@@ -93,6 +104,6 @@
             <p>copyright &copy;2023 Pikahae. designed by <span>dino kuning</span></p>
         </div>
     </footer>
-
+    <script src="../script/login.js"></script>
 </body>
 </html>
