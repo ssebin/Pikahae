@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pikahae</title>
+    <link rel="stylesheet" href="../stylesheet/pikahae.css">
+
+    <!-- For icons -->
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!--  Google fonts Roboto -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@100;200;400;500;600;700;800;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,700;1,300;1,400;1,500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Aldrich&family=Open+Sans:wght@600&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <!-- header -->
+    <section>
+        <nav class="header">
+            <a href="#" class="logo"><img src="../images/logo_draft.png" alt="logo"></a>
+            <!--        <p class="cafe-name">Pikahae</p>-->
+    
+            <ul class="navlist">
+                <li><a href="homepage-admin.html">Home</a></li>
+                <li><a href="about_us-admin.html">About</a></li>
+                <li><a href="cusomter_accounts.html">Accounts</a></li>
+                <li><a href="reservationDashboardAdmin.html">Reservations</a></li>
+                <li><a href="manage_menu.html">Menu</a></li>
+            </ul>
+    
+            <div class="icon">
+                <!-- <a href="cart.html"><i class='bx bxs-cart'></i></a>
+                <a href="view-profile.html"><i class='bx bxs-user'></i></a> -->
+            </div>
+        </nav>
+        <div class="banner">
+            <img src="../images/profile/Background_pic1.png" alt="picture of pikachu with dessert">
+        </div>
+        <div class="sub-header-wrapper">
+            <p>PROFILE</p>
+        </div>
+        <hr>
+    </section>
+    <div class="edit-profile-page">
+        <div class="background-image">
+                <figure class="edit-profile-figure">
+                    <div>
+                        <div class="edit-wrapper">
+                            <h3>Edit Profile</h3>
+                            <div class="profile-description-wrapper">
+                                <div class="profile-wrapper">
+                                    <img src="../images/profile/profile_pic.png" id="ProfilePicture" alt="Profile Picture" class="profile-picture">
+                                    <div class="upload-wrapper">
+                                        <label for="file-upload" id="upload-btn">Upload</label>
+                                        <input type="file" id="file-upload" name="file-upload" accept=".jpg, .jpeg, .png">
+                                        <span class="file-name"></span>
+                                        <script src="../script/editProfile.js"></script>
+                                    </div>
+                                </div>
+                                <figcaption>
+                                    Username1<br>
+                                    <h2>current points: 80pts<br></h2>
+                                    <br>
+                                    <titletext>E-mail:<br></titletext>
+                                    <div contenteditable="true" id="email">Pikachuz@gmail.com</div>
+                                    <br>
+                                    <titletext>Birthday:<br></titletext>
+                                    <input type="date" id="birthday" name="birthday">
+                                    <br>
+                                    <titletext>Favourite pokemon:<br></titletext>
+                                        <select id="favorite-pokemon">
+                                            <option value="bulbasaur">Bulbasaur</option>
+                                            <option value="charmander">Charmander</option>
+                                            <option value="squirtle">Squirtle</option>
+                                            <option value="pikachu">Pikachu</option>
+                                            <option value="rowlet" selected>Rowlet</option>
+                                        </select>
+                                    <script src="../script/editProfile.js"></script>
+                                </figcaption>
+                            </div>
+                        </div>
+                        <div class="button-wrapper">
+                            <button class="delete-account">Delete Account</button>
+                            <button class="cancel-edit">Cancel</button>
+                            <button class="save-edit">Save</button>
+                            <script src="../script/editProfile.js"></script>
+                        </div>
+                    </div>
+                </figure>
+        </div>
+        <footer>
+            <div class="footer-content">
+                <h3>Pikahae</h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.<br>Illo iste corrupti doloribus odio sed!
+                </p>
+                <ul class="socials">
+                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                    <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                    <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+                    <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                </ul>
+                <img src=../images/babies_trans.png>
+            </div>
+            <hr class="footer-line">
+            <div class="footer-bottom">
+                <p>copyright &copy;2023 Pikahae. designed by <span>dino kuning</span></p>
+            </div>
+        </footer>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    </div>
+</body>
+</html>

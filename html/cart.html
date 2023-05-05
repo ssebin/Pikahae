@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>Pikahae</title>
@@ -12,174 +13,178 @@
   <!--  Google fonts Roboto -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@100;200;400;500;600;700;800;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,700;1,300;1,400;1,500&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Jost:wght@100;200;400;500;600;700;800;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,700;1,300;1,400;1,500&display=swap"
+    rel="stylesheet">
 
 
 </head>
 
 <body>
-<!-- header -->
-<section>
-  <nav class="header">
-    <a href="#" class="logo"><img src="../images/logo_draft.png" alt="logo"></a>
-    <!--        <p class="cafe-name">Pikahae</p>-->
+  <!-- header -->
+  <section>
+    <nav class="header">
+      <a href="#" class="logo"><img src="../images/logo_draft.png" alt="logo"></a>
+      <!--        <p class="cafe-name">Pikahae</p>-->
 
-    <ul class="navlist">
-      <li><a href="homepage-customer.html">Home</a></li>
-      <li><a href="#">About</a></li>
-      <li><a href="menu.html">Menu</a></li>
-      <li><a href="#">Reservations</a></li>
-    </ul>
+      <ul class="navlist">
+        <li><a href="homepage-customer.html">Home</a></li>
+        <li><a href="about_us.html">About</a></li>
+        <li><a href="reservation.html">Reservations</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="contact_us.html">Contact Us</a></li>
+      </ul>
 
-    <div class="icon">
-      <a href="#"><i class='bx bxs-cart'></i></a>
-      <a href="#"><i class='bx bxs-user'></i></a>
+      <div class="icon">
+        <a href="cart.html"><i class='bx bxs-cart'></i></a>
+                <a href="view-profile.html"><i class='bx bxs-user'></i></a>
+      </div>
+    </nav>
+
+    <div class="banner">
+      <img src="../images/menu/banner_2.png" alt="picture of pikachu with dessert">
     </div>
-  </nav>
+  </section>
 
-  <div class="banner">
-    <img src="../images/menu/banner_2.png" alt="picture of pikachu with dessert">
-  </div>
-</section>
-
-<!-- sub header section -->
-<div class="sub-header-wrapper">
-  <p>MENU</p>
-  <div class="input-box">
-    <i class="uil uil-search"></i>
-    <input type="text" placeholder="Search menu" />
-    <button class="button"><i class="fa-solid fa-magnifying-glass"></i></button>
-  </div>
-</div>
-<hr>
-
-<!--    menu section -->
-
-<!-- menu header -->
-<section class="menu-header">
-  <nav class="menu-nav">
-    <ul class="menu-navlist">
-      <li><a href="#">ALL</a></li>
-      <li><a href="#">FOOD</a></li>
-      <li><a href="#">DRINKS</a></li>
-      <li><a href="#">DESSERT</a></li>
-    </ul>
-  </nav>
-</section>
-
-<!-- cart container -->
-<section class="cart-main-body">
-  <div class="cart-container">
-
-    <div class="back-btn"><button id="back-btn">Back</button></div>
-    <!-- Title -->
-    <div class="title">
-      Your order
+  <!-- sub header section -->
+  <div class="sub-header-wrapper">
+    <p>MENU</p>
+    <div class="input-box">
+      <i class="uil uil-search"></i>
+      <input type="text" placeholder="Search menu" />
+      <button class="button"><i class="fa-solid fa-magnifying-glass"></i></button>
     </div>
+  </div>
+  <hr>
 
-    <!-- Product #1 -->
-    <div class="cart-item">
+  <!--    menu section -->
+
+  <!-- menu header -->
+  <section class="menu-header">
+    <nav class="menu-nav">
+      <ul class="menu-navlist">
+        <li><a href="#">ALL</a></li>
+        <li><a href="#">FOOD</a></li>
+        <li><a href="#">DRINKS</a></li>
+        <li><a href="#">DESSERT</a></li>
+      </ul>
+    </nav>
+  </section>
+
+  <!-- cart container -->
+  <section class="cart-main-body">
+    <div class="cart-container">
+
+      <div class="back-btn"><button id="back-btn">Back</button></div>
+      <!-- Title -->
+      <div class="title">
+        Your order
+      </div>
+
+      <!-- Product #1 -->
+      <div class="cart-item">
         <span class="delete-btn"><i class="fa-solid fa-xmark"></i></span>
-      <div class="cart-image">
-        <img src="../images/menu/photo_sweets02.jpg" alt="" />
+        <div class="cart-image">
+          <img src="../images/menu/photo_sweets02.jpg" alt="" />
+        </div>
+
+        <div class="description">
+          <span>Pikahae Pancake</span>
+        </div>
+
+        <div class="quantity">
+          <button class="minus-btn" type="button" name="button">
+            <i class="fa-solid fa-minus"></i>
+          </button>
+          <input type="text" name="name" value="1">
+          <button class="plus-btn" type="button" name="button">
+            <i class="fa-solid fa-plus"></i>
+          </button>
+        </div>
+
+        <div class="cart-item-price">RM 25.00</div>
       </div>
 
-      <div class="description">
-        <span>Pikahae Pancake</span>
+      <!-- Product #2 -->
+      <div class="cart-item">
+        <span class="delete-btn"><i class="fa-solid fa-xmark"></i></span>
+
+        <div class="cart-image">
+          <img src="../images/menu/photo_food01_02.jpg" alt="" />
+        </div>
+
+        <div class="description">
+          <span>Pikachu burger</span>
+        </div>
+
+        <div class="quantity">
+          <button class="minus-btn" type="button" name="button">
+            <i class="fa-solid fa-minus"></i>
+          </button>
+          <input type="text" name="name" value="1">
+          <button class="plus-btn" type="button" name="button">
+            <i class="fa-solid fa-plus"></i>
+          </button>
+        </div>
+
+        <div class="cart-item-price">RM 25.00</div>
       </div>
 
-      <div class="quantity">
-        <button class="minus-btn" type="button" name="button">
-          <i class="fa-solid fa-minus"></i>
-        </button>
-        <input type="text" name="name" value="1">
-        <button class="plus-btn" type="button" name="button">
-          <i class="fa-solid fa-plus"></i>
-        </button>
-      </div>
+      <!-- Product #3 -->
+      <div class="cart-item">
+        <span class="delete-btn"><i class="fa-solid fa-xmark"></i></span>
 
-      <div class="cart-item-price">RM 25.00</div>
+        <div class="cart-image">
+          <img src="../images/menu/photo_drink01.jpg" alt="" />
+        </div>
+
+        <div class="description">
+          <span>Eevee Drink</span>
+        </div>
+
+        <div class="quantity">
+          <button class="minus-btn" type="button" name="button">
+            <i class="fa-solid fa-minus"></i>
+          </button>
+          <input type="text" name="name" value="1">
+          <button class="plus-btn" type="button" name="button">
+            <i class="fa-solid fa-plus"></i>
+          </button>
+        </div>
+
+        <div class="cart-item-price">RM 25.00</div>
+      </div>
+      <h3 class="total-price">Total: <span>RM 75.00</span></h3>
+
+      <div class="confirm-order-btn"><button id="confirm-order-btn">Confirm order</button></div>
     </div>
+  </section>
 
-    <!-- Product #2 -->
-    <div class="cart-item">
-      <span class="delete-btn"><i class="fa-solid fa-xmark"></i></span>
+  <!--Footer-->
+  <footer>
 
-      <div class="cart-image">
-        <img src="../images/menu/photo_food01_02.jpg" alt="" />
-      </div>
-
-      <div class="description">
-        <span>Pikachu burger</span>
-      </div>
-
-      <div class="quantity">
-        <button class="minus-btn" type="button" name="button">
-          <i class="fa-solid fa-minus"></i>
-        </button>
-        <input type="text" name="name" value="1">
-        <button class="plus-btn" type="button" name="button">
-          <i class="fa-solid fa-plus"></i>
-        </button>
-      </div>
-
-      <div class="cart-item-price">RM 25.00</div>
+    <div class="footer-content">
+      <h3>Pikahae</h3>
+      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.<br>Illo iste corrupti doloribus odio sed!</p>
+      <ul class="socials">
+        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+        <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+        <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+        <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+      </ul>
+      <img src=../images/babies_trans.png>
     </div>
-
-    <!-- Product #3 -->
-    <div class="cart-item">
-      <span class="delete-btn"><i class="fa-solid fa-xmark"></i></span>
-
-      <div class="cart-image">
-        <img src="../images/menu/photo_drink01.jpg" alt="" />
-      </div>
-
-      <div class="description">
-        <span>Eevee Drink</span>
-      </div>
-
-      <div class="quantity">
-        <button class="minus-btn" type="button" name="button">
-          <i class="fa-solid fa-minus"></i>
-        </button>
-        <input type="text" name="name" value="1">
-        <button class="plus-btn" type="button" name="button">
-          <i class="fa-solid fa-plus"></i>
-        </button>
-      </div>
-
-      <div class="cart-item-price">RM 25.00</div>
+    <hr class="footer-line">
+    <div class="footer-bottom">
+      <p>copyright &copy;2023 Pikahae. designed by <span>dino kuning</span></p>
     </div>
-    <h3 class="total-price">Total: <span>RM 75.00</span></h3>
+  </footer>
 
-    <div class="confirm-order-btn"><button id="confirm-order-btn">Confirm order</button></div>
-  </div>
-</section>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
-<!--Footer-->
-<footer>
-
-  <div class="footer-content">
-    <h3>Pikahae</h3>
-    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.<br>Illo iste corrupti doloribus odio sed!</p>
-    <ul class="socials">
-      <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-      <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-      <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-      <li><a href="#"><i class="fa fa-youtube"></i></a></li>
-      <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-    </ul>
-    <img src=../images/babies_trans.png>
-  </div>
-  <hr class="footer-line">
-  <div class="footer-bottom">
-    <p>copyright &copy;2023 Pikahae. designed by <span>dino kuning</span></p>
-  </div>
-</footer>
-
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-
-<script defer src="../script/main.js"></script>
+  <script defer src="../script/main.js"></script>
 
 </body>
+
 </html>
