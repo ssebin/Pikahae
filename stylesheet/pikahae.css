@@ -3028,7 +3028,9 @@ input[type=number] {
     justify-content: center;
     align-items: center;
     padding-top: 50px;
-    padding-bottom: 70px;
+    padding-bottom: 50px;
+    padding-left: 30px;
+    padding-right: 30px;
 }
 
 .about-us-introduction h1{
@@ -3077,7 +3079,7 @@ input[type=number] {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 0.625rem;
-    margin: 1.25rem;
+    margin: 3rem;
     align-items: center;
     justify-items: center;
   }
@@ -3088,30 +3090,34 @@ input[type=number] {
     align-items: center;
     justify-content: center;
     background-color: #F1EDEA;
-    border-radius: 0.625rem;
-    padding: 1rem;
+    border-radius: 40px;
+    padding: 2rem;
     margin: 1rem;
     text-align: center;
   }
 
   .img-container {
-    width: 10.9375rem;
+    width: 17rem;
     height: 0;
-    padding-bottom: 100%;
+    padding-bottom: 9rem;
+    padding-left: 5rem;
     position: relative;
+    align-items: center;
   }
 
   .img-container img {
     position: absolute;
     top: 0;
-    left: 0;
-    width: 10.625rem;
+    left: 3rem;
+    width: 12rem;
     height: 15.625rem;
     object-fit: cover;
+    align-items: center;
   }
 
 .member-container .item p {
     font-size: 1.125rem;
+    align-items: center;
 }
 
 
