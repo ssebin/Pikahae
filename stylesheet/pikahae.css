@@ -301,30 +301,7 @@ section .header{
     transform: translateY(4px);
 }
 
-.HP-menu{
-    justify-content: center;  
-    align-items: center;  
-    top: 50%;
-    left: 50%;  
-    width: 100%;
-    text-align: center;
-    /* background: linear-gradient(rgba(255,255,255,.80), rgba(255,255,255,.90)),url("../images/pokecafe-bg.jpg"); */
-    background-color: var(--header-color);
-}
 
-.HP-menu-heading{
-    font-size: 2.8rem;
-    color: var(--main-color);  
-    padding-top: 60px;  
-    margin-top: 60px;
-    line-height: 1;
-    justify-content: center;  
-    align-items: center;  
-    top: 50%;
-    left: 50%;  
-    width: 100%;
-    text-align: center;
-}
 
 .btn-pink{
     padding: 15px 25px;
@@ -837,10 +814,111 @@ footer{
 /** End of footer */
 
 /** Customer-Menu */
+
+.HP-menu{
+    justify-content: center;
+    align-items: center;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    text-align: center;
+    /* background: linear-gradient(rgba(255,255,255,.80), rgba(255,255,255,.90)),url("../images/pokecafe-bg.jpg"); */
+    background-color: var(--header-color);
+}
+
+.HP-menu-heading{
+    font-size: 2.8rem;
+    color: var(--main-color);
+    padding-top: 60px;
+    margin-top: 60px;
+    line-height: 1;
+    justify-content: center;
+    align-items: center;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    text-align: center;
+}
+
 .homepage-menu{
     padding: 40px 0 0 40px;
     width: 100%;
     height: auto;
+}
+
+#hp-menu-container{
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    grid-gap: 20px;
+    margin-bottom: 50px;
+    margin-top: 20px;
+}
+
+#hp-menu-container .box{
+    width: 400px;
+    height: 410px;
+    margin: 15px 15px 0;
+    background: var(--bg-color);
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+    justify-content: left;
+    border: none;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    transition: 0.5s all ease-in-out;
+}
+
+#hp-menu-container .box:hover{
+    transform: scale(1.05);
+}
+
+#hp-menu-container .box img{
+    width: 400px;
+    height: 250px;
+}
+
+#hp-menu-container .box .item-text{
+    padding: 10px 20px 10px 20px;
+}
+
+#hp-menu-container .box .item-text h3{
+    padding-bottom: 10px;
+}
+
+#hp-menu-container .box .box .menu-price{
+    font-weight: bold;
+    font-size: 15px;
+    align-self: center;
+}
+
+#hp-menu-container .category-btn{
+    font-size: 15px;
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: var(--main-color);
+    color: white;
+    border-radius: 30px;
+    padding: 5px 10px 5px 10px;
+}
+
+#hp-menu-container .box .item-desc{
+    font-size: 13px;
+    color: #43484D;
+    padding-top: 10px;
+    padding-bottom: 15px;
+}
+
+#hp-menu-container .box .po-btn{
+    justify-content: center;
+    font-size: 15px;
+    background: var(--main-color);
+    color: white;
+    border-radius: 30px;
+    padding: 5px 10px 5px 10px;
 }
 
 .homepage-menu .box-container{
@@ -862,24 +940,61 @@ footer{
     grid-gap: 20px;
 }
 
+/* HOMEPAGE MENU RESPONSIVE */
+
+@media (max-width: 1000px) {
+    #hp-menu-container{
+        grid-template-columns: 1fr 2fr;
+    }
+}
+
+@media (max-width: 1400px) {
+    #hp-menu-container{
+        grid-template-columns: 1fr 2fr;
+    }
+}
+
+@media (max-width: 600px) {
+    #hp-menu-container .box .price{
+        padding: 0;
+        margin: 0;
+    }
+
+    #hp-menu-container{
+        width: 100%;
+        grid-template-columns: 1fr;
+    }
+
+    #hp-menu-container #menu-img{
+        width: 90px;
+        height: 100px;
+    }
+
+    #hp-menu-container{
+        padding-left: 40px;
+        grid-template-columns: minmax(100px, 1fr);
+    }
+}
+
+
 /* @media (min-width: 40px){
     .homepage-menu .box-container{
         grid-template-columns: 1fr 1fr 1fr;
     }
 } */
 
-.homepage-menu .box-container img{
-    /* width: 30vw;
+/*.homepage-menu .box-container img{
+    !* width: 30vw;
     height: 20vw;
     max-width: 350px;
-    max-height: 200px; */
+    max-height: 200px; *!
 
     width: 400px;
     height: 250px;
 }
 
 .homepage-menu .box-container .box{
-    /* width: 30vw;
+    !* width: 30vw;
     height: 20vw;
     max-width: 350px;
     max-height: 350px;
@@ -891,7 +1006,7 @@ footer{
     overflow: hidden;
     justify-content: left;
     border: none;
-    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25); */
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25); *!
 
     width: 400px;
     height: 400px;
@@ -906,20 +1021,20 @@ footer{
 }
 
 .homepage-menu .box-container .box .item-text{
-    /* padding: 10px 20px 10px 0; */
+    !* padding: 10px 20px 10px 0; *!
     padding: 10px 20px 10px 20px;
 }
 
 .homepage-menu .box-container .box .item-text h3{
-    /* padding-left: 25px; */
+    !* padding-left: 25px; *!
     padding-bottom: 5px;
 }
 
 .homepage-menu .box-container .box .item-text .item-desc{
-    /* font-size: small;
+    !* font-size: small;
     padding-top: 10px;
     padding-bottom: 10px;
-    color: #75797F; */
+    color: #75797F; *!
     font-size: 13px;
     color: var(--secound-color);
     padding-bottom: 10px;
@@ -927,17 +1042,17 @@ footer{
 }
 
 .homepage-menu .box-container .box .menu-price{
-    /* display: flex;
+    !* display: flex;
     align-self: end;
     font-weight: bold;
     padding-left: 25px;
-    padding-bottom: 5px; */
+    padding-bottom: 5px; *!
     font-weight: bold;
     font-size: 15px;
     align-self: center;
 }
 
-/* .homepage-menu .box-container .box .btn{
+!* .homepage-menu .box-container .box .btn{
     margin-bottom: 10px;
     margin-right: 10px;
     position: absolute;
@@ -949,17 +1064,17 @@ footer{
     border-radius: 30px;
     padding: 5px 10px 5px 10px;
     justify-content: flex-end;
-} */
+} *!
 
 .homepage-menu .box-container .category-btn{
-    /* font-size: small;
+    !* font-size: small;
     position: absolute;
     top: 20px;
     left: 20px;
     background: var(--main-color);
     color: white;
     border-radius: 30px;
-    padding: 5px 10px 5px 10px; */
+    padding: 5px 10px 5px 10px; *!
     font-size: small;
     position: absolute;
     top: 15px;
@@ -988,7 +1103,7 @@ footer{
 .homepage-menu .box .po-btn:active{
     box-shadow: none;
     transform: translateY(4px);
-}
+}*/
 
 /* MENU RESPONSIVE */
 @media (max-width: 600px) {
