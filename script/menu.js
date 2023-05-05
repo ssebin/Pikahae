@@ -48,7 +48,6 @@ function getItemImageSrc(itemName) {
     return itemImgSrc;
 }
 
-
 function renderCart() {
     let cartItemsHTML = '';
 
@@ -77,7 +76,6 @@ function renderCart() {
     updateDeleteBtnListeners();
 }
 
-
 function cartIt() {
     cartItem.classList.add("open-cart");
     cartTotal.classList.add("open-cart");
@@ -93,6 +91,17 @@ function cartTx() {
     emptyCartTxt.classList.add("open-cart");
 }
 
+// for notification like cart counter
+const cartItemCount = document.querySelector(".cart-item-count");
+
+function updateCartItemCount() {
+    if (noOfItems > 0) {
+        cartItemCount.textContent = noOfItems;
+        cartItemCount.style.display = "inline";
+    } else {
+        cartItemCount.style.display = "none";
+    }
+}
 
 cartBtn.addEventListener("click", function () {
     cart.classList.toggle("open-cart");
@@ -171,7 +180,6 @@ closeCartBtn.addEventListener("click", function () {
     }
 });
 
-
 priceBtns.forEach((btn) => {
     btn.addEventListener("click", function (e) {
         const qtyElement = e.target.closest(".menu-quantity").querySelector(".price-btn__txt");
@@ -210,8 +218,6 @@ priceBtns.forEach((btn) => {
     });
 });
 
-
-
 addToCartBtns.forEach((btn) => {
     btn.addEventListener("click", function (e) {
         e.preventDefault();
@@ -229,6 +235,8 @@ addToCartBtns.forEach((btn) => {
         cartItems[itemId].quantity += itemQuantity;
         noOfItems += itemQuantity;
 
+        updateCartItemCount();
+
         productPrice();
         renderCart();
 
@@ -242,10 +250,10 @@ addToCartBtns.forEach((btn) => {
     });
 });
 
-
 clearCart.addEventListener("click", function () {
     cartTx();
     noOfItems = 0;
+    updateCartItemCount();
     cartItems = {};
     renderCart();
     headerCart.style.setProperty("--display", `none`);
@@ -263,6 +271,8 @@ function updateDeleteBtnListeners() {
             // Remove item from cartItems and update noOfItems
             delete cartItems[itemName];
             noOfItems -= itemQuantity;
+
+            updateCartItemCount();
 
             // Remove the item element from the cart
             itemElement.remove();

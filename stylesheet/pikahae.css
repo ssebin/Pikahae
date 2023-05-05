@@ -4380,7 +4380,7 @@ input:focus {
 .head-cart__item {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 10px;
     align-content: space-between;
     padding-bottom: 10px;
     border-bottom:  1px solid #E1E8EE;
@@ -4688,8 +4688,6 @@ button:active{
 }
 
 
-
-/* TODO: MEDIA QUERIES*/
 @media only screen and (max-width: 1600px) {
     .head {
         max-width: 100%;
@@ -4911,4 +4909,19 @@ button:active{
 
 #topBtn:hover {
     background-color: #555; /* Add a dark-grey background on hover */
+}
+
+/* END SCROLL TO TOP */
+
+/* CART COUNTER */
+.cart-item-count {
+    position: relative;
+    top: -33px;
+    right: 10px;
+    background-color: red;
+    color: white;
+    font-size: 12px;
+    padding: 2px 5px;
+    border-radius: 50%;
+    display: none;
 }
