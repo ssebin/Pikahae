@@ -1393,6 +1393,11 @@ section .menu-navlist{
     justify-content: center;
 }
 
+.form-body.dark {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+  }
+
 .form-container{
     margin-top: 4rem;
 }
@@ -1407,7 +1412,8 @@ section .menu-navlist{
 }
 
 .form-container h1,
-.form-container h2{
+.form-container h2,
+.login-popup-card h1{
     font-family: 'Roboto', sans-serif;
     display: flex;
     align-items: center;
@@ -1523,7 +1529,8 @@ section .menu-navlist{
     font-family: 'Roboto', sans-serif;
 }
 
-.form-card-input button{
+.form-card-input button,
+.login-popup-card button{
     margin: 0.6rem;
     width: 24rem;
     height: 2.2rem;
@@ -1610,6 +1617,54 @@ section .menu-navlist{
 .register-input-alert p{
     display: none;
     color: red;
+}
+
+.login-popup-card{
+    padding: 1.8rem;
+    background-color: white;
+    align-items: center;
+    text-align: center;
+    border-radius: 40px;
+    font-family: 'Roboto', sans-serif;
+    filter: drop-shadow(0px 8px 4px rgba(0, 0, 0, 0.24));
+    position: fixed;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%) translateY(-100%);
+    z-index: 9999;
+    display: none;
+    transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+}
+
+.login-popup-card img{
+    width: 12rem;
+    height: 12rem;
+    margin-left: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.login-popup-card button{
+    width: 20rem;
+    margin: 2rem;
+}
+
+.login-popup-card p{
+    margin-top: 1.5rem;
+}
+
+.login-success-msg{
+    margin-left: 1rem;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* semi-transparent black */
+    z-index: 1000; /* make sure it's above other elements */
+    display: none; /* hide by default */
 }
 
 /* login/registration END */
@@ -2346,6 +2401,11 @@ Product section styling
 .admin-view-header input[type=text]::placeholder{
     color: var(--main-color);
     opacity: 0.5;
+}
+
+.admin-view-table{
+    margin-top: 3rem;
+    margin-bottom: 4rem;
 }
 
 table{

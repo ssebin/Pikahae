@@ -27,10 +27,11 @@
             <!--        <p class="cafe-name">Pikahae</p>-->
     
             <ul class="navlist">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Menu</a></li>
-                <li><a href="#">Reservations</a></li>
+                <li><a href="./homepage-customer.html">Home</a></li>
+                <li><a href="./about_us.html">About</a></li>
+                <li><a href="./reservation.html">Reservations</a></li>
+                <li><a href="./menu.html">Menu</a></li>
+                <li><a href="./contact_us.html">Contact Us</a></li>
             </ul>
     
             <div class="icon">
@@ -40,6 +41,7 @@
         </nav>
     </section>
     <div class="form-body">
+        <div class="overlay"></div>
         <div class="form-container register-container">
             <div class="form-card-logo">
                 <img src="../images/logo_draft.png" alt="pikahae logo">
@@ -81,12 +83,23 @@
                         <p id="password-match-alert">Passwords do not match</p>
                     </div>
                     <p>By clicking register, you agree to Pikahae's<a href="#" id="terms-link">&nbsp; Terms and Conditions</a></p>
-                    <button type="submit" id="register-btn">Register</button><br>
+                    <button type="button" id="register-btn">Register</button><br>
                 </form>
                 <div class="form-card-footer">
                     Already have an account? <a href="./login.html">Login</a>
                 </div>
             </div>
+        </div>
+        <div class="login-popup-card">
+            <div class="login-popup-img">
+                <img src="../images/login/pikachu-celebrate.jpg" alt="Pikachu Celebrating">
+            </div>
+            <div class="login-popup-text">
+                <h1>Registration Complete&nbsp<span class="exclamation">!</span></h1>
+                <p>Your account has been created and a verification email has been sent to your
+                    email address.</p>
+            </div>
+            <a href="./login.html"><button id="login-continue-button" type="button">Continue</button></a>
         </div>
     </div>
     <footer>

@@ -2,7 +2,6 @@ const firstNameInput = document.getElementById('fname');
 const lastNameInput = document.getElementById('lname');
 const usernameInput = document.getElementById('username');
 const passwordInput = document.getElementById('password');
-const registerButton = document.getElementById('register-btn');
 
 const nameInputAlert = document.getElementById('name-input-alert');
 const usernameInputAlert = document.getElementById('username-input-alert');
@@ -23,7 +22,7 @@ firstNameInput.addEventListener('input', () => {
   } else {
     nameInputAlert.style.display = 'none';
   }
-  enableRegisterButton();
+  // enableRegisterButton();
 });
 
 lastNameInput.addEventListener('input', () => {
@@ -32,6 +31,7 @@ lastNameInput.addEventListener('input', () => {
   } else {
     nameInputAlert.style.display = 'none';
   }
+  // enableRegisterButton();
 });
 
 usernameInput.addEventListener('input', () => {
@@ -40,7 +40,7 @@ usernameInput.addEventListener('input', () => {
   } else {
     usernameInputAlert.style.display = 'none';
   }
-  enableRegisterButton();
+  // enableRegisterButton();
 });
 
 confirmPasswordInput.addEventListener('input', function() {
@@ -49,7 +49,7 @@ confirmPasswordInput.addEventListener('input', function() {
   } else {
     passwordMatchAlert.style.display = 'none';
   }
-  enableRegisterButton();
+  // enableRegisterButton();
 });
 
 passwordInput.addEventListener('input', () => {
@@ -60,7 +60,7 @@ passwordInput.addEventListener('input', () => {
     } else {
         passwordRequirementAlert.style.display = 'none';
     }
-    enableRegisterButton();
+    // enableRegisterButton();
   });
 
   function enableRegisterButton() {
@@ -70,3 +70,28 @@ passwordInput.addEventListener('input', () => {
       registerButton.disabled = true;
     }
   }
+
+  const loginButton = document.getElementById('register-btn')
+  const loginPopupCard = document.querySelector('.login-popup-card');
+  const continueButton = document.querySelector('#login-continue-button');
+  const overlay = document.querySelector('.overlay');
+  
+  loginButton.addEventListener('click', () => {
+      overlay.style.display = 'block';
+      loginPopupCard.style.display = 'block';
+      loginPopupCard.style.transform = 'translate(-50%, -100%)';
+    setTimeout(() => {
+        loginPopupCard.style.transform = 'translate(-50%, 0)';
+    }, 100);
+  });
+  
+  continueButton.addEventListener('click', () => {
+      overlay.style.display = 'none';
+      loginPopupCard.style.display = 'none';
+      loginPopupCard.style.transform = 'translate(-50%, -100%)';
+    setTimeout(() => {
+        overlay.style.display = 'none';
+        loginPopupCard.style.display = 'none';
+    }, 500);
+  });
+

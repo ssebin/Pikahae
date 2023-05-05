@@ -25,10 +25,11 @@
             <!--        <p class="cafe-name">Pikahae</p>-->
     
             <ul class="navlist">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Menu</a></li>
-                <li><a href="#">Reservations</a></li>
+                <li><a href="./homepage-customer.html">Home</a></li>
+                <li><a href="./about_us.html">About</a></li>
+                <li><a href="./reservation.html">Reservations</a></li>
+                <li><a href="./menu.html">Menu</a></li>
+                <li><a href="./contact_us.html">Contact Us</a></li>
             </ul>
     
             <div class="icon">
@@ -38,6 +39,7 @@
         </nav>
     </section>
     <div class="form-body">
+        <div class="overlay"></div>
         <div class="form-container">
             <div class="form-card-logo">
                 <img src="../images/logo_draft.png" alt="pikahae logo">
@@ -62,7 +64,7 @@
                         </div>
                         <a href="./forgotpassword.html">Forgot password?</a>
                     </div>
-                    <a href="./homepage-customer.html"><button type="button">Log In</button></a><br>
+                    <button type="button" id="login-button">Log In</button><br>
                     <div class="login-btn-google">
                         <button type="button"><span><img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" alt="google logo"></span>Continue with Google</button>
                     </div>
@@ -73,6 +75,17 @@
             </div>
         </div>
         <a href="./login-admin.html" id="admin-login-button"><button type="submit"><img src="../images/login/admin_logo.png" alt="Admin"></button></a>
+
+        <div class="login-popup-card">
+            <div class="login-popup-img">
+                <img src="../images/login/pikachu-celebrate.jpg" alt="Pikachu Celebrating">
+            </div>
+            <div class="login-popup-text">
+                <h1 class="login-success-msg">Login Success&nbsp<span class="exclamation">!</span></h1>
+                <p>You have successfully logged in</p>
+            </div>
+            <a href="./homepage-customer.html"><button id="login-continue-button" type="button">Continue</button></a>
+        </div>
     </div>
 
     <footer>
@@ -96,6 +109,6 @@
         </div>
     </footer>
     
-
+    <script src="../script/login.js"></script>
 </body>
 </html>
