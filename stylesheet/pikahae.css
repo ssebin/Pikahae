@@ -3094,6 +3094,13 @@ input[type=number] {
     padding: 2rem;
     margin: 1rem;
     text-align: center;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+  }
+
+  .member-container .item:hover {
+    transform: scale(1.05); /* increase the size by 5% */
+    box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.5); /* increase the shadow size */
+    transition: all 0.2s ease-in-out; /* apply smooth transition effect */
   }
 
   .img-container {
