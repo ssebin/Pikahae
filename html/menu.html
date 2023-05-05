@@ -16,7 +16,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Jost:wght@100;200;400;500;600;700;800;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,700;1,300;1,400;1,500&display=swap" rel="stylesheet">
 
-    <script defer src="menu.js"></script>
+    <script defer src="../script/menu.js"></script>
 
 
 </head>
@@ -32,10 +32,11 @@
                 <li><a href="#">About</a></li>
                 <li><a href="menu.html">Menu</a></li>
                 <li><a href="#">Reservations</a></li>
+                <li><a href="#">Contact Us</a></li>
             </ul>
-
             <!-- Cart -->
             <div class="menu-head-cart">
+
                 <h3 class="head-cart__heading">Cart</h3>
                 <div class="head-cart__txt">Your cart is empty.</div>
 
@@ -53,10 +54,13 @@
                     </div>
                 </div>
 
-                <span class="head-cart__price-total">RM75.00</span>
+                <h3 class="head-cart__price-total">RM75.00</h3>
                 <button class="head-cart-checkout">Checkout</button>
 
+
             </div>
+
+
 
             <div class="icon">
                 <div class="head-rgt">
@@ -102,63 +106,117 @@
         <!-- FOOD -->
         <h3 class="category-name" id="food-category">Food</h3>
         <div id="food" class="d-food">
-                <div class="box">
-                    <a href="#" class="category-btn">Food</a>
-                    <img src="../images/menu/photo_food01_02.jpg">
-                    <div class="item-text">
-                        <h3 class="item-name">Pikachu Burger</h3>
-                        <!--<i class="item-desc">Lorem ipsum i love burger sometimes me think</i>
-                        <br>-->
+            <div class="box">
+                <a href="#" class="category-btn">Food</a>
+                <img src="../images/menu/photo_food01_02.jpg" data-img-src="../images/menu/photo_food01_02.jpg">
+
+                <div class="item-text">
+                        <h3 class="item-name">Pikachu Burger</h3><span></span>
                         <span class="menu-price">RM25.00</span>
+                        <br>
+                       <a href="#" class="view-details">view details</span></a>
                     </div>
+
                     <div  class="po-btn-container">
                         <div class="menu-quantity">
-                            <button class="minus-btn" type="button" name="button">
+                            <button class="minus-btn price-btn__img">
                                 <i class="fa-solid fa-minus"></i>
                             </button>
-                            <input type="text" name="name" value="0">
-                            <button class="plus-btn" type="button" name="button">
+
+                            <span class="price-btn__txt">0</span>
+
+                            <button class="plus-btn price-btn__img">
                                 <i class="fa-solid fa-plus"></i>
                             </button>
                         </div>
-                    <a href="#" class="po-btn">Add to cart</a></div>
-                </div>
 
-                <!-- FOOD 2 -->
-                <div class="box">
-                    <a href="#" class="category-btn">Food</a>
-                    <img src="../images/menu/photo_food02_02.jpg">
-                    <div class="item-text">
-                        <h3 class="item-name">Eevee Burger</h3>
-                        <i class="item-desc">Lorem ipsum i love burger sometimes me think</i>
-                        <br>
-                        <span class="menu-price">RM25.00</span>
+                        <a href="#" class="po-btn">Add to cart</a>
+
                     </div>
-                    <div  class="po-btn-container"><a href="#" class="po-btn">Pre-order</a></div>
                 </div>
-
-                <div class="box">
-                    <a href="#" class="category-btn">Food</a>
-                    <img src="../images/menu/photo_food02_03.jpg">
-                    <div class="item-text">
-                        <h3 class="item-name">Snorlax Rice</h3>
-                        <i class="item-desc">Lorem ipsum i love burger sometimes me think</i>
-                        <br>
-                        <span class="menu-price">RM25.00</span>
-                    </div>
-                    <div  class="po-btn-container"><a href="#" class="po-btn">Pre-order</a></div>
-                </div>
-
             <div class="box">
                 <a href="#" class="category-btn">Food</a>
-                <img src="../images/menu/pika2.jpeg">
+                <img src="../images/menu/photo_food02_02.jpg" data-img-src="../images/menu/photo_food02_02.jpg">
+
                 <div class="item-text">
-                    <h3 class="item-name">Pikachu Burger Set</h3>
-                    <i class="item-desc">Lorem ipsum i love burger sometimes me think</i>
-                    <br>
+                    <h3 class="item-name">Eevee Burger</h3><span></span>
                     <span class="menu-price">RM25.00</span>
+                    <br>
+                    <a href="#" class="view-details">view details</span></a>
                 </div>
-                <div  class="po-btn-container"><a href="#" class="po-btn">Pre-order</a></div>
+
+                <div  class="po-btn-container">
+                    <div class="menu-quantity">
+                        <button class="minus-btn price-btn__img">
+                            <i class="fa-solid fa-minus"></i>
+                        </button>
+
+                        <span class="price-btn__txt">0</span>
+
+                        <button class="plus-btn price-btn__img">
+                            <i class="fa-solid fa-plus"></i>
+                        </button>
+                    </div>
+
+                    <a href="#" class="po-btn">Add to cart</a>
+
+                </div>
+            </div>
+            <div class="box">
+                <a href="#" class="category-btn">Food</a>
+                <img src="../images/menu/photo_food02_03.jpg" data-img-src="../images/menu/photo_food02_03.jpg">
+
+                <div class="item-text">
+                    <h3 class="item-name">Snorlax Rice</h3><span></span>
+                    <span class="menu-price">RM25.00</span>
+                    <br>
+                    <a href="#" class="view-details">view details</span></a>
+                </div>
+
+                <div  class="po-btn-container">
+                    <div class="menu-quantity">
+                        <button class="minus-btn price-btn__img">
+                            <i class="fa-solid fa-minus"></i>
+                        </button>
+
+                        <span class="price-btn__txt">0</span>
+
+                        <button class="plus-btn price-btn__img">
+                            <i class="fa-solid fa-plus"></i>
+                        </button>
+                    </div>
+
+                    <a href="#" class="po-btn">Add to cart</a>
+
+                </div>
+            </div>
+            <div class="box">
+                <a href="#" class="category-btn">Food</a>
+                <img src="../images/menu/pika2.jpeg" data-img-src="../images/menu/pika2.jpeg">
+
+                <div class="item-text">
+                    <h3 class="item-name">Pikachu Food Set</h3><span></span>
+                    <span class="menu-price">RM25.00</span>
+                    <br>
+                    <a href="#" class="view-details">view details</span></a>
+                </div>
+
+                <div  class="po-btn-container">
+                    <div class="menu-quantity">
+                        <button class="minus-btn price-btn__img">
+                            <i class="fa-solid fa-minus"></i>
+                        </button>
+
+                        <span class="price-btn__txt">0</span>
+
+                        <button class="plus-btn price-btn__img">
+                            <i class="fa-solid fa-plus"></i>
+                        </button>
+                    </div>
+
+                    <a href="#" class="po-btn">Add to cart</a>
+
+                </div>
             </div>
         </div>
 
@@ -166,32 +224,33 @@
 
         <!-- DESSERTS -->
         <h3 class="category-name" id="desserts-category">Desserts</h3>
-        <div id="desserts" class="d-dessert">
-            <div class="box">
-                <a href="#" class="category-btn">Dessert</a>
-                <img src="../images/menu/photo_sweets02.jpg">
-                <div class="item-text">
-                    <h3 class="item-name">Pikachu Cake</h3>
-                    <i class="item-desc">Lorem ipsum i love burger sometimes me think</i>
-                    <br>
-                    <span class="menu-price">RM25.00</span>
-                </div>
-                <div  class="po-btn-container"><a href="#" class="po-btn">Pre-order</a></div>
+        <div class="box">
+            <a href="#" class="category-btn">Desserts</a>
+            <img src="../images/menu/photo_sweets02.jpg">
+
+            <div class="item-text">
+                <h3 class="item-name">Pikachu Cake</h3><span></span>
+                <span class="menu-price">RM25.00</span>
+                <br>
+                <a href="#" class="view-details">view details</span></a>
             </div>
 
-            <!-- FOOD 2 -->
-            <div class="box">
-                <a href="#" class="category-btn">Dessert</a>
-                <img src="../images/menu/pika3.jpeg">
-                <div class="item-text">
-                    <h3 class="item-name">Pikachu Dessert Set</h3>
-                    <i class="item-desc">Lorem ipsum i love burger sometimes me think</i>
-                    <br>
-                    <span class="menu-price">RM25.00</span>
-                </div>
-                <div  class="po-btn-container"><a href="#" class="po-btn">Pre-order</a></div>
-            </div>
+            <div  class="po-btn-container">
+                <div class="menu-quantity">
+                    <button class="minus-btn price-btn__img">
+                        <i class="fa-solid fa-minus"></i>
+                    </button>
 
+                    <span class="price-btn__txt">0</span>
+
+                    <button class="plus-btn price-btn__img">
+                        <i class="fa-solid fa-plus"></i>
+                    </button>
+                </div>
+
+                <a href="#" class="po-btn">Add to cart</a>
+
+            </div>
         </div>
 
         <!-- DESSERTS END -->
@@ -201,39 +260,87 @@
         <div id="drinks" class="d-drinks">
             <div class="box">
                 <a href="#" class="category-btn">Drinks</a>
-                <img src="../images/menu/photo_drink01.jpg">
-                <div class="item-text">
-                    <h3 class="item-name">Pikachu Cake</h3>
-                    <i class="item-desc">Lorem ipsum i love burger sometimes me think</i>
-                    <br>
-                    <span class="menu-price">RM25.00</span>
-                </div>
-                <div  class="po-btn-container"><a href="#" class="po-btn">Pre-order</a></div>
-            </div>
+                <img src="../images/menu/photo_drink01.jpg" data-img-src="../images/menu/photo_drink01.jpg">
 
-            <!-- FOOD 2 -->
-            <div class="box">
-                <a href="#" class="category-btn">Food</a>
-                <img src="../images/menu/photo_drink04.jpg">
                 <div class="item-text">
-                    <h3 class="item-name">Pikachu Burger</h3>
-                    <i class="item-desc">Lorem ipsum i love burger sometimes me think</i>
+                    <h3 class="item-name">Eevee Choco Drink</h3><span></span>
+                    <span class="menu-price">RM15.00</span>
                     <br>
-                    <span class="menu-price">RM25.00</span>
+                    <a href="#" class="view-details">view details</span></a>
                 </div>
-                <div  class="po-btn-container"><a href="#" class="po-btn">Pre-order</a></div>
-            </div>
 
+                <div  class="po-btn-container">
+                    <div class="menu-quantity">
+                        <button class="minus-btn price-btn__img">
+                            <i class="fa-solid fa-minus"></i>
+                        </button>
+
+                        <span class="price-btn__txt">0</span>
+
+                        <button class="plus-btn price-btn__img">
+                            <i class="fa-solid fa-plus"></i>
+                        </button>
+                    </div>
+
+                    <a href="#" class="po-btn">Add to cart</a>
+
+                </div>
+            </div>
             <div class="box">
                 <a href="#" class="category-btn">Drinks</a>
-                <img src="../images/menu/pika4.jpeg">
+                <img src="../images/menu/photo_drink04.jpg" data-img-src="../images/menu/photo_drink04.jpg">
+
                 <div class="item-text">
-                    <h3 class="item-name">Pikachu Drinks SET</h3>
-                    <i class="item-desc">Lorem ipsum i love burger sometimes me think</i>
-                    <br>
+                    <h3 class="item-name">Pokemon Drink Set</h3><span></span>
                     <span class="menu-price">RM25.00</span>
+                    <br>
+                    <a href="#" class="view-details">view details</span></a>
                 </div>
-                <div  class="po-btn-container"><a href="#" class="po-btn">Pre-order</a></div>
+
+                <div  class="po-btn-container">
+                    <div class="menu-quantity">
+                        <button class="minus-btn price-btn__img">
+                            <i class="fa-solid fa-minus"></i>
+                        </button>
+
+                        <span class="price-btn__txt">0</span>
+
+                        <button class="plus-btn price-btn__img">
+                            <i class="fa-solid fa-plus"></i>
+                        </button>
+                    </div>
+
+                    <a href="#" class="po-btn">Add to cart</a>
+
+                </div>
+            </div>
+            <div class="box">
+                <a href="#" class="category-btn">Drinks</a>
+                <img src="../images/menu/pika4.jpeg" data-img-src="../images/menu/pika4.jpeg">
+
+                <div class="item-text">
+                    <h3 class="item-name">Pikachu Drink Set</h3><span></span>
+                    <span class="menu-price">RM35.00</span>
+                    <br>
+                    <a href="#" class="view-details">view details</span></a>
+                </div>
+
+                <div  class="po-btn-container">
+                    <div class="menu-quantity">
+                        <button class="minus-btn price-btn__img">
+                            <i class="fa-solid fa-minus"></i>
+                        </button>
+
+                        <span class="price-btn__txt">0</span>
+
+                        <button class="plus-btn price-btn__img">
+                            <i class="fa-solid fa-plus"></i>
+                        </button>
+                    </div>
+
+                    <a href="#" class="po-btn">Add to cart</a>
+
+                </div>
             </div>
         </div>
         <!-- DRINKS END -->
@@ -243,7 +350,6 @@
             <img id="pika-bottle-img" src="../images/menu/pika_bottle_trans.png">
         </div>
     </section>
-
 
 </body>
 
