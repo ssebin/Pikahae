@@ -3124,6 +3124,10 @@ input[type=number] {
     margin-top: 20px;
 }
 
+.locate-us p{
+    margin-left: 14px;
+}
+
 .cafe-location-wrapper{
     display: flex;
     flex-direction: row;
