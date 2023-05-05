@@ -99,11 +99,9 @@
                                         <button type="button">
                                             <img src="../images/manage/edit.png" alt="Edit">
                                         </button></a>
-                                    <a href="#">
-                                        <button type="button">
+                                    <button type="button" id="menu-delete-btn">
                                             <img src="../images/manage/delete.png" alt="Delete">
-                                        </button>
-                                    </a>
+                                    </button>
                                 </td>
                             </tr>
                             <tr>
@@ -118,11 +116,9 @@
                                         <button type="button">
                                             <img src="../images/manage/edit.png" alt="Edit">
                                         </button></a>
-                                    <a href="#">
-                                        <button type="button">
+                                    <button type="button" id="menu-delete-btn">
                                             <img src="../images/manage/delete.png" alt="Delete">
-                                        </button>
-                                    </a>
+                                    </button>
                                 </td>
                             </tr>
                             <tr>
@@ -137,11 +133,9 @@
                                         <button type="button">
                                             <img src="../images/manage/edit.png" alt="Edit">
                                         </button></a>
-                                    <a href="#">
-                                        <button type="button">
+                                    <button type="button" id="menu-delete-btn">
                                             <img src="../images/manage/delete.png" alt="Delete">
-                                        </button>
-                                    </a>
+                                    </button>
                                 </td>
                             </tr>
                         </tbody>
@@ -149,6 +143,18 @@
                 </table>
             </div>
         </div>
+        <div class="overlay"></div>
+            <div class="cancel-popup-card">
+                <div class="cancel-popup-text">
+                    <div class="cancel-popup-header">
+                        <h1>Confirm Delete Menu</h1>
+                    </div>
+                    <p>This process cannot be undone</p>
+                </div>
+                <button id="cancel-back-button" type="button">Back</button><span>
+                    <a href="./manage_menu.html"><button id="cancel-confirm-button" type="button">Confirm</button></a>
+                </span>
+            </div>
     </div>
     <footer>
         <div class="footer-content">
@@ -169,6 +175,7 @@
             <p>copyright &copy;2023 Pikahae. designed by <span>dino kuning</span></p>
         </div>
     </footer>
+
     <script src="../script/manageMenu.js"></script>
 </body>
 

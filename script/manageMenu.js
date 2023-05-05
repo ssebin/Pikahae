@@ -77,6 +77,37 @@ function sortTable(columnIndex, ascending) {
     // reorder the rows in the table body based on the sorted rows
     sortedRows.forEach(row => tableBody.appendChild(row));
 }
+
+const deleteButton = document.querySelector('#menu-delete-btn');
+const deletePopupCard = document.querySelector('.cancel-popup-card');
+const deleteConfirmButton = document.querySelector('#cancel-confirm-button');
+const deleteBackButton = document.querySelector('#cancel-back-button');
+const overlay = document.querySelector('.overlay');
+
+deleteButton.addEventListener('click', () => {
+  overlay.style.display = 'block';
+  deletePopupCard.style.display = 'block';
+  deletePopupCard.style.transform = 'translate(-50%, -100%)';
+  setTimeout(() => {
+    deletePopupCard.style.transform = 'translate(-50%, 0)';
+  }, 100);
+});
+
+deleteBackButton.addEventListener('click', () => {
+  overlay.style.display = 'none';
+  deletePopupCard.style.display = 'none';
+  deletePopupCard.style.transform = 'translate(-50%, -100%)';
+  setTimeout(() => {
+    overlay.style.display = 'none';
+    deletePopupCard.style.display = 'none';
+  }, 500);
+});
+
+deleteConfirmButton.addEventListener('click', () => {
+  window.location.href = '../manage_menu.html';
+});
+
+
   
 
 
