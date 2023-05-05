@@ -100,3 +100,34 @@ function sortTable(columnIndex, ascending) {
     sortedRows.forEach(row => tableBody.appendChild(row));
     
 }
+const deleteButtons = document.querySelectorAll('tbody tr button:nth-child(2)');
+const deletePopupCard = document.querySelector('.cancel-popup-card');
+const deleteConfirmButton = document.querySelector('#cancel-confirm-button');
+const deleteBackButton = document.querySelector('#cancel-back-button');
+const overlay = document.querySelector('.overlay');
+
+deleteButtons.forEach((button) => {
+  button.addEventListener('click', () => {
+    overlay.style.display = 'block';
+    deletePopupCard.style.display = 'block';
+    deletePopupCard.style.transform = 'translate(-50%, -100%)';
+    setTimeout(() => {
+      deletePopupCard.style.transform = 'translate(-50%, 0)';
+    }, 100);
+  });
+});
+
+deleteBackButton.addEventListener('click', () => {
+  overlay.style.display = 'none';
+  deletePopupCard.style.display = 'none';
+  deletePopupCard.style.transform = 'translate(-50%, -100%)';
+  setTimeout(() => {
+    overlay.style.display = 'none';
+    deletePopupCard.style.display = 'none';
+  }, 500);
+});
+
+deleteConfirmButton.addEventListener('click', () => {
+  window.location.href = '../customer_accounts.html';
+});
+
