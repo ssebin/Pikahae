@@ -953,40 +953,43 @@ footer{
     grid-gap: 20px;
 }
 
+#hp-menu-container{
+    align-items: center;
+}
+
 /* HOMEPAGE MENU RESPONSIVE */
-
-@media (max-width: 1000px) {
+/* Adjust the grid for tablet devices */
+@media only screen and (max-width:1400px) {
     #hp-menu-container{
-        grid-template-columns: 1fr 2fr;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+    }
+}
+@media only screen and (max-width:1080px) {
+    #hp-menu-container {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
-@media (max-width: 1400px) {
+
+@media only screen and (max-width:900px) {
     #hp-menu-container{
-        grid-template-columns: 1fr 2fr;
+        align-items: center;
+        grid-template-columns: repeat(1, 1fr);
+        overflow: hidden;
+        padding-left: 180px;
     }
 }
 
-@media (max-width: 600px) {
-    #hp-menu-container .box .price{
-        padding: 0;
-        margin: 0;
-    }
-
+/* Adjust the grid for mobile devices */
+@media only screen and (max-width: 700px) {
     #hp-menu-container{
-        width: 100%;
-        grid-template-columns: 1fr;
-    }
-
-    #hp-menu-container #menu-img{
-        width: 90px;
-        height: 100px;
-    }
-
-    #hp-menu-container{
-        padding-left: 5px;
+        padding-left: 100px;
+        padding-right: 100px;
+        grid-template-columns: 1fr !important;
     }
 }
+
 
 
 /* @media (min-width: 40px){
@@ -4163,6 +4166,16 @@ input:focus {
 
 /*  CART END */
 
+section .header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    right: 0;
+    left: 0;
+    background-color: var(--header-color);
+    z-index: 1000;
+}
 .menu{
     /*padding: 40px 0 0 40px;*/
     padding-left: 10%;
@@ -4294,7 +4307,45 @@ input:focus {
 
 /* MENU RESPONSIVE */
 
-@media (max-width: 1000px) {
+/* Adjust the grid for tablet devices */
+@media only screen and (max-width:1400px) {
+    .menu #food, .menu #desserts, .menu #drinks{
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+    }
+}
+@media only screen and (max-width:1080px) {
+    .menu #food, .menu #desserts, .menu #drinks {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+@media only screen and (max-width:900px) {
+    .menu #food, .menu #desserts, .menu #drinks{
+        align-items: center;
+        grid-template-columns: repeat(1, 1fr);
+        overflow: hidden;
+        padding-left: 180px;
+    }
+}
+
+/* Adjust the grid for mobile devices */
+@media only screen and (max-width: 700px) {
+    .menu #food, .menu #desserts, .menu #drinks{
+        padding-left: 50px;
+        padding-right: 100px;
+        grid-template-columns: 1fr !important;
+    }
+
+    .category-name{
+        padding-left: 230px;
+    }
+}
+
+
+
+/*@media (max-width: 1000px) {
     .menu #food, #desserts, #drinks, #hp-menu-container{
         grid-template-columns: 1fr 2fr;
     }
@@ -4334,7 +4385,7 @@ input:focus {
     #hp-menu-container{
         padding-left: 15%;
     }
-}
+}*/
 
 /* END FOR NEW MENU PAGE */
 
