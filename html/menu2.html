@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pikahae</title>
+
+
+    <link rel="stylesheet" href="../stylesheet/pikahae.css">
+
+    <!-- For icons -->
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+          integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+          crossorigin="anonymous">
+
+
+    <!--  Google fonts Roboto -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@100;200;400;500;600;700;800;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,700;1,300;1,400;1,500&display=swap" rel="stylesheet">
+
+    <script defer src="../script/menu2.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+
+
+</head>
+
+<body>
+
+<!-- header -->
+<section>
+    <nav class="header">
+        <a href="#" class="logo"><img src="../images/logo_draft.png" alt="logo"></a>
+
+        <ul class="navlist">
+            <li><a href="homepage-customer.html">Home</a></li>
+            <li><a href="about_us.html">About</a></li>
+            <li><a href="reservation.html">Reservations</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="contact_us.html">Contact Us</a></li>
+        </ul>
+        <!-- Cart -->
+        <div class="menu-head-cart" id="menu-head-cart">
+            <h3 class="head-cart__heading">Cart<span class="cart-close">&times;</span></h3>
+            <div class="head-cart__txt">Your cart is empty.</div>
+
+            <div class="head-cart__item">
+                <div class="head-cart__item-wrapper">
+                    <span class="delete-btn"><i class="fa-solid fa-xmark"></i></span>
+                    <img src="../images/menu/photo_food01_02.jpg" class="head-cart__item-img" alt="" />
+
+                    <div class="head-cart__des">
+                        <p class="head-cart__des-txt">Pikachu Burger</p>
+                        <div class="head-cart__price">
+                            <span class="head-cart__price-single">RM25.00*3</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h3 class="head-cart__price-total">RM75.00</h3>
+            <button class="head-cart-checkout">Checkout</button>
+
+
+        </div>
+
+        <div class="icon">
+            <div class="head-rgt">
+                <button class="head-rgt__btn">
+                    <i class='bx bxs-cart'></i>
+                    <span class="cart-item-count">0</span>
+                </button>
+                <a href="view-profile.html"><i class='bx bxs-user'></i></a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="banner">
+        <img src="../images/menu/banner_2.png" alt="picture of pikachu with dessert">
+    </div>
+</section>
+
+<!-- sub header section -->
+<div class="sub-header-wrapper">
+    <p>MENU</p>
+    <div class="input-box">
+        <i class="uil uil-search"></i>
+        <input type="text" placeholder="Search menu" />
+        <button class="button"><i class="fa-solid fa-magnifying-glass"></i></button>
+    </div>
+</div>
+<hr>
+
+<!--    menu section -->
+
+<!-- menu header -->
+<section class="menu-header">
+    <nav class="menu-nav">
+        <ul class="menu-navlist">
+            <li><a href="#all">ALL</a></li>
+            <li><a href="#food">FOOD</a></li>
+            <li><a href="#dessert">DESSERT</a></li>
+            <li><a href="#drinks">DRINKS</a></li>
+        </ul>
+    </nav>
+</section>
+
+<section class="menu" id="menu">
+    <div id="food" class="d-food">
+        <!-- JavaScript code will insert menu items here -->
+    </div>
+
+   <!--  DESSERTS
+    <h3 class="category-name" id="desserts-category">Desserts</h3>
+    <div id="desserts" class="d-desserts">
+        <div class="box">
+            <a href="#" class="category-btn">Desserts</a>
+            <img src="../images/menu/photo_sweets02.jpg">
+
+            <div class="item-text">
+                <h3 class="item-name">Pikachu Cake</h3><span></span>
+                <span class="menu-price">RM25.00</span>
+                <br>
+
+                 The Modal
+                <span class="menu-details-btn">View details</span>
+
+                <div class="modal">
+                     Modal content
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <div class="item-section">
+                            <section class="img">
+                                <img src="../images/menu/photo_sweets02.jpg" alt="" class="img-main" />
+                            </section>
+                            <section class="item-detail">
+                                <h3 class="item-title">Pikachu Pancake</h3>
+                                <p class="item-price">RM 15.00</p>
+                                <p class="item-desc">
+                                    A pancake is a flat cake, often thin and round,
+                                    prepared from a starch-based batter that may contain eggs,
+                                    milk and butter and cooked on a hot surface such as a griddle or
+                                    frying pan, often frying with oil or butter.
+                                    It is a type of batter bread.
+                                </p>
+                                <p class="allergen-title">Allergen</p>
+                                <div class="allergen">
+                                                PUT ALLERGEN HERE
+                                    <img src="../images/menu/allergen/berries.png" alt="berries" title="berries">
+                                    <img src="../images/menu/allergen/honey.png" alt="honey" title="honey">
+                                    <img src="../images/menu/allergen/banana.png" alt="banana" title="banana">
+                                    <img src="../images/menu/allergen/wheat.png" alt="wheat" title="wheat">
+                                    <img src="../images/menu/allergen/inclined-chocolate-bar.png" alt="chocolate" title="chocolate">
+                                </div>
+                            </section>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div  class="po-btn-container">
+                <div class="menu-quantity">
+                    <button class="minus-btn price-btn__img">
+                        <i class="fa-solid fa-minus"></i>
+                    </button>
+
+                    <span class="price-btn__txt">0</span>
+
+                    <button class="plus-btn price-btn__img">
+                        <i class="fa-solid fa-plus"></i>
+                    </button>
+                </div>
+
+                <a href="#" class="po-btn">Add to cart</a>
+
+            </div>
+        </div>
+    </div>
+
+     DESSERTS END
+
+     DRINKS
+    <h3 class="category-name" id="drinks-category">Drinks</h3>
+    <div id="drinks" class="d-drinks">
+        <div class="box">
+            <a href="#" class="category-btn">Drinks</a>
+            <img src="../images/menu/photo_drink01.jpg" data-img-src="../images/menu/photo_drink01.jpg">
+
+            <div class="item-text">
+                <h3 class="item-name">Eevee Choco Drink</h3><span></span>
+                <span class="menu-price">RM15.00</span>
+                <br>
+
+                 The Modal
+                <span class="menu-details-btn">View details</span>
+
+                <div class="modal">
+                     Modal content
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <div class="item-section">
+                            <section class="img">
+                                <img src="../images/menu/photo_drink01.jpg" alt="" class="img-main" />
+                            </section>
+                            <section class="item-detail">
+                                <h3 class="item-title">Eevee Choco Drink</h3>
+                                <p class="item-price">RM 15.00</p>
+                                <p class="item-desc">
+                                    Chocolate milk is a type of flavoured milk made by mixing cocoa solids with milk.
+                                    It is a food pairing in which the milk's mouthfeel masks the dietary fibres of the cocoa solids
+                                </p>
+                                <p class="allergen-title">Allergen</p>
+                                <div class="allergen">
+                                                PUT ALLERGEN HERE
+
+                                    <img src="../images/menu/allergen/honey.png" alt="honey" title="honey">
+                                    <img src="../images/menu/allergen/wheat.png" alt="wheat" title="wheat">
+                                    <img src="../images/menu/allergen/milk.png" alt="milk" title="milk">
+                                    <img src="../images/menu/allergen/inclined-chocolate-bar.png" alt="chocolate" title="chocolate">
+                                </div>
+                            </section>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div  class="po-btn-container">
+                <div class="menu-quantity">
+                    <button class="minus-btn price-btn__img">
+                        <i class="fa-solid fa-minus"></i>
+                    </button>
+
+                    <span class="price-btn__txt">0</span>
+
+                    <button class="plus-btn price-btn__img">
+                        <i class="fa-solid fa-plus"></i>
+                    </button>
+                </div>
+
+                <a href="#" class="po-btn">Add to cart</a>
+
+            </div>
+        </div>
+        <div class="box">
+            <a href="#" class="category-btn">Drinks</a>
+            <img src="../images/menu/photo_drink04.jpg" data-img-src="../images/menu/photo_drink04.jpg">
+
+            <div class="item-text">
+                <h3 class="item-name">Pokemon Drink Set</h3><span></span>
+                <span class="menu-price">RM25.00</span>
+                <br>
+
+                 The Modal
+                <span class="menu-details-btn">View details</span>
+
+                <div class="modal">
+                     Modal content
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <div class="item-section">
+                            <section class="img">
+                                <img src="../images/menu/photo_drink04.jpg" alt="" class="img-main" />
+                            </section>
+                            <section class="item-detail">
+                                <h3 class="item-title">Pokemon Drink Set</h3>
+                                <p class="item-price">RM 25.00</p>
+                                <p class="item-desc">
+                                    Chocolate milk is a type of flavoured milk made by mixing cocoa solids with milk.
+                                    It is a food pairing in which the milk's mouthfeel masks the dietary fibres of the cocoa solids
+                                </p>
+                                <p class="allergen-title">Allergen</p>
+                                <div class="allergen">
+                                                PUT ALLERGEN HERE
+                                    <img src="../images/menu/allergen/honey.png" alt="honey" title="honey">
+                                    <img src="../images/menu/allergen/sugar-cube.png" alt="sugar" title="sugar">
+                                    <img src="../images/menu/allergen/milk.png" alt="milk" title="milk">
+                                </div>
+                            </section>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div  class="po-btn-container">
+                <div class="menu-quantity">
+                    <button class="minus-btn price-btn__img">
+                        <i class="fa-solid fa-minus"></i>
+                    </button>
+
+                    <span class="price-btn__txt">0</span>
+
+                    <button class="plus-btn price-btn__img">
+                        <i class="fa-solid fa-plus"></i>
+                    </button>
+                </div>
+
+                <a href="#" class="po-btn">Add to cart</a>
+
+            </div>
+        </div>
+        <div class="box">
+            <a href="#" class="category-btn">Drinks</a>
+            <img src="../images/menu/pika4.jpeg" data-img-src="../images/menu/pika4.jpeg">
+
+            <div class="item-text">
+                <h3 class="item-name">Pikachu Drink Set</h3><span></span>
+                <span class="menu-price">RM35.00</span>
+                <br>
+
+                 The Modal
+                <span class="menu-details-btn">View details</span>
+
+                <div class="modal">
+                     Modal content
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <div class="item-section">
+                            <section class="img">
+                                <img src="../images/menu/pika4.jpeg" alt="" class="img-main" />
+                            </section>
+                            <section class="item-detail">
+                                <h3 class="item-title">Pikachu Drink Set</h3>
+                                <p class="item-price">RM 35.00</p>
+                                <p class="item-desc">
+                                    Chocolate milk is a type of flavoured milk made by mixing cocoa solids with milk.
+                                    It is a food pairing in which the milk's mouthfeel masks the dietary fibres of the cocoa solids
+                                </p>
+                                <p class="allergen-title">Allergen</p>
+                                <div class="allergen">
+                                                PUT ALLERGEN HERE
+                                    <img src="../images/menu/allergen/honey.png" alt="honey" title="honey">
+                                    <img src="../images/menu/allergen/berries.png" alt="berries" title="berries">
+                                    <img src="../images/menu/allergen/wheat.png" alt="wheat" title="wheat">
+                                    <img src="../images/menu/allergen/milk.png" alt="milk" title="milk">
+                                </div>
+                            </section>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <div  class="po-btn-container">
+                <div class="menu-quantity">
+                    <button class="minus-btn price-btn__img">
+                        <i class="fa-solid fa-minus"></i>
+                    </button>
+
+                    <span class="price-btn__txt">0</span>
+
+                    <button class="plus-btn price-btn__img">
+                        <i class="fa-solid fa-plus"></i>
+                    </button>
+                </div>
+
+                <a href="#" class="po-btn">Add to cart</a>
+
+            </div>
+        </div>
+    </div>
+     DRINKS END -->
+
+    <div class="menu-bottom-img">
+        <img id="menu-img" src="../images/menu/illust_menu.png">
+        <img id="pika-bottle-img" src="../images/menu/pika_bottle_trans.png">
+    </div>
+</section>
+<button onclick="topFunction()" id="topBtn" title="Go to top"><i class="fa-solid fa-angle-up"></i></button>
+
+</body>
+
+<!--Footer-->
+<footer>
+    <div class="footer-content">
+        <h3>Pikahae</h3>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.<br>Illo iste corrupti doloribus odio sed!</p>
+        <ul class="socials">
+            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+            <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+            <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+        </ul>
+        <img src=../images/babies_trans.png>
+    </div>
+    <hr class="footer-line">
+    <div class="footer-bottom">
+        <p>copyright &copy;2023 Pikahae. designed by <span>dino kuning</span></p>
+    </div>
+</footer>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</html>

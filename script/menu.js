@@ -20,6 +20,33 @@ const closeCartBtn = document.querySelector(".cart-close");
 let noOfItems = 0;
 let cartItems = {};
 
+
+fetchMenuData().then(menu => {
+    const menuContainer = document.querySelector('.menu-container'); // your container for menu items
+
+    for (let item of menu) {
+        let box = document.createElement('div');
+        box.className = "box";
+
+        let categoryBtn = document.createElement('a');
+        categoryBtn.className = "category-btn";
+        categoryBtn.href = "#";
+        categoryBtn.textContent = "Food";
+        box.appendChild(categoryBtn);
+
+        let img = document.createElement('img');
+        img.src = item.image_url;
+        img.setAttribute('data-img-src', item.image_url);
+        box.appendChild(img);
+
+        // Continue this pattern for each piece of data you want to display
+
+        // Add each box to your container
+        menuContainer.appendChild(box);
+    }
+});
+
+
 function productPrice() {
     let total = 0;
 

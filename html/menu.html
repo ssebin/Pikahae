@@ -17,11 +17,28 @@
     <link href="https://fonts.googleapis.com/css2?family=Jost:wght@100;200;400;500;600;700;800;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,700;1,300;1,400;1,500&display=swap" rel="stylesheet">
 
     <script defer src="../script/menu.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
 
 
 </head>
 
 <body>
+    <script>
+        const SUPABASE_URL = 'https://lrdpllwtkxlqgwcmpjju.supabase.co'
+        const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImxyZHBsbHd0a3hscWd3Y21wamp1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODU1OTY4MDMsImV4cCI6MjAwMTE3MjgwM30.6VFgPcFj9bYG1b5Tza3O70H-HitdPb9kzjwJ5OnBz9k'
+        const _supabase = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY)
+
+        async function loadData() {
+            const { data, error } = await _supabase
+                .from('menu')
+                .select()
+
+            console.log(data)
+            console.log(error)
+        }
+        loadData()
+    </script>
+
 <!-- header -->
 <section>
     <nav class="header">
