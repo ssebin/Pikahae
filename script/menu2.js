@@ -29,32 +29,6 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     }
 
-    // Variables related to cart functionality
-    let cartItems = {};
-    let noOfItems = 0;
-
-// Other necessary variables
-    const menuContainer = document.querySelector('.menu-container');
-    const categoriesMenu = document.querySelector('.categories-menu');
-    const addToCartBtns = document.querySelectorAll('.add-to-cart-btn');
-
-// Variables for quantity modification
-    const plusBtns = document.querySelectorAll('.plus-btn');
-    const minusBtns = document.querySelectorAll('.minus-btn');
-    const quantityDisplays = document.querySelectorAll('.price-btn__txt');
-
-// Variables for cart functionality
-    const cart = document.querySelector('.menu-head-cart');
-    const cartBtn = document.querySelector('.head-rgt__btn');
-    const cartItemCount = document.querySelector('.cart-item-count');
-    const cartTotal = document.querySelector('.head-cart__price-total');
-    const headerCart = document.querySelector('.head-rgt');
-    let cartCheckoutBtn = document.querySelector('.head-cart-checkout');
-    const closeCartBtn = document.querySelector('.cart-close');
-    const clearCart = document.querySelector('.delete-btn');
-    const cartItem = document.querySelector('.head-cart__item');
-    const emptyCartTxt = document.querySelector('.head-cart__txt');
-    
 
 // Variable for the scroll to top button
     const topBtn = document.getElementById('topBtn');
