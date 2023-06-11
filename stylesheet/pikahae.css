@@ -2007,7 +2007,7 @@ select {
     font-size: 1rem;
     color: black;
     background-color: white;
-    box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+    /* box-shadow: 2px 2px 10px rgba(0,0,0,0.5); */
 }
 
 #upload-btn{
@@ -3558,7 +3558,8 @@ input[type=number] {
 
      .table-details-side {
         max-width: 400px;
-        height: fit-content;
+        /* height: fit-content; */
+        height: 500px;
         border-color: black;
      }
 

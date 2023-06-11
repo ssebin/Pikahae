@@ -78,10 +78,16 @@
 
   <section class="reservation-admintable-bg">
     <div class="reservation-admintable-container">
+
       <!-- make this div respondsive container -->
       <!-- <div class="table-selection-container"> -->
-      <h2 class="available-table-header">Available Tables</h2>
+      <h2 class="available-table-header">Tables View</h2>
       <h6 class="select-table-header">*Please select one</h6>
+
+      <div class="container-fluid reservation-date-form">
+        <label for="date">Select Date:</label> &nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="date" id="date" name="date" class="custom-date-input" required>
+      </div> <br><br>
 
       <div class="row">
         <div class="col-md-9">
@@ -275,10 +281,10 @@
             <div class="table-details-side">
               <h3 class="tabel-detials-header"> Table Details</h3>
               <div class="table-selection-details">
-                <p>Date: <span id="date"></span></p>
-                <p>Time: <span id=""></span></p>
-                <p>Number of Guests: <span id="guests"></span></p>
-                <p>Table Selection: <span id="table"></span></p>
+                <p>Date: 20/05/2023 <span id="date"></span></p>
+                <p>Time: 3:00 P.M. - 4:00 P.M. <span id=""></span></p>
+                <p>Number of Guests: 3 <span id="guests"></span></p>
+                <p>Table Selection: Table 7<span id="table"></span></p>
               </div>
 
               <div class="preordermenu-container">
