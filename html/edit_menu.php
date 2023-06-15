@@ -45,7 +45,7 @@
         <?php
         $hostname = 'localhost';
         $username = 'root';
-        $database = 'pikahase_db';
+        $database = 'pikahae_db';
 
         $conn = new mysqli($hostname, $username, '', $database);
 
