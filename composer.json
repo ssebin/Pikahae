@@ -1,0 +1,5 @@
+{
+    "require": {
+        "rafaelwendel/phpsupabase": "^0.0.5"
+    }
+}

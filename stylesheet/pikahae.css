@@ -4179,7 +4179,7 @@ section .header{
 }
 .menu{
     /*padding: 40px 0 0 40px;*/
-    padding-left: 10%;
+    /* padding-left: 3%; */
     width: 100%;
     height: auto;
     background: linear-gradient(rgba(255,255,255,.80), rgba(255,255,255,.90)),url("../images/pokecafe-bg.jpg");
@@ -4217,7 +4217,7 @@ section .header{
 .menu .box{
     width: 400px;
     height: 410px;
-    margin: 15px 15px 0;
+    margin: 0 15px 0;
     background: var(--bg-color);
     border-radius: 20px;
     position: relative;
@@ -4344,8 +4344,6 @@ section .header{
     }
 }
 
-
-
 /*@media (max-width: 1000px) {
     .menu #food, #desserts, #drinks, #hp-menu-container{
         grid-template-columns: 1fr 2fr;
@@ -4408,6 +4406,7 @@ section .header{
     visibility: hidden;
 }
 
+
 .head-cart__heading {
     position: relative;
     font-size: 18px;
@@ -4446,6 +4445,10 @@ section .header{
     visibility: hidden;
 }
 
+.empty-cart .head-cart__txt {
+    visibility: visible;
+}
+
 .head-cart__btn {
     align-self: center;
     width: 100%;
@@ -4463,7 +4466,7 @@ section .header{
     gap: 10px;
     align-content: space-between;
     padding-bottom: 10px;
-    border-bottom:  1px solid #E1E8EE;
+    border-bottom: 1px solid #E1E8EE;
     visibility: hidden;
 }
 
@@ -4510,7 +4513,7 @@ section .header{
     visibility: hidden;
 }
 
-.head-cart-checkout{
+.head-cart-checkout {
     background: var(--main-color);
     padding: 5px;
     border-radius: 30px;
@@ -4588,6 +4591,7 @@ section .header{
 .price-cart__btn{
     border-radius: 10px;
 }
+
 
 /* HEAD CART END */
 
