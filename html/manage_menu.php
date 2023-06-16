@@ -61,10 +61,10 @@
     <hr>
 </section>
 
-    <?php
-    $hostname = 'localhost';
-    $username = 'root';
-    $database = 'pikahase_db';
+<?php
+$hostname = 'localhost';
+$username = 'root';
+$database = 'pikahae_db';
 
 $conn = new mysqli($hostname, $username, '', $database);
 
@@ -88,29 +88,29 @@ if ($result->num_rows > 0) {
     <div class="admin-view-container">
         <div class="admin-view-table">
             <table>
-    <thead>
-        <tr>
-            <th id="menu-table-id">ID</th>
-            <th id="menu-table-name">Name</th>
-            <th id="menu-table-cat">Category</th>
-            <th id="menu-table-price">Price</th>
-            <th>Stock</th>
-            <th>Description</th>
-            <th>Action</th>
-        </tr>
-    </thead>
-    <tbody>
-        <?php
-        if (!empty($menus)) {
-            foreach ($menus as $menu) {
-                $menu_id = $menu["menu_id"];
-                $menu_name = $menu["menu_name"];
-                $menu_price = $menu["menu_price"];
-                $menu_cat = $menu["menu_cat"];
-                $menu_stock = $menu["menu_stock"];
-                $menu_desc = $menu["menu_desc"];
-                $menu_img_base64 = base64_encode($menu_img);
-                $menu_img_base64_urlencoded = urlencode($menu_img_base64);
+                <thead>
+                <tr>
+                    <th id="menu-table-id">ID</th>
+                    <th id="menu-table-name">Name</th>
+                    <th id="menu-table-cat">Category</th>
+                    <th id="menu-table-price">Price</th>
+                    <th>Stock</th>
+                    <th>Description</th>
+                    <th>Action</th>
+                </tr>
+                </thead>
+                <tbody>
+                <?php
+                if (!empty($menus)) {
+                    foreach ($menus as $menu) {
+                        $menu_id = $menu["menu_id"];
+                        $menu_name = $menu["menu_name"];
+                        $menu_price = $menu["menu_price"];
+                        $menu_cat = $menu["menu_cat"];
+                        $menu_stock = $menu["menu_stock"];
+                        $menu_desc = $menu["menu_desc"];
+                        $menu_img_base64 = base64_encode($menu_img);
+                        $menu_img_base64_urlencoded = urlencode($menu_img_base64);
 
                         echo "<tr>";
                         echo "<td>$menu_id</td>";

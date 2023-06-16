@@ -91,25 +91,25 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <img src="../images/homepage/homepage_admin_main.jpg" alt="picture of pikachu with dessert">
     </div>
 
-        <?php
-        $hostname = 'localhost';
-        $username = 'root';
-        $database = 'pikahase_db';
+    <?php
+    $hostname = 'localhost';
+    $username = 'root';
+    $database = 'pikahae_db';
 
-        $conn = new mysqli($hostname, $username, '', $database);
+    $conn = new mysqli($hostname, $username, '', $database);
 
-        if ($conn->connect_error) {
-            die("Connection failed: " . $conn->connect_error);
-        }
-        ?>
+    if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
+    }
+    ?>
 
-        <div class="sub-header-wrapper">
-            <p>EDIT MENU</p>
-        </div>
-        <hr>
-        <div class="edit-item-container">
-            <div class="edit-item-card">
-                <h1 class="edit-item-header">Edit Item Details</h1>
+    <div class="sub-header-wrapper">
+        <p>EDIT MENU</p>
+    </div>
+    <hr>
+    <div class="edit-item-container">
+        <div class="edit-item-card">
+            <h1 class="edit-item-header">Edit Item Details</h1>
 
             <form class="edit-item-form" method="POST" action="" enctype="multipart/form-data">
                 <div class="edit-item-form-item">
