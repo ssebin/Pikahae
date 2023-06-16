@@ -108,7 +108,11 @@ if (isset($_GET['user_id'])) {
                                         <option value="squirtle" <?php if ($user_pokemon === "squirtle") echo "selected"; ?>>Squirtle</option>
                                         <option value="pikachu" <?php if ($user_pokemon === "pikachu") echo "selected"; ?>>Pikachu</option>
                                         <option value="rowlet" <?php if ($user_pokemon === "rowlet") echo "selected"; ?>>Rowlet</option>
+                                        <?php if (!in_array($user_pokemon, ['bulbasaur', 'charmander', 'squirtle', 'pikachu', 'rowlet'])) {
+                                            echo "<option value='$user_pokemon' selected>$user_pokemon</option>";
+                                        } ?>
                                     </select>
+
                                     <script src="../script/editProfileAdmin.js"></script>
                                 </figcaption>
                             </div>
