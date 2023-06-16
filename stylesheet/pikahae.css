@@ -3664,8 +3664,10 @@ input[type=number] {
  }
 
  #preview{
-    width: 25rem;
-    height: 15.625rem;
+    /*width: 25rem;*/
+    /*height: 15.625rem;*/
+     max-width: 200px;
+     max-height: 200px;
  }
 
  #item-desc{

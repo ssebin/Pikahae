@@ -33,8 +33,7 @@ try {
     $result = $conn->query($sql);
 
     if ($result) {
-        $order_id = $conn->insert_id; // Store the generated order_id
-        echo json_encode(['order_id' => $order_id]);
+        echo json_encode(['order_id' => $conn->insert_id]);
     } else {
         echo json_encode(['error' => "Error: " . $sql . "<br>" . $conn->error]);
     }
