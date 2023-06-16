@@ -99,6 +99,13 @@
             <th>Action</th>
         </tr>
     </thead>
+    <div class="add-menu-button">
+        <a href="./add_menu.html">
+            <button id="menu-add-btn" type="button">
+                <img src="../images/manage/add.png" alt="Add">
+            </button>
+        </a>
+    </div>
     <tbody>
         <?php
         if (!empty($menus)) {
