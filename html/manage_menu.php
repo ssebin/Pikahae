@@ -72,6 +72,17 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
+if (isset($_GET['delete'])) {
+    $menu_id = intval($_GET['delete']); // Sanitizing the input
+    $sql = "DELETE FROM menu WHERE menu_id = $menu_id";
+
+    if ($conn->query($sql) === TRUE) {
+        echo "Record deleted successfully";
+    } else {
+        echo "Error deleting record: " . $conn->error;
+    }
+}
+
 $sql = "SELECT menu_id, menu_name, menu_price, menu_cat, menu_stock, menu_desc, menu_img FROM menu";
 $result = $conn->query($sql);
 
@@ -128,7 +139,7 @@ if ($result->num_rows > 0) {
                         echo "<td>$menu_desc</td>";
                         echo "<td>";
                         echo "<a href='./edit_menu.php?menu_id=$menu_id&menu_name=$menu_name&menu_price=$menu_price&menu_cat=$menu_cat&menu_stock=$menu_stock&menu_desc=$menu_desc&menu_img=$menu_img_base64_urlencoded'><button type='button'><img src='../images/manage/edit.png' alt='Edit'></button></a>";
-                        echo "<button type='button'><img src='../images/manage/delete.png' alt='Delete'></button>";
+                        echo "<a href='./manage_menu.php?delete=$menu_id'><button type='button'><img src='../images/manage/delete.png' alt='Delete'></button></a>";
                         echo "</td>";
                         echo "</tr>";
                     }
