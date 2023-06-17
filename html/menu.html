@@ -22,21 +22,6 @@
 </head>
 
 <body>
-<script>
-    const SUPABASE_URL = 'https://lrdpllwtkxlqgwcmpjju.supabase.co'
-    const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImxyZHBsbHd0a3hscWd3Y21wamp1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODU1OTY4MDMsImV4cCI6MjAwMTE3MjgwM30.6VFgPcFj9bYG1b5Tza3O70H-HitdPb9kzjwJ5OnBz9k'
-    const _supabase = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY)
-
-    async function loadData() {
-        const { data, error } = await _supabase
-            .from('menu')
-            .select()
-
-        console.log(data)
-        console.log(error)
-    }
-    loadData()
-</script>
 
 <!-- header -->
 <section>
