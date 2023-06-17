@@ -17,6 +17,9 @@ file.addEventListener('change', function(){
             img.style.width = '12.5rem';
             img.style.height = '12.5rem';
             img.style.borderRadius = "50%";
+
+            const formData = new FormData();
+            formData.append('image', choosedFile);
         });
 
         reader.readAsDataURL(choosedFile);
@@ -58,17 +61,34 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-closeButton.addEventListener('click', function() {
-    overlay.style.display = 'none'; // Hide the overlay
-    window.location.href = 'view-profile.html'; 
-});
+    closeButton.addEventListener('click', function() {
+        overlay.style.display = 'none'; // Hide the overlay
+        var emailContent = document.getElementById("email").textContent;
+        var birthdayContent = document.getElementById("birthday").value; 
+        var pokemonContent = document.getElementById("favorite-pokemon").value;
+        var imgUrl = formData;
+    
+        var xhr = new XMLHttpRequest();
+        xhr.open("POST", "update-profile.php", true); // Update the PHP file name
+        xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+        xhr.onreadystatechange = function() {
+            if (xhr.readyState === 4 && xhr.status === 200) {
+            // Handle the response from the server if needed
+            console.log(xhr.responseText);
+            }
+        };
+        xhr.send("email=" + encodeURIComponent(emailContent) + "&birthday=" + encodeURIComponent(birthdayContent) + "&favorite_pokemon=" + encodeURIComponent(pokemonContent) + "$img_Url" + encodeURIComponent(imgUrl));
+        window.location.href = 'view-profile.php'; 
+    });
+
+
 
 /* cancel edit*/
 document.addEventListener('DOMContentLoaded', function() {
     const cancelButton = document.querySelector('.cancel-edit');
     cancelButton.addEventListener('click', function() {
       // Redirect to "view profile" page
-      window.location.href = 'view-profile.html'; 
+      window.location.href = 'view-profile.php'; 
     });
 });
 
@@ -97,7 +117,22 @@ document.addEventListener('DOMContentLoaded', function() {
         overlay.style.display = 'block'; // Show the overlay
         closeButton.addEventListener('click', function() {
             overlay.style.display = 'none'; // Hide the overlay
-            window.location.href = 'login.html'; 
+            fetch('delete-account.php', {
+                method: 'POST',
+                headers: {
+                    "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8"
+                }
+              })
+                .then(response => response.text())
+                .then(data => {
+                  // Handle the response from the server
+                  console.log(data);
+                })
+                .catch(error => {
+                  // Handle errors
+                  console.error(error);
+                });
+            window.location.href = 'login.php'; 
         });
     });
 
