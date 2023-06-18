@@ -74,7 +74,7 @@ closeButton.addEventListener('click', function() {
             }
         };
         xhr.send("email=" + encodeURIComponent(emailContent) + "&birthday=" + encodeURIComponent(birthdayContent) + "&favorite_pokemon=" + encodeURIComponent(pokemonContent));
-    window.location.href = 'cusomter_accounts.php'; 
+    window.location.href = 'customer_accounts.php'; 
 });
 
 /* cancel edit*/
@@ -82,7 +82,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const cancelButton = document.querySelector('.cancel-edit');
     cancelButton.addEventListener('click', function() {
       // Redirect to "view profile" page
-      window.location.href = 'cusomter_accounts.php'; 
+      window.location.href = 'customer_accounts.php'; 
     });
 });
 
@@ -126,7 +126,7 @@ document.addEventListener('DOMContentLoaded', function() {
                   // Handle errors
                   console.error(error);
                 });
-            window.location.href = 'cusomter_accounts.php'; 
+            window.location.href = 'customer_accounts.php'; 
         });
     });
 

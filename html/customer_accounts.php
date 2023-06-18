@@ -77,7 +77,7 @@
                 <div class="table-body">
                     <tbody id="customer-table-body">
                         <?php
-                        $conn = new mysqli('localhost', 'root', '', 'pikahae_db');
+                        $conn = new mysqli('localhost:3307', 'root', '', 'pikahae_db');
 
                         if ($conn->connect_error) {
                             die("Connection failed: " . $conn->connect_error);

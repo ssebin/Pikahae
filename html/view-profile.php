@@ -48,9 +48,9 @@
     <div class="background-image">
         <figure class="view-profile-figure">
             <div class="profile-wrapper">
-                <img src="../images/profile/profile_pic.png" alt="Profile Picture" class="profile-picture">
+                <img alt="Profile Picture" class="profile-picture" id="profile_img">
                 <a href="edit-profile.php" class="profile-button">Edit Profile</a>
-                <script src="C:\xampp\htdocs\pikahae\Pikahae\script\viewProfile.js"></script>
+                <script src="../script/viewProfile.js"></script>
             </div>
             <figcaption>
                 <?php 

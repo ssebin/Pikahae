@@ -9,7 +9,6 @@ imgDiv.addEventListener('mouseleave', function(){
 
 file.addEventListener('change', function(){
     const choosedFile = this.files[0];  
-
     if(choosedFile) {
         const reader = new FileReader();
         reader.addEventListener('load', function(){
@@ -17,13 +16,22 @@ file.addEventListener('change', function(){
             img.style.width = '12.5rem';
             img.style.height = '12.5rem';
             img.style.borderRadius = "50%";
-
-            const formData = new FormData();
-            formData.append('image', choosedFile);
+            ; 
         });
-
-        reader.readAsDataURL(choosedFile);
     }
+    //var imageUrl = reader.readAsDataURL(choosedFile);
+    var xhr = new XMLHttpRequest();
+    var imageUrl = urlCreator.createObjectURL(choosedFile);
+    xhr.open("POST", "upload-image.php", true);
+    xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    xhr.onreadystatechange = function() {
+        if (xhr.readyState === 4 && xhr.status === 200) {
+        // Handle the response from the server if needed
+        console.log(xhr.responseText);
+        }
+    };
+    xhr.send("img=" + encodeURIComponent(imageUrl));
+    window.location.href = 'view-profile.php'
 });
 
 /* save edit and its pop-up message display*/
@@ -61,25 +69,25 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-    closeButton.addEventListener('click', function() {
-        overlay.style.display = 'none'; // Hide the overlay
-        var emailContent = document.getElementById("email").textContent;
-        var birthdayContent = document.getElementById("birthday").value; 
-        var pokemonContent = document.getElementById("favorite-pokemon").value;
-        var imgUrl = formData;
-    
-        var xhr = new XMLHttpRequest();
-        xhr.open("POST", "update-profile.php", true); // Update the PHP file name
-        xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-        xhr.onreadystatechange = function() {
-            if (xhr.readyState === 4 && xhr.status === 200) {
-            // Handle the response from the server if needed
-            console.log(xhr.responseText);
-            }
-        };
-        xhr.send("email=" + encodeURIComponent(emailContent) + "&birthday=" + encodeURIComponent(birthdayContent) + "&favorite_pokemon=" + encodeURIComponent(pokemonContent) + "$img_Url" + encodeURIComponent(imgUrl));
-        window.location.href = 'view-profile.php'; 
-    });
+closeButton.addEventListener('click', function() {
+    overlay.style.display = 'none'; // Hide the overlay
+    var emailContent = document.getElementById("email").textContent;
+    var birthdayContent = document.getElementById("birthday").value; 
+    var pokemonContent = document.getElementById("favorite-pokemon").value;
+
+    var xhr = new XMLHttpRequest();
+    xhr.open("POST", "update-profile.php", true); // Update the PHP file name
+    xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    xhr.onreadystatechange = function() {
+        if (xhr.readyState === 4 && xhr.status === 200) {
+        // Handle the response from the server if needed
+        console.log(xhr.responseText);
+        }
+    };
+
+    xhr.send("email=" + encodeURIComponent(emailContent) + "&birthday=" + encodeURIComponent(birthdayContent) + "&favorite_pokemon=" + encodeURIComponent(pokemonContent));
+    window.location.href = 'view-profile.php'; 
+});
 
 
 

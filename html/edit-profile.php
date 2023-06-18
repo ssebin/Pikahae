@@ -1,3 +1,23 @@
+<?php 
+    $connection = new mysqli('localhost:3307', 'root', '', 'pikahae_db');
+    // Check the connection
+    if ($connection->connect_error) {
+        die("Connection failed: " . $connection->connect_error);
+    } else {
+    }
+    $query = "SELECT user_fname, user_lname, user_email, user_points, user_pokemon, user_bday FROM user WHERE user_id = 1";
+    $stmt = $connection->prepare($query);
+    $stmt->execute();
+    $result = $stmt->get_result();
+    $profileData = $result->fetch_assoc();
+    $username = $profileData['user_fname'] ." ". $profileData['user_lname'];
+    $point = $profileData['user_points'];
+    $birthday = $profileData['user_bday'];
+    $email = $profileData['user_email'];
+    $pokemon = $profileData['user_pokemon'];
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -52,28 +72,10 @@
                         <div class="edit-wrapper">
                             <h3>Edit Profile</h3>
                             <div class="profile-description-wrapper">
-                            <?php 
-                                $connection = new mysqli('localhost:3307', 'root', '', 'pikahae_db');
-                                // Check the connection
-                                if ($connection->connect_error) {
-                                    die("Connection failed: " . $connection->connect_error);
-                                } else {
-                                }
-                                $query = "SELECT user_fname, user_lname, user_email, user_points, user_pokemon, user_bday FROM user WHERE user_id = 1";
-                                $stmt = $connection->prepare($query);
-                                $stmt->execute();
-                                $result = $stmt->get_result();
-                                $profileData = $result->fetch_assoc();
-                                $username = $profileData['user_fname'] ." ". $profileData['user_lname'];
-                                $point = $profileData['user_points'];
-                                $birthday = $profileData['user_bday'];
-                                $email = $profileData['user_email'];
-                                $pokemon = $profileData['user_pokemon'];
-                            ?>
                                 <div class="profile-wrapper">
                                     <img src="../images/profile/profile_pic.png" id="ProfilePicture" alt="Profile Picture" class="profile-picture">
                                     <div class="upload-wrapper">
-                                        <label for="file-upload" id="upload-btn">Upload</label>
+                                        <label for="file-upload" id="upload-btn">Upload</lapbel>
                                         <input type="file" id="file-upload" name="file-upload" accept=".jpg, .jpeg, .png">
                                         <span class="file-name"></span>
                                         <script src="../script/editProfile.js"></script>
