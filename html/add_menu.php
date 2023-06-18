@@ -137,29 +137,29 @@
                 </div>
             </form>
         </div>
-        <div class="overlay"></div>
-        <div class="cancel-popup-card">
-            <div class="cancel-popup-text">
-                <div class="cancel-popup-header">
-                    <h1>Confirm Cancel Changes</h1>
-                </div>
-                <p>Changes made will not be saved</p>
-            </div>
-            <button id="cancel-back-button" type="button">Back</button><span>
-                    <a href="./manage_menu.php"><button id="cancel-confirm-button" type="button">Confirm</button></a>
-                </span>
-        </div>
-        <div class="save-popup-card">
-            <div class="save-popup-text">
-                <div class="save-popup-header">
-                    <h1>Confirm Save Changes</h1>
-                </div>
-                <p>Changes made will be saved</p>
-            </div>
-            <button id="save-back-button" type="button">Back</button><span>
-                    <a href="./manage_menu.php"><button id="save-confirm-button" type="button">Confirm</button></a>
-                </span>
-        </div>
+<!--        <div class="overlay"></div>-->
+<!--        <div class="cancel-popup-card">-->
+<!--            <div class="cancel-popup-text">-->
+<!--                <div class="cancel-popup-header">-->
+<!--                    <h1>Confirm Cancel Changes</h1>-->
+<!--                </div>-->
+<!--                <p>Changes made will not be saved</p>-->
+<!--            </div>-->
+<!--            <button id="cancel-back-button" type="button">Back</button><span>-->
+<!--                    <a href="./manage_menu.php"><button id="cancel-confirm-button" type="button">Confirm</button></a>-->
+<!--                </span>-->
+<!--        </div>-->
+<!--        <div class="save-popup-card">-->
+<!--            <div class="save-popup-text">-->
+<!--                <div class="save-popup-header">-->
+<!--                    <h1>Confirm Save Changes</h1>-->
+<!--                </div>-->
+<!--                <p>Changes made will be saved</p>-->
+<!--            </div>-->
+<!--            <button id="save-back-button" type="button">Back</button><span>-->
+<!--                    <a href="./manage_menu.php"><button id="save-confirm-button" type="button">Confirm</button></a>-->
+<!--                </span>-->
+<!--        </div>-->
     </div>
 </section>
 <footer>
