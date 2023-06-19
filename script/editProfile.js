@@ -1,7 +1,7 @@
 const imgDiv = document.querySelector('.profile-wrapper');
 const img = document.querySelector('#ProfilePicture');
 const file = document.querySelector('#file-upload');
-const uploadBtn = document.querySelector('#upload-btn');
+const uploadBtn = document.querySelector('upload-btn');
 
 imgDiv.addEventListener('mouseleave', function(){
     uploadBtn.style.display = "block";
@@ -16,80 +16,18 @@ file.addEventListener('change', function(){
             img.style.width = '12.5rem';
             img.style.height = '12.5rem';
             img.style.borderRadius = "50%";
-            ; 
         });
     }
-    //var imageUrl = reader.readAsDataURL(choosedFile);
-    var xhr = new XMLHttpRequest();
-    var imageUrl = urlCreator.createObjectURL(choosedFile);
-    xhr.open("POST", "upload-image.php", true);
-    xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-    xhr.onreadystatechange = function() {
-        if (xhr.readyState === 4 && xhr.status === 200) {
-        // Handle the response from the server if needed
-        console.log(xhr.responseText);
-        }
-    };
-    xhr.send("img=" + encodeURIComponent(imageUrl));
-    window.location.href = 'view-profile.php'
 });
 
-/* save edit and its pop-up message display*/
-const overlay = document.createElement('div');
-overlay.classList.add('submit-btn-overlay');
 
-const messageBox = document.createElement('div');
-messageBox.classList.add('message-box');
-
-const image = document.createElement('img');
-image.src = '../images/other/pop-up-pic.jpg';
-image.style.width = '200px';
-image.style.height = '155px';
-
-const messageText = document.createElement('p');
-messageText.textContent = 'Profile saved!';
-messageText.style.marginTop = '30px'; 
-
-const closeButton = document.createElement('span');
-closeButton.classList.add('close-button');
-closeButton.textContent = 'Close';
-closeButton.style.marginTop = '16px'; 
-
-messageBox.appendChild(image);
-messageBox.appendChild(messageText);
-messageBox.appendChild(closeButton);
-overlay.appendChild(messageBox);
 
 /* save edit*/
 document.addEventListener('DOMContentLoaded', function() {
     const saveButton = document.querySelector('.save-edit');
     saveButton.addEventListener('click', function() {
-        document.body.appendChild(overlay); // Add the overlay to the page
-        overlay.style.display = 'block'; // Show the overlay
     });
 });
-
-closeButton.addEventListener('click', function() {
-    overlay.style.display = 'none'; // Hide the overlay
-    var emailContent = document.getElementById("email").textContent;
-    var birthdayContent = document.getElementById("birthday").value; 
-    var pokemonContent = document.getElementById("favorite-pokemon").value;
-
-    var xhr = new XMLHttpRequest();
-    xhr.open("POST", "update-profile.php", true); // Update the PHP file name
-    xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-    xhr.onreadystatechange = function() {
-        if (xhr.readyState === 4 && xhr.status === 200) {
-        // Handle the response from the server if needed
-        console.log(xhr.responseText);
-        }
-    };
-
-    xhr.send("email=" + encodeURIComponent(emailContent) + "&birthday=" + encodeURIComponent(birthdayContent) + "&favorite_pokemon=" + encodeURIComponent(pokemonContent));
-    window.location.href = 'view-profile.php'; 
-});
-
-
 
 /* cancel edit*/
 document.addEventListener('DOMContentLoaded', function() {

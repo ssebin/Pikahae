@@ -1,31 +1,23 @@
-<?php
-if (isset($_GET['user_id'])) {
-    $user_id = $_GET['user_id'];
-
-    $conn = new mysqli('localhost:3307', 'root', '', 'pikahae_db');
-    if ($conn->connect_error) {
-        die("Connection failed: " . $conn->connect_error);
-    }
-
-    $sql = "SELECT user_id, user_fname, user_lname, user_email, user_phone, user_bday, user_pokemon, user_points FROM user WHERE user_id = $user_id";
-    $result = $conn->query($sql);
-
-    if ($result->num_rows > 0) {
-        $row = $result->fetch_assoc();
-        $user_fname = $row["user_fname"];
-        $user_lname = $row["user_lname"];
-        $user_email = $row["user_email"];
-        $user_phone = $row["user_phone"];
-        $user_bday = $row["user_bday"];
-        $user_pokemon = $row["user_pokemon"];
-        $user_points = $row["user_points"];
+<?php 
+    $connection = new mysqli('localhost:3307', 'root', '', 'pikahae_db');
+    // Check the connection
+    if ($connection->connect_error) {
+        die("Connection failed: " . $connection->connect_error);
     } else {
-        die("User not found");
     }
-    $conn->close();
-} else {
-    die("User ID not provided");
-}
+    $query = "SELECT user_fname, user_lname, user_email, user_points, user_pokemon, user_bday, user_img FROM user WHERE user_id = 1";
+    $stmt = $connection->prepare($query);
+    $stmt->execute();
+    $result = $stmt->get_result();
+    $profileData = $result->fetch_assoc();
+    $username = $profileData['user_fname'] ." ". $profileData['user_lname'];
+    $point = $profileData['user_points'];
+    $birthday = $profileData['user_bday'];
+    $email = $profileData['user_email'];
+    $pokemon = $profileData['user_pokemon'];
+    $userImage = $profileData['user_img'];
+    $imageData = base64_encode($userImage);
+    $dataURL = "data:image/jpeg;base64," . $imageData;
 ?>
 
 
@@ -56,15 +48,16 @@ if (isset($_GET['user_id'])) {
             <!--        <p class="cafe-name">Pikahae</p>-->
     
             <ul class="navlist">
-                <li><a href="homepage-admin.html">Home</a></li>
-                <li><a href="cusomter_accounts.html">Accounts</a></li>
-                <li><a href="reservationDashboardAdmin.html">Reservations</a></li>
-                <li><a href="manage_menu.html">Menu</a></li>
+                <li><a href="homepage-customer.html">Home</a></li>
+                <li><a href="about_us.html">About</a></li>
+                <li><a href="reservation.html">Reservations</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="contact_us.html">Contact Us</a></li>
             </ul>
     
             <div class="icon">
-                <!-- <a href="cart.html"><i class='bx bxs-cart'></i></a>
-                <a href="view-profile.html"><i class='bx bxs-user'></i></a> -->
+                <a href="cart.html"><i class='bx bxs-cart'></i></a>
+                <a href="view-profile.html"><i class='bx bxs-user'></i></a>
             </div>
         </nav>
         <div class="banner">
@@ -78,49 +71,45 @@ if (isset($_GET['user_id'])) {
     <div class="edit-profile-page">
         <div class="background-image">
                 <figure class="edit-profile-figure">
+                <form class="edit-item-form" method="POST" enctype="multipart/form-data" action="update-profile-admin.php">
                     <div>
                         <div class="edit-wrapper">
                             <h3>Edit Profile</h3>
-                            <div class="profile-description-wrapper">
-                                <div class="profile-wrapper">
-                                    <img src="../images/profile/profile_pic.png" id="ProfilePicture" alt="Profile Picture" class="profile-picture">
-                                    <div class="upload-wrapper">
-                                        <label for="file-upload" id="upload-btn">Upload</label>
-                                        <input type="file" id="file-upload" name="file-upload" accept=".jpg, .jpeg, .png">
-                                        <span class="file-name"></span>
-                                        <script src="../script/editProfileAdmin.js"></script>
+                                <div class="profile-description-wrapper">
+                                    <div class="profile-wrapper">
+                                        <img src="<?php echo $dataURL; ?>" id="ProfilePicture" alt="Profile Picture" class="profile-picture">
+                                        <div class="upload-wrapper">
+                                            <label for="file-upload" id="upload-btn">Upload</label>
+                                            <input type="file" id="file-upload" name="file-upload" accept=".jpg, .jpeg, .png">
+                                            <script src="../script/editProfileAdmin.js"></script>         
+                                        </div>
                                     </div>
+                                    <figcaption>
+                                        <?php echo $username?><br>
+                                        <h2>current points: <span id="user_points"><?php echo $point?></span><br></h2>
+                                        <br>
+                                        <titletext>E-mail:<br></titletext>
+                                        <input type="email" id="email" name="email" value="<?php echo $email ?>">
+                                        <br>
+                                        <titletext>Birthday:<br></titletext>
+                                        <input type="date" id="birthday" name="birthday" value=<?php echo $birthday ?>>
+                                        <br>
+                                        <titletext>Favourite pokemon:<br></titletext>
+                                            <select id="favorite-pokemon" name="favorite_pokemon">
+                                                <option value="Bulbasaur"<?php if ($pokemon === 'Bulbasaur') echo 'selected'; ?>>Bulbasaur</option>
+                                                <option value="Charmander" <?php if ($pokemon === 'Charmander') echo 'selected'; ?>>Charmander</option>
+                                                <option value="Squirtle"<?php if ($pokemon === 'Squirtle') echo 'selected'; ?>>Squirtle</option>
+                                                <option value="Pikachu"<?php if ($pokemon === 'Pikachu') echo 'selected'; ?>>Pikachu</option>
+                                                <option value="Rowlet" <?php if ($pokemon === 'Rowlet') echo 'selected'; ?>>Rowlet</option>
+                                            </select>
+                                        <script src="../script/editProfileAdmin.js"></script>
+                                    </figcaption>
                                 </div>
-                                <figcaption>
-                                    <?php echo "$user_fname $user_lname"; ?><br>
-                                    <h2>current points: <?php echo $user_points; ?>pts<br></h2>
-                                    <br>
-                                    <titletext>E-mail:<br></titletext>
-                                    <div contenteditable="true" id="email"><?php echo $user_email; ?></div>
-                                    <br>
-                                    <titletext>Birthday:<br></titletext>
-                                    <input type="date" id="birthday" name="birthday" value="<?php echo $user_bday; ?>">
-                                    <br>
-                                    <titletext>Favourite pokemon:<br></titletext>
-                                    <select id="favorite-pokemon">
-                                        <option value="bulbasaur" <?php if ($user_pokemon === "bulbasaur") echo "selected"; ?>>Bulbasaur</option>
-                                        <option value="charmander" <?php if ($user_pokemon === "charmander") echo "selected"; ?>>Charmander</option>
-                                        <option value="squirtle" <?php if ($user_pokemon === "squirtle") echo "selected"; ?>>Squirtle</option>
-                                        <option value="pikachu" <?php if ($user_pokemon === "pikachu") echo "selected"; ?>>Pikachu</option>
-                                        <option value="rowlet" <?php if ($user_pokemon === "rowlet") echo "selected"; ?>>Rowlet</option>
-                                        <?php if (!in_array($user_pokemon, ['bulbasaur', 'charmander', 'squirtle', 'pikachu', 'rowlet'])) {
-                                            echo "<option value='$user_pokemon' selected>$user_pokemon</option>";
-                                        } ?>
-                                    </select>
-
-                                    <script src="../script/editProfileAdmin.js"></script>
-                                </figcaption>
-                            </div>
                         </div>
                         <div class="button-wrapper">
-                            <button class="delete-account">Delete Account</button>
-                            <button class="cancel-edit">Cancel</button>
-                            <button class="save-edit">Save</button>
+                            <button class="delete-account" name="delete-account">Delete Account</button>
+                            <button class="cancel-edit" name="cancel-edit">Cancel</button>
+                            <span><button class="save-edit" name="save-btn" type="submit">Save</button></span>
                             <script src="../script/editProfileAdmin.js"></script>
                         </div>
                         <div class="confirmation-box" id="confirmationBox">
@@ -134,6 +123,7 @@ if (isset($_GET['user_id'])) {
                             </div>
                         </div>
                     </div>
+                </form>
                 </figure>
         </div>
         <footer>
@@ -158,4 +148,5 @@ if (isset($_GET['user_id'])) {
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     </div>
 </body>
+<script src="../script/editProfileAdmin.js"></script>
 </html>

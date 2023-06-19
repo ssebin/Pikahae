@@ -24,12 +24,12 @@
         $stmt->bind_param("sss", $email, $favorite_pokemon, $birthday);
         $stmt->execute();
 
-        header("Location: view-profile.php");
+        header("Location: customer_accounts.php");
         exit;
     }  
 
     elseif(isset($_POST['cancel-edit'])) {
-        header("Location: view-profile.php");
+        header("Location: customer_accounts.php");
     }
 
     elseif(isset($_POST['delete-account'])){
@@ -43,7 +43,7 @@
         $query = "DELETE FROM user WHERE user_id = 1";
         $stmt = $connection->prepare($query);
         $stmt->execute();
-        header("Location: login.html");
+        header("Location: customer_accounts.php");
     }
 
 ?>

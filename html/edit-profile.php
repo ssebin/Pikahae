@@ -5,7 +5,7 @@
         die("Connection failed: " . $connection->connect_error);
     } else {
     }
-    $query = "SELECT user_fname, user_lname, user_email, user_points, user_pokemon, user_bday FROM user WHERE user_id = 1";
+    $query = "SELECT user_fname, user_lname, user_email, user_points, user_pokemon, user_bday, user_img FROM user WHERE user_id = 1";
     $stmt = $connection->prepare($query);
     $stmt->execute();
     $result = $stmt->get_result();
@@ -15,6 +15,9 @@
     $birthday = $profileData['user_bday'];
     $email = $profileData['user_email'];
     $pokemon = $profileData['user_pokemon'];
+    $userImage = $profileData['user_img'];
+    $imageData = base64_encode($userImage);
+    $dataURL = "data:image/jpeg;base64," . $imageData;
 ?>
 
 
@@ -68,45 +71,45 @@
     <div class="edit-profile-page">
         <div class="background-image">
                 <figure class="edit-profile-figure">
+                <form class="edit-item-form" method="POST" enctype="multipart/form-data" action="update-profile.php">
                     <div>
                         <div class="edit-wrapper">
                             <h3>Edit Profile</h3>
-                            <div class="profile-description-wrapper">
-                                <div class="profile-wrapper">
-                                    <img src="../images/profile/profile_pic.png" id="ProfilePicture" alt="Profile Picture" class="profile-picture">
-                                    <div class="upload-wrapper">
-                                        <label for="file-upload" id="upload-btn">Upload</lapbel>
-                                        <input type="file" id="file-upload" name="file-upload" accept=".jpg, .jpeg, .png">
-                                        <span class="file-name"></span>
-                                        <script src="../script/editProfile.js"></script>
+                                <div class="profile-description-wrapper">
+                                    <div class="profile-wrapper">
+                                        <img src="<?php echo $dataURL; ?>" id="ProfilePicture" alt="Profile Picture" class="profile-picture">
+                                        <div class="upload-wrapper">
+                                            <label for="file-upload" id="upload-btn">Upload</label>
+                                            <input type="file" id="file-upload" name="file-upload" accept=".jpg, .jpeg, .png">
+                                            <script src="../script/editProfile.js"></script>         
+                                        </div>
                                     </div>
+                                    <figcaption>
+                                        <?php echo $username?><br>
+                                        <h2>current points: <span id="user_points"><?php echo $point?></span><br></h2>
+                                        <br>
+                                        <titletext>E-mail:<br></titletext>
+                                        <input type="email" id="email" name="email" value="<?php echo $email ?>">
+                                        <br>
+                                        <titletext>Birthday:<br></titletext>
+                                        <input type="date" id="birthday" name="birthday" value=<?php echo $birthday ?>>
+                                        <br>
+                                        <titletext>Favourite pokemon:<br></titletext>
+                                            <select id="favorite-pokemon" name="favorite_pokemon">
+                                                <option value="Bulbasaur"<?php if ($pokemon === 'Bulbasaur') echo 'selected'; ?>>Bulbasaur</option>
+                                                <option value="Charmander" <?php if ($pokemon === 'Charmander') echo 'selected'; ?>>Charmander</option>
+                                                <option value="Squirtle"<?php if ($pokemon === 'Squirtle') echo 'selected'; ?>>Squirtle</option>
+                                                <option value="Pikachu"<?php if ($pokemon === 'Pikachu') echo 'selected'; ?>>Pikachu</option>
+                                                <option value="Rowlet" <?php if ($pokemon === 'Rowlet') echo 'selected'; ?>>Rowlet</option>
+                                            </select>
+                                        <script src="../script/editProfile.js"></script>
+                                    </figcaption>
                                 </div>
-                                <figcaption>
-                                    <?php echo $username?><br>
-                                    <h2>current points: <span id="user_points"><?php echo $point?></span><br></h2>
-                                    <br>
-                                    <titletext>E-mail:<br></titletext>
-                                    <div contenteditable="true" id="email"><?php echo $email?></div>
-                                    <br>
-                                    <titletext>Birthday:<br></titletext>
-                                    <input type="date" id="birthday" name="birthday" value=<?php echo $birthday ?>>
-                                    <br>
-                                    <titletext>Favourite pokemon:<br></titletext>
-                                        <select id="favorite-pokemon">
-                                            <option value="Bulbasaur"<?php if ($pokemon === 'Bulbasaur') echo 'selected'; ?>>Bulbasaur</option>
-                                            <option value="Charmander" <?php if ($pokemon === 'Charmander') echo 'selected'; ?>>Charmander</option>
-                                            <option value="Squirtle"<?php if ($pokemon === 'Squirtle') echo 'selected'; ?>>Squirtle</option>
-                                            <option value="Pikachu"<?php if ($pokemon === 'Pikachu') echo 'selected'; ?>>Pikachu</option>
-                                            <option value="Rowlet" <?php if ($pokemon === 'Rowlet') echo 'selected'; ?>>Rowlet</option>
-                                        </select>
-                                    <script src="../script/editProfile.js"></script>
-                                </figcaption>
-                            </div>
                         </div>
                         <div class="button-wrapper">
-                            <button class="delete-account">Delete Account</button>
-                            <button class="cancel-edit">Cancel</button>
-                            <button class="save-edit" name="save-btn">Save</button>
+                            <button class="delete-account" name="delete-account">Delete Account</button>
+                            <button class="cancel-edit" name="cancel-edit">Cancel</button>
+                            <span><button class="save-edit" name="save-btn" type="submit">Save</button></span>
                             <script src="../script/editProfile.js"></script>
                         </div>
                         <div class="confirmation-box" id="confirmationBox">
@@ -120,6 +123,7 @@
                             </div>
                         </div>
                     </div>
+                </form>
                 </figure>
         </div>
         <footer>
@@ -144,4 +148,5 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     </div>
 </body>
+<script src="../script/editProfile.js"></script>
 </html>

@@ -1,3 +1,25 @@
+<?php 
+    $connection = new mysqli('localhost:3307', 'root', '', 'pikahae_db');
+    // Check the connection
+    if ($connection->connect_error) {
+        die("Connection failed: " . $connection->connect_error);
+    } else {
+    }
+    $query = "SELECT user_fname, user_lname, user_email, user_points, user_pokemon, user_bday, user_img FROM user WHERE user_id = 1";
+    $stmt = $connection->prepare($query);
+    $stmt->execute();
+    $result = $stmt->get_result();
+    $profileData = $result->fetch_assoc();
+    $username = $profileData['user_fname'] ." ". $profileData['user_lname'];
+    $point = $profileData['user_points'];
+    $birthday = $profileData['user_bday'];
+    $email = $profileData['user_email'];
+    $pokemon = $profileData['user_pokemon'];
+    $userImage = $profileData['user_img'];
+    $imageData = base64_encode($userImage);
+    $dataURL = "data:image/jpeg;base64," . $imageData;
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -48,29 +70,11 @@
     <div class="background-image">
         <figure class="view-profile-figure">
             <div class="profile-wrapper">
-                <img alt="Profile Picture" class="profile-picture" id="profile_img">
+                <img src="<?php echo $dataURL; ?>" alt="Profile Picture" class="profile-picture" id="profile_img">
                 <a href="edit-profile.php" class="profile-button">Edit Profile</a>
                 <script src="../script/viewProfile.js"></script>
             </div>
             <figcaption>
-                <?php 
-                    $connection = new mysqli('localhost:3307', 'root', '', 'pikahae_db');
-                    // Check the connection
-                    if ($connection->connect_error) {
-                        die("Connection failed: " . $connection->connect_error);
-                    } else {
-                    }
-                    $query = "SELECT user_fname, user_lname, user_email, user_points, user_pokemon, user_bday FROM user WHERE user_id = 1";
-                    $stmt = $connection->prepare($query);
-                    $stmt->execute();
-                    $result = $stmt->get_result();
-                    $profileData = $result->fetch_assoc();
-                    $username = $profileData['user_fname'] ." ". $profileData['user_lname'];
-                    $point = $profileData['user_points'];
-                    $birthday = $profileData['user_bday'];
-                    $email = $profileData['user_email'];
-                    $pokemon = $profileData['user_pokemon'];
-                ?>
                 <contenttext id="user_name"><?php echo $username?><br></contenttext>
                 <h2>current points: <span id="user_points"><?php echo $point?></span><br></h2>
                 <br>
