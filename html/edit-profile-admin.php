@@ -16,9 +16,15 @@
     $birthday = $profileData['user_bday'];
     $email = $profileData['user_email'];
     $pokemon = $profileData['user_pokemon'];
-    $userImage = $profileData['user_img'];
-    $imageData = base64_encode($userImage);
-    $dataURL = "data:image/jpeg;base64," . $imageData;
+    if($profileData['user_img'] === NULL){
+        $dataURL = '../images/profile/profile_pic.png';
+
+    }
+    else{
+        $userImage = $profileData['user_img'];
+        $imageData = base64_encode($userImage);
+        $dataURL = "data:image/jpeg;base64," . $imageData;
+    }
 ?>
 
 
