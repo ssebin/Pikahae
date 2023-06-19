@@ -23,5 +23,6 @@
     <orderEntry type="library" name="all" level="application" />
     <orderEntry type="library" name="@supabase" level="application" />
     <orderEntry type="library" name="boxicons" level="application" />
+    <orderEntry type="library" name="jquery" level="application" />
   </component>
 </module>

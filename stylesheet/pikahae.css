@@ -4199,7 +4199,7 @@ section .header{
 }
 .menu{
     /*padding: 40px 0 0 40px;*/
-    /* padding-left: 3%; */
+    padding-left: 3%;
     width: 100%;
     height: auto;
     background: linear-gradient(rgba(255,255,255,.80), rgba(255,255,255,.90)),url("../images/pokecafe-bg.jpg");
@@ -4462,7 +4462,7 @@ section .header{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    visibility: hidden;
+    visibility: visible;
 }
 
 .empty-cart .head-cart__txt {
@@ -4487,7 +4487,7 @@ section .header{
     align-content: space-between;
     padding-bottom: 10px;
     border-bottom: 1px solid #E1E8EE;
-    visibility: hidden;
+    visibility: visible;
 }
 
 
@@ -4530,7 +4530,7 @@ section .header{
 .head-cart__price-total {
     align-self: end;
     font-weight: 700;
-    visibility: hidden;
+    visibility: visible;
 }
 
 .head-cart-checkout {
@@ -4539,7 +4539,7 @@ section .header{
     border-radius: 30px;
     color: var(--bg-color);
     border: none;
-    visibility: hidden;
+    visibility: visible;
 }
 
 .head-rgt button{
