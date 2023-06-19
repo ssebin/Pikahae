@@ -92,23 +92,27 @@
                     <div class="table-body">
                         <tbody>
                             <?php
-                            $userID = 1;
+                            $userID = 3;
 
                             $userOrdersQuery = "SELECT * FROM user_order WHERE user_id = $userID";
                             $userOrdersResult = mysqli_query($conn, $userOrdersQuery);
-                            
+                        
                             while ($orderRow = mysqli_fetch_assoc($userOrdersResult)) {
                                 $tableID = $orderRow['table_id'];
-                                $name = $orderRow['user_fname'] . ' ' . $orderRow['user_lname'];
+                                $orderID = $orderRow['order_id'];
                                 $date = $orderRow['order_date'];
                                 $time = $orderRow['order_time'];
                                 $pax = $orderRow['order_pax'];
                                 $status = $orderRow['order_status'];
-                                $orderID = $orderRow['order_id'];
-                            
+                        
+                                $userNameQuery = "SELECT user_fname, user_lname FROM user WHERE user_id = $userID";
+                                $userNameResult = mysqli_query($conn, $userNameQuery);
+                                $userNameRow = mysqli_fetch_assoc($userNameResult);
+                                $name = $userNameRow['user_fname'] . ' ' . $userNameRow['user_lname'];
+                        
                                 $orderItemsQuery = "SELECT * FROM order_item JOIN menu ON order_item.menu_id = menu.menu_id WHERE order_id = $orderID";
                                 $orderItemsResult = mysqli_query($conn, $orderItemsQuery);
-                            
+                        
                                 echo "<tr>";
                                 echo "<td>" . $tableID . "</td>";
                                 echo "<td>" . $name . "</td>";
@@ -125,8 +129,9 @@
                                 echo "<td>" . $status . "</td>";
                                 echo "</tr>";
                             }
-                            
+                        
                             $conn->close();
+                        
                             ?>
                         </tbody>
                     </div>

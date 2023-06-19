@@ -5,7 +5,7 @@
         die("Connection failed: " . $conn->connect_error);
     }
 
-?>
+    ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -100,46 +100,39 @@
                     <div class="table-body">
                     <tbody>
                         <?php
-                        $userID = 3;
 
-                        $userOrdersQuery = "SELECT * FROM user_order WHERE user_id = $userID";
-                        $userOrdersResult = mysqli_query($conn, $userOrdersQuery);
-                    
-                        while ($orderRow = mysqli_fetch_assoc($userOrdersResult)) {
-                            $tableID = $orderRow['table_id'];
-                            $orderID = $orderRow['order_id'];
-                            $date = $orderRow['order_date'];
-                            $time = $orderRow['order_time'];
-                            $pax = $orderRow['order_pax'];
-                            $status = $orderRow['order_status'];
-                    
-                            $userNameQuery = "SELECT user_fname, user_lname FROM user WHERE user_id = $userID";
-                            $userNameResult = mysqli_query($conn, $userNameQuery);
-                            $userNameRow = mysqli_fetch_assoc($userNameResult);
-                            $name = $userNameRow['user_fname'] . ' ' . $userNameRow['user_lname'];
-                    
+                        $sql = "SELECT * FROM user_order JOIN user ON user_order.user_id = user.user_id";
+                        $result = mysqli_query($conn, $sql);
+
+                        while ($row = mysqli_fetch_assoc($result)) {
+                            $orderID = $row['order_id'];
+                            $tableName = $row['table_id'];
+                            $name = $row['user_fname'] . ' ' . $row['user_lname'];
+                            $date = $row['order_date'];
+                            $time = $row['order_time'];
+                            $pax = $row['order_pax'];
+                            $status = $row['order_status'];
+
                             $orderItemsQuery = "SELECT * FROM order_item JOIN menu ON order_item.menu_id = menu.menu_id WHERE order_id = $orderID";
                             $orderItemsResult = mysqli_query($conn, $orderItemsQuery);
-                    
-                            echo "<tr>";
-                            echo "<td>" . $tableID . "</td>";
-                            echo "<td>" . $name . "</td>";
-                            echo "<td>" . $date . "</td>";
-                            echo "<td>" . $time . "</td>";
-                            echo "<td>" . $pax . "</td>";
-                            echo "<td>";
+
+                            $menuItems = '';
                             while ($orderItemRow = mysqli_fetch_assoc($orderItemsResult)) {
                                 $menuItemName = $orderItemRow['menu_name'];
                                 $menuItemQty = $orderItemRow['order_qty'];
-                                echo $menuItemName . " x" . $menuItemQty . "<br>";
+                                $menuItems .= "$menuItemName x$menuItemQty<br>";
                             }
-                            echo "</td>";
-                            echo "<td>" . $status . "</td>";
-                            echo "</tr>";
+                            echo "<tr>
+                                <td>$tableName</td>
+                                <td>$name</td>
+                                <td>$date</td>
+                                <td>$time</td>
+                                <td>$pax</td>
+                                <td>$menuItems</td>
+                                <td>$status</td>
+                            </tr>";
                         }
-                    
-                        $conn->close();
-                    
+                        mysqli_close($conn);
                         ?>
                     </tbody>
                     </div>
