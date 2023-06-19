@@ -1,4 +1,5 @@
 <?php
+    $user_id = $_GET['user_id'];
     if (isset($_POST['save-btn'])) {
         $email = $_POST['email'];
         $birthday = $_POST['birthday'];
@@ -13,10 +14,10 @@
 
         if (!empty($_FILES['file-upload']['tmp_name'])) {
             $imageData = addslashes(file_get_contents($_FILES['file-upload']['tmp_name']));
-            $query1 = "UPDATE user SET user_email = ?, user_pokemon = ?, user_bday = ?, user_img = '$imageData' WHERE user_id = 1";
+            $query1 = "UPDATE user SET user_email = ?, user_pokemon = ?, user_bday = ?, user_img = '$imageData' WHERE user_id = $user_id";
         }
         else{
-            $query1 = "UPDATE user SET user_email = ?, user_pokemon = ?, user_bday = ? WHERE user_id = 1";
+            $query1 = "UPDATE user SET user_email = ?, user_pokemon = ?, user_bday = ? WHERE user_id = $user_id";
         }
 
         // Perform the database update operation to store the values
@@ -40,7 +41,7 @@
         } else {
         }
         // Delete acc
-        $query = "DELETE FROM user WHERE user_id = 1";
+        $query = "DELETE FROM user WHERE user_id = $user_id";
         $stmt = $connection->prepare($query);
         $stmt->execute();
         header("Location: customer_accounts.php");

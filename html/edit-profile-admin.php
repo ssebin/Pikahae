@@ -5,7 +5,8 @@
         die("Connection failed: " . $connection->connect_error);
     } else {
     }
-    $query = "SELECT user_fname, user_lname, user_email, user_points, user_pokemon, user_bday, user_img FROM user WHERE user_id = 1";
+    $user_id = $_GET['user_id'];
+    $query = "SELECT user_fname, user_lname, user_email, user_points, user_pokemon, user_bday, user_img FROM user WHERE user_id = $user_id";
     $stmt = $connection->prepare($query);
     $stmt->execute();
     $result = $stmt->get_result();
@@ -71,7 +72,7 @@
     <div class="edit-profile-page">
         <div class="background-image">
                 <figure class="edit-profile-figure">
-                <form class="edit-item-form" method="POST" enctype="multipart/form-data" action="update-profile-admin.php">
+                <form class="edit-item-form" method="POST" enctype="multipart/form-data" action="update-profile-admin.php?user_id=<?php echo $user_id; ?>">
                     <div>
                         <div class="edit-wrapper">
                             <h3>Edit Profile</h3>
