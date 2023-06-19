@@ -170,7 +170,7 @@ document.addEventListener("DOMContentLoaded", function() {
         event.preventDefault();
         if (cartItems.length > 0) {
             const xhr = new XMLHttpRequest();
-            xhr.open("POST", "checkout.php", true);
+            xhr.open("POST", "checkOut.php", true);
             xhr.setRequestHeader("Content-Type", "application/json");
             xhr.send(JSON.stringify(cartItems));
 
@@ -180,6 +180,10 @@ document.addEventListener("DOMContentLoaded", function() {
                     cartItems.length = 0;  // Empty the cart
                     renderCartItems();  // Update the cart UI
                     cartContainer.style.visibility = "hidden";  // Close the cart
+
+                    // Redirect to reservation_confirmation.php
+                    const order_id = xhr.responseText.split(":")[1].trim();
+                    window.location.href = `reservation_confirmation.php?order_id=${order_id}`;
                 }
             }
         } else {

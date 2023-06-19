@@ -93,5 +93,3 @@ continueButton.addEventListener('click', () => {
     loginPopupCard.style.display = 'none';
   }, 500);
 });
-
-

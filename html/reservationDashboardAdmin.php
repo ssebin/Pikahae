@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
     $conn = new mysqli('localhost', 'root', '', 'pikahae_db');
 
@@ -7,6 +8,8 @@
 
     ?>
 
+=======
+>>>>>>> 70909e4 (heheheheheheh (normal))
 <!DOCTYPE html>
 <html lang="en">
 
@@ -80,6 +83,15 @@
         </div>
         <hr style="background-color: #FE6A86; border: 1px solid #FE6A86; opacity: 1; margin: 0; padding: 0;">
     </section>
+    <?php
+    $conn = new mysqli('localhost', 'root', '', 'pikahae_db');
+
+    if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
+    }
+
+    ?>
+
     <div class="admin-view-body">
         <div class="admin-view-container">
             <div class="admin-view-table">

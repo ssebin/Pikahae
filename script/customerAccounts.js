@@ -1,3 +1,56 @@
+const SUPABASE_URL = 'https://lrdpllwtkxlqgwcmpjju.supabase.co'
+const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImxyZHBsbHd0a3hscWd3Y21wamp1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODU1OTY4MDMsImV4cCI6MjAwMTE3MjgwM30.6VFgPcFj9bYG1b5Tza3O70H-HitdPb9kzjwJ5OnBz9k'
+const _supabase = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY)
+
+// Assuming you have Supabase JavaScript SDK already set up
+
+// Fetch user data from Supabase
+_supabase
+  .from('user')
+  .select('user_id, user_fname, user_lname, user_phone, user_email, user_bday, user_pokemon')
+  .then(({ data: users, error }) => {
+    if (error) {
+      console.error(error);
+      return;
+    }
+
+    // Get the table body element
+    const tableBody = document.getElementById('customer-table-body');
+
+    // Iterate over the users and create table rows
+    users.forEach((user) => {
+      const row = document.createElement('tr');
+
+      // Add the user data to table cells
+      row.innerHTML = `
+        <td>${user.user_id}</td>
+        <td>${user.user_fname} ${user.user_lname}</td>
+        <td>${user.user_phone}</td>
+        <td>${user.user_email}</td>
+        <td>${user.user_bday}</td>
+        <td>${user.user_pokemon}</td>
+        <td>
+          <a href="edit-profile-admin.html">
+            <button type="button">
+              <img src="../images/manage/edit.png" alt="Edit">
+            </button>
+          </a>
+          <button type="button">
+            <img src="../images/manage/delete.png" alt="Delete">
+          </button>
+        </td>
+      `;
+
+      // Append the row to the table body
+      tableBody.appendChild(row);
+    });
+  })
+  .catch((error) => {
+    console.error(error);
+  });
+
+
+
 // searching through search bar
 const searchBtn = document.getElementById('customer-search-button');
 const searchInput = document.getElementById('customer-search-input');
@@ -127,5 +180,7 @@ deleteBackButton.addEventListener('click', () => {
   }, 500);
 });
 
-
+deleteConfirmButton.addEventListener('click', () => {
+  window.location.href = '../customer_accounts.html';
+});
 

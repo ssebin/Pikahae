@@ -1726,8 +1726,7 @@ section .menu-navlist{
 }
 
 .form-body button:hover,
-#admin-login-button button:hover,
-#admin-table-reservation-dashboard-submit:hover{
+#admin-login-button button:hover{
     background-color: #E66079;
     transition: 0.5s;
 }
@@ -1817,8 +1816,7 @@ hr {
 
 .profile-picture {
     border-radius: 50%;
-    width: 11.25rem;
-    height: 11.25rem;
+    width: 12.5rem;
 }
 
 .edit-profile-page {
@@ -1867,13 +1865,7 @@ figcaption {
     margin: 3.125rem;
 }
 
-#email{
-    border-radius: 40px;
-    height: 40px;
-    width: 255px;
-    margin-bottom: 20px;
-    padding-left: 16px;
-    text-align: left;
+figcaption #email{
     border: white;
     box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
 }
@@ -1947,17 +1939,6 @@ figcaption contenttext {
     border-radius: 40px;
     height: 40px;
     margin-bottom: 20px;
-    text-align: left;
-    border: white;
-    box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
-}
-
-#favorite-pokemon{
-    border-radius: 40px;
-    height: 40px;
-    width: 255px;
-    margin-bottom: 20px;
-    padding-left: 16px;
     text-align: left;
     border: white;
     box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
@@ -4993,18 +4974,6 @@ button:active{
 }
 
 /* ITEM DETAIL PAGE END */
-
-#admin-table-reservation-dashboard-submit{
-    height: 2.5rem;
-    width: 5rem;
-    border-radius: 30px;
-    border: none;
-    font-family: 'Roboto', sans-serif;
-    font-weight: bold;
-    color: white;
-    background-color: var(--main-color);
-
-}
 
 /* SCROLL TO TOP */
 

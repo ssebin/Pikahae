@@ -74,13 +74,6 @@ if ($conn->connect_error) {
 
 if (isset($_GET['delete'])) {
     $menu_id = intval($_GET['delete']); // Sanitizing the input
-
-    echo "<script>
-                        function confirmDelete() {
-                            return confirm('Are you sure you want to delete this record?');
-                        }
-                    </script>";
-
     $sql = "DELETE FROM menu WHERE menu_id = $menu_id";
 
     if ($conn->query($sql) === TRUE) {
