@@ -9,19 +9,19 @@ if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
 }
 
-// Fetch the latest order_id from user_order table
-$query = "SELECT MAX(order_id) AS latest_order_id FROM user_order";
+// Retrieve the latest order ID from the user_order table
+$query = "SELECT order_id FROM user_order ORDER BY order_id DESC LIMIT 1";
 $result = mysqli_query($conn, $query);
 if (!$result) {
     die('Query failed: ' . mysqli_error($conn));
 }
 
 $row = mysqli_fetch_assoc($result);
-$order_id = $row['latest_order_id'];
+$order_id = $row['order_id'];
 
 mysqli_free_result($result);
 
-// Proceed with fetching details for the latest order_id
+// Fetch the order details based on the latest order ID
 $query = "SELECT order_date, order_time, order_pax, table_id FROM user_order WHERE order_id = '$order_id'";
 $result = mysqli_query($conn, $query);
 if (!$result) {
@@ -33,6 +33,25 @@ $orderDate = $row['order_date'];
 $orderTime = $row['order_time'];
 $orderPax = $row['order_pax'];
 $tableId = $row['table_id'];
+
+mysqli_free_result($result);
+
+// Retrieve the order items for the given order ID
+$query = "SELECT oi.order_qty, m.menu_name
+          FROM order_item oi
+          INNER JOIN menu m ON oi.menu_id = m.menu_id
+          WHERE oi.order_id = '$order_id'";
+$result = mysqli_query($conn, $query);
+if (!$result) {
+    die('Query failed: ' . mysqli_error($conn));
+}
+
+$orderItems = '';
+while ($row = mysqli_fetch_assoc($result)) {
+    $menuName = $row['menu_name'];
+    $orderQty = $row['order_qty'];
+    $orderItems .= $menuName . " (x" . $orderQty . ")<br>";
+}
 
 mysqli_free_result($result);
 mysqli_close($conn);
