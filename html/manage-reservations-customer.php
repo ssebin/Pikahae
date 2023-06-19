@@ -6,7 +6,6 @@
     }
 
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -49,37 +48,30 @@
             <!--        <p class="cafe-name">Pikahae</p>-->
 
             <ul class="navlist" style="margin: 0; padding: 0;">
-                <li><a href="homepage-admin.html">Home</a></li>
-                <li><a href="cusomter_accounts.html">Accounts</a></li>
-                <li><a href="reservationDashboardAdmin.html">Reservations</a></li>
-                <li><a href="manage_menu.html">Menu</a></li>
+                <li><a href="homepage-customer.html">Home</a></li>
+                <li><a href="about_us.html">About</a></li>
+                <li><a href="reservation.html">Reservations</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="contact_us.html">Contact Us</a></li>
             </ul>
 
             <div class="icon">
-                <!-- <a href="#"><i class=null></i></a>
-                <a href="#"><i class=null></i></a> -->
+                <a href="cart.html"><i class='bx bxs-cart'></i></a>
+                <a href="view-profile.html"><i class='bx bxs-user'></i></a>
             </div>
         </nav>
         <div class="banner">
-            <img src="../images/homepage/homepage_admin_main.jpg" alt="picture of pikachu with dessert">
+            <img src="../images/reservation/reservation_banner.png" alt="picture of pikachu with dessert">
         </div>
 
         <div class="sub-header-wrapper">
-            <p style="margin: 0;">ADMIN DASHBOARD</p>
-            <div class="tab-switch-reservation">
-                <ul class="nav nav-pills justify-content-end">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page"
-                            href="reservationDashboardAdmin.html">Reservation</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="reservationTableDashboardAdmin.html" style="color: black;">Tables</a>
-                    </li>
-                </ul>
-            </div>
+            <p style="margin: 0;">MY RESERVATIONS</p>
         </div>
+
         <hr style="background-color: #FE6A86; border: 1px solid #FE6A86; opacity: 1; margin: 0; padding: 0;">
     </section>
+
+
     <div class="admin-view-body">
         <div class="admin-view-container">
             <div class="admin-view-table">
@@ -98,50 +90,45 @@
                         </thead>
                     </div>
                     <div class="table-body">
-                    <tbody>
-                        <?php
-                        $userID = 3;
+                        <tbody>
+                            <?php
+                            $userID = 1;
 
-                        $userOrdersQuery = "SELECT * FROM user_order WHERE user_id = $userID";
-                        $userOrdersResult = mysqli_query($conn, $userOrdersQuery);
-                    
-                        while ($orderRow = mysqli_fetch_assoc($userOrdersResult)) {
-                            $tableID = $orderRow['table_id'];
-                            $orderID = $orderRow['order_id'];
-                            $date = $orderRow['order_date'];
-                            $time = $orderRow['order_time'];
-                            $pax = $orderRow['order_pax'];
-                            $status = $orderRow['order_status'];
-                    
-                            $userNameQuery = "SELECT user_fname, user_lname FROM user WHERE user_id = $userID";
-                            $userNameResult = mysqli_query($conn, $userNameQuery);
-                            $userNameRow = mysqli_fetch_assoc($userNameResult);
-                            $name = $userNameRow['user_fname'] . ' ' . $userNameRow['user_lname'];
-                    
-                            $orderItemsQuery = "SELECT * FROM order_item JOIN menu ON order_item.menu_id = menu.menu_id WHERE order_id = $orderID";
-                            $orderItemsResult = mysqli_query($conn, $orderItemsQuery);
-                    
-                            echo "<tr>";
-                            echo "<td>" . $tableID . "</td>";
-                            echo "<td>" . $name . "</td>";
-                            echo "<td>" . $date . "</td>";
-                            echo "<td>" . $time . "</td>";
-                            echo "<td>" . $pax . "</td>";
-                            echo "<td>";
-                            while ($orderItemRow = mysqli_fetch_assoc($orderItemsResult)) {
-                                $menuItemName = $orderItemRow['menu_name'];
-                                $menuItemQty = $orderItemRow['order_qty'];
-                                echo $menuItemName . " x" . $menuItemQty . "<br>";
+                            $userOrdersQuery = "SELECT * FROM user_order WHERE user_id = $userID";
+                            $userOrdersResult = mysqli_query($conn, $userOrdersQuery);
+                            
+                            while ($orderRow = mysqli_fetch_assoc($userOrdersResult)) {
+                                $tableID = $orderRow['table_id'];
+                                $name = $orderRow['user_fname'] . ' ' . $orderRow['user_lname'];
+                                $date = $orderRow['order_date'];
+                                $time = $orderRow['order_time'];
+                                $pax = $orderRow['order_pax'];
+                                $status = $orderRow['order_status'];
+                                $orderID = $orderRow['order_id'];
+                            
+                                $orderItemsQuery = "SELECT * FROM order_item JOIN menu ON order_item.menu_id = menu.menu_id WHERE order_id = $orderID";
+                                $orderItemsResult = mysqli_query($conn, $orderItemsQuery);
+                            
+                                echo "<tr>";
+                                echo "<td>" . $tableID . "</td>";
+                                echo "<td>" . $name . "</td>";
+                                echo "<td>" . $date . "</td>";
+                                echo "<td>" . $time . "</td>";
+                                echo "<td>" . $pax . "</td>";
+                                echo "<td>";
+                                while ($orderItemRow = mysqli_fetch_assoc($orderItemsResult)) {
+                                    $menuItemName = $orderItemRow['menu_name'];
+                                    $menuItemQty = $orderItemRow['order_qty'];
+                                    echo $menuItemName . " x" . $menuItemQty . "<br>";
+                                }
+                                echo "</td>";
+                                echo "<td>" . $status . "</td>";
+                                echo "</tr>";
                             }
-                            echo "</td>";
-                            echo "<td>" . $status . "</td>";
-                            echo "</tr>";
-                        }
-                    
-                        $conn->close();
-                    
-                        ?>
-                    </tbody>
+                            
+                            $conn->close();
+                            ?>
+                        </tbody>
                     </div>
                 </table>
             </div>
@@ -150,6 +137,7 @@
 
     <!--Footer-->
     <footer>
+
         <div class="footer-content">
             <h3>Pikahae</h3>
             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.<br>Illo iste corrupti doloribus odio sed!</p>
@@ -168,5 +156,10 @@
         </div>
     </footer>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+
+
 </body>
+
 </html>
