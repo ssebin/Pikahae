@@ -1,91 +1,22 @@
 const imgDiv = document.querySelector('.profile-wrapper');
 const img = document.querySelector('#ProfilePicture');
 const file = document.querySelector('#file-upload');
-const uploadBtn = document.querySelector('upload-btn');
+const uploadBtn = document.querySelector('#upload-btn');
 
-imgDiv.addEventListener('mouseleave', function(){
-    uploadBtn.style.display = "block";
+imgDiv.addEventListener('mouseleave', function() {
+  uploadBtn.style.display = "block";
 });
 
-file.addEventListener('change', function(){
-    const choosedFile = this.files[0];  
-    if(choosedFile) {
-        const reader = new FileReader();
-        reader.addEventListener('load', function(){
-            img.setAttribute('src', reader.result);
-            img.style.width = '12.5rem';
-            img.style.height = '12.5rem';
-            img.style.borderRadius = "50%";
-        });
-    }
+file.addEventListener('change', function() {
+  const choosedFile = this.files[0];
+  if (choosedFile) {
+    const reader = new FileReader();
+    reader.addEventListener('load', function() {
+      img.setAttribute('src', reader.result);
+      img.style.width = '11.25rem';
+      img.style.height = '11.25rem';
+      img.style.borderRadius = "50%";
+    });
+    reader.readAsDataURL(choosedFile);
+  }
 });
-
-
-
-/* save edit*/
-document.addEventListener('DOMContentLoaded', function() {
-    const saveButton = document.querySelector('.save-edit');
-    saveButton.addEventListener('click', function() {
-    });
-});
-
-/* cancel edit*/
-document.addEventListener('DOMContentLoaded', function() {
-    const cancelButton = document.querySelector('.cancel-edit');
-    cancelButton.addEventListener('click', function() {
-      // Redirect to "view profile" page
-      window.location.href = 'view-profile.php'; 
-    });
-});
-
-/*delete acc*/
-document.addEventListener('DOMContentLoaded', function() {
-    const deleteButton = document.querySelector('.delete-account');
-    const confirmationBox = document.querySelector('#confirmationBox');
-    const confirmYesButton = document.querySelector('#confirmYes');
-    const confirmNoButton = document.querySelector('#confirmNo');
-
-    deleteButton.addEventListener('click', function() {
-        confirmationBox.style.display = 'block';
-    });
-
-    confirmYesButton.addEventListener('click', function() {
-        confirmationBox.style.display = 'none';
-        image.src = '../images/other/pokemon-bye-bye.jpg';
-        image.style.width = '200px';
-        image.style.height = '155px';   
-        messageText.textContent = 'Account is successfully deleted.';
-        messageBox.appendChild(image);
-        messageBox.appendChild(messageText);
-        messageBox.appendChild(closeButton);
-        overlay.appendChild(messageBox);
-        document.body.appendChild(overlay); // Add the overlay to the page
-        overlay.style.display = 'block'; // Show the overlay
-        closeButton.addEventListener('click', function() {
-            overlay.style.display = 'none'; // Hide the overlay
-            fetch('delete-account.php', {
-                method: 'POST',
-                headers: {
-                    "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8"
-                }
-              })
-                .then(response => response.text())
-                .then(data => {
-                  // Handle the response from the server
-                  console.log(data);
-                })
-                .catch(error => {
-                  // Handle errors
-                  console.error(error);
-                });
-            window.location.href = 'login.php'; 
-        });
-    });
-
-    confirmNoButton.addEventListener('click', function() {
-        confirmationBox.style.display = 'none';
-    });
-});
-
-
-  
