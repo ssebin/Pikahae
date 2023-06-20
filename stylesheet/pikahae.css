@@ -2775,7 +2775,7 @@ tr:nth-child(odd){
     font-size: 16px;
     font-weight: 500;
     border-radius: 40px;
-    margin-bottom: 150px;
+    /* margin-bottom: 150px; */
     line-height: 1.8;
     text-decoration: none;
     box-shadow: 0 4px 0 #ecd134;
@@ -2898,6 +2898,20 @@ tr:nth-child(odd){
 
   .reservation-time-form {
     margin-top: 20px;
+  }
+
+  #table_selection {
+    width: 100%;
+    height: auto;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border-radius: 40px;
+    border: 2px solid #ccc;
+    font-size: 16px;
+  }
+
+  #table_selection:hover {
+    border: 2px solid #555;
   }
 
   .reservation-pax-form {
@@ -4169,9 +4183,9 @@ hr {
 }
 
 button[class*=btn] {
-    width: 30px;
-    height: 30px;
-    background-color: #E1E8EE;
+    /* width: 30px;
+    height: 30px; */
+    background-color: var(--btn-color);
     border-radius: 6px;
     border: none;
     cursor: pointer;

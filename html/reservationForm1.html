@@ -34,9 +34,8 @@
 <body class="reservationForm1-body">
     <!-- header -->
     <section>
-      <nav class="header">
+      <!-- <nav class="header">
         <a href="#" class="logo"><img src="../images/logo_draft.png" alt="logo"></a>
-        <!--        <p class="cafe-name">Pikahae</p>-->
   
         <ul class="navlist" style="margin: 0; padding: 0;">
           <li><a href="homepage-customer.html">Home</a></li>
@@ -49,7 +48,23 @@
         <div class="icon">
           <a href="cart.html"><i class='bx bxs-cart'></i></a>
           <a href="view-profile.html"><i class='bx bxs-user'></i></a>
-      </nav>
+      </nav> -->
+
+      <nav class="header">
+        <a href="homepage-customer.php" class="logo"><img src="../images/logo_draft.png" alt="logo"></a>
+        <ul class="navlist">
+            <li><a href="homepage-customer.php">Home</a></li>
+            <li><a href="about_us.php">About</a></li>
+            <li><a href="reservation.php">Reservations</a></li>
+            <li><a href="menu3.php">Menu</a></li>
+            <li><a href="contact_us.php">Contact Us</a></li>
+        </ul>
+
+        <div class="icon">
+            <a href="view-profile.php"><i class='bx bxs-user'></i></a>
+        </div>
+      </nav>
+
     </section>
   
       <div class="banner">
@@ -69,34 +84,36 @@
       <div class="logo-container">
         <img src="../images/logo_draft.png" width="200">
       </div> <br><br>
-    <form action="" method="POST">
+    <form action="reservationForm1.php" method="POST"> 
+      
       <div class="container-fluid reservation-date-form">
         <label for="date">Select Date:</label> &nbsp;&nbsp;&nbsp;&nbsp;
-        <input type="date" id="date" name="date" class="custom-date-input" required>
+        <input type="date" id="date" name="reservation_date" class="custom-date-input" required>
       </div>
     
       <div class="container-fluid reservation-time-form">
         <label for="time">Select Time:</label> &nbsp;&nbsp;&nbsp;&nbsp;
-        <select id="time" name="time" required>
+        <select id="time" name="reservation_time" required>
           <option value="">--Please choose an option--</option>
-          <option value="5:00 PM">3:00PM - 4:00 PM</option>
-          <option value="6:00 PM">4:00PM - 5:00 PM</option>
-          <option value="7:00 PM">5:00PM - 6:00 PM</option>
-          <option value="8:00 PM">6:00PM - 7:00 PM</option>
-          <option value="8:00 PM">7:00PM - 8:00 PM</option>
-          <option value="8:00 PM">8:00PM - 9:00 PM</option>
+          <option value="15:00:00">3:00 PM - 4:00 PM</option>
+          <option value="16:00:00">4:00 PM - 5:00 PM</option>
+          <option value="17:00:00">5:00 PM - 6:00 PM</option>
+          <option value="18:00:00">6:00 PM - 7:00 PM</option>
+          <option value="19:00:00">7:00 PM - 8:00 PM</option>
+          <option value="20:00:00">8:00 PM - 9:00 PM</option>
         </select>
       </div>
     
       <div class="container-fluid reservation-pax-form">
         <label for="pax">Number of guests:</label> &nbsp;&nbsp;&nbsp;&nbsp;
-        <input type="number" id="pax" name="pax" min="1" max="10" required><br><br>
+        <input type="number" id="pax" name="num_guests" min="1" max="10" required><br><br>
       </div>
       <br>
     
       <!-- <input type="submit" value="Search for available tables"> -->
       <div class="text-center">
-        <a href="reservationSelectTable.html" class="btn-yellow-reservation">Search for available tables</a>
+        <!-- <a href="reservationSelectTable.html" class="btn-yellow-reservation">Search for available tables</a> -->
+        <button type="submit" class="btn-yellow-reservation">Search for available tables</button>
       </div>
 
     </form>
