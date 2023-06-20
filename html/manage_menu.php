@@ -25,17 +25,16 @@
 <!-- header -->
 <section>
     <nav class="header">
-        <a href="#" class="logo"><img src="../images/logo_draft.png" alt="logo"></a>
+        <a href="homepage-admin.php" class="logo"><img src="../images/logo_draft.png" alt="logo"></a>
         <ul class="navlist">
-            <li><a href="homepage-admin.html">Home</a></li>
-            <li><a href="cusomter_accounts.html">Accounts</a></li>
-            <li><a href="reservationDashboardAdmin.html">Reservations</a></li>
-            <li><a href="manage_menu.html">Menu</a></li>
+            <li><a href="homepage-admin.php">Home</a></li>
+            <li><a href="customer_accounts.php">Accounts</a></li>
+            <li><a href="reservationDashboardAdmin.php">Reservations</a></li>
+            <li><a href="manage_menu.php">Menu</a></li>
         </ul>
-
         <div class="icon">
-            <!-- <a href="#"><i class='bx bxs-cart'></i></a>
-            <a href="#"><i class='bx bxs-user'></i></a> -->
+            <!-- <a href="#"><i class=null></i></a>
+            <a href="#"><i class=null></i></a> -->
         </div>
     </nav>
     <div class="banner">
@@ -62,6 +61,8 @@
 </section>
 
 <?php
+include 'auth-admin.php';
+
 $hostname = 'localhost';
 $username = 'root';
 $database = 'pikahae_db';

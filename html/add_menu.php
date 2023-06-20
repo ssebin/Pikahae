@@ -22,18 +22,16 @@
 <!-- header -->
 <section>
     <nav class="header">
-        <a href="#" class="logo"><img src="../images/logo_draft.png" alt="logo"></a>
+        <a href="homepage-admin.php" class="logo"><img src="../images/logo_draft.png" alt="logo"></a>
         <ul class="navlist">
-            <li><a href="./homepage-admin.html">Home</a></li>
-            <li><a href="./about_us.html">About</a></li>
-            <li><a href="./edit-profile.html">Accounts</a></li>
-            <li><a href="./reservationDashboardAdmin.html">Reservations</a></li>
-            <li><a href="./edit_menu.html">Menu</a></li>
+            <li><a href="homepage-admin.php">Home</a></li>
+            <li><a href="customer_accounts.php">Accounts</a></li>
+            <li><a href="reservationDashboardAdmin.php">Reservations</a></li>
+            <li><a href="manage_menu.php">Menu</a></li>
         </ul>
-
         <div class="icon">
-            <!-- <a href="#"><i class='bx bxs-cart'></i></a>
-            <a href="#"><i class='bx bxs-user'></i></a> -->
+            <!-- <a href="#"><i class=null></i></a>
+            <a href="#"><i class=null></i></a> -->
         </div>
     </nav>
     <div class="banner">
@@ -49,6 +47,9 @@
             <h1 class="edit-item-header">Add Item Details</h1>
 
             <?php
+
+            include 'auth-admin.php';
+
             // Check if the form is submitted
             if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 // Retrieve the form data

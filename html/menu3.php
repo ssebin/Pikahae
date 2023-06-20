@@ -31,17 +31,15 @@
 <!-- header -->
 <section>
     <nav class="header">
-        <a href="#" class="logo"
-        ><img src="../images/logo_draft.png" alt="logo"
-            /></a>
-
+        <a href="homepage-customer.php" class="logo"><img src="../images/logo_draft.png" alt="logo"></a>
         <ul class="navlist">
-            <li><a href="homepage-customer.html">Home</a></li>
-            <li><a href="about_us.html">About</a></li>
-            <li><a href="reservation.html">Reservations</a></li>
-            <li><a href="menu.html">Menu</a></li>
-            <li><a href="contact_us.html">Contact Us</a></li>
+            <li><a href="homepage-customer.php">Home</a></li>
+            <li><a href="about_us.php">About</a></li>
+            <li><a href="reservation.php">Reservations</a></li>
+            <li><a href="menu3.php">Menu</a></li>
+            <li><a href="contact_us.php">Contact Us</a></li>
         </ul>
+
         <!-- Cart -->
         <div class="menu-head-cart" id="menu-head-cart">
             <h3 class="head-cart__heading">
@@ -61,11 +59,10 @@
                     <i class="bx bxs-cart"></i>
                     <span class="cart-item-count">0</span>
                 </button>
-                <a href="view-profile.html"><i class="bx bxs-user"></i></a>
+                <a href="view-profile.php"><i class="bx bxs-user"></i></a>
             </div>
         </div>
     </nav>
-
     <div class="banner">
         <img src="../images/menu/banner_2.png" alt="picture of pikachu with dessert" />
     </div>
@@ -100,6 +97,8 @@
     <!-- FOOD -->
     <div id="food" class="d-food">
         <?php
+
+        include 'auth.php';
 
         error_reporting(E_ALL);
         ini_set('display_errors', 1);
