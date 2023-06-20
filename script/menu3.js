@@ -237,9 +237,7 @@ document.addEventListener("DOMContentLoaded", function() {
             cartContainer.classList.add("open-cart");
             checkoutButton.style.display = "block";
         }
-
         toggleMenuItemsVisibility();
-
     }
 
     const modalElements = document.getElementsByClassName("modal");

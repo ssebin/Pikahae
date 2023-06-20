@@ -37,24 +37,29 @@ priceHeader.addEventListener('click', () => {
     ascendingPrice = !ascendingPrice;
 });
 
-function searchTable() {
-    const searchValue = searchInput.value.toLowerCase();
+function searchTable(event) {
+    if (event.type === 'click' || (event.type === 'keydown' && event.key === 'Enter')) {
+        const searchValue = searchInput.value.toLowerCase();
 
-    // loop through all rows of the table
-    for (let row of tableBody.rows) {
-        let visible = false;
-        // loop through all cells of the row
-        for (let cell of row.cells) {
-            const text = cell.textContent.toLowerCase();
-            if (text.includes(searchValue)) {
+        // loop through all rows of the table
+        for (let row of tableBody.rows) {
+            let visible = false;
+            const menuName = row.cells[1].textContent.toLowerCase(); // Get the menu name from the second cell
+            const menuCategory = row.cells[2].textContent.toLowerCase(); // Get the menu category from the third cell
+
+            // Check if the search value matches the menu name or menu category
+            if (menuName.includes(searchValue) || menuCategory.includes(searchValue)) {
                 visible = true;
-                break;
             }
+
+            // hide or show the row based on the search result
+            row.style.display = visible ? '' : 'none';
         }
-        // hide or show the row based on the search result
-        row.style.display = visible ? '' : 'none';
     }
 }
+
+searchBtn.addEventListener('click', searchTable);
+searchInput.addEventListener('keydown', searchTable);
 
 function sortTable(columnIndex, ascending) {
     const rows = Array.from(tableBody.rows);

@@ -77,7 +77,7 @@ if (isset($_GET['delete'])) {
     $sql = "DELETE FROM menu WHERE menu_id = $menu_id";
 
     if ($conn->query($sql) === TRUE) {
-        echo "Record deleted successfully";
+//        echo "Record deleted successfully";
     } else {
         echo "Error deleting record: " . $conn->error;
     }
@@ -117,7 +117,7 @@ if ($result->num_rows > 0) {
                         </button>
                     </a>
                 </div>
-                <tbody>
+                <tbody id="menu-table-body">
                 <?php
                 if (!empty($menus)) {
                     foreach ($menus as $menu) {
