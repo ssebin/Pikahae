@@ -1,4 +1,7 @@
 <?php
+
+include 'auth.php';
+
 $dbHost = 'localhost';
 $dbUsername = 'root';
 $dbPassword = '';
