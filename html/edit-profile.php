@@ -51,21 +51,18 @@
 <body>
     <!-- header -->
     <section>
-        <nav class="header">
-            <a href="#" class="logo"><img src="../images/logo_draft.png" alt="logo"></a>
-            <!--        <p class="cafe-name">Pikahae</p>-->
-    
+    <nav class="header">
+            <a href="homepage-customer.php" class="logo"><img src="../images/logo_draft.png" alt="logo"></a>
             <ul class="navlist">
-                <li><a href="homepage-customer.html">Home</a></li>
-                <li><a href="about_us.html">About</a></li>
+                <li><a href="homepage-customer.php">Home</a></li>
+                <li><a href="about_us.php">About</a></li>
                 <li><a href="reservation.html">Reservations</a></li>
-                <li><a href="menu.html">Menu</a></li>
+                <li><a href="menu3.php">Menu</a></li>
                 <li><a href="contact_us.html">Contact Us</a></li>
             </ul>
-    
+
             <div class="icon">
-                <a href="cart.html"><i class='bx bxs-cart'></i></a>
-                <a href="view-profile.html"><i class='bx bxs-user'></i></a>
+                <a href="view-profile.php"><i class='bx bxs-user'></i></a>
             </div>
         </nav>
         <div class="banner">

@@ -1,4 +1,5 @@
 <?php 
+    include 'auth-admin.php';
     $connection = new mysqli('localhost:3307', 'root', '', 'pikahae_db');
     // Check the connection
     if ($connection->connect_error) {
@@ -50,21 +51,17 @@
 <body>
     <!-- header -->
     <section>
-        <nav class="header">
-            <a href="#" class="logo"><img src="../images/logo_draft.png" alt="logo"></a>
-            <!--        <p class="cafe-name">Pikahae</p>-->
-    
+    <nav class="header">
+            <a href="homepage-admin.php" class="logo"><img src="../images/logo_draft.png" alt="logo"></a>
             <ul class="navlist">
-                <li><a href="homepage-customer.html">Home</a></li>
-                <li><a href="about_us.html">About</a></li>
-                <li><a href="reservation.html">Reservations</a></li>
-                <li><a href="menu.html">Menu</a></li>
-                <li><a href="contact_us.html">Contact Us</a></li>
+                <li><a href="homepage-admin.php">Home</a></li>
+                <li><a href="customer_accounts.php">Accounts</a></li>
+                <li><a href="reservationDashboardAdmin.php">Reservations</a></li>
+                <li><a href="manage_menu.php">Menu</a></li>
             </ul>
-    
             <div class="icon">
-                <a href="cart.html"><i class='bx bxs-cart'></i></a>
-                <a href="view-profile.html"><i class='bx bxs-user'></i></a>
+                <!-- <a href="#"><i class=null></i></a>
+                <a href="#"><i class=null></i></a> -->
             </div>
         </nav>
         <div class="banner">
