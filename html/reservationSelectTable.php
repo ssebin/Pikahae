@@ -77,7 +77,7 @@ if ($result) {
 mysqli_close($connection);
 
 // Generate an array of all table IDs
-$totalTables = range(1, 10);
+$totalTables = range(1, 16);
 
 // Get the available tables by excluding the booked tables
 $availableTables = array_diff($totalTables, $bookedTables);
@@ -197,7 +197,7 @@ $availableTables = array_diff($totalTables, $bookedTables);
         <br>
 
         <div style="text-align: center;">
-          <img src="../images/reservation/seatmap.png" width="600" height="400" alt="Seating Map">
+          <img src="../images/reservation/seatmapNew.png" width="600" height="400" alt="Seating Map">
         </div>
 
 
