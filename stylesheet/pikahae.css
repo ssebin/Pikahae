@@ -281,6 +281,34 @@ section .header{
     margin-bottom: -70px;
 }
 
+.logout-button {
+    flex:1 1 20rem;
+    font-size: 1.1rem;
+    display: block;
+    padding: 10px 25px;
+    background-color: var(--btn-color);
+    color: var(--text-color);
+    border: none;
+    border-radius: 40px;
+    font-size: 1rem;
+    line-height: 1.8;
+    margin-bottom: 40px;
+    cursor: pointer;
+    box-shadow: 0 4px 0 #ecd134;
+    justify-content: center;  
+    align-items: center;  
+    top: 50%;
+    left: 50%;  
+    height: auto;
+    text-align: center;
+    position: sticky;
+    margin-right: 10rem;
+}
+
+.logout-button:active{
+    box-shadow: none;
+}
+
 .HP-heading{
     font-size: 3rem;    
     color: var(--main-color);    
@@ -1948,6 +1976,25 @@ figcaption contenttext {
 }
 
 .profile-button:active{
+    box-shadow: none;
+    transform: translateY(4px);
+}
+
+.profile2-button {
+    display: block;
+    margin-left: 3.5rem;
+    padding: 0.625rem 1.25rem;
+    background-color: #FE6A86;
+    color: white;
+    border: none;
+    border-radius: 40px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    cursor: pointer;
+    box-shadow: 0 4px 0 #b20046;
+}
+
+.profile2-button:active{
     box-shadow: none;
     transform: translateY(4px);
 }

@@ -1,16 +1,16 @@
-const loginButton = document.getElementById('login-button')
+const loginButton = document.getElementById('login-button');
 const loginPopupCard = document.querySelector('.login-popup-card');
 const continueButton = document.querySelector('#login-continue-button');
 const overlay = document.querySelector('.overlay');
 
-loginButton.addEventListener('click', () => {
+if (typeof loginSuccess !== 'undefined' && loginSuccess) {
     overlay.style.display = 'block';
     loginPopupCard.style.display = 'block';
     loginPopupCard.style.transform = 'translate(-50%, -100%)';
     setTimeout(() => {
         loginPopupCard.style.transform = 'translate(-50%, 0)';
     }, 100);
-});
+}
 
 continueButton.addEventListener('click', () => {
     overlay.style.display = 'none';

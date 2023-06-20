@@ -1,5 +1,5 @@
 <?php
-$servername = "localhost:4306";
+$servername = "localhost";
 $username = "root";
 $password = "";
 $dbname = "pikahae_db";
@@ -9,32 +9,20 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 
 // Check connection
 if ($conn->connect_error) {
-  die(json_encode(['error' => "Connection failed: " . $conn->connect_error]));
-} 
+  die("Connection failed: " . $conn->connect_error);
+}
 
-$sql = "SELECT menu_id, menu_name, menu_price, menu_cat, menu_stock, menu_img, menu_desc FROM menu";
+// SQL to select all records from 'menu'
+$sql = "SELECT menu_name FROM menu";
 $result = $conn->query($sql);
 
-$menu_items = [];
-
-if ($result) {
-    while($row = $result->fetch_assoc()) {
-        // Check if the image data is not null
-        if ($row["menu_img"] !== null) {
-            // Convert the binary data to base64
-            $row["menu_img"] = "data:image/jpeg;base64," . base64_encode($row["menu_img"]);
-        }
-        $menu_items[] = $row;
-    }
-}
-
-$json = json_encode($menu_items, JSON_UNESCAPED_UNICODE);
-
-if ($json) {
-    echo $json;
+if ($result->num_rows > 0) {
+  // Output each row
+  while($row = $result->fetch_assoc()) {
+    echo "Menu Name: " . $row["menu_name"] . "<br>";
+  }
 } else {
-    echo json_encode(['error' => "json_encode error: " . json_last_error_msg()]);
+  echo "0 results";
 }
-
 $conn->close();
 ?>

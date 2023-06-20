@@ -1,5 +1,6 @@
 <?php 
-    $connection = new mysqli('localhost:3307', 'root', '', 'pikahae_db');
+include 'auth.php';
+    $connection = new mysqli('localhost', 'root', '', 'pikahae_db');
     // Check the connection
     if ($connection->connect_error) {
         die("Connection failed: " . $connection->connect_error);
@@ -28,6 +29,7 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Pikahae</title>
@@ -52,6 +54,7 @@
             <a href="#" class="logo"><img src="../images/logo_draft.png" alt="logo"></a>
             <!--        <p class="cafe-name">Pikahae</p>-->
     
+
             <ul class="navlist">
                 <li><a href="homepage-customer.html">Home</a></li>
                 <li><a href="about_us.html">About</a></li>
@@ -59,10 +62,10 @@
                 <li><a href="menu.html">Menu</a></li>
                 <li><a href="contact_us.html">Contact Us</a></li>
             </ul>
-    
+
             <div class="icon">
                 <a href="cart.html"><i class='bx bxs-cart'></i></a>
-                <a href="view-profile.html"><i class='bx bxs-user'></i></a>
+                <a href="view-profile.php"><i class='bx bxs-user'></i></a>
             </div>
         </nav>
         <div class="banner">
@@ -95,6 +98,9 @@
             </figcaption>
             <div class="qr-code">
                 <img src="../images/profile/QR_code_for_mobile.png" alt="QR Code" class="qr-code">
+                <form method="POST" action="logout.php">
+                    <button type="submit" class="profile2-button">Log Out</button>
+                </form>
             </div>           
         </figure>
     </div>
