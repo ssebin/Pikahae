@@ -124,8 +124,7 @@ mysqli_close($connection);
 
             <div class="icon">
                 <a href="view-profile.php"><i class='bx bxs-user'></i></a>
-            </div>
-        </nav>
+            </div></nav>
 
         <!--Different banner for each page-->
         <div class="reservation_banner">
@@ -180,7 +179,7 @@ mysqli_close($connection);
                     </div>                    
                     <div class="res-button-wrapper">
                         <!-- <a href="reservationForm1.html"><button class="res-back-btn">Back</button></a> -->
-                        <a href="./menu3.php"><button class="proceed-btn">Proceed to pre-order menu</button></a>                 
+                        <a href="./menu.html"><button class="proceed-btn">Proceed to pre-order menu</button></a>
                     </div>
                 </div>
                 
