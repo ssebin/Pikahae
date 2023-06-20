@@ -32,7 +32,7 @@ include 'auth.php';
     <!-- header -->
     <section>
     <nav class="header">
-            <a href="homepage-customer.php" class="logo"><img src="../images/logo_draft.png" alt="logo"></a>
+            <a href="./homepage-customer.php" class="logo"><img src="../images/logo_draft.png" alt="logo"></a>
             <ul class="navlist">
                 <li><a href="./homepage-customer.php">Home</a></li>
                 <li><a href="./about_us.php">About</a></li>

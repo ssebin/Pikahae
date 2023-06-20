@@ -180,7 +180,7 @@ mysqli_close($connection);
                     </div>                    
                     <div class="res-button-wrapper">
                         <!-- <a href="reservationForm1.html"><button class="res-back-btn">Back</button></a> -->
-                        <a href="menu.html"><button class="proceed-btn">Proceed to pre-order menu</button></a>                 
+                        <a href="./menu3.php"><button class="proceed-btn">Proceed to pre-order menu</button></a>                 
                     </div>
                 </div>
                 

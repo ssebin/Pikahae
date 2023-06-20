@@ -32,7 +32,7 @@ include 'auth-admin.php';
     <!-- header -->
     <section>
     <nav class="header">
-            <a href="homepage-admin.php" class="logo"><img src="../images/logo_draft.png" alt="logo"></a>
+            <a href="./homepage-admin.php" class="logo"><img src="../images/logo_draft.png" alt="logo"></a>
             <ul class="navlist">
                 <li><a href="./homepage-admin.php">Home</a></li>
                 <li><a href="./customer_accounts.php">Accounts</a></li>
@@ -253,15 +253,6 @@ include 'auth-admin.php';
                 <p>copyright &copy;2023 Pikahae. designed by <span>dino kuning</span></p>
             </div>
         </footer>
-        <script>
-            // Detect browser/tab close event
-            window.addEventListener('beforeunload', function(event) {
-                // Make an AJAX request to the logout script to destroy the session
-                var xhr = new XMLHttpRequest();
-                xhr.open('GET', 'logout.php', true);
-                xhr.send();
-            });
-        </script>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     </section>
 

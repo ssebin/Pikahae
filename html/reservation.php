@@ -72,7 +72,7 @@ include 'auth.php';
           <a href="#">Reservations</a>
         </button> -->
         <a href="reservationForm1.html" class="btn-yellow">Make a Reservation</a>
-        <a href="manage-reservations-customer.html" class="btn-yellow">History</a>
+        <a href="manage-reservations-customer.php" class="btn-yellow">History</a>
         <br> <br>
       </div>
 
