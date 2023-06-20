@@ -4444,7 +4444,7 @@ section .header{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    visibility: visible;
+    /*visibility: visible;*/
 }
 
 .empty-cart .head-cart__txt {
@@ -4512,7 +4512,7 @@ section .header{
 .head-cart__price-total {
     align-self: end;
     font-weight: 700;
-    visibility: visible;
+    /*visibility: visible;*/
 }
 
 .head-cart-checkout {
@@ -4521,7 +4521,7 @@ section .header{
     border-radius: 30px;
     color: var(--bg-color);
     border: none;
-    visibility: visible;
+    /*visibility: visible;*/
 }
 
 .head-rgt button{

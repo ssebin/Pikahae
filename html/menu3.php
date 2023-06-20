@@ -89,9 +89,9 @@
     <nav class="menu-nav">
         <ul class="menu-navlist">
             <li><a href="#">ALL</a></li>
-            <li><a href="#food-category">food</a></li>
-            <li><a href="#desserts-category">dessert</a></li>
-            <li><a href="#drinks-category">drinks</a></li>
+            <li><a href="#food-category">FOOD</a></li>
+            <li><a href="#desserts-category">DESSERT</a></li>
+            <li><a href="#drinks-category">DRINKS</a></li>
         </ul>
     </nav>
 </section>
