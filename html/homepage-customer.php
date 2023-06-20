@@ -32,19 +32,16 @@ include 'auth.php';
     <!-- header -->
     <section>
         <nav class="header">
-            <a href="homepage-customer.html" class="logo"><img src="../images/logo_draft.png" alt="logo"></a>
-            <!--        <p class="cafe-name">Pikahae</p>-->
-
+            <a href="homepage-customer.php" class="logo"><img src="../images/logo_draft.png" alt="logo"></a>
             <ul class="navlist">
-                <li><a href="homepage-customer.html">Home</a></li>
+                <li><a href="homepage-customer.php">Home</a></li>
                 <li><a href="about_us.php">About</a></li>
                 <li><a href="reservation.html">Reservations</a></li>
-                <li><a href="menu.html">Menu</a></li>
+                <li><a href="menu3.php">Menu</a></li>
                 <li><a href="contact_us.html">Contact Us</a></li>
             </ul>
 
             <div class="icon">
-                <a href="cart.html"><i class='bx bxs-cart'></i></a>
                 <a href="view-profile.php"><i class='bx bxs-user'></i></a>
             </div>
         </nav>
@@ -106,7 +103,7 @@ include 'auth.php';
             <p class="HP-desc">A Pokémon Cafe to meet and hang out with your pika-friends.<br>
                 Try our exclusive Pokémon themed menu at the heart of KL.<br>
                 Make a reservation to spend meaningful time with your loved ones!<br></p>
-            <a href="about_us.html" class="btn-yellow">About Us</a>
+            <a href="about_us.php" class="btn-yellow">About Us</a>
         </div>
         <!--Menu-->
         <div class="HP-menu">
@@ -273,7 +270,7 @@ include 'auth.php';
                 </div>
             </div>
 
-            <a href="menu.html" class="btn-pink">Explore Menu</a>
+            <a href="menu3.php" class="btn-pink">Explore Menu</a>
         </div>
 
         <!--Mid pic-->

@@ -32,16 +32,13 @@ include 'auth-admin.php';
     <!-- header -->
     <section>
         <nav class="header">
-            <a href="homepage-admin.html" class="logo"><img src="../images/logo_draft.png" alt="logo"></a>
-            <!--        <p class="cafe-name">Pikahae</p>-->
-
+            <a href="homepage-admin.php" class="logo"><img src="../images/logo_draft.png" alt="logo"></a>
             <ul class="navlist">
-                <li><a href="homepage-admin.html">Home</a></li>
-                <li><a href="cusomter_accounts.html">Accounts</a></li>
-                <li><a href="reservationDashboardAdmin.html">Reservations</a></li>
-                <li><a href="manage_menu.html">Menu</a></li>
+                <li><a href="homepage-admin.php">Home</a></li>
+                <li><a href="customer_accounts.php">Accounts</a></li>
+                <li><a href="reservationDashboardAdmin.php">Reservations</a></li>
+                <li><a href="manage_menu.php">Menu</a></li>
             </ul>
-
             <div class="icon">
                 <!-- <a href="#"><i class=null></i></a>
                 <a href="#"><i class=null></i></a> -->
@@ -127,7 +124,7 @@ include 'auth-admin.php';
                             <i class="item-desc">View list of users<br>Update user information<br>Delete an account</i>
                             <br>
                         </div>
-                        <div class="po-btn-container"><a href="cusomter_accounts.html" class="po-btn">Manage</a></div>
+                        <div class="po-btn-container"><a href="customer_accounts.php" class="po-btn">Manage</a></div>
                     </div>
 
                     <!-- CARD 2 -->
@@ -139,7 +136,7 @@ include 'auth-admin.php';
                                 menu items</i>
                             <br>
                         </div>
-                        <div class="po-btn-container"><a href="reservationDashboardAdmin.html" class="po-btn">Manage</a></div>
+                        <div class="po-btn-container"><a href="reservationDashboardAdmin.php" class="po-btn">Manage</a></div>
                     </div>
 
                     <!-- CARD 3 -->
@@ -150,7 +147,7 @@ include 'auth-admin.php';
                             <i class="item-desc">View an item<br>Add or delete an item<br>Edit an item</i>
                             <br>
                         </div>
-                        <div class="po-btn-container"><a href="manage_menu.html" class="po-btn">Manage</a></div>
+                        <div class="po-btn-container"><a href="manage_menu.php" class="po-btn">Manage</a></div>
                     </div>
                 </div>
             </section>
