@@ -1816,7 +1816,8 @@ hr {
 
 .profile-picture {
     border-radius: 50%;
-    width: 12.5rem;
+    width: 11.25rem;
+    height: 11.25rem
 }
 
 .edit-profile-page {
@@ -1865,11 +1866,27 @@ figcaption {
     margin: 3.125rem;
 }
 
-figcaption #email{
+#email{
+    border-radius: 40px;
+    height: 40px;
+    width: 255px;
+    padding-left: 16px;
+    margin-bottom: 20px;
+    text-align: left;
     border: white;
     box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
 }
 
+#favorite-pokemon{
+    border-radius: 40px;
+    height: 40px;
+    width: 255px;
+    padding-left: 16px;
+    margin-bottom: 20px;
+    text-align: left;
+    border: white;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+}
 .upload-wrapper .file-name {
     font-size: 16px;
     display: inline-block;
