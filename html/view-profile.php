@@ -6,7 +6,8 @@ include 'auth.php';
         die("Connection failed: " . $connection->connect_error);
     } else {
     }
-    $query = "SELECT user_fname, user_lname, user_email, user_points, user_pokemon, user_bday, user_img FROM user WHERE user_id = 1";
+    $user_id = $_SESSION['user_id'];
+    $query = "SELECT user_fname, user_lname, user_email, user_points, user_pokemon, user_bday, user_img FROM user WHERE user_id = $user_id";
     $stmt = $connection->prepare($query);
     $stmt->execute();
     $result = $stmt->get_result();
