@@ -114,7 +114,12 @@
                         </div>
                         <div class="button-wrapper">
                             <button class="delete-account" name="delete-account" onclick="return confirm('Are you sure you want to delete your account? This action cannot be undone.')" >Delete Account</button>
-                            <button class="cancel-edit" name="cancel-edit">Cancel</button>
+                            <button class="cancel-edit" name="cancel-edit" onclick="goBack()">Cancel</button>
+                            <script>
+                                function goBack() {
+                                    window.location.href = 'view-profile.php';
+                                }
+                            </script>
                             <span><button class="save-edit" name="save-btn" type="submit">Save</button></span>
                             <script src="../script/editProfile.js"></script>
                         </div>
