@@ -43,12 +43,13 @@
 
     <div class="sub-header-wrapper">
         <p>MANAGE MENU</p>
-        </div>
         <div class="input-box">
             <i class="uil uil-search"></i>
             <input type="text" id="menu-search-input" placeholder="Search menu" />
             <button class="button" id="menu-search-button"><i class="fa-solid fa-magnifying-glass"></i></button>
         </div>
+        </div>
+
     </div>
 
     <hr>
