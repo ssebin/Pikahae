@@ -53,7 +53,7 @@
                 <button class="button" id="customer-search-button"><i class="fa-solid fa-magnifying-glass"></i></button>
             </div>
         </div>
-
+        <!-- test -->
         <hr>
     </section>
     <div class="admin-view-body">
@@ -77,47 +77,62 @@
                 <div class="table-body">
                     <tbody id="customer-table-body">
                         <?php
-                        $conn = new mysqli('localhost:3307', 'root', '', 'pikahae_db');
+                        $conn = new mysqli('localhost', 'root', '', 'pikahae_db');
 
-                        if ($conn->connect_error) {
-                            die("Connection failed: " . $conn->connect_error);
+                if ($conn->connect_error) {
+                    die("Connection failed: " . $conn->connect_error);
+                }
+
+                if (isset($_GET['delete_id'])) {
+                    $delete_id = $_GET['delete_id'];
+                    
+                    // Confirmation dialog for delete action
+                    echo "<script>
+                        function confirmDelete() {
+                            return confirm('Are you sure you want to delete this record?');
                         }
+                    </script>";
+                    
+                    $delete_sql = "DELETE FROM user WHERE user_id = $delete_id";
+                    $conn->query($delete_sql);
+                }
 
-                        $sql = "SELECT user_id, user_fname, user_lname, user_email, user_phone, user_bday, user_pokemon FROM user";
-                        $result = $conn->query($sql);
-                        
-                        // Output the table rows dynamically
-                        if ($result->num_rows > 0) {
-                            while ($row = $result->fetch_assoc()) {
-                                $user_id = $row["user_id"];
-                                $user_fname = $row["user_fname"];
-                                $user_lname = $row["user_lname"];
-                                $user_email = $row["user_email"];
-                                $user_phone = $row["user_phone"];
-                                $user_bday = $row["user_bday"];
-                                $user_pokemon = $row["user_pokemon"];
+                $sql = "SELECT user_id, user_fname, user_lname, user_email, user_phone, user_bday, user_pokemon FROM user";
+                $result = $conn->query($sql);
 
-                                echo "<tr>";
-                                echo "<td>$user_id</td>";
-                                echo "<td>$user_fname $user_lname</td>";
-                                echo "<td>$user_phone</td>";
-                                echo "<td>$user_email</td>";
-                                echo "<td>$user_bday</td>";
-                                echo "<td>$user_pokemon</td>";
-                                echo "<td>";
-                                echo "<a href='edit-profile-admin.php?user_id=$user_id'><button type='button'><img src='../images/manage/edit.png' alt='Edit'></button></a>";
-                                echo "<button type='button'><img src='../images/manage/delete.png' alt='Delete'></button>";
-                                echo "</td>";
-                                echo "</tr>";
-                            }
-                        } else {
-                            echo "<tr><td colspan='7'>No results found</td></tr>";
-                        }
-                        ?>
-                    </tbody>
-                </div>
-            </table>
+                // Output the table rows dynamically
+                if ($result->num_rows > 0) {
+                    while ($row = $result->fetch_assoc()) {
+                        $user_id = $row["user_id"];
+                        $user_fname = $row["user_fname"];
+                        $user_lname = $row["user_lname"];
+                        $user_email = $row["user_email"];
+                        $user_phone = $row["user_phone"];
+                        $user_bday = $row["user_bday"];
+                        $user_pokemon = $row["user_pokemon"];
+
+                        echo "<tr>";
+                        echo "<td>$user_id</td>";
+                        echo "<td>$user_fname $user_lname</td>";
+                        echo "<td>$user_phone</td>";
+                        echo "<td>$user_email</td>";
+                        echo "<td>$user_bday</td>";
+                        echo "<td>$user_pokemon</td>";
+                        echo "<td>";
+                        echo "<a href='edit-profile-admin.php?user_id=$user_id'><button type='button'><img src='../images/manage/edit.png' alt='Edit'></button></a>";
+                        echo "<a href='./customer_accounts.php?delete_id=$user_id' onclick='return confirmDelete()'><button type='button'><img src='../images/manage/delete.png' alt='Delete'></button></a>";
+                        echo "</td>";
+                        echo "</tr>";
+                    }
+                } else {
+                    echo "<tr><td colspan='7'>No results found</td></tr>";
+                }
+                ?>
+            </tbody>
         </div>
+    </table>
+</div>
+
         <div class="overlay"></div>
             <div class="cancel-popup-card">
                 <div class="cancel-popup-text">
