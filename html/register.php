@@ -44,7 +44,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // ...
 
     // Establish a connection to the database
-    $host = "localhost";
+    $host = "localhost:3307";
     $username = "root";
     $password = "";
     $database = "pikahae_db";

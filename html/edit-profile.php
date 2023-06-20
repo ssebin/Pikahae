@@ -1,11 +1,13 @@
 <?php 
+    include 'auth.php';
+    $user_id = $_SESSION['user_id'];
     $connection = new mysqli('localhost:3307', 'root', '', 'pikahae_db');
     // Check the connection
     if ($connection->connect_error) {
         die("Connection failed: " . $connection->connect_error);
     } else {
     }
-    $query = "SELECT user_fname, user_lname, user_email, user_points, user_pokemon, user_bday, user_img FROM user WHERE user_id = 1";
+    $query = "SELECT user_fname, user_lname, user_email, user_points, user_pokemon, user_bday, user_img FROM user WHERE user_id = $user_id";
     $stmt = $connection->prepare($query);
     $stmt->execute();
     $result = $stmt->get_result();
@@ -77,7 +79,7 @@
     <div class="edit-profile-page">
         <div class="background-image">
                 <figure class="edit-profile-figure">
-                <form class="edit-item-form" method="POST" enctype="multipart/form-data" action="update-profile.php">
+                <form class="edit-item-form" method="POST" enctype="multipart/form-data" action="update-profile.php?user_id=<?php echo $user_id; ?>">
                     <div>
                         <div class="edit-wrapper">
                             <h3>Edit Profile</h3>
@@ -113,7 +115,7 @@
                                 </div>
                         </div>
                         <div class="button-wrapper">
-                            <button class="delete-account" name="delete-account" onclick="return confirm('Are you sure you want to delete your account? This action cannot be undone.')" >Delete Account</button>
+                            <button class="delete-account" name="delete-account" type="submit" onclick="return confirm('Are you sure you want to delete your account? This action cannot be undone.')" >Delete Account</button>
                             <button class="cancel-edit" name="cancel-edit" onclick="goBack()">Cancel</button>
                             <script>
                                 function goBack() {

@@ -1,6 +1,6 @@
 <?php 
 include 'auth.php';
-    $connection = new mysqli('localhost', 'root', '', 'pikahae_db');
+    $connection = new mysqli('localhost:3307', 'root', '', 'pikahae_db');
     // Check the connection
     if ($connection->connect_error) {
         die("Connection failed: " . $connection->connect_error);
@@ -89,7 +89,7 @@ include 'auth.php';
                 <h2>current points: <span id="user_points"><?php echo $point?></span><br></h2>
                 <br>
                 <titletext>E-mail:<br></titletext>
-                <contenttext id="user_email"><?php echo $email?></contenttext><br>
+                <contenttext id="user_emails"><?php echo $email?></contenttext><br>
                 <br>
                 <titletext>Birthday:<br></titletext>
                 <contenttext id="user_birthday"><?php echo $birthday?></contenttext><br>

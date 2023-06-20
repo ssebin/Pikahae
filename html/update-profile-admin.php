@@ -1,7 +1,7 @@
 <?php
     $user_id = $_GET['user_id'];
     if (isset($_POST['save-btn'])) {
-        $email = $_POST['email'];
+        $email = $_POST['user_email'];
         $birthday = $_POST['birthday'];
         $favorite_pokemon = $_POST['favorite_pokemon'];
         $connection = new mysqli('localhost:3307', 'root', '', 'pikahae_db');
