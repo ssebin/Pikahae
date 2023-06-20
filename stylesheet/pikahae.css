@@ -16,7 +16,7 @@
     --main-color-light: #faacba;
     --main-color-very-light: #ffd1d8;
     --header-color: #FFF6CC;
-    --btn-color: #FFDD13;
+    --btn-color: #efefef;
     --btn-hover-color: #ecd134;
     --btn-pink-hover-color: #f63055;
     --brown-text: #9B693E;
@@ -4776,7 +4776,14 @@ Product section styling
 }
 
 .plus-btn, .minus-btn{
-    box-shadow: 0 4px 0 #b9a2a2;
+    padding: 10px;
+    background: var(--main-color);
+    color: var(--bg-color);
+    font-size: 10px;
+    border-radius: 5px;
+    box-shadow: 0 4px 0 #aa9c9f;
+    /*border-radius: 5px;
+    box-shadow: 0 4px 0 #b9a2a2;*/
 }
 
 button:active{
