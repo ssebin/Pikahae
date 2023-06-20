@@ -43,10 +43,10 @@ if ($conn->connect_error) {
     <nav class="header">
             <a href="homepage-admin.php" class="logo"><img src="../images/logo_draft.png" alt="logo"></a>
             <ul class="navlist">
-                <li><a href="homepage-admin.php">Home</a></li>
-                <li><a href="customer_accounts.php">Accounts</a></li>
-                <li><a href="reservationDashboardAdmin.php">Reservations</a></li>
-                <li><a href="manage_menu.php">Menu</a></li>
+                <li><a href="./homepage-admin.php">Home</a></li>
+                <li><a href="./customer_accounts.php">Accounts</a></li>
+                <li><a href="./reservationDashboardAdmin.php">Reservations</a></li>
+                <li><a href="./manage_menu.php">Menu</a></li>
             </ul>
             <div class="icon">
                 <!-- <a href="#"><i class=null></i></a>

@@ -47,10 +47,10 @@ if ($conn->connect_error) {
     <nav class="header">
       <a href="homepage-admin.php" class="logo"><img src="../images/logo_draft.png" alt="logo"></a>
       <ul class="navlist">
-        <li><a href="homepage-admin.php">Home</a></li>
-        <li><a href="customer_accounts.php">Accounts</a></li>
-        <li><a href="reservationDashboardAdmin.php">Reservations</a></li>
-        <li><a href="manage_menu.php">Menu</a></li>
+        <li><a href="./homepage-admin.php">Home</a></li>
+        <li><a href="./customer_accounts.php">Accounts</a></li>
+        <li><a href="./reservationDashboardAdmin.php">Reservations</a></li>
+        <li><a href="./manage_menu.php">Menu</a></li>
       </ul>
             <div class="icon">
                 <!-- <a href="#"><i class=null></i></a>
@@ -70,7 +70,7 @@ if ($conn->connect_error) {
               style="color: black;">Reservation</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" href="reservationTableDashboardAdmin.html">Tables</a>
+            <a class="nav-link active" href="reservationTableDashboardAdmin.php">Tables</a>
           </li>
         </ul>
       </div>
