@@ -1,5 +1,5 @@
 <?php
-session_start();
+//session_start();
 include 'auth.php';
 $user_id = $_SESSION['user_id'];
 
@@ -268,10 +268,11 @@ $availableTables = array_diff($totalTables, $bookedTables);
         $reservationTime = $_SESSION['reservation_time'];
         $numGuests = $_SESSION['num_guests'];
         $tableSelected = $_POST['table_selection'];
+        $r_id = $_SESSION['user_id'];
 
 
         //SQL STATEMENT TO INSERT TO TDB
-        $sqlToDB = "INSERT INTO user_order (order_date, order_time, order_pax, order_status, admin_id, user_id, table_id) VALUES (?, ?, ?, 'Pending', NULL, 3, ?)";
+        $sqlToDB = "INSERT INTO user_order (order_date, order_time, order_pax, order_status, admin_id, user_id, table_id) VALUES (?, ?, ?, 'Pending', NULL, $r_id, ?)";
 
         // Execute the SQL statement to insert the reservation details
         $stmt = mysqli_prepare($connection, $sqlToDB);
@@ -280,26 +281,29 @@ $availableTables = array_diff($totalTables, $bookedTables);
         $stmt->execute();
         
 
-        //DEGUGGUNG THE DATABASE TO CHECK MASUK KE TAK
-        // Execute the INSERT query
-        // $result = $mysqli->query($sqlToDB);
+        // //DEGUGGUNG THE DATABASE TO CHECK MASUK KE TAK
+        // $result = mysqli_stmt_execute($stmt);
 
-        // // Check if the query was successful
-        // if ($result) {
-        //     // Get the number of affected rows
-        //     $numRowsAffected = $mysqli->affected_rows;
-            
-        //     if ($numRowsAffected > 0) {
-        //         echo "Data inserted successfully into the database.";
-        //     } else {
-        //         echo "Data insertion failed.";
-        //     }
-        // } else {
-        //     echo "Error executing the query: " . $mysqli->error;
+        // // Check if the execution failed
+        // if (!$result) {
+        //     die("Statement execution failed: " . mysqli_stmt_error($stmt));
         // }
+
+        // // Get the order ID of the inserted row
+        // $orderId = mysqli_insert_id($connection);
+
+        // // Close the statement and database connection
+        // mysqli_stmt_close($stmt);
+        // mysqli_close($connection);
+
+        // // Print the inserted data and order ID for debugging
+        // echo "Data inserted successfully. Order ID: " . $orderId;
+
+                
+        
 
         // Close the statement and database connection
         $stmt->close();
-        $mysqli->close();
+        //$mysqli->close();
 
         ?>

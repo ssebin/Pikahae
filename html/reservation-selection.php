@@ -1,5 +1,5 @@
 <?php 
-session_start();
+//session_start();
 include 'auth.php';
 $user_id = $_SESSION['user_id'];
 
@@ -41,19 +41,6 @@ $orderDate = $row['order_date'];
 $orderTime = $row['order_time'];
 $orderPax = $row['order_pax'];
 $tableId = $row['table_id'];
-
-mysqli_free_result($result);
-
-// Retrieve the order items for the given order ID
-$query = "SELECT oi.order_qty, m.menu_name
-          FROM order_item oi
-          INNER JOIN menu m ON oi.menu_id = m.menu_id
-          WHERE oi.order_id = '$order_id'";
-$result = mysqli_query($connection, $query);
-if (!$result) {
-    die('Query failed: ' . mysqli_error($conn));
-}
-
 
 mysqli_free_result($result);
 
@@ -180,7 +167,7 @@ mysqli_close($connection);
                     </div>                    
                     <div class="res-button-wrapper">
                         <!-- <a href="reservationForm1.html"><button class="res-back-btn">Back</button></a> -->
-                        <a href="./menu3.php"><button class="proceed-btn">Proceed to pre-order menu</button></a>                 
+                        <a href="menu3.php"><button class="proceed-btn">Proceed to pre-order menu</button></a>                 
                     </div>
                 </div>
                 
