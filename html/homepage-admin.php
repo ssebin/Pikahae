@@ -1,5 +1,5 @@
 <?php
-include 'auth.php';
+include 'auth-admin.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
