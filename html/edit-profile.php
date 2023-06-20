@@ -95,7 +95,7 @@
                                         <h2>current points: <span id="user_points"><?php echo $point?></span><br></h2>
                                         <br>
                                         <titletext>E-mail:<br></titletext>
-                                        <input type="email" id="email" name="email" value="<?php echo $email ?>">
+                                        <input type="email" id="user_email" name="user_email" value="<?php echo $email ?>">
                                         <br>
                                         <titletext>Birthday:<br></titletext>
                                         <input type="date" id="birthday" name="birthday" value=<?php echo $birthday ?>>
