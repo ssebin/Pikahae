@@ -1,10 +1,14 @@
 <?php
-    $conn = new mysqli('localhost', 'root', '', 'pikahae_db');
+include 'auth.php';
+$hostname = 'localhost';
+$username = 'root';
+$database = 'pikahae_db';
 
-    if ($conn->connect_error) {
-        die("Connection failed: " . $conn->connect_error);
-    }
+$conn = new mysqli($hostname, $username, '', $database);
 
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -43,21 +47,18 @@
 <body class="admin-view">
     <!-- header -->
     <section>
-        <nav class="header">
-            <a href="#" class="logo"><img src="../images/logo_draft.png" alt="logo"></a>
-            <!--        <p class="cafe-name">Pikahae</p>-->
-
-            <ul class="navlist" style="margin: 0; padding: 0;">
-                <li><a href="homepage-customer.html">Home</a></li>
-                <li><a href="about_us.html">About</a></li>
-                <li><a href="reservation.html">Reservations</a></li>
-                <li><a href="menu.html">Menu</a></li>
-                <li><a href="contact_us.html">Contact Us</a></li>
+    <nav class="header">
+            <a href="homepage-customer.php" class="logo"><img src="../images/logo_draft.png" alt="logo"></a>
+            <ul class="navlist">
+                <li><a href="homepage-customer.php">Home</a></li>
+                <li><a href="about_us.php">About</a></li>
+                <li><a href="reservation.php">Reservations</a></li>
+                <li><a href="menu3.php">Menu</a></li>
+                <li><a href="contact_us.php">Contact Us</a></li>
             </ul>
 
             <div class="icon">
-                <a href="cart.html"><i class='bx bxs-cart'></i></a>
-                <a href="view-profile.html"><i class='bx bxs-user'></i></a>
+                <a href="view-profile.php"><i class='bx bxs-user'></i></a>
             </div>
         </nav>
         <div class="banner">
@@ -92,7 +93,7 @@
                     <div class="table-body">
                         <tbody>
                             <?php
-                            $userID = 3;
+                            $userID = $_SESSION['user_id'];
 
                             $userOrdersQuery = "SELECT * FROM user_order WHERE user_id = $userID";
                             $userOrdersResult = mysqli_query($conn, $userOrdersQuery);

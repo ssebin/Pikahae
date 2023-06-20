@@ -1,15 +1,15 @@
-<<<<<<< HEAD
 <?php
-    $conn = new mysqli('localhost', 'root', '', 'pikahae_db');
+include 'auth-admin.php';
+$hostname = 'localhost';
+$username = 'root';
+$database = 'pikahae_db';
 
-    if ($conn->connect_error) {
-        die("Connection failed: " . $conn->connect_error);
-    }
+$conn = new mysqli($hostname, $username, '', $database);
 
-    ?>
-
-=======
->>>>>>> 70909e4 (heheheheheheh (normal))
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -48,16 +48,13 @@
     <!-- header -->
     <section>
         <nav class="header">
-            <a href="#" class="logo"><img src="../images/logo_draft.png" alt="logo"></a>
-            <!--        <p class="cafe-name">Pikahae</p>-->
-
-            <ul class="navlist" style="margin: 0; padding: 0;">
-                <li><a href="homepage-admin.html">Home</a></li>
-                <li><a href="cusomter_accounts.html">Accounts</a></li>
-                <li><a href="reservationDashboardAdmin.html">Reservations</a></li>
-                <li><a href="manage_menu.html">Menu</a></li>
+            <a href="homepage-admin.php" class="logo"><img src="../images/logo_draft.png" alt="logo"></a>
+            <ul class="navlist">
+                <li><a href="homepage-admin.php">Home</a></li>
+                <li><a href="customer_accounts.php">Accounts</a></li>
+                <li><a href="reservationDashboardAdmin.php">Reservations</a></li>
+                <li><a href="manage_menu.php">Menu</a></li>
             </ul>
-
             <div class="icon">
                 <!-- <a href="#"><i class=null></i></a>
                 <a href="#"><i class=null></i></a> -->

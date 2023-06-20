@@ -1754,7 +1754,8 @@ section .menu-navlist{
 }
 
 .form-body button:hover,
-#admin-login-button button:hover{
+#admin-login-button button:hover,
+#admin-table-reservation-dashboard-submit:hover{
     background-color: #E66079;
     transition: 0.5s;
 }
@@ -5034,6 +5035,18 @@ button:active{
     .head-rgt {
         gap: 1.5rem;
     }
+
+}
+
+#admin-table-reservation-dashboard-submit{
+    height: 2.5rem;
+    width: 5rem;
+    border-radius: 30px;
+    border: none;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    color: white;
+    background-color: var(--main-color);
 
 }
 
