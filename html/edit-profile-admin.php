@@ -1,6 +1,6 @@
 <?php 
     include 'auth-admin.php';
-    $connection = new mysqli('localhost:3307', 'root', '', 'pikahae_db');
+    $connection = new mysqli('localhost', 'root', '', 'pikahae_db');
     // Check the connection
     if ($connection->connect_error) {
         die("Connection failed: " . $connection->connect_error);
