@@ -4,7 +4,6 @@ include 'auth.php';
 $user_id = $_SESSION['user_id'];
 
 
-
 // Step 1: Establish database connection (replace with your credentials)
 $host = "localhost"; // Database host
 $username = "root"; // Database username
