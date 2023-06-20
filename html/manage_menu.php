@@ -128,8 +128,12 @@ if ($result->num_rows > 0) {
                         $menu_cat = $menu["menu_cat"];
                         $menu_stock = $menu["menu_stock"];
                         $menu_desc = $menu["menu_desc"];
+                        // Make sure $menu_img is defined before using it
+                        $menu_img = isset($menu["menu_img"]) ? $menu["menu_img"] : '';
+
                         $menu_img_base64 = base64_encode($menu_img);
                         $menu_img_base64_urlencoded = urlencode($menu_img_base64);
+
 
                         echo "<tr>";
                         echo "<td>$menu_id</td>";
@@ -139,7 +143,7 @@ if ($result->num_rows > 0) {
                         echo "<td>$menu_stock</td>";
                         echo "<td>$menu_desc</td>";
                         echo "<td>";
-                        echo "<a href='./edit_menu.php?menu_id=$menu_id&menu_name=$menu_name&menu_price=$menu_price&menu_cat=$menu_cat&menu_stock=$menu_stock&menu_desc=$menu_desc&menu_img=$menu_img_base64_urlencoded'><button type='button'><img src='../images/manage/edit.png' alt='Edit'></button></a>";
+                        echo "<a href='./edit_menu.php?menu_id=$menu_id'><button type='button'><img src='../images/manage/edit.png' alt='Edit'></button></a>";
                         echo "<a href='./manage_menu.php?delete=$menu_id'><button type='button'><img src='../images/manage/delete.png' alt='Delete'></button></a>";
                         echo "</td>";
                         echo "</tr>";

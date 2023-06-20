@@ -114,72 +114,79 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <h1 class="edit-item-header">Edit Item Details</h1>
 
             <form class="edit-item-form" method="POST" action="" enctype="multipart/form-data">
-                <div class="edit-item-form-item">
-                    <label for="item-category">Category:</label><br>
-                    <select id="item-category" name="item-category">
+                <?php
+                $menu_id = $_GET['menu_id'];
+
+                $sql = "SELECT * FROM menu WHERE menu_id = $menu_id";
+                $result = $conn->query($sql);
+
+                if ($result->num_rows > 0) {
+                    $row = $result->fetch_assoc();
+                    $menu_cat = $row['menu_cat'];
+                    $menu_name = $row['menu_name'];
+                    $menu_price = $row['menu_price'];
+                    $menu_desc = $row['menu_desc'];
+                    $menu_img = $row['menu_img'];
+                    ?>
+                    <div class="edit-item-form-item">
+                        <label for="item-category">Category:</label><br>
+                        <select id="item-category" name="item-category">
+                            <?php
+                            $categories = ['food', 'dessert', 'drink'];
+                            foreach ($categories as $category) {
+                                $selected = ($category == $menu_cat) ? 'selected' : '';
+                                echo "<option value='$category' $selected>$category</option>";
+                            }
+                            ?>
+                        </select><br>
+                    </div>
+
+                    <div class="edit-item-form-item">
+                        <label for="item-name">Item name:</label><br>
+                        <input id="item-name" type="text" placeholder="Enter item name" name="item-name" value="<?php echo $menu_name; ?>"><br>
+                    </div>
+
+                    <div class="edit-item-form-item">
+                        <label for="item-price">Item price:</label><br>
+                        <input type="text" id="item-price" name="item-price" pattern="[0-9]+(\.[0-9]{2})?" placeholder="RM 0.00" required oninput="formatCurrency(this)" value="<?php echo $menu_price; ?>"><br>
+                    </div>
+
+                    <div class="edit-item-form-item">
+                        <label for="item-desc">Item description:</label><br>
+                        <textarea id="item-desc" rows="4" cols="100" placeholder="Enter item description" name="item-desc"><?php echo $menu_desc; ?></textarea>
+                    </div>
+
+                    <div class="edit-item-form-item">
+                        <label for="item-photo">Item photo:</label><br>
                         <?php
-                        $menu_cat = $_GET['menu_cat'];
-                        $categories = ['food', 'dessert', 'drink'];
-                        foreach ($categories as $category) {
-                            $selected = ($category == $menu_cat) ? 'selected' : '';
-                            echo "<option value='$category' $selected>$category</option>";
-                        }
-                        ?>
-                    </select><br>
-                </div>
-
-                <div class="edit-item-form-item">
-                    <label for="item-name">Item name:</label><br>
-                    <input id="item-name" type="text" placeholder="Enter item name" name="item-name" value="<?php echo $_GET['menu_name']; ?>"><br>
-                </div>
-
-                <div class="edit-item-form-item">
-                    <label for="item-price">Item price:</label><br>
-                    <input type="text" id="item-price" name="item-price" pattern="[0-9]+(\.[0-9]{2})?" placeholder="RM 0.00" required oninput="formatCurrency(this)" value="<?php echo $_GET['menu_price']; ?>"><br>
-                </div>
-
-                <div class="edit-item-form-item">
-                    <label for="item-desc">Item description:</label><br>
-                    <textarea id="item-desc" rows="4" cols="100" placeholder="Enter item description" name="item-desc"><?php echo $_GET['menu_desc']; ?></textarea>
-                </div>
-
-                <div class="edit-item-form-item">
-                    <label for="item-photo">Item photo:</label><br>
-                    <?php
-                    $menu_id = $_GET['menu_id'];
-
-                    $sql = "SELECT menu_img FROM menu WHERE menu_id = $menu_id";
-                    $result = $conn->query($sql);
-
-                    if ($result->num_rows > 0) {
-                        $row = $result->fetch_assoc();
-                        $menu_img = $row['menu_img'];
-
                         // Display the image
                         if ($menu_img) {
                             echo "<img class='menu-image' src='data:image/jpeg;base64," . base64_encode($menu_img) . "' alt='Image Preview'><br>";
                         } else {
                             echo "No image available";
                         }
-                    } else {
-                        echo "Menu item not found";
-                    }
-                    ?>
-                    <input type="file" id="item-photo" name="item-photo" accept="image/*"><br>
-                </div>
+                        ?>
+                        <input type="file" id="item-photo" name="item-photo" accept="image/*"><br>
+                    </div>
 
-                <div class="edit-item-form-btn">
-                    <button id="cancel-edit-btn" type="button">
-                        <a href="manage_menu.php">Cancel</a>
-                    </button>
-                    <span>
-                        <button id="submit-edit-btn" type="submit" name="save-confirm">Save</button>
-                    </span>
-                </div>
+                    <div class="edit-item-form-btn">
+                        <button id="cancel-edit-btn" type="button">
+                            <a href="manage_menu.php">Cancel</a>
+                        </button>
+                        <span>
+                    <button id="submit-edit-btn" type="submit" name="save-confirm">Save</button>
+                </span>
+                    </div>
 
-                <input type="hidden" name="menu_id" value="<?php echo $_GET['menu_id']; ?>">
+                    <input type="hidden" name="menu_id" value="<?php echo $menu_id; ?>">
+                    <?php
+                } else {
+                    echo "Menu item not found";
+                }
+                ?>
             </form>
         </div>
+    </div>
     </div>
 </section>
 <footer>
