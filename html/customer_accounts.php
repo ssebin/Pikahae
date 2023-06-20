@@ -132,7 +132,7 @@ if ($conn->connect_error) {
                         echo "<td>$user_pokemon</td>";
                         echo "<td>";
                         echo "<a href='edit-profile-admin.php?user_id=$user_id'><button type='button'><img src='../images/manage/edit.png' alt='Edit'></button></a>";
-                        echo "<a href='./customer_accounts.php?delete_id=$user_id' onclick='return confirmDelete()'><button type='button'><img src='../images/manage/delete.png' alt='Delete'></button></a>";
+                        echo "<a href='customer_accounts.php?delete_id=$user_id' onclick='return confirmDelete()'><button type='button'><img src='../images/manage/delete.png' alt='Delete'></button></a>";
                         echo "</td>";
                         echo "</tr>";
                     }
