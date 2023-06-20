@@ -24,20 +24,20 @@ include 'auth.php';
 <body>
   <!-- header -->
   <section>
-    <nav class="header">
-      <a href="homepage-customer.php" class="logo"><img src="../images/logo_draft.png" alt="logo"></a>
-      <ul class="navlist">
-        <li><a href="homepage-customer.php">Home</a></li>
-        <li><a href="about_us.php">About</a></li>
-        <li><a href="reservation.html">Reservations</a></li>
-        <li><a href="menu3.php">Menu</a></li>
-        <li><a href="contact_us.html">Contact Us</a></li>
-      </ul>
+  <nav class="header">
+            <a href="homepage-customer.php" class="logo"><img src="../images/logo_draft.png" alt="logo"></a>
+            <ul class="navlist">
+                <li><a href="homepage-customer.php">Home</a></li>
+                <li><a href="about_us.php">About</a></li>
+                <li><a href="reservation.php">Reservations</a></li>
+                <li><a href="menu3.php">Menu</a></li>
+                <li><a href="contact_us.php">Contact Us</a></li>
+            </ul>
 
-      <div class="icon">
-        <a href="view-profile.php"><i class='bx bxs-user'></i></a>
-      </div>
-    </nav>
+            <div class="icon">
+                <a href="view-profile.php"><i class='bx bxs-user'></i></a>
+            </div>
+        </nav>
     <div class="banner">
       <img src="../images/other/pokemon_bg.png" alt="picture of pikachu with dessert">
       <div class="sub-header-wrapper">
