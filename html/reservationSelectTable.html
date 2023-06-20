@@ -52,19 +52,19 @@
     </nav> -->
 
     <nav class="header">
-      <a href="homepage-customer.php" class="logo"><img src="../images/logo_draft.png" alt="logo"></a>
-      <ul class="navlist">
-          <li><a href="homepage-customer.php">Home</a></li>
-          <li><a href="about_us.php">About</a></li>
-          <li><a href="reservation.php">Reservations</a></li>
-          <li><a href="menu3.php">Menu</a></li>
-          <li><a href="contact_us.php">Contact Us</a></li>
-      </ul>
+            <a href="homepage-customer.php" class="logo"><img src="../images/logo_draft.png" alt="logo"></a>
+            <ul class="navlist">
+                <li><a href="homepage-customer.php">Home</a></li>
+                <li><a href="about_us.php">About</a></li>
+                <li><a href="reservation.php">Reservations</a></li>
+                <li><a href="menu3.php">Menu</a></li>
+                <li><a href="contact_us.php">Contact Us</a></li>
+            </ul>
 
-      <div class="icon">
-          <a href="view-profile.php"><i class='bx bxs-user'></i></a>
-      </div>
-        </nav>
+            <div class="icon">
+                <a href="view-profile.php"><i class='bx bxs-user'></i></a>
+            </div>
+      </nav>
   </section>
 
     <div class="banner">
@@ -79,227 +79,49 @@
     <hr style="background-color: #FE6A86; border: 1px solid #FE6A86; opacity: 1; margin: 0; padding: 0;">
 
 <section class = "reservation-select-table-bg">
-  <div class="reservation-table-container">
-    <!-- make this div respondsive container -->
-    <!-- <div class="table-selection-container"> -->
+  <div class="reservation-form-container">
       <h2 class="available-table-header">Available Tables</h2>
       <h6 class="select-table-header">*Please select one</h6>
 
-      <div class="container-fluid">
-        <div class="row">
-          <!-- row 1 of table cards -->
-          <div class="col-md-3 mb-4">
-            <div class="card">
-              <img src="../images/reservation/table6pax.png" width="50" class="card-img-top" alt="Table 1">
-              <div class="card-body">
-                <h5 class="card-title">Table 1</h5>
-                <input type="checkbox" class="form-check-input" id="table1" name="table" onclick="uncheckOthers(this)" disabled>
-              </div>
+
+
+      <form action="" method="POST">
+        <!-- reservation-selection.php -->
+      
+      <div style="text-align: center;">
+        <div class="row align-items-center">
+          <div class="col-md-3 text-end">
+              <label for="selected_table"> Select a Table: </label>            
+          </div>
+            <div class="col-md-9">
+              <select class="drop-down-table" name="table_selection" id="table_selection">
+                <?php foreach ($availableTables as $table) : ?>
+                    <option value="<?php echo $table; ?>"><?php echo $table; ?></option>
+                <?php endforeach; ?>
+              </select>
             </div>
-          </div>
-          <div class="col-md-3 mb-4">
-            <div class="card">
-              <img src="../images/reservation/table6pax.png" class="card-img-top" alt="Table 2">
-              <div class="card-body">
-                <h5 class="card-title">Table 2</h5>
-                <input type="checkbox" class="form-check-input" id="table2" name="table" onclick="uncheckOthers(this)">
-              </div>
-            </div>
-          </div>
-          <div class="col-md-3 mb-4">
-            <div class="card">
-              <img src="../images/reservation/table6pax.png" class="card-img-top" alt="Table 3">
-              <div class="card-body">
-                <h5 class="card-title">Table 3</h5>
-                <input type="checkbox" class="form-check-input" id="table3" name="table" onclick="uncheckOthers(this)">
-              </div>
-            </div>   
-          </div>
-          <div class="col-md-3 mb-4">
-            <div class="card">
-              <img src="../images/reservation/table6pax.png" class="card-img-top" alt="Table 4">
-              <div class="card-body">
-                <h5 class="card-title">Table 4</h5>
-                <input type="checkbox" class="form-check-input" id="table4" name="table" onclick="uncheckOthers(this)">
-              </div>
-            </div>   
-          </div>
+        </div>
+        
+        <br>
+
+        <div style="text-align: center;">
+          <img src="../images/reservation/seatmap.png" width="600" height="400" alt="Seating Map">
         </div>
 
-        <div class="row">
-          <!-- row 2 or table cards -->
-          <div class="col-md-3 mb-4">
-            <div class="card">
-              <img src="../images/reservation/table6pax.png" class="card-img-top" alt="Table 5">
-              <div class="card-body">
-                <h5 class="card-title">Table 5</h5>
-                <input type="checkbox" class="form-check-input" id="table5" name="table" onclick="uncheckOthers(this)">
-              </div>
-            </div>
-          </div>
-          <div class="col-md-3 mb-4">
-            <div class="card">
-              <img src="../images/reservation/table6pax.png" class="card-img-top" alt="Table 6">
-              <div class="card-body">
-                <h5 class="card-title">Table 6</h5>
-                <input type="checkbox" class="form-check-input" id="table6" name="table" onclick="uncheckOthers(this)">
-              </div>
-            </div>
-          </div>
-          <div class="col-md-3 mb-4">
-            <div class="card">
-              <img src="../images/reservation/table6pax.png" class="card-img-top" alt="Table 7">
-              <div class="card-body">
-                <h5 class="card-title">Table 7</h5>
-                <input type="checkbox" class="form-check-input" id="table7" name="table" onclick="uncheckOthers(this)">
-              </div>
-            </div>   
-          </div>
-          <div class="col-md-3 mb-4">
-            <div class="card">
-              <img src="../images/reservation/table6pax.png" class="card-img-top" alt="Table 8">
-              <div class="card-body">
-                <h5 class="card-title">Table 8</h5>
-                <input type="checkbox" class="form-check-input" id="table8" name="table" onclick="uncheckOthers(this)">
-              </div>
-            </div>   
-          </div>
-        </div>
 
-        <div class="row">
-          <!-- row 3 table cards -->
-          <div class="col-md-3 mb-4">
-            <div class="card">
-              <img src="../images/reservation/table6pax.png" class="card-img-top" alt="Table 9">
-              <div class="card-body">
-                <h5 class="card-title">Table 9</h5>
-                <input type="checkbox" class="form-check-input" id="table9" name="table" onclick="uncheckOthers(this)">
-              </div>
-            </div>
-          </div>
-          <div class="col-md-3 mb-4">
-            <div class="card">
-              <img src="../images/reservation/table6pax.png" class="card-img-top" alt="Table 10">
-              <div class="card-body">
-                <h5 class="card-title">Table 10</h5>
-                <input type="checkbox" class="form-check-input" id="table10" name="table" onclick="uncheckOthers(this)">
-              </div>
-            </div>
-          </div>
-          <div class="col-md-3 mb-4">
-            <div class="card">
-              <img src="../images/reservation/table6pax.png" class="card-img-top" alt="Table 11">
-              <div class="card-body">
-                <h5 class="card-title">Table 11</h5>
-                <input type="checkbox" class="form-check-input" id="table11" name="table" onclick="uncheckOthers(this)">
-              </div>
-            </div>   
-          </div>
-          <div class="col-md-3 mb-4">
-            <div class="card">
-              <img src="../images/reservation/table6pax.png" class="card-img-top" alt="Table 12">
-              <div class="card-body">
-                <h5 class="card-title">Table 12</h5>
-                <input type="checkbox" class="form-check-input" id="table12" name="table" onclick="uncheckOthers(this)">
-              </div>
-            </div>   
-          </div>
-        </div>
-
-        <div class="row">
-          <!-- row 4 table cards -->
-          <div class="col-md-3 mb-4">
-            <div class="card">
-              <img src="../images/reservation/table6pax.png" class="card-img-top" alt="Table 13">
-              <div class="card-body">
-                <h5 class="card-title">Table 13</h5>
-                <input type="checkbox" class="form-check-input" id="table13" name="table" onclick="uncheckOthers(this)">
-              </div>
-            </div>
-          </div>
-          <div class="col-md-3 mb-4">
-            <div class="card">
-              <img src="../images/reservation/table6pax.png" class="card-img-top" alt="Table 14">
-              <div class="card-body">
-                <h5 class="card-title">Table 14</h5>
-                <input type="checkbox" class="form-check-input" id="table14" name="table" onclick="uncheckOthers(this)">
-              </div>
-            </div>
-          </div>
-          <div class="col-md-3 mb-4">
-            <div class="card">
-              <img src="../images/reservation/table6pax.png" class="card-img-top" alt="Table 15">
-              <div class="card-body">
-                <h5 class="card-title">Table 15</h5>
-                <input type="checkbox" class="form-check-input" id="table15" name="table" onclick="uncheckOthers(this)">
-              </div>
-            </div>   
-          </div>
-          <div class="col-md-3 mb-4">
-            <div class="card">
-              <img src="../images/reservation/table6pax.png" class="card-img-top" alt="Table 16">
-              <div class="card-body">
-                <h5 class="card-title">Table 16</h5>
-                <input type="checkbox" class="form-check-input" id="table16" name="table" onclick="uncheckOthers(this)">
-              </div>
-            </div>   
-          </div>
-        </div>
-
-        <div class="text-center">
-          <a href="reservation-selection.html" class="btn-yellow-reservation">Confirm Selection</a>
-        </div>
+        <br>
+        <input class="btn-yellow-reservation" type="submit" value="Confirm">
+        
       </div>
-            </section>
-    <!-- </div> -->
+      </form>
 
-    <!-- <div class="container">
-      <div class="row">
-        <div class="col-md-6 offset-md-3">
-          <div class="card-deck mt-4" id="table-list">
-            <div class="card available" data-table-id="1">
-              <img class="card-img-top" src="table-image-1.jpg" alt="Table 1">
-              <div class="card-body">
-                <h5 class="card-title">Table 1</h5>
-                <p class="card-text">Capacity: 4</p>
-              </div>
-            </div>
-            <div class="card available" data-table-id="2">
-              <img class="card-img-top" src="table-image-2.jpg" alt="Table 2">
-              <div class="card-body">
-                <h5 class="card-title">Table 2</h5>
-                <p class="card-text">Capacity: 6</p>
-              </div>
-            </div>
-            <div class="card unavailable" data-table-id="3">
-              <img class="card-img-top" src="table-image-3.jpg" alt="Table 3">
-              <div class="card-body">
-                <h5 class="card-title">Table 3</h5>
-                <p class="card-text">Capacity: 8</p>
-              </div>
-            </div>
-            <div class="card available" data-table-id="4">
-              <img class="card-img-top" src="table-image-4.jpg" alt="Table 4">
-              <div class="card-body">
-                <h5 class="card-title">Table 4</h5>
-                <p class="card-text">Capacity: 2</p>
-              </div>
-            </div>
-            <div class="card available" data-table-id="5">
-              <img class="card-img-top" src="table-image-5.jpg" alt="Table 5">
-              <div class="card-body">
-                <h5 class="card-title">Table 5</h5>
-                <p class="card-text">Capacity: 4</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div> -->
+      
   </div>
+</section>
 
-  <!--Footer-->
-  <footer>        
+
+    <!--Footer-->
+<footer>        
     <div class="footer-content">
         <h3 style="margin-bottom: 0;">Pikahae</h3>
         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.<br>Illo iste corrupti doloribus odio sed!</p>

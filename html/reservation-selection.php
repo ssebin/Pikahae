@@ -4,6 +4,7 @@ include 'auth.php';
 $user_id = $_SESSION['user_id'];
 
 
+
 // Step 1: Establish database connection (replace with your credentials)
 $host = "localhost"; // Database host
 $username = "root"; // Database username
@@ -15,6 +16,36 @@ $connection = new mysqli('localhost', 'root', '', 'pikahae_db');
 if ($connection->connect_error) {
     die("Connection failed: " . $connection->connect_error);
 }
+
+
+
+$reservationDate = $_SESSION['reservation_date'];
+$reservationTime = $_SESSION['reservation_time'];
+$numGuests = $_SESSION['num_guests'];
+$tableSelected = $_POST['table_selection'];
+
+  //SQL STATEMENT TO INSERT TO DB
+  $sqltoDB = "INSERT INTO user_order (order_date, order_time, order_pax, order_status, admin_id, user_id, table_id) VALUES (?, ?, ?, 'Pending', NULL, $user_id, ?)";
+
+  // Execute the SQL statement to insert the reservation details
+  $stmt = mysqli_prepare($connection, $sqltoDB);
+  mysqli_stmt_bind_param($stmt, "ssii", $reservationDate, $reservationTime, $numGuests, $tableSelected);
+  mysqli_stmt_execute($stmt);
+
+  if (mysqli_stmt_affected_rows($stmt) > 0) {
+    // Insertion successful
+    echo "sUCCESS";
+} else {
+    // Insertion failed
+    echo "FAILED";
+}
+
+mysqli_stmt_close($stmt);
+
+
+
+
+
 
 // Retrieve the latest order ID from the user_order table
 $query = "SELECT order_id FROM user_order ORDER BY order_id DESC LIMIT 1";
@@ -43,9 +74,30 @@ $orderPax = $row['order_pax'];
 $tableId = $row['table_id'];
 
 mysqli_free_result($result);
+mysqli_close($connection);
+
 
 // Close the database connection
-mysqli_close($connection);
+//mysqli_close($connection);
+
+
+
+
+
+
+ // //DEGUGGUNG THE DATABASE TO CHECK MASUK KE TAK
+//  $result = mysqli_stmt_execute($stmt);
+
+//  // Check if the execution failed
+//  if (!$result) {
+//      die("Statement execution failed: " . mysqli_stmt_error($stmt));
+//  }
+
+
+
+
+
+
 
 
 ?>
