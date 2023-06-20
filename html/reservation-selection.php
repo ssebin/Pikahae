@@ -31,13 +31,13 @@ $tableSelected = $_POST['table_selection'];
   mysqli_stmt_bind_param($stmt, "ssii", $reservationDate, $reservationTime, $numGuests, $tableSelected);
   mysqli_stmt_execute($stmt);
 
-  if (mysqli_stmt_affected_rows($stmt) > 0) {
-    // Insertion successful
-    echo "sUCCESS";
-} else {
-    // Insertion failed
-    echo "FAILED";
-}
+//   if (mysqli_stmt_affected_rows($stmt) > 0) {
+//     // Insertion successful
+//     echo "sUCCESS";
+// } else {
+//     // Insertion failed
+//     echo "FAILED";
+// }
 
 mysqli_stmt_close($stmt);
 
