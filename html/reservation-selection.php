@@ -111,8 +111,7 @@ mysqli_close($connection);
 
             <div class="icon">
                 <a href="view-profile.php"><i class='bx bxs-user'></i></a>
-            </div>
-        </nav>
+            </div></nav>
 
         <!--Different banner for each page-->
         <div class="reservation_banner">

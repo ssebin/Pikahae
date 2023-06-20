@@ -91,17 +91,17 @@ mysqli_close($conn);
 <!-- header -->
 <section>
     <nav class="header">
-        <a href="homepage-customer.php" class="logo"><img src="../images/logo_draft.png" alt="logo"></a>
+        <a href="./homepage-customer.php" class="logo"><img src="../images/logo_draft.png" alt="logo"></a>
         <ul class="navlist">
-            <li><a href="homepage-customer.php">Home</a></li>
-            <li><a href="about_us.php">About</a></li>
-            <li><a href="reservation.php">Reservations</a></li>
-            <li><a href="menu3.php">Menu</a></li>
-            <li><a href="contact_us.php">Contact Us</a></li>
+            <li><a href="./homepage-customer.php">Home</a></li>
+            <li><a href="./about_us.php">About</a></li>
+            <li><a href="./reservation.php">Reservations</a></li>
+            <li><a href="./menu3.php">Menu</a></li>
+            <li><a href="./contact_us.php">Contact Us</a></li>
         </ul>
 
         <div class="icon">
-            <a href="view-profile.php"><i class='bx bxs-user'></i></a>
+            <a href="./view-profile.php"><i class='bx bxs-user'></i></a>
         </div>
     </nav>
 
@@ -146,7 +146,7 @@ mysqli_close($conn);
                     </figcaption>
                 </div>
                 <div class="res-button-wrapper">
-                    <a href="homepage-customer.html"><button class="proceed-btn">Done</button></a>
+                    <a href="./homepage-customer.php"><button class="proceed-btn">Done</button></a>
                 </div>
             </div>
 

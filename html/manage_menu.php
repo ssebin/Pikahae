@@ -43,13 +43,7 @@
 
     <div class="sub-header-wrapper">
         <p>MANAGE MENU</p>
-        <!-- <div class="add-menu-button">
-            <a href="./edit_menu.html">
-                <button id="menu-add-btn" type="button">
-                    <img src="../images/manage/add.png" alt="Add">
-                </button>
-            </a>
-        </div> -->
+        </div>
         <div class="input-box">
             <i class="uil uil-search"></i>
             <input type="text" id="menu-search-input" placeholder="Search menu" />
@@ -165,7 +159,7 @@ if ($result->num_rows > 0) {
             <p>This process cannot be undone</p>
         </div>
         <button id="cancel-back-button" type="button">Back</button><span>
-                    <a href="./manage_menu.html"><button id="cancel-confirm-button" type="button">Confirm</button></a>
+                    <a href="./manage_menu.php"><button id="cancel-confirm-button" type="button">Confirm</button></a>
                 </span>
     </div>
 </div>
