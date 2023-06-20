@@ -73,7 +73,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $hashed_password = password_hash($user_pass, PASSWORD_DEFAULT);
 
     // Insert the user into the database
-    $query = "INSERT INTO user (user_fname, user_lname, user_nickname, user_phone, user_email, user_pass, user_points, user_pokemon, user_img, user_id, user_bday) VALUES (?, ?, ?, ?, ?, ?, '0', 'Pikachu', '', '0', '1999-11-09')";
+    $query = "INSERT INTO user (user_fname, user_lname, user_nickname, user_phone, user_email, user_pass, user_points, user_pokemon, user_img, user_id, user_bday) VALUES (?, ?, ?, ?, ?, ?, '0', 'Pikachu', NULL, '0', '1999-11-09')";
 
     $stmt = mysqli_prepare($connection, $query);
     mysqli_stmt_bind_param($stmt, "ssssss", $user_fname, $user_lname, $user_nickname, $user_phone, $user_email, $hashed_password);
