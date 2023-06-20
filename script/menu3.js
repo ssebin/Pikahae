@@ -112,12 +112,24 @@ document.addEventListener("DOMContentLoaded", function() {
     const cartCloseBtn = document.querySelector(".cart-close");
     const checkoutButton = document.querySelector(".head-cart-checkout");
 
+    function toggleMenuItemsVisibility() {
+        const cartItemsContainer = cartContainer.querySelector(".head-cart__items");
+        if (cartContainer.classList.contains("open-cart")) {
+            cartItemsContainer.style.display = "block";
+        } else {
+            cartItemsContainer.style.display = "none";
+        }
+    }
+
     cartCloseBtn.addEventListener("click", function() {
         cartContainer.classList.remove("open-cart");
+        toggleMenuItemsVisibility();
     });
+
 
     cartIcon.addEventListener("click", function() {
         cartContainer.classList.toggle("open-cart");
+        toggleMenuItemsVisibility();
 
         if (cartContainer.classList.contains("open-cart")) {
             checkoutButton.style.display = "block";
@@ -225,6 +237,8 @@ document.addEventListener("DOMContentLoaded", function() {
             cartContainer.classList.add("open-cart");
             checkoutButton.style.display = "block";
         }
+
+        toggleMenuItemsVisibility();
 
     }
 
