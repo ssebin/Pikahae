@@ -61,7 +61,7 @@
         </div>
         <div class="admin-view-table">
             <table>
-                <div class="table-header">
+<!--                <div class="table-header">-->
                     <thead>
                         <tr>
                             <th id="customer-acc-num">Account<br>Number</th>
@@ -73,7 +73,7 @@
                             <th>Action</th>
                         </tr>
                     </thead>
-                </div>
+<!--                </div>-->
                 <div class="table-body">
                     <tbody id="customer-table-body">
                         <?php
