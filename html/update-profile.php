@@ -42,9 +42,19 @@
         } else {
         }
         // Delete acc
-        $query = "DELETE FROM user WHERE user_id = $user_id";
-        $stmt = $connection->prepare($query);
+        $queryCheck = "SET FOREIGN_KEY_CHECKS=0";
+        $stmt = $connection->prepare($queryCheck);
         $stmt->execute();
+
+        $query = "DELETE FROM user_order WHERE user_id = ?";
+        $stmt1 = $connection->prepare($query);
+        $stmt1->bind_param("i", $user_id);
+        $stmt1->execute();
+
+        $query2 = "DELETE FROM user WHERE user_id = ?";
+        $stmt2 = $connection->prepare($query2);
+        $stmt2->bind_param("i", $user_id);
+        $stmt2->execute();
         header("Location: logout.php");
     }
 
