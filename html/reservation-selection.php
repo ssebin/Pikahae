@@ -2,7 +2,6 @@
 //session_start();
 include 'auth.php';
 $user_id = $_SESSION['user_id'];
-//$userName = $_SESSION['user_fname'];
 
 
 // Step 1: Establish database connection (replace with your credentials)
@@ -16,6 +15,25 @@ $connection = new mysqli('localhost', 'root', '', 'pikahae_db');
 if ($connection->connect_error) {
     die("Connection failed: " . $connection->connect_error);
 }
+
+
+// Retrieve the current user's ID
+$userID = $_SESSION['user_id'];
+
+// Query to fetch the user's first name and last name
+$userQuery = "SELECT user_fname, user_lname FROM `user` WHERE user_id = '$userID'";
+$userResult = mysqli_query($connection, $userQuery);
+if (!$userResult) {
+    die('Query failed: ' . mysqli_error($conn));
+}
+
+$userRow = mysqli_fetch_assoc($userResult);
+$userFname = $userRow['user_fname'];
+$userLname = $userRow['user_lname'];
+
+mysqli_free_result($userResult);
+
+
 
 
 
@@ -188,9 +206,8 @@ mysqli_close($connection);
                     <div class="profile-description-wrapper">
                         <figcaption class = "res-sel-fig">
                             <h3><i>
-                              <!-- Chunsik Meow -->
-                              User ID:
-                              <?php echo $user_id ?>
+                              User:
+                              <?php echo $userFname . ' ' . $userLname; ?>
                             </i></h3>
                             <br>
 
