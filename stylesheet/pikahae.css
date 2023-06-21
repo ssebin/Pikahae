@@ -19,6 +19,7 @@
     --btn-color: #efefef;
     --btn-hover-color: #ecd134;
     --btn-pink-hover-color: #f63055;
+    --btn-yellow: #FEE255; 
     --brown-text: #9B693E;
     --big-font: 5rem;
     --h2-font: 3rem;
@@ -341,6 +342,25 @@ section .header{
     transform: translateY(4px);
 }
 
+.new-yellow-button{
+    padding: 15px 25px;
+    background: var(--btn-yellow);
+    color: var(--text-color);
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 40px;
+    line-height: 1.8;
+    text-decoration: none;
+    box-shadow: 0 4px 0 #ecd134;
+    box-shadow: var();
+    border: none;
+    outline: none;
+}
+
+.new-yellow-button:active{
+    box-shadow: none;
+    transform: translateY(4px);
+}
 
 
 .btn-pink{

@@ -71,8 +71,8 @@ include 'auth.php';
         <!-- <button type="button" class="btn btn-primary btn-lg reservation-Button">
           <a href="#">Reservations</a>
         </button> -->
-        <a href="reservationForm1.html" class="btn-yellow">Make a Reservation</a>
-        <a href="manage-reservations-customer.php" class="btn-yellow">History</a>
+        <a href="reservationForm1.html" class="new-yellow-button">Make a Reservation</a>
+        <a href="manage-reservations-customer.php" class="new-yellow-button">History</a>
         <br> <br>
       </div>
 

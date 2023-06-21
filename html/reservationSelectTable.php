@@ -202,7 +202,7 @@ $availableTables = array_diff($totalTables, $bookedTables);
 
 
         <br>
-        <input class="btn-yellow-reservation" type="submit" value="Confirm">
+        <input class="new-yellow-button" type="submit" value="Confirm">
         
       </div>
       </form>

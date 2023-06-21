@@ -2,6 +2,7 @@
 //session_start();
 include 'auth.php';
 $user_id = $_SESSION['user_id'];
+//$userName = $_SESSION['user_fname'];
 
 
 // Step 1: Establish database connection (replace with your credentials)
@@ -187,7 +188,9 @@ mysqli_close($connection);
                     <div class="profile-description-wrapper">
                         <figcaption class = "res-sel-fig">
                             <h3><i>
-                              Chunsik Meow
+                              <!-- Chunsik Meow -->
+                              User ID:
+                              <?php echo $user_id ?>
                             </i></h3>
                             <br>
 

@@ -103,7 +103,7 @@ include 'auth.php';
             <p class="HP-desc">A Pokémon Cafe to meet and hang out with your pika-friends.<br>
                 Try our exclusive Pokémon themed menu at the heart of KL.<br>
                 Make a reservation to spend meaningful time with your loved ones!<br></p>
-            <a href="about_us.php" class="btn-yellow">About Us</a>
+            <a href="about_us.php" class="new-yellow-button">About Us</a>
         </div>
         <!--Menu-->
         <div class="HP-menu">
@@ -285,7 +285,7 @@ include 'auth.php';
                 <p class="HP-desc"><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam mi neque, hendrerit
                     nec ex at, rhoncus scelerisque elit. In hac habitasse platea dictumst. Aliquam egestas placerat
                     dolor vitae hendrerit.</p>
-                <a href="reservation.html" class="btn-yellow">Make a Reservation</a>
+                <a href="reservation.html" class="new-yellow-button">Make a Reservation</a>
             </div>
 
             <div class="HP-res-1">

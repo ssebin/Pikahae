@@ -105,8 +105,8 @@ include 'auth-admin.php';
                 Manage consumer accounts, reservations, and menu items.<br>
                 All within your fingertips.<br></p>
                 <form method="POST" action="logout.php">
-                    <button type="submit" class="logout-button">Log Out</button>
-                </form>
+                    <button type="submit" class="new-yellow-button">Log Out</button>
+                </form> <br>
         </div>
         <!--Menu-->
         <div class="HP-menu">
