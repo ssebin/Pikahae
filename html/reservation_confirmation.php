@@ -56,6 +56,22 @@ while ($row = mysqli_fetch_assoc($result)) {
     $orderItems .= $menuName . " (x" . $orderQty . ")<br>";
 }
 
+// Retrieve the current user's ID
+$userID = $_SESSION['user_id'];
+
+// Query to fetch the user's first name and last name
+$userQuery = "SELECT user_fname, user_lname FROM `user` WHERE user_id = '$userID'";
+$userResult = mysqli_query($conn, $userQuery);
+if (!$userResult) {
+    die('Query failed: ' . mysqli_error($conn));
+}
+
+$userRow = mysqli_fetch_assoc($userResult);
+$userFname = $userRow['user_fname'];
+$userLname = $userRow['user_lname'];
+
+mysqli_free_result($userResult);
+
 mysqli_free_result($result);
 mysqli_close($conn);
 ?>
@@ -127,7 +143,8 @@ mysqli_close($conn);
                 <h3>Reservation Successful!</h3>
                 <div class="profile-description-wrapper">
                     <figcaption class="res-sel-fig">
-                        <h3><i>Mr. Chunsik Meow</i></h3><br>
+<!--                        <h3><i>Mr. Chunsik Meow</i></h3><br>-->
+                        <h3><i><?php echo $userFname . ' ' . $userLname; ?></i></h3><br>
                         <titletext>Date:<br></titletext>
                         <div class="res-title" id="date"><?php echo $orderDate; ?></div>
                         <br>
