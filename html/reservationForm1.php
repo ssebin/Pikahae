@@ -11,7 +11,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST')
     $reservationTime = $_POST['reservation_time'];
     $numGuests = $_POST['num_guests'];
 
-     // Perform server-side validation to make sure user fills out the form an dnot leave it empty
+     // Perform server-side validation to make sure user fills out the form and not leave it empty
      $errors = [];
 
      // Check if any of the fields are empty
