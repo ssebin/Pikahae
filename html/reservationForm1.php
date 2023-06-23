@@ -38,11 +38,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST')
     $_SESSION['reservation_time'] = $reservationTime;
     $_SESSION['num_guests'] = $numGuests;
 
-    //Debugging output
-    // echo "Reservation date: " . $_SESSION['reservation_date'] . "<br>";
-    // echo "Reservation time: " . $_SESSION['reservation_time'] . "<br>";
-    // echo "Number of guests: " . $_SESSION['num_guests'] . "<br>";
-
 
     // Redirect to the table selection page
     header('Location: reservationSelectTable.php');

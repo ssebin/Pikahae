@@ -65,7 +65,7 @@ if ($conn->connect_error) {
                 <button class="button" id="customer-search-button"><i class="fa-solid fa-magnifying-glass"></i></button>
             </div>
         </div>
-        <!-- test -->
+
         <hr>
     </section>
     <div class="admin-view-body">
@@ -73,7 +73,6 @@ if ($conn->connect_error) {
         </div>
         <div class="admin-view-table">
             <table>
-<!--                <div class="table-header">-->
                     <thead>
                         <tr>
                             <th id="customer-acc-num">Account<br>Number</th>

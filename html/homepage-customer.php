@@ -109,91 +109,6 @@ include 'auth.php';
         <div class="HP-menu">
             <h2 class="HP-menu-heading">Menu</h2>
 
-            <!--Copied from homung's menu-->
-            <!--<section class="homepage-menu" id="homepage-menu">
-                <div class="box-container">
-
-                    &lt;!&ndash; FOOD 1 &ndash;&gt;
-                    <div class="box">
-                        <a href="#" class="category-btn">Food</a>
-                        <img src="../images/menu/photo_food01_02.jpg">
-                        <div class="item-text">
-                            <h3 class="item-name">Pikachu Burger</h3>
-                            <i class="item-desc">Lorem ipsum i love burger sometimes me think</i>
-                            <br>
-                            <span class="menu-price">RM25.00</span>
-                        </div>
-                        <div class="po-btn-container"><a href="#" class="po-btn">Pre-order</a></div>
-                    </div>
-
-                    &lt;!&ndash; FOOD 2 &ndash;&gt;
-                    <div class="box">
-                        <a href="#" class="category-btn">Food</a>
-                        <img src="../images/menu/photo_food02_02.jpg">
-                        <div class="item-text">
-                            <h3 class="item-name">Pikachu Burger</h3>
-                            <i class="item-desc">Lorem ipsum i love burger sometimes me think</i>
-                            <br>
-                            <span class="menu-price">RM25.00</span>
-                        </div>
-                        <div class="po-btn-container"><a href="#" class="po-btn">Pre-order</a></div>
-                    </div>
-
-                    &lt;!&ndash; FOOD 3 &ndash;&gt;
-                    <div class="box">
-                        <a href="#" class="category-btn">Food</a>
-                        <img src="../images/menu/photo_food02_03.jpg">
-                        <div class="item-text">
-                            <h3 class="item-name">Pikachu Burger</h3>
-                            <i class="item-desc">Lorem ipsum i love burger sometimes me think</i>
-                            <br>
-                            <span class="menu-price">RM25.00</span>
-                        </div>
-                        <div class="po-btn-container"><a href="#" class="po-btn">Pre-order</a></div>
-                    </div>
-
-                    &lt;!&ndash; FOOD 4 &ndash;&gt;
-                    <div class="box">
-                        <a href="#" class="category-btn">Drinks</a>
-                        <img src="../images/menu/photo_drink01.jpg">
-                        <div class="item-text">
-                            <h3 class="item-name">Pikachu Burger</h3>
-                            <i class="item-desc">Lorem ipsum i love burger sometimes me think</i>
-                            <br>
-                            <span class="menu-price">RM25.00</span>
-                        </div>
-                        <div class="po-btn-container"><a href="#" class="po-btn">Pre-order</a></div>
-                    </div>
-
-                    &lt;!&ndash; FOOD 5 &ndash;&gt;
-                    <div class="box">
-                        <a href="#" class="category-btn">Drinks</a>
-                        <img src="../images/menu/photo_drink04.jpg">
-                        <div class="item-text">
-                            <h3 class="item-name">Pikachu Burger</h3>
-                            <i class="item-desc">Lorem ipsum i love burger sometimes me think</i>
-                            <br>
-                            <span class="menu-price">RM25.00</span>
-                        </div>
-                        <div class="po-btn-container"><a href="#" class="po-btn">Pre-order</a></div>
-                    </div>
-
-                    &lt;!&ndash; FOOD 6 &ndash;&gt;
-                    <div class="box">
-                        <a href="#" class="category-btn">Dessert</a>
-                        <img src="../images/menu/photo_sweets02.jpg">
-                        <div class="item-text">
-                            <h3 class="item-name">Pikachu Burger</h3>
-                            <i class="item-desc">Lorem ipsum i love burger sometimes me think</i>
-                            <br>
-                            <span class="menu-price">RM25.00</span>
-                        </div>
-                        <div class="po-btn-container"><a href="#" class="po-btn">Pre-order</a></div>
-                    </div>
-
-                </div>
-            </section>-->
-
             <!--  new one -->
             <div id="hp-menu-container" class="hp-menu-container">
                 <div class="box">
@@ -366,70 +281,6 @@ include 'auth.php';
 
             </div>
         </section>
-        <!--Review
-        <div class="review-container">
-            <div class="review-board">
-                <h2 class="review-title">What Our Customers are Saying</h2>
-
-                Slider main container
-                <div class="swiper">
-                    Additional required wrapper
-                    <div class="swiper-wrapper">
-                         Slides
-                        <div class="swiper-slide">
-                            <div class="flex">
-                                <div class="comments">
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                    Non, placeat quisquam? Animi sunt, dignissimos est sit reiciendis iste ipsa error?
-                                </div>
-                                <div class="profile">
-                                    <img src="../images/review/review-brock.jpg" alt="">
-                                    <a href="#">Brock</a>
-                                    <span>Gym Leader</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="flex">
-                                <div class="comments">
-                                    Non, placeat quisquam? Animi sunt, dignissimos est sit reiciendis iste ipsa error?
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                </div>
-                                <div class="profile">
-                                    <img src="../images/review/review-jessie.jpeg" alt="">
-                                    <a href="#">Jessie</a>
-                                    <span>Team Rocket</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="flex">
-                                <div class="comments">
-                                    Animi sunt, ipsa error? Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                    Non, placeat quisquam? dignissimos est sit reiciendis iste
-                                </div>
-                                <div class="profile">
-                                    <img src="../images/review/review-oak.png" alt="">
-                                    <a href="#">Samuel Oak</a>
-                                    <span>Pokemon Researcher</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    If we need pagination 
-                    <div class="swiper-pagination"></div>
-
-                    If we need navigation buttons 
-                    <div class="swiper-button-prev"></div>
-                    <div class="swiper-button-next"></div>
-                    <br>
-                </div>
-
-            </div>
-        </div>
-
-        <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
-         -->
 
         <!--Footer-->
         <footer>
@@ -452,15 +303,6 @@ include 'auth.php';
                 <p>copyright &copy;2023 Pikahae. designed by <span>dino kuning</span></p>
             </div>
         </footer>
-        <!-- <script>
-            // Detect browser/tab close event
-            window.addEventListener('beforeunload', function(event) {
-                // Make an AJAX request to the logout script to destroy the session
-                var xhr = new XMLHttpRequest();
-                xhr.open('GET', 'logout.php', true);
-                xhr.send();
-            });
-        </script> -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     </section>
 

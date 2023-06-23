@@ -1,25 +1,3 @@
-// // Get all table elements
-// var tables = document.querySelectorAll('.table');
-
-// // Add event listener to each table element
-// tables.forEach(function(table) {
-//   table.addEventListener('click', function() {
-//     // Check if table is available
-//     if (table.classList.contains('available')) {
-//       // Change appearance of selected table
-//       table.classList.add('selected');
-      
-//       // Deselect other tables
-//       tables.forEach(function(otherTable) {
-//         if (otherTable != table) {
-//           otherTable.classList.remove('selected');
-//         }
-//       });
-//     }
-//   });
-// });
-
-
 
 
 //to allow user to check only 1 box/table
@@ -69,23 +47,4 @@ $('#confirmBtn').on('click', function() {
     alert(confirmMsg);
   }
 }); //end
-
-
-// const checkboxes = document.querySelectorAll('input[type="checkbox"]');
-
-// checkboxes.forEach(checkbox => {
-//   checkbox.addEventListener('click', function() {
-//     if (this.checked) {
-//       // remove selected class from previously selected checkbox
-//       const prevSelected = document.querySelector('.selected');
-//       if (prevSelected && prevSelected !== this) {
-//         prevSelected.classList.remove('selected');
-//       }
-//       // add selected class to current checkbox
-//       this.parentNode.parentNode.classList.add('selected');
-//     } else {
-//       // remove selected class if checkbox is unchecked
-//       this.parentNode.parentNode.classList.remove('selected');
-//     }
-//   });
 // });
